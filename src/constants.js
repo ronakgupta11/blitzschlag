@@ -1,0 +1,1 @@
+export const url = "http://localhost:5000/blitzstarter-d367e/us-central1/api"
