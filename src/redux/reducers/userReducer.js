@@ -21,12 +21,7 @@ const initialState = {
 
         },
         SET_UNAUTHENTICATED:(state)=>{
-            return {
-                ...state,
-                authenticated :false,
-                credentials:{}, 
-                registeredEvents:[]
-            }
+            return initialState
 
         },
         SET_USER:(state,action)=>{

@@ -16,8 +16,9 @@ export default function App({ Component, pageProps }) {
   const dispatch = store.dispatch;
 
   useEffect(() => {
-    const token = localStorage.getItem("BLITZID");
 
+    const token = localStorage.getItem("BLITZID");
+    const profile = localStorage.getItem("BLITZUSER")
     if (token) {
       const decoded = jwtDecode(token);
 
@@ -27,13 +28,11 @@ export default function App({ Component, pageProps }) {
       } else {
         dispatch(SET_AUTHENTICATED());
 
-        axios.defaults.headers.common["Authorization"] = token;
-
-        getUserData().then((res) => {
-
-          console.log("res",res)
-          dispatch(SET_USER(res));
-        });
+        // axios.defaults.headers.common["Authorization"] = token;
+        
+        
+          dispatch(SET_USER(profile));
+       
       }
     }
   }, []);

@@ -43,6 +43,8 @@ export const getUserData = async()=>{
 
 export const logOutUser = ()=>{
         localStorage.removeItem("BLITZID"),
+        localStorage.removeItem("BLITZUSER");
+
         delete axios.defaults.headers.common["Authorization"]
     
     }

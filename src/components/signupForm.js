@@ -73,6 +73,8 @@ const handleClick = (e)=>{
             localStorage.setItem("BLITZID",BLITZID);
             axios.defaults.headers.common["Authorization"] = BLITZID;
             getUserData().then(res=>{
+            localStorage.setItem("BLITZUSER",res);
+
               dispatch(SET_USER(res))
             });
             dispatch(CLEAR_ERRORS())
@@ -82,6 +84,7 @@ const handleClick = (e)=>{
         }
     ).catch(
         err=>{
+          console.log(err)
             dispatch(
                 SET_ERRORS(err.response.data),
   
