@@ -39,7 +39,8 @@ module.exports = {
 
 
         },
-        red: "#ff0000",
+        red5: "#ff0000",
+
         gainsboro: "#e1e1e1",
       },
       height: 
