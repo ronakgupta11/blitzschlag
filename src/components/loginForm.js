@@ -1,7 +1,7 @@
 
 'use client';
 
-import { Button,  Label, TextInput ,Spinner} from 'flowbite-react';
+import { Button,  Label, TextInput ,Spinner,Checkbox} from 'flowbite-react';
 import { url } from '@/constants';
 import { useState } from 'react';
 import axios from 'axios';
@@ -15,7 +15,6 @@ import { useDispatch,useSelector } from 'react-redux';
 import { selectErrors, selectLoading } from '@/redux/reducers/uiReducer';
 import { LOADING_UI,SET_ERRORS,CLEAR_ERRORS } from '@/redux/reducers/uiReducer';
 import { SET_USER } from '@/redux/reducers/userReducer';
-
 import { getUserData } from '@/redux/actions/userAction';
 
 
@@ -114,7 +113,7 @@ const handleForgot = ()=>{
 
 
   return (
-    <div className="flex max-w-md flex-col gap-4">
+    <div className="flex max-w-md flex-col gap-4 contain">
       <div>
         <div className="mb-2 block">
           <Label htmlFor="email1" value="Your email" />
@@ -132,6 +131,10 @@ const handleForgot = ()=>{
             
             setPass(e.target.value)}} id="password1" type="password" required />
       </div>
+      <div className="flex items-center gap-2">
+          <Checkbox id="remember" />
+          <Label htmlFor="remember">Remember me</Label>
+        </div>
 {errors.general &&<p className='text-red-600 text-sm'>{errors.general}</p>}
 <div className='flex items-center justify-between px-4'>
     <Link className=' text-gray-700 text-sm' href={"/register"}>Create an account</Link>

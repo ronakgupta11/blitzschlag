@@ -102,7 +102,7 @@ const handleClick = (e)=>{
 // console.log(errors)
 
   return (
-    <form className=" flex max-w-md !text-sm flex-col gap-2">
+    <form className=" flex max-w-md !text-sm flex-col gap-2 contain">
         <div>
         <div className="mb-1 block">
           <Label htmlFor="name" value="Name" />

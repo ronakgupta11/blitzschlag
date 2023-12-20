@@ -3,11 +3,11 @@ import { useState } from 'react'
 function Menu() {
     const [expand,setExpand]=useState(false);
     const changeExpand=()=>{
-       setExpand(true)
+       setExpand(!expand)
     }
   return (
     <>
-    {!expand && <div class="absolute top-[92px] left-32 border-1 border-white h-borderh w-56 rounded-lg text-white backdrop-blur-3xl flex-shrink-0 bg-x font-black-ops-one"  onMouseOverCapture={changeExpand}>
+    {!expand && <div class="absolute top-[92px] left-32 border-1 border-white h-borderh w-56 rounded-lg text-white backdrop-blur-3xl flex-shrink-0 bg-x font-black-ops-one  transition-all ease-in-out duration-300"  onMouseEnter={changeExpand}>
         <img
         className="absolute w-[24px] h-[24px] top-[40px] left-[12px]  object-cover"
         alt=""
@@ -45,7 +45,7 @@ function Menu() {
         />
       </div>
     }
-    {expand && <div class="absolute top-[92px] left-32 border-1 border-white h-borderh w-368 rounded-lg text-white backdrop-blur-3xl flex-shrink-0 bg-x font-black-ops-one" onMouseOutCapture={changeExpand}>
+    {expand && <div  class="absolute top-[92px] left-32 border-1 border-white h-borderh w-368 rounded-lg text-white backdrop-blur-3xl flex-shrink-0 bg-x font-black-ops-one  transition-all ease-in-out duration-300"  onMouseOutCapture={changeExpand}>
         <img
         className=" absolute w-[24px] h-[24px] top-[40px] left-[50px]  object-cover"
         alt=""
