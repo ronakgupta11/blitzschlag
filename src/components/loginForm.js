@@ -32,19 +32,6 @@ const successReset = () => toast("Sent Password Reset Mail",{type:"success"});
 const dispatch = useDispatch()
 
 
-// const getUserData = ()=>{
-
-//   axios.get(`${url}/user`).then(
-//       res=>{
-//           dispatch(
-//              SET_USER(res.data)
-//           )
-//       }
-//   ).catch(
-//       err => console.log(err)
-//   )
-
-// }
 const handleClick = ()=>{
     
 

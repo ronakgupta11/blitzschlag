@@ -6,7 +6,7 @@ function Sidebar() {
     const [expanded,setExpanded] = useState( true)
   return (
     // <aside className={`h-screen ${ expanded ? "w-64" : "w-20"} `}>
-    <nav className={`flex flex-col bg-[rgba(255, 255, 255, 0.45)]  rounded-lg shadow-sm  ${ expanded ? "w-64 border " : "w-16 border-r border-white "} m-8  backdrop-blur text-white font-black-ops-one text-sm `}>
+    <nav className={`flex flex-col  rounded-lg shadow-sm  ${ expanded ? "w-64 border " : "w-16 border-r border-white "} m-8 relative backdrop-blur text-white  font-black-ops-one text-sm `}>
       {/* <div className="flex justify-center  items-center">
         <img
           src="https://img.logoipsum.com/243.svg"
@@ -24,6 +24,9 @@ function Sidebar() {
       </div> */}
 
       {/* <SidebarContext.Provider value={{ expanded }}> */}
+  <div className='fixed h-full w-full bg-gradient-to-b from-[#070707] opacity-70 to-transparent rounded-lg z-10'></div>
+<div className='relative z-10'>
+
         <ul className="flex-1 px-3">
 <div className='my-8' onClick = {() => setExpanded((curr) => !curr)}>
 
@@ -45,6 +48,7 @@ function Sidebar() {
 
         </ul>
       {/* </SidebarContext.Provider> */}
+      </div>
 
     </nav>
 //   </aside>

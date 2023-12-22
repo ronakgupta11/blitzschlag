@@ -18,10 +18,10 @@ module.exports = {
       //   'top':'83%','left':'45%',
       //   '32':'32px'
       // },
-      // fontFamily: {
-      //   "black-ops-one": "'Black Ops One'",
-      //   amita: "Amita",
-      // },
+      fontFamily: {
+        "black-ops-one": "'Black Ops One'",
+        amita: "Amita",
+      },
       // fontSize: {
       //   xl: "20px",
       //   "13xl": "32px",
