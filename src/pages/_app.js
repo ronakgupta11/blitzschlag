@@ -10,6 +10,7 @@ import { SET_AUTHENTICATED, SET_UNAUTHENTICATED, SET_USER } from '@/redux/reduce
 import axios from 'axios';
 import { useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
+import Layout from '@/components/layout';
 
 // import { useDispatch } from 'react-redux';
 export default function App({ Component, pageProps }) {
@@ -42,8 +43,10 @@ export default function App({ Component, pageProps }) {
 
   return (<>
   <Provider store={store}>
+<Layout>
 
   <Component {...pageProps} />
+</Layout>
   <ToastContainer
   position="top-right"
   autoClose={5000}

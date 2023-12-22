@@ -27,11 +27,13 @@ const num = Math.floor(Math.random() * 5) % 5
 
   },[auth])
   return (
+    <>
     <div className='container' style={{ backgroundImage: `url(${imgArr[num].src})` }}>
 
         <LoginForm/>
         {/* <Login/> */}
       </div>
+    </>
     
   )
 }
