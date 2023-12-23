@@ -6,11 +6,11 @@ export const EventCard = ({title,desc1,desc2}) => {
 <div className="relative ">
   <div className=" absolute z-10 border rounded-lg h-full w-full " style={{background: 'linear-gradient(99deg, rgba(0, 22.45, 42.06, 0.80) 0%, rgba(65, 48, 90, 0.03) 100%)',boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',}}></div>
 
-<div className="relative flex p-8  rounded-lg z-10 ">
+<div className="relative flex flex-col space-y-2 md:flex-row p-8 overflow-x-hidden rounded-lg z-10 ">
 
 
 
-  <div className="w-96">
+  <div className="w-72 md:w-96">
     <img className="w-full rounded-lg"
       src="https://c.animaapp.com/NTSSYpw2/img/yogendra-singh-koiodzd-byq-unsplash@2x.png"
       
@@ -33,9 +33,9 @@ export const EventCard = ({title,desc1,desc2}) => {
     </p>
     </div>
   </div>
-<div className="flex w-full px-4 justify-between items-center">
+<div className="flex flex-col space-y-2 md:flex-row px-4 w-full justify-between items-center">
 
-  <div className="flex space-x-8">
+  <div className="flex w-full space-x-16">
     <div className="">
       <p className="font-amita">
         Venue
@@ -61,7 +61,7 @@ export const EventCard = ({title,desc1,desc2}) => {
   </div>
 
   
-    <button className="bg-[#FF002F] text-white font-black-ops-one text-lg  rounded-md px-16 py-2 " >
+    <button className="bg-[#FF002F] w-full md:w-60  text-white font-black-ops-one text-lg  rounded-md px-16 py-2 " >
 
     Register
     </button>
