@@ -24,9 +24,23 @@ const auth = useSelector(selectAuthenticated)
 
   },[auth])
   return (
-    <div className='container' style={{ backgroundImage: `url(${imgArr[num].src})` }}>
-
-      <SignupForm/>
+    <div className=' relative h-screen pl-24 '>
+    <div
+        className='fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover'
+        style={{ backgroundImage: `url(${imgArr[num].src})` }}
+      ></div>
+    
+      <div className='fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-10'></div>
+    <div className='relative overfolw-hidden  z-10  py-12 flex flex-col lg:flex-row items-center justify-around space-y-4 w-full'>
+<div className='font-black-ops-one text-white text-5xl items-center '>
+BLITZSCHLAG
+</div>
+<div className=' bg-black opacity-80 backdrop-blur-md rounded-lg p-8'>
+  
+  <p className='text-white text-xl font-black-ops-one my-4'> SIGN UP</p>
+  <SignupForm/>
+</div>
+    </div>
     </div>
   )
 }

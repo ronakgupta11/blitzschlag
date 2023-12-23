@@ -34,8 +34,15 @@ const num = Math.floor(Math.random() * 5) % 5
       ></div>
     
       <div className='fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-10'></div>
-    <div className='relative overflow-y-auto z-10 mx-16 py-12 flex flex-col items-center space-y-4'>
-    
+    <div className='relative overfolw-x-hidden z-10  py-12 flex flex-col lg:flex-row items-center justify-around space-y-4 w-full'>
+<div className='font-black-ops-one text-white text-5xl items-center '>
+BLITZSCHLAG
+</div>
+<div className=' bg-black opacity-80 backdrop-blur-md rounded-lg p-8'>
+  
+  <p className='text-white text-xl font-black-ops-one my-4'> LOGIN</p>
+  <LoginForm/>
+</div>
     </div>
     </div>
     

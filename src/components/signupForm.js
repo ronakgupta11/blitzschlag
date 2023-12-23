@@ -102,77 +102,100 @@ const handleClick = (e)=>{
 // console.log(errors)
 
   return (
-    <form className=" flex max-w-md !text-sm flex-col gap-2 contain">
-        <div>
-        <div className="mb-1 block">
-          <Label htmlFor="name" value="Name" />
-        </div>
-        <TextInput helperText={errors.name} color={errors.name?"failure":"gray"}   onChange={(e)=>{
-            dispatch(SET_ERRORS({...errors,name:""}))
-            
-            setName(e.target.value)}} id="name" type="text" placeholder="John Doe" required sizing={"sm"}/>
-      </div>
-      <div>
-        <div className="mb-1 block">
-          <Label htmlFor="email1" value="Email" />
-        </div>
-        <TextInput helperText={errors.email} color={errors.email?"failure":"gray"}  onChange={(e)=>{
-            // setErrors()
-            dispatch(SET_ERRORS({...errors,email:""}))
-
-            setEmail(e.target.value)}} id="email1" type="email" placeholder="name@blitzschlag.com" required  sizing={"sm"}/>
-      </div>
-      <div>
-        <div className="mb-1 block">
-          <Label htmlFor="phone" value="Phone" />
-        </div>
-        <TextInput helperText={errors.phone} color={errors.phone?"failure":"gray"}    onChange={(e)=>{
-            dispatch(SET_ERRORS({...errors,phone:""}))
-
-            setPhone(e.target.value)}} id="phone" type="text" placeholder="9999999999" required sizing={"sm"}/>
-      </div>
-      <div>
-        <div className="mb-1 block">
-          <Label htmlFor="college" value="College Name" />
-        </div>
-        <TextInput helperText={errors.college} color={errors.college?"failure":"gray"}   onChange={(e)=>{
-            dispatch(SET_ERRORS({...errors,college:""}))
-
-            
-            setCollege(e.target.value)}} id="college" type="text" placeholder="MNIT Jaipur" required sizing={"sm"} />
-      </div>
-      <div>
-        <div className="mb-1 block">
-          <Label htmlFor="referal" value="Referral Id" />
-        </div>
-        <TextInput helperText={errors.referal} color={errors.referal?"failure":"gray"}    onChange={(e)=>{
-            dispatch(SET_ERRORS({...errors,referal:""}))
-            
-            setReferal(e.target.value)}} id="referal" type="text" placeholder="(optional)" required sizing={"sm"} />
-      </div>
-
-      <div>
-        <div className="mb-1 block">
-          <Label htmlFor="password1" value="Password" />
-        </div>
-        <TextInput  helperText={errors.password} color={errors.password?"failure":"gray"}  onChange={(e)=>{
-            dispatch(SET_ERRORS({...errors,password:""}))
+    <div className=" flex flex-col gap-2 ">
 
 
-            setPass(e.target.value)}} id="password1" type="password" required sizing={"sm"} />
-      </div>
-      <div>
-        <div className="mb-1 block">
-          <Label htmlFor="password2" value="Confirm password" />
-        </div>
-        <TextInput helperText={errors.confirmPassword} color={errors.confirmPassword?"failure":"gray"}  onChange={(e)=>{
-                       dispatch(SET_ERRORS({...errors,confirmPassword:""}))
+      <label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">Your Name</span>
+  </div>
+  <input type="text" placeholder="John Doe" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,name:""}))
+            setName(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.name? "input-error":""}`} />
+  <div className="label">
+    {errors.name && <span className="label-text-alt text-red-500">{errors.name}</span>}
+  </div>
+</label>
 
-            setCnf(e.target.value)}} id="password2" type="password" required sizing={"sm"}/>
-      </div>
+
+      <label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">Your Email</span>
+  </div>
+  <input type="email" placeholder="blitzschlag@gmail.com" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,email:""}))
+            setEmail(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.email? "input-error":""}`} />
+  <div className="label">
+    {errors.email && <span className="label-text-alt text-red-500">{errors.email}</span>}
+  </div>
+</label>
+
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">Phone</span>
+  </div>
+  <input type="text" placeholder="9999-5842-58" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,phone:""}))
+            setPhone(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.phone? "input-error":""}`} />
+  <div className="label">
+    {errors.phone && <span className="label-text-alt text-red-500">{errors.phone}</span>}
+  </div>
+</label>
+
+
+
+
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">College Name</span>
+  </div>
+  <input type="text" placeholder="MNIT Jaipur" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,college:""}))
+            setCollege(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.college? "input-error":""}`} />
+  <div className="label">
+    {errors.college && <span className="label-text-alt text-red-500">{errors.college}</span>}
+  </div>
+</label>
+
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">Referal Id (optional)</span>
+  </div>
+  <input type="text" placeholder="optional" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,referal:""}))
+            setReferal(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.referal? "input-error":""}`} />
+  <div className="label">
+    {errors.referal && <span className="label-text-alt text-red-500">{errors.referal}</span>}
+  </div>
+</label>
+
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">Set password</span>
+  </div>
+  <input type="password" placeholder="********" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,password:""}))
+            setPass(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.password? "input-error":""}`} />
+  <div className="label">
+    {errors.password && <span className="label-text-alt text-red-500">{errors.password}</span>}
+  </div>
+</label>
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text text-white">Confirm Password</span>
+  </div>
+  <input type="password" placeholder="********" onChange={(e)=>{
+                   dispatch(SET_ERRORS({...errors,confirmPassword:""}))
+            setCnf(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs ${errors.confirmPassword? "input-error":""}`} />
+  <div className="label">
+    {errors.confirmPassword && <span className="label-text-alt text-red-500">{errors.confirmPassword}</span>}
+  </div>
+</label>
 {errors.general &&<p className='text-red-600 text-sm'>{errors.general}</p>}
 
-      <Button onClick={(e)=>handleClick(e)} type="submit">{loading?<Spinner/>:"Create Account"}</Button>
-    </form>
+      {/* <Button onClick={(e)=>handleClick(e)} type="submit">{loading?<Spinner/>:"Create Account"}</Button> */}
+<button className='bg-blue-700 text-white rounded-lg  py-2 w-full' onClick={(e)=>handleClick(e)} type="submit">{loading?<Spinner/>:"Create Account"}</button>
+
+    </div>
   );
 }
