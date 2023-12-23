@@ -1,7 +1,6 @@
 
 'use client';
 
-import { Button ,Spinner} from 'flowbite-react';
 import { url } from '@/constants';
 import { useState } from 'react';
 import axios from 'axios';
@@ -132,7 +131,7 @@ const handleForgot = ()=>{
         Forgot password?
     </p>
 </div>
-      <button className='bg-blue-700 text-white rounded-lg  py-2 w-full' onClick={handleClick} type="submit">{loading?<Spinner/>:"Login"}</button>
+      <button className='bg-blue-700 text-white rounded-lg  py-2 w-full' onClick={handleClick} type="submit">{loading?<span className="loading loading-dots loading-sm"></span>:"Login"}</button>
     </div>
   );
 }

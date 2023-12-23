@@ -1,7 +1,6 @@
 
 'use client';
 
-import { Button,  Label, TextInput ,Spinner} from 'flowbite-react';
 import { url } from '@/constants';
 import { useState } from 'react';
 import axios from 'axios';
@@ -194,7 +193,7 @@ const handleClick = (e)=>{
 {errors.general &&<p className='text-red-600 text-sm'>{errors.general}</p>}
 
       {/* <Button onClick={(e)=>handleClick(e)} type="submit">{loading?<Spinner/>:"Create Account"}</Button> */}
-<button className='bg-blue-700 text-white rounded-lg  py-2 w-full' onClick={(e)=>handleClick(e)} type="submit">{loading?<Spinner/>:"Create Account"}</button>
+<button className='bg-blue-700 text-white rounded-lg  py-2 w-full' onClick={(e)=>handleClick(e)} type="submit">{loading?<span className="loading loading-dots loading-sm"></span>:"Create Account"}</button>
 
     </div>
   );
