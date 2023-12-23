@@ -27,7 +27,7 @@ const num = Math.floor(Math.random() * 5) % 5
 
   },[auth])
   return (
-    <div className=' relative h-screen pl-24 '>
+    <div className=' relative h-screen pl-12 '>
     <div
         className='fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover'
         style={{ backgroundImage: `url(${imgArr[num].src})` }}

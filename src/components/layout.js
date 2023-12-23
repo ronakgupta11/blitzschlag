@@ -5,7 +5,7 @@ import React from 'react'
 function Layout({children}) {
   return (
     <div className='layout overflow-hidden '>
-<div className='sidebar fixed z-[9999999] mt-16'>
+<div className='sidebar fixed z-[9999999] lg:mt-12 '>
 
         <Sidebar/>
 </div>

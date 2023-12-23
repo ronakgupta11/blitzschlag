@@ -6,7 +6,7 @@ function Sidebar() {
     const [expanded,setExpanded] = useState( true)
   return (
     // <aside className={`h-screen ${ expanded ? "w-64" : "w-20"} `}>
-    <nav className={`flex flex-col  rounded-lg shadow-sm  ${ expanded ? "w-64 border " : "w-16 border-r border-white "} m-8 relative backdrop-blur text-white  font-black-ops-one text-sm `}>
+    <nav className={`flex flex-col  sm:rounded-lg shadow-sm  ${ expanded ? "w-64 border " : "w-16 border-r border-white "} lg:m-8 h-screen md:h-[400px] relative backdrop-blur text-white  font-black-ops-one text-sm `}>
       {/* <div className="flex justify-center  items-center">
         <img
           src="https://img.logoipsum.com/243.svg"
