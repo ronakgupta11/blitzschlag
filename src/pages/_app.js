@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
         // axios.defaults.headers.common["Authorization"] = token;
         
         
-          dispatch(SET_USER(profile));
+          dispatch(SET_USER(JSON.parse(profile)));
        
       }
     }

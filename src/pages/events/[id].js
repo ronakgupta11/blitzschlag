@@ -14,7 +14,12 @@ function eventPage() {
           ).catch(e=>console.error(e))
         },[id])
   return (
-    <div>eventPage</div>
+    <div>
+      <div>
+        Event header
+      </div>
+      
+      </div>
   )
 }
 

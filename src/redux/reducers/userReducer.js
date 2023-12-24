@@ -48,5 +48,7 @@ const initialState = {
 
  export const {SET_AUTHENTICATED,SET_UNAUTHENTICATED,SET_USER} = userSlice.actions
  export const selectAuthenticated = (state)=>state.user.authenticated
+ export const selectCredentials = (state)=>state.user.credentials
+ export const selectEvents = (state)=>state.user.registeredEvents
 
  export default userSlice.reducer

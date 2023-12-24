@@ -43,7 +43,8 @@ const userData =  {
           localStorage.setItem("BLITZID",BLITZID);
           axios.defaults.headers.common["Authorization"] = BLITZID;
           getUserData().then(res=>{
-            localStorage.setItem("BLITZUSER",res);
+            console.log("res",res)
+            localStorage.setItem("BLITZUSER",JSON.stringify(res));
 
             dispatch(SET_USER(res))
           });
