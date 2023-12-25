@@ -12,16 +12,16 @@ export default function events() {
 
   // },[])
   return (
-<div className=' relative pl-24 '>
+<div className=' relative'>
 <div
     className='fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover'
     style={{ backgroundImage: `url(${bgImage.src})` }}
   ></div>
 
   <div className='fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-10'></div>
-<div className='relative h-screen  z-10 overflow-x-hidden  p-20 flex flex-col items-center space-y-4'>
+<div className='relative h-screen z-10 overflow-x-hidden py-20 pl-10 w-[85%] md:w-[80%] m-auto flex flex-col items-center space-y-4'>
   <p className='font-black-ops-one text-white text-4xl text-center  '> EVENTS</p>
-  <input type='text' className='border-gray-300 focus:outline-none focus:border-gray-300 bg-transparent rounded-lg text-white  w-96 ' placeholder='Search for events'></input>
+  <input type='text' className='border-gray-300 focus:outline-none focus:border-gray-300 bg-transparent rounded-lg text-white w-60  md:w-96 ' placeholder='Search for events'></input>
 <div className='flex flex-wrap items-center justify-between  w-full'>
   <div className='font-black-ops-one p-4 m-4 rounded-md   bg-[#26272a] text-white'>
     Flagship Events

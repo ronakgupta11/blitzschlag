@@ -4,7 +4,11 @@ import { FaInstagram,FaEnvelope,FaLinkedin } from 'react-icons/fa'
 // import { FaLinkedin } from 'react-icons/fa'
 function TeamCard({name}) {
   return (
+    <div>
+      <div className='h-full w-full '></div>
+
     <div className='m-4 text-white'>
+
       <div>
         <img/>
       </div>
@@ -18,6 +22,8 @@ function TeamCard({name}) {
       </div>
 
     </div>
+    </div>
+
   )
 }
 
