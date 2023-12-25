@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SidebarItem from './SidebarItem'
 import {FaHome} from "react-icons/fa"
 
+
 function Sidebar() {
     const [expanded,setExpanded] = useState( true)
   return (
@@ -35,14 +36,14 @@ function Sidebar() {
             {/* <hr/> */}
             {/* <div className='my-8'></div> */}
             <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"About Us"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"Events"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"Schedule"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"Sponsors"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"Ambassador"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"Our Team"} expanded={expanded}/>
             <div className='my-8'></div>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
+            <SidebarItem  icon={<FaHome size={16}/>} text={"Login"} expanded={expanded}/>
 
 
 

@@ -1,8 +1,23 @@
 import React from 'react'
-
-function TeamCard() {
+// import { IoMdMail } from "react-icons/io"
+import { FaInstagram,FaEnvelope,FaLinkedin } from 'react-icons/fa'
+// import { FaLinkedin } from 'react-icons/fa'
+function TeamCard({name}) {
   return (
-    <div className='m-4 text-white'>TeamCard</div>
+    <div className='m-4 text-white'>
+      <div>
+        <img/>
+      </div>
+      <div className='flex flex-col items-center space-y-6'>
+        <p>{"Roank Gupta"}</p>
+        <div className='flex items-center space-x-2'>
+          <span><FaInstagram size={20}/></span>
+          <span><FaLinkedin size={20}/></span>
+          <span><FaEnvelope size={20}/></span>
+        </div>
+      </div>
+
+    </div>
   )
 }
 
