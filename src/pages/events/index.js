@@ -23,16 +23,16 @@ export default function events() {
   <p className='font-black-ops-one text-white text-4xl text-center  '> EVENTS</p>
   <input type='text' className='border-gray-300 focus:outline-none focus:border-gray-300 bg-transparent rounded-lg text-white w-60  md:w-96 ' placeholder='Search for events'></input>
 <div className='flex flex-wrap items-center justify-between  w-full'>
-  <div className='font-black-ops-one p-4 m-4 rounded-md   bg-[#26272a] text-white'>
-    Flagship Events
+  <div className='font-black-ops-one p-4 my-4 mx-2 rounded-md   bg-[#26272a] text-white'>
+    Flagship
   </div>
-  <div className='font-black-ops-one p-4 m-4 rounded-md   bg-[#26272a] text-white'>
+  <div className='font-black-ops-one p-4 my-4 mx-2 rounded-md   bg-[#26272a] text-white'>
     Club Events
   </div>
-  <div className='font-black-ops-one p-4 m-4 rounded-md   bg-[#26272a] text-white'>
-    Department Events
+  <div className='font-black-ops-one p-4 my-4 mx-2 rounded-md   bg-[#26272a] text-white'>
+    Department
   </div>
-  <div className='font-black-ops-one p-4 m-4 rounded-md   bg-[#26272a] text-white'>
+  <div className='font-black-ops-one p-4 my-4 mx-2 rounded-md   bg-[#26272a] text-white'>
     Competitions
   </div>
 

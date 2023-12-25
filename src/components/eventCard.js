@@ -6,7 +6,7 @@ export const EventCard = ({title,desc1,desc2}) => {
 <div className="relative w-full m-2 ">
   <div className=" absolute z-10 border rounded-lg h-full w-full " style={{background: 'linear-gradient(99deg, rgba(0, 22.45, 42.06, 0.80) 0%, rgba(65, 48, 90, 0.03) 100%)',boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',}}></div>
 
-<div className="relative flex flex-col space-y-2 md:flex-row p-8 overflow-x-hidden rounded-lg z-10 ">
+<div className="relative flex flex-col space-y-2 md:flex-row p-4 md:p-8 overflow-x-hidden rounded-lg z-10 ">
 
 
 
