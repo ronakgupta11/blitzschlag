@@ -5,7 +5,7 @@ import ambassdorP1 from "../../../public/assets/ambassdorP1.png";
 import ambassdorP2 from "../../../public/assets/ambassdorP2.png";
 
 import Image from "next/image";
-import MiddleCard from "@/components/MiddleCard";
+import MiddleCard from "@/components/ambassdorComponents/MiddleCard";
 import BottomMiddleCard from "@/components/ambassdorComponents/BottomMiddleCard";
 const index = () => {
   return (

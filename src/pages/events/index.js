@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import { url } from '@/constants'
 import axios from 'axios'
-import { EventCard } from '@/components/eventCard'
-import bgImage from "../../../public/assets/events.png"
+// import { EventCard } from '@/components/eventCard'
+import CategoriesCard from '@/components/eventsComponents/CategoriesCard'
+// import bgImage from "../../../public/assets/events.png"
+import EventHeader from '@/components/eventsComponents/EventHeader'
 export default function events() {
   // useEffect(()=>{
   //   axios.get(`${url}/events`)
@@ -12,7 +14,20 @@ export default function events() {
 
   // },[])
   return (
-<div className=' relative'>
+
+    <div className='flex flex-col items-center justify-center w-full'>
+      
+<EventHeader/>
+<CategoriesCard/>
+    </div>
+
+// </div>
+
+
+  )
+}
+
+{/* <div className=' relative'>
 <div
     className='fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover'
     style={{ backgroundImage: `url(${bgImage.src})` }}
@@ -42,11 +57,4 @@ export default function events() {
 <EventCard title={"Panache"} desc1={"Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably )"} desc2={"In this the group may consist of 8-16 members."}/>
 <EventCard title={"Panache"} desc1={"Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably )"} desc2={"In this the group may consist of 8-16 members."}/>
 </div>
-</div>
-
-// </div>
-
-
-  )
-}
-
+</div> */}

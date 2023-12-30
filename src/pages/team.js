@@ -5,7 +5,7 @@ import axios from 'axios'
 import bgImage from "../../public/assets/events.png"
 import TeamCard from '@/components/TeamCard'
 import EventRegisterModal from '@/components/EventRegisterModal'
-import CampusAmbassdorDialog from '@/components/CampusAmbassdorDialog'
+import CampusAmbassdorDialog from '@/components/ambassdorComponents/CampusAmbassdorDialog'
 
 export default function events() {
  
