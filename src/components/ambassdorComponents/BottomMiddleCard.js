@@ -9,8 +9,13 @@ const BottomMiddleCard = () => {
     <div className="bg-[#463000] ">
       <div className="flex sm:justify-center md:justify-between lg:justify-between  ">
         <Image className="hidden md:block" src={flower1}></Image>
-        <div className="text-white text-center font-BlackOpsOne text-[48px] font-normal leading-[40px] mt-[78px]">
-          Benefits you will enjoy!
+        <div className="w-full lg:flex flex-col align-middle justify-center gap-4 text-white text-center font-BlackOpsOne text-[36px] lg:text-[48px] font-normal leading-[40px] mt-[36px] lg:mt-[78px]">
+          <div className="">
+          Benefits you
+          </div>
+          <div>
+          will enjoy!
+          </div>
         </div>
         <Image className="hidden md:block" src={flower2}></Image>
       </div>
