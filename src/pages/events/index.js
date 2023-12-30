@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { url } from '@/constants'
 import axios from 'axios'
+import EventList from '@/components/eventsComponents/EventList'
 // import { EventCard } from '@/components/eventCard'
 import CategoriesCard from '@/components/eventsComponents/CategoriesCard'
 
@@ -18,7 +19,8 @@ export default function events() {
     <div className='flex flex-col items-center justify-center w-full'>
       
 <EventHeader/>
-<CategoriesCard/>
+<EventList/>
+{/* <CategoriesCard/> */}
     </div>
 
 // </div>

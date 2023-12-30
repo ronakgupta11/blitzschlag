@@ -10,7 +10,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 export default function SponsorList() {
   return (
-    <div className='bg-[#C66800] w-full flex flex-col items-center'>
+    <div className='bg-[#C66800] w-full flex flex-col items-center overflow-x-hidden'>
     <div className="flex w-full items-center relative ">
         <Image src={borderDown}></Image>
         <Image src={borderDown}></Image>
