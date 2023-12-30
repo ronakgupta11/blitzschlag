@@ -5,6 +5,7 @@ import borderDown from "../../../public/assets/sponsors/borderdown.png";
 import borderUp from "../../../public/assets/sponsors/borderup.png";
 import flower1 from "../../../public/assets/sponsors/flower1.png"
 import flower2 from "../../../public/assets/sponsors/flower2.png"
+import Link from 'next/link'
 
 import Image from 'next/image';
 export default function SponsorList() {
@@ -37,7 +38,8 @@ export default function SponsorList() {
 <SponsorCard src={bsnl} link={"/"}/>
 <SponsorCard src={bsnl} link={"/"}/>
         </div>
-<button className='bg-red btn hover:bg-[#4f0c26] hover:border-white rounded-[40px] border-2 my-4 text-white border-white py-4 px-16 bg-[#4f0c26]'>Sponsor Us</button>
+<button className='bg-red btn hover:bg-[#4f0c26] hover:border-white rounded-[40px] border-2 my-4 text-white border-white py-4 px-16 bg-[#4f0c26]'><Link href
+="https://forms.gle/1ViUV2xSo6Uq7Ayc7" target="_blank">Sponsor Us</Link></button>
 <div className="flex w-full items-center">
         <Image src={borderUp}></Image>
         <Image src={borderUp}></Image>

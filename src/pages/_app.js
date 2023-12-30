@@ -1,13 +1,13 @@
 import '@/styles/globals.css'
-import "@/styles/login.css"
+// import "@/styles/login.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { Provider } from 'react-redux';
 import store from '@/redux/store';
-import localFont from '@next/font/local'
+
 import { getUserData, logOutUser } from '@/redux/actions/userAction';
 import { SET_AUTHENTICATED, SET_UNAUTHENTICATED, SET_USER } from '@/redux/reducers/userReducer';
-import axios from 'axios';
+// import axios from 'axios';
 import { useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import Layout from '@/components/layout';
