@@ -3,7 +3,7 @@ import { url } from '@/constants'
 import axios from 'axios'
 // import { EventCard } from '@/components/eventCard'
 import CategoriesCard from '@/components/eventsComponents/CategoriesCard'
-// import bgImage from "../../../public/assets/events.png"
+
 import EventHeader from '@/components/eventsComponents/EventHeader'
 export default function events() {
   // useEffect(()=>{

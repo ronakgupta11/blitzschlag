@@ -1,8 +1,7 @@
 import colorLine from "../../../public/assets/colorline.svg";
 import ellipse55 from "../../../public/assets/Ellipse55.svg";
 import ellipse54 from "../../../public/assets/Ellipse54.svg";
-import ambassdorP1 from "../../../public/assets/ambassdorP1.png";
-import ambassdorP2 from "../../../public/assets/ambassdorP2.png";
+
 
 import Image from "next/image";
 import MiddleCard from "@/components/ambassdorComponents/MiddleCard";

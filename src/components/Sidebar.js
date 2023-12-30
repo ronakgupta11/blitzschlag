@@ -25,7 +25,7 @@ function Sidebar() {
       </div> */}
 
       {/* <SidebarContext.Provider value={{ expanded }}> */}
-  <div className='fixed h-full w-full bg-gradient-to-b from-[#070707] opacity-70 to-transparent rounded-lg z-10'></div>
+  <div className='fixed h-full w-full bg-gradient-to-b  opacity-70 to-transparent rounded-lg z-10'></div>
 <div className='relative z-10'>
 
         <ul className="flex-1 px-3">
