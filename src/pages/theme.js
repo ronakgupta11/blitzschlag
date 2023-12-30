@@ -9,7 +9,7 @@ import orange from "../../public/assets/theme/orange.png"
 import Image from 'next/image'
 const theme = () => {
   return (
-    <div className="bg-[#fffbed] min-h-screen relative w-full text-[#393939] text-lg font-amita flex flex-col items-center justify-center">
+    <div className="bg-[#fffbed] min-h-screen relative w-full text-[#393939] text-lg font-amita flex flex-col items-center justify-center p-4">
       <Image className="absolute top-0 right-0 rotate-90" src={flower1}/>
       <div className="flex m-2 w-full items-center justify-between">
         <Image src ={flower}/>
