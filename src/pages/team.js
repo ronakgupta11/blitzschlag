@@ -28,14 +28,14 @@ export default function team() {
   <Image className="absolute top-0 left-0" src ={flower1}/>
   <div className='flex w-full h-full flex-col md:flex-row items-center justify-around m-2 p-2 '>
 
-    <div className='cards flex flex-wrap'>
+    <div className='cards flex flex-wrap my-12'>
 <TeamCard/>
 <TeamCard/>
 <TeamCard/>
 <TeamCard/>
     </div>
     <div className=' text-[#606060]  text-lg font-amita h-full '>
-      <ul className='flex flex-row md:flex-col items-center justify-around space-x-3 '>
+      <ul className='flex flex-row md:flex-col items-center justify-around space-x-3 space-y-6 '>
         <li>Technical Team</li>
         <li>Technical Team</li>
         <li className='text-black text-xl border-b-2 border-black'>Technical Team</li>

@@ -6,7 +6,7 @@ function TeamCard({post,name,image}) {
   return (
     <div className='flex sm:flex-col m-4 items-center justify-center space-x-2 space-y-2'>
 
-    <div className='img-div flex flex-col w-full m-2'>
+    <div className='img-div flex flex-col w-full m-4'>
         <div className='rounded-full bg-red-500 w-12 h-12 self-end'></div>
         <div className='rounded-full bg-red-500 w-32 h-32 self-center flex items-center justify-center p-3'>
             <img className="rounded-full w-full h-full" src={"https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"}/>
