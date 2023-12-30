@@ -1,3 +1,4 @@
+import Footer from './Footer'
 import Sidebar from './Sidebar'
 import React from 'react'
 
@@ -14,6 +15,7 @@ function Layout({children}) {
 
         {children}
 </div>
+<Footer/>
     </div>
   )
 }
