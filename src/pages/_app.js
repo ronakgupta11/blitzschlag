@@ -11,6 +11,7 @@ import { SET_AUTHENTICATED, SET_UNAUTHENTICATED, SET_USER } from '@/redux/reduce
 import { useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import Layout from '@/components/layout';
+import axios from 'axios';
 
 // const samakarn = localFont({
 //   src: [
@@ -30,6 +31,8 @@ export default function App({ Component, pageProps }) {
 
     const token = localStorage.getItem("BLITZID");
     const profile = localStorage.getItem("BLITZUSER")
+    axios.defaults.headers.common["Authorization"] = token;
+
     if (token) {
       const decoded = jwtDecode(token);
 

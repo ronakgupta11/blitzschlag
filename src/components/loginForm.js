@@ -43,14 +43,14 @@ const userData =  {
           localStorage.setItem("BLITZID",BLITZID);
           axios.defaults.headers.common["Authorization"] = BLITZID;
           getUserData().then(res=>{
-            console.log("res",res)
+            // console.log("res",res)
             localStorage.setItem("BLITZUSER",JSON.stringify(res));
 
             dispatch(SET_USER(res))
           });
           dispatch(CLEAR_ERRORS())
           successLogin()
-          router.push("/")
+          // router.push("/")
 
       }
   ).catch(

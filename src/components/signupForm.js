@@ -78,7 +78,7 @@ const handleClick = (e)=>{
             });
             dispatch(CLEAR_ERRORS())
             successCreate()
-            router.push("/")
+            // router.push("/")
   
         }
     ).catch(
