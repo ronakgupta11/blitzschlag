@@ -15,10 +15,10 @@ export default function EventList() {
         {/* <Image src={borderDown2}></Image> */}
       </div>
       <div
-      className='absolute flex font-amita  text-white md:text-md text-sm border-white'
+      className=' z-10 absolute flex font-amita  text-white md:text-md text-sm border-white'
 
       >
-        <button className='h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-4 rounded-bl-3xl bg-[#a86a32]'>Flagship</button>
+        <button className=' h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-4 rounded-bl-3xl bg-[#a86a32]'>Flagship</button>
         <button className='h-full border-b-2  px-8 md:px-12 py-2 md:py-4 bg-[#a86a32]'>Club Events</button>
         <button className='h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-4 rounded-br-3xl bg-[#a86a32]'>Department</button>
         
