@@ -51,8 +51,9 @@ export default function EventList() {
       </div>}
       {selectedTab === 2 &&<div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center ">
     
-        <EventCard1 />
-        <EventCard2 />
+       <p className="text-4xl font-amita text-center text-white min-h-60">
+        No Events Here yet
+        </p>
         
       </div>}
 
