@@ -6,6 +6,7 @@ import Image from "next/image";
 import axios from "axios";
 import { url } from "@/constants";
 import img from "/public/assets/img4.png";
+import LeftArrow from "/public/icons/left_arrow.svg";
 
 function eventPage() {
   const router = useRouter();
@@ -59,7 +60,10 @@ function eventPage() {
           </div>
         </div>
         <div className="mt-[52px] flex gap-[100px]">
-          <div className="color-[#00293E] text-[20px] text-[#202020]">Back</div>
+          <div className="color-[#00293E] text-[20px] text-[#202020] flex gap-[7px] items-center">
+            {" "}
+            <Image src={LeftArrow} /> Back
+          </div>
           <button className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white">
             Register
           </button>
@@ -76,7 +80,7 @@ function eventPage() {
           src={img}
           width={400}
           height={600}
-          className="border-r-8 border-b-8 border-[#fb5e3f] relative left-[30%]"
+          className={`border-r-8 border-b-8 border-[#fb5e3f] relative left-[30%] ${styles.rightImg}`}
         />
         <div className="flex w-full items-center">
           {/* <Image src={borderDown}></Image> */}
