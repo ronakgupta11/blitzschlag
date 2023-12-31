@@ -23,7 +23,7 @@ function eventPage() {
   return (
     <div className="bg-black w-full flex h-full">
       <div
-        className={`${styles.cont1} pl-[60px] flex flex-col gap-[25px] pt-[60px] pb-[40px]`}
+        className={`${styles.cont1} pl-[60px] pr-[140px] flex flex-col gap-[25px] pt-[60px] pb-[50px] w-[80%]`}
       >
         <p className="text-[60px] text-[#751300]">PANACHE</p>
         <p className="text-[#313131] text-[14px] text-justify z-10">
@@ -48,18 +48,26 @@ function eventPage() {
           suscipit lectus adipiscing aliquet sit. Integer felis felis
           sollicitudin elementum malesuada rhoncus purus id sollicitudin.
         </p>
-        <div className="flex gap-[150px] items-center">
+        <div className="flex gap-[150px] items-center font-amita">
           <div>
-            <div className="text-[#202020] text-[20px]">Venue: OAT</div>
-            <div className="text-[#202020] text-[20px]">Date: 2.02.2024</div>
-            <div className="text-[#202020] text-[20px]">Time: 6:00pm</div>
+            <div className="text-[#202020] text-[20px]">
+              <span className="font-bold">Venue:</span> OAT
+            </div>
+            <div className="text-[#202020] text-[20px]">
+              <span className="font-bold">Date:</span> 2.02.2024
+            </div>
+            <div className="text-[#202020] text-[20px]">
+              <span className="font-bold">Time:</span> 6:00pm
+            </div>
           </div>
           <div>
             <div className="text-[#202020] text-[30px]">Prize Worth</div>
-            <div className="text-[#202020] text-[42px] font-bold">80k</div>
+            <div className="text-[#202020] text-[42px] font-bold text-right">
+              ₹ 80k
+            </div>
           </div>
         </div>
-        <div className="mt-[52px] flex gap-[100px]">
+        <div className="mt-[52px] flex gap-[200px] font-amita">
           <div className="color-[#00293E] text-[20px] text-[#202020] flex gap-[7px] items-center">
             {" "}
             <Image src={LeftArrow} /> Back
@@ -72,17 +80,21 @@ function eventPage() {
 
       <div className="flex flex-col gap-[100px] justify-between">
         {/* <div> */}
-        <div className="flex w-full items-center relative ">
+        <div className="flex w-full items-center relative">
+          {/* <Image className="rotate-180" src={borderDown}></Image> */}
           <Image className="rotate-180" src={borderDown}></Image>
           <Image className="rotate-180" src={borderDown}></Image>
         </div>
+        {/* <div className="width-[500px] height-[800px]"> */}
         <Image
           src={img}
-          width={400}
-          height={600}
-          className={`border-r-8 border-b-8 border-[#fb5e3f] relative left-[30%] ${styles.rightImg}`}
+          width={500}
+          height={800}
+          className={`border-r-8 border-b-8 border-[#fb5e3f] relative left-[10%] ${styles.rightImg}`}
         />
-        <div className="flex w-full items-center">
+        {/* </div> */}
+
+        <div className="flex w-full items-center relative">
           {/* <Image src={borderDown}></Image> */}
           <Image src={borderDown}></Image>
           <Image src={borderDown}></Image>
