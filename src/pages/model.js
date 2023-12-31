@@ -5,11 +5,11 @@ import { Suspense, useEffect, useRef, useState } from "react";
 // import sakura from "../assets/sakura.mp3";
 // import { HomeInfo, Loader } from "../components";
 // import { soundoff, soundon } from "../assets/icons";
-// import {  Plane, Sky } from "../models";
+import { IndianGazebo } from "@/models/IndianGazebo";
 import { Sky } from "@/models/Sky";
-import { Plane } from "@/models/Plane";
-import { Fort } from "@/models/fort";
-
+import { Plane } from "@/models/Plane"
+import { Bird } from "@/models";
+import { Desert } from "@/models";
 const Model = () => {
 //   const audioRef = useRef(new Audio(sakura));
 //   audioRef.current.volume = 0.4;
@@ -89,11 +89,10 @@ const Model = () => {
             intensity={1}
           />
 
-          {/* <Bird /> */}
-          {/* <Sky isRotating={isRotating} /> */}
-          <Fort isRotating={isRotating} />
-          {/* {
-            <Island
+          <Bird />
+          <Sky isRotating={isRotating} />
+          
+            <IndianGazebo
               isRotating={isRotating}
               setIsRotating={setIsRotating}
               setCurrentStage={setCurrentStage}
@@ -101,7 +100,7 @@ const Model = () => {
               rotation={[0.1, 4.7077, 0]}
               scale={islandScale}
             />
-          } */}
+          
           {/* <Fort/> */}
           
 
@@ -111,6 +110,8 @@ const Model = () => {
             rotation={[0, 20.1, 0]}
             scale={biplaneScale}
           />
+          
+
         </Suspense>
       </Canvas>
 
