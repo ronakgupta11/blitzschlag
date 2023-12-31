@@ -13,7 +13,7 @@ function EventCard({name,desc,image,id}) {
       <p className='md:text-lg text-md'>
       Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably ).  
       </p>
-      <button className='px-4 text-white py-2 btn hover:border-white hover:bg-[#9D390E] hover:text-white bg-[#9D390E] border-white border-2 rounded-3xl'>Know more</button>
+      <button className='px-4 text-sm text-white  btn hover:border-white hover:bg-[#9D390E] hover:text-white bg-[#9D390E] border-white border-2 rounded-3xl'>Know more</button>
 
       </div>
         

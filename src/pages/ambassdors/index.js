@@ -40,7 +40,7 @@ const index = () => {
 
      <MiddleCard/>
      <BottomMiddleCard/>
-     <Footer/>
+     {/* <Footer/> */}
     </div>
   );
 };

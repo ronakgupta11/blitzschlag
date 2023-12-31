@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "sankaran";
+  src: url("../../public/fonts/SAMARN__.TTF");
+}
 ::-webkit-scrollbar {
     height: 5px;
     width: 5px;

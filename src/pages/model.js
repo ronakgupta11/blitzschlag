@@ -8,6 +8,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 // import {  Plane, Sky } from "../models";
 import { Sky } from "@/models/Sky";
 import { Plane } from "@/models/Plane";
+import { Fort } from "@/models/fort";
 
 const Model = () => {
 //   const audioRef = useRef(new Audio(sakura));
@@ -89,7 +90,8 @@ const Model = () => {
           />
 
           {/* <Bird /> */}
-          <Sky isRotating={isRotating} />
+          {/* <Sky isRotating={isRotating} /> */}
+          <Fort isRotating={isRotating} />
           {/* {
             <Island
               isRotating={isRotating}
