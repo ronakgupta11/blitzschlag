@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import BlitzLogo from "../../public/assets/Footer/BlitzLogo.png";
+import Link from "next/link";
 function Footer() {
   return (
     <div className="bg-[#140E00]">
@@ -10,8 +11,8 @@ function Footer() {
             <Image src={BlitzLogo}></Image>
           </div>
           <div
-            style={{ fontFamily: "BlackOpsOne" }}
-            className="text-white text-center font-BlackOpsOne text-[16px] font-normal leading-[44px]"
+            
+            className="text-white text-center font-sankaran text-[16px]  leading-[44px]"
           >
             BLITZSCHALG’24
           </div>
@@ -20,36 +21,36 @@ function Footer() {
         <div 
         style={{ fontFamily: "BlackOpsOne" }}
         className="flex flex-col  lg:gap-y-11 align-middle lg:max-w-[50%] ">
-          <div className="text-white text-center font-BlackOpsOne text-[20px] lg:text-[40px] font-normal leading-[44px]">
+          <div className="text-white text-center font-sankaran text-[20px] lg:text-[40px] font-normal leading-[44px]">
             Quick Links
           </div>
-          <div className=" flex align-middle lg:gap-y-5 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-BlackOpsOne text-[12.5px] lg:text-[25px] font-normal leading-[44px]">
+          <div className=" flex align-middle lg:gap-y-5 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-amita text-[12.5px] md:text-[20px] font-normal leading-[44px]">
             <div className="text-center">
-              <a className="text-center" href="">
+              <Link className="text-center" href="/">
                 Home
-              </a>
+              </Link>
             </div>
             <div className="">
-              <a href="">Events</a>
+              <Link href="/events">Events</Link>
             </div>
             <div className="">
-              <a href="">About Us</a>
+              <Link href="/about">About Us</Link>
             </div>
             <div className="">
-              <a href="">Register</a>
+              <Link href="/register">Register</Link>
             </div>
             <div className="">
-              <a href="">Campus Ambassador</a>
+              <Link href="/ambassadors">Campus Ambassador</Link>
             </div>
             <div className="">
-              <a href="">Contact Us</a>
+              <Link href="/team">Contact Us</Link>
             </div>
           </div>
         </div>
         
-        <div style={{ fontFamily: "BlackOpsOne" }} className="lg:max-w-[25%]">
-          <div className="flex justify-center gap-y-5 lg:gap-y-12  align-middle  flex-col text-white text-center font-BlackOpsOne text-[25px] font-normal leading-[44px]">
-            <div className="text-center">Connect With Us</div>
+        <div  className="lg:max-w-[25%] ">
+          <div className="flex justify-center gap-y-5 lg:gap-y-12  align-middle flex-col text-white text-center font-BlackOpsOne md:text-[25px] text-[20px] font-normal leading-[44px]">
+            <div className="text-center font-sankaran">Connect With Us</div>
             <div className="flex justify-center">
             <div className=" flex align-middle justify-center w-[88px] h-[88px] flex-wrap gap-[40px]">
               <a href="">

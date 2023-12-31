@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EventCard = ({title,desc1,desc2}) => {
+export const EventCard = ({title,desc1,desc2,pos}) => {
   return (
 
 <div className="relative w-full m-2 ">

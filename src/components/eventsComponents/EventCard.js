@@ -8,12 +8,12 @@ function EventCard({name,desc,image,id}) {
         <Image className='w-full h-full rounded-lg' src={img}/>
 
       </div>
-      <div className='flex flex-col bg-[#894e0d] px-6 items-center font-amita text-white justify-around md:w-96 w-72 h-48 md:h-56 border-b-2 border-t-2 border-r-2  rounded-br-[80px] '> 
+      <div className='flex flex-col bg-[#894e0d] px-6 items-center font-amita text-white justify-around md:w-96 w-72 h-48 md:h-56 border-b-2 border-t-2 border-r-2  rounded-br-[100px] '> 
       <p className=' md:text-2xl text-lg font-bold'>Panache</p>
       <p className='md:text-lg text-md'>
       Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably ).  
       </p>
-      <button className='px-4 text-sm text-white  btn hover:border-white hover:bg-[#9D390E] hover:text-white bg-[#9D390E] border-white border-2 rounded-3xl'>Know more</button>
+      <button className='px-4 text-sm text-white py-1  bg-[#9D390E] border-white border rounded-3xl'>Know more</button>
 
       </div>
         

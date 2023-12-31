@@ -2,11 +2,9 @@ import React from 'react'
 import bsnl from "../../../public/assets/sponsors/BSNL.png"
 import SponsorCard from './SponsorCard'
 import borderDown from "../../../public/assets/sponsors/borderdown.png";
-import borderUp from "../../../public/assets/sponsors/borderup.png";
 import flower1 from "../../../public/assets/sponsors/flower1.png"
 import flower2 from "../../../public/assets/sponsors/flower2.png"
 import Link from 'next/link'
-
 import Image from 'next/image';
 export default function SponsorList() {
   return (
@@ -20,7 +18,7 @@ export default function SponsorList() {
       <div
       className='absolute rounded-b-3xl bg-[#4f0c26] px-8 md:px-12 py-2 md:py-4 border-b-2 border-r-2 border-l-2 border-white'
 
-      ><p className='text-white'>Our Sponsors</p></div>
+      ><p className='text-white font-sankaran text-[12px] lg:text-[20px]'>Our Sponsors</p></div>
 <div className='absolute flex w-full justify-between'>
     <Image src ={flower1}/>
     <Image src ={flower2}/>
@@ -38,7 +36,7 @@ export default function SponsorList() {
 <SponsorCard src={bsnl} link={"/"}/>
 <SponsorCard src={bsnl} link={"/"}/>
         </div>
-<button className='bg-red btn hover:bg-[#4f0c26] hover:border-white rounded-[40px] border-2 my-4 text-white border-white py-4 px-16 bg-[#4f0c26]'>
+<button className='bg-red btn hover:bg-[#4f0c26] font-sankaran  hover:border-white rounded-[40px] border-2 my-4 text-white border-white px-16 text-[20px] bg-[#4f0c26]'>
     <Link href="https://forms.gle/1ViUV2xSo6Uq7Ayc7" target="_blank">
     Sponsor Us
 </Link>

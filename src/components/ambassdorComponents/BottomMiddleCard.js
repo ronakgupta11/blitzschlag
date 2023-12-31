@@ -7,9 +7,9 @@ import flower2 from "../../../public/assets/flower2.png";
 const BottomMiddleCard = () => {
   return (
     <div className="bg-[#463000] ">
-      <div className="flex sm:justify-center md:justify-between lg:justify-between  ">
+      <div className="flex sm:justify-center md:justify-between lg:justify-between   ">
         <Image className="hidden md:block" src={flower1}></Image>
-        <div className="w-full lg:flex flex-col align-middle justify-center gap-4 text-white text-center font-BlackOpsOne text-[36px] lg:text-[48px] font-normal leading-[40px] mt-[36px] lg:mt-[78px]">
+        <div className="w-full lg:flex flex-col align-middle justify-center gap-4 text-white text-center font-sankaran text-[36px] lg:text-[48px] font-normal leading-[40px] mt-[36px] lg:mt-[78px]">
           <div className="">
           Benefits you
           </div>
@@ -21,17 +21,17 @@ const BottomMiddleCard = () => {
       </div>
       <div className="flex ml-5 justify-center w-[100%]  ">
       <div 
-      className="flex gap-[64px] gap-x-[94px] max-w-[1084px] mt-[35px] justify-center align-middle  flex-wrap ">
+      className="flex gap-[64px] gap-x-[94px] max-w-[1084px] mt-[35px] justify-center align-middle mb-12 flex-wrap ">
         {/* 1 */}
         <div className="flex-[45%]">
           <div className="flex justify-center gap-2 ">
-            <p className="text-[#E9B704] pt-1 text-center font-BlackOpsOne text-[64px] font-normal leading-[40px]">
+            <p className="text-[#E9B704] pt-1 text-center font-sankaran lg:text-[64px] text-[40px]  font-normal leading-[40px]">
               1
             </p>
             <div style={{textAlign:"start"}}>
             <div 
             style={{fontFamily:"amita"}}
-            className="text-white max-w-[250px] text-[40px] font-bold leading-[39px] tracking-[-1.2px]">
+            className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]">
             Goods and Merchandise
           </div>
           <p 
@@ -47,13 +47,13 @@ const BottomMiddleCard = () => {
         {/* 2 */}
         <div className="flex-[45%]">
           <div className="flex justify-center gap-2 ">
-            <p className="text-[#E9B704] pt-1 text-center font-BlackOpsOne text-[64px] font-normal leading-[40px]">
+            <p className="text-[#E9B704] pt-1 text-center font-sankaran lg:text-[64px] text-[40px]  font-normal leading-[40px]">
               2
             </p>
             <div style={{textAlign:"start"}}>
             <div 
             style={{fontFamily:"amita"}}
-            className="text-white max-w-[250px] text-[40px] font-bold leading-[39px] tracking-[-1.2px]">
+            className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]">
             Networking
           </div>
           <p 
@@ -69,13 +69,13 @@ const BottomMiddleCard = () => {
         {/* 3 */}
         <div className="flex-[45%]">
           <div className="flex gap-2 justify-center ">
-            <p className="text-[#E9B704] pt-1 text-center font-BlackOpsOne text-[64px] font-normal leading-[40px]">
+            <p className="text-[#E9B704] pt-1 text-center font-sankaran lg:text-[64px] text-[40px]  font-normal leading-[40px]">
               3
             </p>
             <div style={{textAlign:"start"}}>
             <div 
             style={{fontFamily:"amita"}}
-            className="text-white max-w-[250px] text-[40px] font-bold leading-[39px] tracking-[-1.2px]">
+            className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]">
             Take Charge
           </div>
           <p 
@@ -91,13 +91,13 @@ const BottomMiddleCard = () => {
         {/* 4 */}
         <div className="flex-[45%]">
           <div className="flex gap-2 justify-center ">
-            <p className="text-[#E9B704] pt-1 text-center font-BlackOpsOne text-[64px] font-normal leading-[40px]">
+            <p className="text-[#E9B704] pt-1 text-center font-sankaran lg:text-[64px] text-[40px]  font-normal leading-[40px]">
               4
             </p>
             <div style={{textAlign:"start"}}>
             <div 
             style={{fontFamily:"amita"}}
-            className="text-white max-w-[250px] text-[40px] font-bold leading-[39px] tracking-[-1.2px]">
+            className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]">
             Passes
           </div>
           <p 
@@ -113,13 +113,13 @@ const BottomMiddleCard = () => {
         {/* 5 */}
         <div className="flex-[45%]">
           <div className="flex gap-2 justify-center ">
-            <p className="text-[#E9B704] pt-1 text-center font-BlackOpsOne text-[64px] font-normal leading-[40px]">
+            <p className="text-[#E9B704] pt-1 text-center font-sankaran lg:text-[64px] text-[40px]  font-normal leading-[40px]">
               5
             </p>
             <div style={{textAlign:"start"}}>
             <div 
             style={{fontFamily:"amita"}}
-            className="text-white max-w-[250px] text-[40px] font-bold leading-[39px] tracking-[-1.2px]">
+            className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]">
             Certification
           </div>
           <p 
@@ -135,13 +135,13 @@ const BottomMiddleCard = () => {
         {/* 6 */}
         <div className="flex-[45%]">
           <div className="flex gap-2 justify-center ">
-            <p className="text-[#E9B704] pt-1 text-center font-BlackOpsOne text-[64px] font-normal leading-[40px]">
+            <p className="text-[#E9B704] pt-1 text-center font-sankaran lg:text-[64px] text-[40px]  font-normal leading-[40px]">
               6
             </p>
             <div style={{textAlign:"start"}}>
             <div 
             style={{fontFamily:"amita"}}
-            className="text-white max-w-[250px] text-[40px] font-bold leading-[39px] tracking-[-1.2px]">
+            className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]">
             The Top Chart
           </div>
           <p 
