@@ -14,6 +14,11 @@ export default function events() {
   //   ).catch(e=>console.error(e))
 
   // },[])
+
+  useEffect(() => {
+    // Scroll the page on component mount
+    window.scrollTo({ top: 100, behavior: 'smooth' }); // Adjust the value based on how much you want to scroll
+  }, []);
   return (
 
     <div className='flex flex-col items-center justify-center w-full'>
