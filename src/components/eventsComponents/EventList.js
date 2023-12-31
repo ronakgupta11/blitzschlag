@@ -15,7 +15,7 @@ return (
 {/* <Image src={borderDown2}></Image> */}
       </div>
       <div className=' z-10 absolute flex font-sankaran  text-white md:text-md text-sm border-white '>
-        <button className=' h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 rounded-bl-3xl bg-[#a86a32]'>Flagship Events</button>
+        <button className=' h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 text-[#721542] rounded-bl-3xl bg-white'>Flagship Events</button>
         <button className='h-full border-b-2  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32]'>Club Events</button>
         <button className='h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 rounded-br-3xl bg-[#a86a32]'>Department Events</button>
 </div>
