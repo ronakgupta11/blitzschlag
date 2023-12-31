@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         "black-ops-one": "'Black Ops One'",
         amita: "Amita",
+        sankaran:"sankaran"
       },
       // fontSize: {
       //   xl: "20px",
