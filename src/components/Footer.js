@@ -10,15 +10,17 @@ function Footer() {
             <Image src={BlitzLogo}></Image>
           </div>
           <div
-            style={{ fontFamily: "Samarkan" }}
-            className="text-white text-center font-Samarkan text-[16px] font-normal leading-[44px]"
+            style={{ fontFamily: "BlackOpsOne" }}
+            className="text-white text-center font-BlackOpsOne text-[16px] font-normal leading-[44px]"
           >
             BLITZSCHALG’24
           </div>
         </div>
 
-        <div className="flex flex-col  lg:gap-y-11 align-middle lg:max-w-[50%] ">
-          <div className="text-white text-center font-Samarkan text-[20px] lg:text-[40px] font-normal leading-[44px]">
+        <div 
+        style={{ fontFamily: "BlackOpsOne" }}
+        className="flex flex-col  lg:gap-y-11 align-middle lg:max-w-[50%] ">
+          <div className="text-white text-center font-BlackOpsOne text-[20px] lg:text-[40px] font-normal leading-[44px]">
             Quick Links
           </div>
           <div className=" flex align-middle lg:gap-y-5 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-BlackOpsOne text-[12.5px] lg:text-[25px] font-normal leading-[44px]">
@@ -45,7 +47,7 @@ function Footer() {
           </div>
         </div>
         
-        <div className="lg:max-w-[25%]">
+        <div style={{ fontFamily: "BlackOpsOne" }} className="lg:max-w-[25%]">
           <div className="flex justify-center gap-y-5 lg:gap-y-12  align-middle  flex-col text-white text-center font-BlackOpsOne text-[25px] font-normal leading-[44px]">
             <div className="text-center">Connect With Us</div>
             <div className="flex justify-center">
