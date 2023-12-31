@@ -8,7 +8,7 @@ function Layout({children}) {
     <div className='layout '>
 <div className='sidebar fixed z-[9999999]  '>
 
-        <Sidebar/>
+        {/* <Sidebar/> */}
 </div>
 <div className='content flex-1 relative w-full '>
 
