@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 import { selectAuthenticated } from '@/redux/reducers/userReducer'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
-import img from "../../public/assets/login/image.jpg"
+import img from "../../public/assets/login/Image.jpg"
 
 function register() {
   const router = useRouter()

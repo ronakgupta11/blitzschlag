@@ -4,7 +4,7 @@ import { selectAuthenticated } from '@/redux/reducers/userReducer'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
 // import "./styles/login.css"
-import img from "../../public/assets/login/image.jpg"
+import img from "../../public/assets/login/Image.jpg"
 // import img1 from "../../public/assets/img2.png";
 // import img2 from "../../public/assets/img3.png";
 // import img3 from "../../public/assets/img4.png";
