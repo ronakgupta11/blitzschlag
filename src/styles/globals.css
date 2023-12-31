@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "sankaran";
-  src: url("../../public/fonts/SAMARN__.TTF");
+  src: url("/fonts/SAMARN__.TTF");
 }
 ::-webkit-scrollbar {
     height: 5px;
