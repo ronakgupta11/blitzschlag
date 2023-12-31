@@ -3,7 +3,8 @@ import borderDown from "../../../public/assets/events/border.png";
 import flower1 from "../../../public/assets/sponsors/flower1.png"
 import flower2 from "../../../public/assets/sponsors/flower2.png"
 import Image from 'next/image';
-import EventCard from './EventCard';
+import EventCard1 from './EventCard1';
+import EventCard2 from './EventCard2';
 export default function EventList() {
 return (
 <div className='bg-[#883800] w-full flex flex-col items-center overflow-x-hidden'>
@@ -23,14 +24,14 @@ return (
     <Image src ={flower2}/>
 </div>
 <div className=' z-10 flex flex-wrap m-3 p-3 items-center justify-center '>
-<EventCard/>
-<EventCard/>
-<EventCard/>
-<EventCard/>
-<EventCard/>
-<EventCard/>
-<EventCard/>
-<EventCard/>
+<EventCard1/>
+<EventCard2/>
+<EventCard1/>
+<EventCard2/>
+<EventCard1/>
+<EventCard2/>
+<EventCard1/>
+<EventCard2/>
         </div>
 
 <div className="flex w-full items-center">
