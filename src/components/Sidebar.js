@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
-import SidebarItem from './SidebarItem'
-import {FaHome} from "react-icons/fa"
-
+import React, { useState } from "react";
+import SidebarItem from "./SidebarItem";
+import { FaHome } from "react-icons/fa";
 
 function Sidebar() {
-    const [expanded,setExpanded] = useState( true)
+  const [expanded, setExpanded] = useState(true);
   return (
     // <aside className={`h-screen ${ expanded ? "w-64" : "w-20"} `}>
-    <nav className={`flex flex-col  sm:rounded-lg shadow-sm  ${ expanded ? "w-64 border " : "w-16 border-r border-white "} lg:m-8 h-screen md:h-[calc(100vh-50px)] relative backdrop-blur text-white my-auto  font-black-ops-one text-sm `}>
+    <nav
+      className={`flex flex-col  sm:rounded-lg shadow-sm  ${
+        expanded ? "w-64 border " : "w-16 border-r border-white "
+      } lg:m-8 h-screen md:h-[calc(100vh-50px)] relative backdrop-blur text-white my-auto  font-black-ops-one text-sm `}
+    >
       {/* <div className="flex justify-center  items-center">
         <img
           src="https://img.logoipsum.com/243.svg"
@@ -25,35 +28,65 @@ function Sidebar() {
       </div> */}
 
       {/* <SidebarContext.Provider value={{ expanded }}> */}
-  <div className='fixed h-full w-full bg-gradient-to-b  opacity-70 to-transparent rounded-lg z-10'></div>
-<div className='relative z-10'>
-
+      <div className="fixed h-full w-full bg-gradient-to-b  opacity-70 to-transparent rounded-lg z-10"></div>
+      <div className="relative z-10">
         <ul className="flex-1 px-3">
-<div className='my-8' onClick = {() => setExpanded((curr) => !curr)}>
-
-            <SidebarItem  icon={<FaHome size={20}/>} text={"Blitzschlag"} expanded={expanded}/>
-</div>
-            {/* <hr/> */}
-            {/* <div className='my-8'></div> */}
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Home"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"About Us"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Events"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Schedule"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Sponsors"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Ambassador"} expanded={expanded}/>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Our Team"} expanded={expanded}/>
-            <div className='my-8'></div>
-            <SidebarItem  icon={<FaHome size={16}/>} text={"Login"} expanded={expanded}/>
-
-
-
+          <div className="my-8" onClick={() => setExpanded((curr) => !curr)}>
+            <SidebarItem
+              icon={<FaHome size={20} />}
+              text={"Blitzschlag"}
+              expanded={expanded}
+            />
+          </div>
+          {/* <hr/> */}
+          {/* <div className='my-8'></div> */}
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Home"}
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"About Us"}
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Events"}
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Schedule"}
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Sponsors"}
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Ambassador"}
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Our Team"}
+            expanded={expanded}
+          />
+          <div className="my-8"></div>
+          <SidebarItem
+            icon={<FaHome size={16} />}
+            text={"Login"}
+            expanded={expanded}
+          />
         </ul>
-      {/* </SidebarContext.Provider> */}
+        {/* </SidebarContext.Provider> */}
       </div>
-
     </nav>
-//   </aside>
-  )
+    //   </aside>
+  );
 }
 
-export default Sidebar
+export default Sidebar;

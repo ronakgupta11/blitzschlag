@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
@@ -10,23 +10,23 @@ import { Sky } from "@/models/Sky";
 import { Plane } from "@/models/Plane";
 
 const Model = () => {
-//   const audioRef = useRef(new Audio(sakura));
-//   audioRef.current.volume = 0.4;
-//   audioRef.current.loop = true;
+  //   const audioRef = useRef(new Audio(sakura));
+  //   audioRef.current.volume = 0.4;
+  //   audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
-//   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  //   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-//   useEffect(() => {
-//     if (isPlayingMusic) {
-//       audioRef.current.play();
-//     }
+  //   useEffect(() => {
+  //     if (isPlayingMusic) {
+  //       audioRef.current.play();
+  //     }
 
-//     return () => {
-//       audioRef.current.pause();
-//     };
-//   }, [isPlayingMusic]);
+  //     return () => {
+  //       audioRef.current.pause();
+  //     };
+  //   }, [isPlayingMusic]);
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
@@ -101,7 +101,6 @@ const Model = () => {
             />
           } */}
           {/* <Fort/> */}
-          
 
           <Plane
             isRotating={isRotating}
