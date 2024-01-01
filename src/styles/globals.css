@@ -13,7 +13,7 @@
     width: 5px;
     background: "#FFFFFF";
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: "#FF002F";
     -webkit-border-radius: 1ex;
