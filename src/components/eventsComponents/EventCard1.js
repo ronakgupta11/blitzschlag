@@ -5,7 +5,7 @@ import img from "../../../public/assets/events/event.png"
 function EventCard1({name,desc,image,id}) {
 
   return (
-    <div className="flex relative items-center scale-70 ml-28 md:ml-0 md:scale-90 m-4">
+    <div className="flex relative items-center scale-60 ml-28 md:ml-0 md:scale-90 m-4">
       <div className="image absolute -left-20 md:-left-32 -top-4  h-44 md:h-64">
         <Image className="w-full h-full rounded-lg" src={img} />
       </div>
