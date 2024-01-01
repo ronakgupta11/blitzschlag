@@ -8,7 +8,7 @@ import { url } from "@/constants";
 import img from "/public/assets/img4.png";
 import LeftArrow from "/public/icons/left_arrow.svg";
 
-function EventPage() {
+function eventPage() {
   const router = useRouter();
 
   const id = router.query.id;
@@ -21,9 +21,9 @@ function EventPage() {
       .catch((e) => console.error(e));
   }, [id]);
   return (
-    <div className="bg-black w-full flex h-full bg-[url('/curved_shape.svg')] bg-no-repeat bg-[length:60%]">
+    <div className="bg-black w-full flex h-full">
       <div
-        className={` pl-[80px] pr-[140px] flex flex-col gap-[25px] pt-[60px] pb-[50px] w-[80%]`}
+        className={`${styles.cont1} pl-[60px] pr-[140px] flex flex-col gap-[25px] pt-[60px] pb-[50px] w-[80%]`}
       >
         <p className="text-[60px] text-[#751300]">PANACHE</p>
         <p className="text-[#313131] text-[14px] text-justify z-10">
@@ -67,7 +67,7 @@ function EventPage() {
             </div>
           </div>
         </div>
-        <div className="mt-[32px] flex gap-[200px] font-amita">
+        <div className="mt-[52px] flex gap-[200px] font-amita">
           <div className="color-[#00293E] text-[20px] text-[#202020] flex gap-[7px] items-center">
             {" "}
             <Image src={LeftArrow} /> Back
@@ -79,28 +79,30 @@ function EventPage() {
       </div>
 
       <div className="flex flex-col gap-[100px] justify-between">
+        {/* <div> */}
         <div className="flex w-full items-center relative">
           {/* <Image className="rotate-180" src={borderDown}></Image> */}
           <Image className="rotate-180" src={borderDown}></Image>
           <Image className="rotate-180" src={borderDown}></Image>
         </div>
-
+        {/* <div className="width-[500px] height-[800px]"> */}
         <Image
           src={img}
-          width={414}
-          //   height={500}
-          style={{ height: "500px !important" }}
-          className={`border-r-8 border-b-8 border-[#fb5e3f] relative left-[20%] ${styles.rightImg}`}
+          width={500}
+          height={800}
+          className={`border-r-8 border-b-8 border-[#fb5e3f] relative left-[10%] ${styles.rightImg}`}
         />
+        {/* </div> */}
 
         <div className="flex w-full items-center relative">
           {/* <Image src={borderDown}></Image> */}
           <Image src={borderDown}></Image>
           <Image src={borderDown}></Image>
         </div>
+        {/* </div> */}
       </div>
     </div>
   );
 }
 
-export default EventPage;
+export default eventPage;

@@ -21,5 +21,4 @@ function EventCard1({name,desc,image,id}) {
   );
 }
 
-export default EventCard1
-
+export default EventCard1;
