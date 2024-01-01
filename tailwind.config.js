@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    'node_modules/flowbite-react/lib/esm/**/*.js'
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
     extend: {
@@ -21,7 +22,7 @@ module.exports = {
       fontFamily: {
         "black-ops-one": "'Black Ops One'",
         amita: "Amita",
-        sankaran:"sankaran"
+        sankaran: "sankaran",
       },
       // fontSize: {
       //   xl: "20px",
@@ -35,16 +36,13 @@ module.exports = {
       //     "200": "#0a0a0a",
       //     "300": "rgba(255, 255, 255, 0.12)",
       //     "400": "rgba(10, 10, 10, 0.76)",
-         
-
-
 
       //   },
       //   red5: "#ff0000",
 
       //   gainsboro: "#e1e1e1",
       // },
-      // height: 
+      // height:
       // {
       //   '108':'6.75rem',
       //   '632':'39.5rem',
@@ -53,7 +51,7 @@ module.exports = {
       //   'ell2':'1201.567px',
       //   'hscreen':'832px',
       //   'borderh':'550px'
-        
+
       // },
       // width:{
       //   'ell1':'1998.788px',
@@ -61,7 +59,6 @@ module.exports = {
       //    '56':'56px',
       //    '368':'368px'
 
-        
       // },
       // borderRadius: {
       //   'full':'1998.788px',
@@ -75,8 +72,7 @@ module.exports = {
       // borderWidth:{
       //   '1':'1px'
       // }
-  
     },
   },
-  plugins: [ require('flowbite/plugin'),require("daisyui")],
-}
+  plugins: [require("flowbite/plugin"), require("daisyui")],
+};

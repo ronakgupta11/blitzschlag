@@ -47,7 +47,7 @@ function Footer() {
         </div>
 
         <div className="lg:max-w-[25%] ">
-          <div className="flex justify-center gap-y-5 lg:gap-y-12  align-middle flex-col text-white text-center font-BlackOpsOne md:text-[25px] text-[20px] font-normal leading-[44px]">
+          <div className="flex justify-center gap-y-5 lg:gap-y-12  align-middle flex-col text-white text-center font-BlackOpsOne md:text-[25px] text-[20px] font-normal">
             <div className="text-center font-sankaran">Connect With Us</div>
             <div className="flex justify-center">
               <div className=" flex align-middle justify-center w-[88px] h-[88px] flex-wrap gap-[40px]">
