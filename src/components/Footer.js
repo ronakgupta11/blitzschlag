@@ -5,7 +5,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <div className="bg-[#140E00]">
-      <div className="flex-col md:flex lg:flex  justify-center flex-wrap  lg:flex-row align-middle bg-[#140E00] pt-[77px] gap-10">
+      <div className="flex-col md:flex lg:flex  justify-center flex-wrap  lg:flex-row align-middle bg-[#140E00] py-[57px] gap-10">
         <div className="flex-col align-middle justify-center lg:max-w-[25%]">
           <div className="flex align-middle justify-center">
             {/* <Image src={BlitzLogo}></Image> */}
