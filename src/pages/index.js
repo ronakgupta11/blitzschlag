@@ -17,7 +17,6 @@ export default function Home() {
     <Page1/>
     <Page2/>
     <Page3/>
-    
     <Page4/>
     <Page5/>
 
