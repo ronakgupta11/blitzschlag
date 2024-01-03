@@ -5,7 +5,7 @@ export function Desert(props) {
   const { nodes, materials } = useGLTF(desert);
   return (
     <group {...props} dispose={null}>
-      <group scale={0.50}>
+      <group scale={[1.2,0.5,0.5]}>
         <group rotation={[-Math.PI / 2, 0, 0]} scale={191.328}>
           <mesh
             castShadow

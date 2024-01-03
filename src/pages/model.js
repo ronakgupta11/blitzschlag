@@ -1,7 +1,7 @@
 "use client"
-import { Canvas } from "@react-three/fiber";
+import { Canvas, } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
-
+import { Html } from '@react-three/drei';
 // import sakura from "../assets/sakura.mp3";
 // import { HomeInfo, Loader } from "../components";
 // import { soundoff, soundon } from "../assets/icons";
@@ -28,7 +28,11 @@ const Model = () => {
 //       audioRef.current.pause();
 //     };
 //   }, [isPlayingMusic]);
-
+  const handleButtonClick = (keyCode)=>{
+    const event = new KeyboardEvent('keydown', "37");
+    window.dispatchEvent(event);
+    console.log("left")
+  }
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -74,7 +78,7 @@ const Model = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<></>}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
+          <directionalLight position={[0, 4, 4]} intensity={3} />
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 5, 10]} intensity={2} />
           <spotLight
@@ -111,9 +115,24 @@ const Model = () => {
             scale={biplaneScale}
           />
           
-
         </Suspense>
+        <Html>
+        <button
+          onClick={handleButtonClick(37)}
+          style={{
+            position: 'absolute',
+            fontWeight:"bold",
+            top: '100px',
+            left: '50px',
+            zIndex: '1',
+            color:"red" // Ensure the button appears above the canvas
+          }}
+        >
+          Your Button
+        </button>
+      </Html>
       </Canvas>
+         
 
       <div className="absolute bottom-2 left-2">
         {/* <img
