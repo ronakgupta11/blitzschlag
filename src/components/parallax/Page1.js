@@ -5,7 +5,7 @@ function Page1() {
   return (
     <div>
 
-    <div className='h-screen w-full relative flex items-center overflow-hidden'>
+    <div className=' w-full relative flex items-center overflow-hidden'>
     <Image className='w-full' src = {gate}/>
     </div>
     </div>

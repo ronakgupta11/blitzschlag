@@ -13,8 +13,10 @@ function Page3() {
         <div className='h-screen w-full absolute bottom-0' style={{ background: "linear-gradient(180deg, #5DAAE7 -7.87%, #BEEBFF 74.4%)"}}></div>
         {/* <Image className='absolute bottom-0 z-20' src={cloudBottom}/> */}
         {/* <Image className='absolute bottom-0 z-0' src={cloudBg}/> */}
-        <Image className='absolute bottom-0    z-10 w-[50%] min-h-[70%] 'style={{objectFit:"cover",
-    minHeight:"70%"}} src={fort}/>
+        <Image
+          
+        className='absolute bottom-0  object-top  z-10 w-[60%] max-h-[80%] 'style={{objectFit:"cover",
+    minHeight:"70%",objectPosition:"top"}} src={fort}/>
         <Image className='absolute top-[20%] left-[13%] w-[240px] z-0' src={moon}/>
         <Image className='absolute top-32 right-2 scale-50 z-0' src={cloudBig}/>
         <Image className='absolute top-24 right-40 scale-50 z-0' src={cloudSmall}/>

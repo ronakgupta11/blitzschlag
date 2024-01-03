@@ -182,7 +182,7 @@ export function IndianGazebo({
   return (
     // {Island 3D model from: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907}
     <>
-    <Desert position={[-0,-16,-80]} />
+    <Desert position={[-0,-19,-80]} />
     <a.group ref={islandRef} {...props} scale={[0.0005, 0.0005, 0.0005]}>
       {
         console.log("materials",materials.material_0)
