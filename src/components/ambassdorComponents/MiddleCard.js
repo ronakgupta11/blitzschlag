@@ -20,7 +20,7 @@ const MiddleCard = () => {
         <Image src={borderDown2}></Image>
       </div>
       <div
-        className="flex flex-col justify-center ml-[75px] mt-[86px] mb-[120px]"
+        className="flex flex-col justify-center lg:text-6xl text-3xl text-center font-sankaran mt-16 mb-16"
         style={{ color: "#E9B704" }}
       >
         What should you do?

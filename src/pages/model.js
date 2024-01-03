@@ -1,5 +1,5 @@
-"use client"
-import { Canvas, } from "@react-three/fiber";
+"use client";
+import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { Html } from '@react-three/drei';
 // import sakura from "../assets/sakura.mp3";
@@ -11,28 +11,24 @@ import { Plane } from "@/models/Plane"
 import { Bird } from "@/models";
 import { Desert } from "@/models";
 const Model = () => {
-//   const audioRef = useRef(new Audio(sakura));
-//   audioRef.current.volume = 0.4;
-//   audioRef.current.loop = true;
+  //   const audioRef = useRef(new Audio(sakura));
+  //   audioRef.current.volume = 0.4;
+  //   audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
-//   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  //   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-//   useEffect(() => {
-//     if (isPlayingMusic) {
-//       audioRef.current.play();
-//     }
+  //   useEffect(() => {
+  //     if (isPlayingMusic) {
+  //       audioRef.current.play();
+  //     }
 
-//     return () => {
-//       audioRef.current.pause();
-//     };
-//   }, [isPlayingMusic]);
-  const handleButtonClick = (keyCode)=>{
-    const event = new KeyboardEvent('keydown', "37");
-    window.dispatchEvent(event);
-    console.log("left")
-  }
+  //     return () => {
+  //       audioRef.current.pause();
+  //     };
+  //   }, [isPlayingMusic]);
+
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -106,7 +102,6 @@ const Model = () => {
             />
           
           {/* <Fort/> */}
-          
 
           <Plane
             isRotating={isRotating}
