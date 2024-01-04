@@ -9,7 +9,7 @@ import moon from "../../../public/assets/home/page5/moon.png"
 import { useParallax } from 'react-scroll-parallax'
 function Page5() {
   const {ref:fortRef} = useParallax({
-    translateY:[50,0]
+    translateY:[30,0]
   })
   return (
     <div className='h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background:" linear-gradient(180deg, #292929 -7.2%, #5F5F5F 79.53%)"}}>
