@@ -20,7 +20,7 @@ function Page2() {
   
 
   return (
-    <div className='h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #E6745A -7.87%, #FFBCB6 74.4%)"}}>
+    <div className='h-[700px] sm:h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #E6745A -7.87%, #FFBCB6 74.4%)"}}>
 
       <div className='self-start mt-24 ml-4'>
 

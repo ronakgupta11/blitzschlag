@@ -12,7 +12,7 @@ function Page3() {
   })
 
   return (
-    <div className='h-screen w-full relative flex flex-col  items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #5DAAE7 -7.87%, #BEEBFF 74.4%)"}}>
+    <div className='h-[700px] sm:h-screen w-full relative flex flex-col  items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #5DAAE7 -7.87%, #BEEBFF 74.4%)"}}>
 
 
 <div className='self-start mt-12 ml-4'>
