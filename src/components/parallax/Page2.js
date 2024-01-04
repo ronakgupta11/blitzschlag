@@ -9,13 +9,13 @@ import cloudSmall from "../../../public/assets/home/page2/cloudSmall.png"
 import { useParallax } from 'react-scroll-parallax'
 function Page2() {
   const {ref:fortref} = useParallax({
-      translateX:[-200,20]
+      speed:-20
 
   })
 
 
   return (
-    <div className='h-screen w-full relative flex items-center'>
+    <div className='h-screen w-full relative flex items-center overflow-hidden'>
         {/* <Image className='absolute bottom-0 ' src = {bg}/> */}
         <div className='h-screen w-full absolute bottom-0' style={{ background: "linear-gradient(180deg, #E6745A -7.87%, #FFBCB6 74.4%)"}}></div>
         <Image className='absolute max-h-[80%]  bottom-0 w-full z-20' src={cloudBottom}/>

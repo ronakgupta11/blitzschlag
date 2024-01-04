@@ -6,7 +6,11 @@ import fort from "../../../public/assets/home/page3/fort.png"
 import moon from "../../../public/assets/home/page3/moon.png"
 import cloudBig from "../../../public/assets/home/page2/cloudBig.png"
 import cloudSmall from "../../../public/assets/home/page2/cloudSmall.png"
+import { useParallax } from 'react-scroll-parallax'
 function Page3() {
+  const {ref:fortRef} = useParallax({
+   translateX:[-50,0]
+  })
   return (
     <div className='h-screen w-full relative flex items-center overflow-hidden'>
         {/* <Image className='absolute bottom-0 ' src = {bg}/> */}
@@ -14,6 +18,7 @@ function Page3() {
         {/* <Image className='absolute bottom-0 z-20' src={cloudBottom}/> */}
         <Image className='absolute bottom-0 z-0 w-full max-h-40' src={cloudback}/>
         <Image
+        ref={fortRef}
           
         className='absolute w-full md:w-[55%] bottom-0  object-top  z-10  max-h-[80%] 'style={{objectFit:"cover",
     minHeight:"70%",objectPosition:"top"}} src={fort}/>
