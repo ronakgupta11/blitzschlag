@@ -1,12 +1,35 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Image from "next/image";
 import BlitzLogo from "../../public/assets/Footer/logo.png";
 import Link from "next/link";
 function Footer() {
+  const [isMobile,setIsMobile]=useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobileScreen = window.innerWidth < 768; // You can adjust the threshold as needed
+      setIsMobile(isMobileScreen);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen for resize events
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
   return (
     <div className="bg-[#140E00]">
       <div className="flex-col md:flex lg:flex  justify-center flex-wrap  lg:flex-row align-middle bg-[#140E00] py-[57px] gap-10">
-        <div className="flex-col align-middle justify-center lg:max-w-[25%]">
+        <div 
+         style={{
+          borderRight:"solid white 1px",
+          borderBottom:isMobile?"solid white 1px":""
+         }}
+        className="flex-col px-5 align-middle justify-center lg:max-w-[25%]">
           <div className="flex align-middle justify-center">
             {/* <Image src={BlitzLogo}></Image> */}
           </div>
@@ -16,12 +39,15 @@ function Footer() {
         </div>
 
         <div
-          style={{ fontFamily: "BlackOpsOne" }}
-          className="flex flex-col  lg:gap-y-11 align-middle lg:max-w-[50%] "
+          style={{ fontFamily: "BlackOpsOne",borderRight:"1px solid white",
+          borderBottom:isMobile?"solid white 1px":""
+        }}
+          className="flex flex-col my-3  lg:gap-y-11 align-middle lg:max-w-[50%] "
         >
           <div className="text-white text-center font-sankaran text-[20px] lg:text-[40px] font-normal leading-[44px]">
             Quick Links
           </div>
+
           <div className=" flex align-middle lg:gap-y-5 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-amita text-[12.5px] md:text-[20px] font-normal leading-[44px]">
             <div className="text-center">
               <Link className="text-center" href="/">
