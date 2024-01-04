@@ -3,75 +3,40 @@ import flower1 from "../../public/assets/team/flower1.png"
 import flower from "../../public/assets/team/flower.png"
 import Image from 'next/image'
 import TeamCard from '@/components/teamComponents/TeamCard'
-// import { url } from '@/constants'
-// import axios from 'axios'
-// import { EventCard } from '@/components/eventCard'
-// import bgImage from "../../public/assets/events.png"
-// import TeamCard from '@/components/TeamCard'
-
+import { Parallax } from 'react-scroll-parallax'
 
 export default function team() {
- 
-  const [activeSection, setActiveSection] = useState('');
-  const teamContainerRef = useRef(null);
-  const targetRef = useRef(null)
-  const targetRef2 =useRef(null)
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const sections = teamContainerRef.current.children; // Replace with your actual content sections
-  //     let currentSection = '';
+  const [activeSection, setActiveSection] = useState(0);
+  const sectionRefs = useRef([
+    { id: 'Technical', ref: useRef() },
+    { id: 'Publicity', ref: useRef() },
+    { id: 'MassMedia', ref: useRef() },
+    { id: 'Cultural', ref: useRef() },
+  ]);
 
-  //     // sections.forEach((section) => {
-  //     //   const sectionTop = section.offsetTop - 100; // Adjust the offset as needed
-  //     //   const sectionBottom = sectionTop + section.offsetHeight;
-
-  //     //   if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-  //     //     currentSection = section.id;
-  //     //   }
-  //     // });
-  //     console.log(sections)
-  //     setActiveSection(currentSection);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
+  const containerRef = useRef()
   const handleScroll = () => {
-    const sections = teamContainerRef.current.children; // Replace with your actual content sections
-    let currentSection = '';
-    
-    if (teamContainerRef.current) {
-      const rect = targetRef.current.getBoundingClientRect();
-      const rect2=targetRef.current.getBoundingClientRect();
-      console.log(rect.top , "," , rect.bottom,window.innerHeight)
-      const isInView = rect.top <= window.innerHeight-100 && rect.bottom >= 0;
-      const isInView2 = rect2.top <= window.innerHeight-400 && rect2.bottom >= 0;
-      if (isInView) {
-        // Element is in view
-        // Call your function or perform any action here
-        console.log(targetRef.current.id);
-        setActiveSection(targetRef.current.id) 
-       
-      }else{
-        setActiveSection('') 
-    }
-    if (isInView2) {
-      // Element is in view
-      // Call your function or perform any action here
-      console.log(targetRef2.current.id);
-      setActiveSection(targetRef2.current.id) 
-     
-    }else{
-      setActiveSection('') 
-  }
-    }
-   
-    // console.log(sections)
-   
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    sectionRefs.current.forEach(({ id, ref }, index) => {
+      if (ref.current.offsetTop <= scrollPosition && ref.current.offsetTop + ref.current.clientHeight >= scrollPosition) {
+        setActiveSection(index);
+      }
+    });
   };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+  console.log(activeSection)
+
+
   return (
 
 
@@ -82,71 +47,74 @@ export default function team() {
   </div>
   <div className='w-full flex space-x-2 items-center justify-between'>
   <div className='border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg'></div>
-    <p className='font-amita text-2xl md:text-4xl text-[#5A2700] '>Technical team</p>
+    <p className='font-amita text-2xl md:text-4xl text-[#5A2700] '>Our Team</p>
     <div className='border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg'></div>
   
   </div>
   <Image className="absolute top-0 left-0" src ={flower1}/>
   <div className='flex h-screen w-full flex-col md:flex-row items-center justify-around  p-2 '>
 
-<div id='TeamContainer' onScroll={handleScroll} ref={teamContainerRef} className='h-full  overflow-y-scroll '>
-<div id='Technical' ref={targetRef2} onScroll={()=>{
-  console.log("scrolled")
-}}  className='cards  flex flex-wrap my-12'>
-    <TeamCard/>
-<TeamCard/>
-<TeamCard/>
-<TeamCard/>
+  <div id='TeamContainer' ref={containerRef} className='h-full overflow-y-scroll'>
+          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
+            <div ref={sectionRefs.current[0].ref} id='Technical' className='cards flex flex-wrap my-12'>
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+            </div>
+          {/* </Parallax> */}
+          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
+            <div ref={sectionRefs.current[1].ref} id='Publicity' className='cards flex flex-wrap my-12'>
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+            </div>
+          {/* </Parallax> */}
+          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
+            <div ref={sectionRefs.current[2].ref} id='MassMedia' className='cards flex flex-wrap my-12'>
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+            </div>
+          {/* </Parallax> */}
+          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
+            <div ref={sectionRefs.current[3].ref} id='Cultural' className='cards flex flex-wrap my-12'>
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+              <TeamCard />
+            </div>
+          {/* </Parallax> */}
+        </div>
+
+        {/* <div className='relative h-full flex align-start justify-start'>
+          <div style={{ alignSelf: "start" }} className=' text-[#606060] text-lg font-amita h-full '>
+            <ul className='flex flex-row md:flex-col items-center justify-around space-x-3 space-y-6'>
+              <div>Hello {activeSection}</div>
+              <li className={activeSection === 0 ? 'text-red-500' : ''}
+             onClick={() => sectionRefs.current[0].ref.current.scrollIntoView({ behavior: 'smooth' })}>
+                  Technical Team
+          
+              </li>
+              <li className={activeSection === 1 ? 'text-red-500' : ''}
+           onClick={() => sectionRefs.current[1].ref.current.scrollIntoView({ behavior: 'smooth' })}>
+                  Publicity Team
+                
+              </li>
+              <li className={activeSection === 2 ? 'text-black text-xl border-b-2 border-black' : ''}
+               onClick={() => sectionRefs.current[2].ref.current.scrollIntoView({ behavior: 'smooth' })}>
+                  Mass Media Team
+                
+              </li>
+              <li className={activeSection === 3 ? 'text-red-500' : ''} onClick={() => sectionRefs.current[3].ref.current.scrollIntoView({ behavior: 'smooth' })}>
+                  Cultural Team
+                
+              </li>
+            </ul>
     </div>
-    <div id='Publicity'
-     style={{color:"red"}}
-    ref={targetRef} className='cards flex flex-wrap my-12'>
-    <TeamCard/>
-<TeamCard/>
-<TeamCard/>
-<TeamCard/>
-    </div>
-    <div id='Cultural'  className='cards flex flex-wrap my-12'>
-    <TeamCard/>
-<TeamCard/>
-<TeamCard/>
-<TeamCard/>
-    </div>
-    <div id=''  className='cards flex flex-wrap my-12'>
-    <TeamCard/>
-<TeamCard/>
-<TeamCard/>
-<TeamCard/>
-    </div>
-    <div className='cards flex flex-wrap my-12'>
-    <TeamCard/>
-<TeamCard/>
-<TeamCard/>
-<TeamCard/>
-    </div>
-</div>
-   <div className='relative h-full flex align-start justify-start'>
-   <div 
-   style={{alignSelf:"staet"}}
-   className=' text-[#606060]  text-lg font-amita   h-full '>
-       <ul className='flex flex-row md:flex-col items-center justify-around space-x-3 space-y-6'>
-        <div>Hello {activeSection}</div>
-          <li id='TechnicalTeam' className={activeSection === 'TechnicalTeam' ? 'text-red-500' : ''}>
-            Technical Team
-          </li>
-          <li id='Publicity' className={activeSection === 'Publicity' ? 'text-red-500' : ''}>
-            Publicity Team
-          </li>
-          <li id='MassMedia' className={activeSection === 'MassMedia' ? 'text-black text-xl border-b-2 border-black' : ''}>
-            Mass Media Team
-          </li>
-          <li id='Cultural' className={activeSection === 'Cultural' ? 'active' : ''}>
-            Cultural Team
-          </li>
-          {/* Add more list items as needed */}
-        </ul>
-    </div>
-   </div>
+   </div> */}
   </div>
 </div>
 
