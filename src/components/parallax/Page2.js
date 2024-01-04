@@ -9,7 +9,7 @@ import cloudSmall from "../../../public/assets/home/page2/cloudSmall.png"
 import { useParallax } from 'react-scroll-parallax'
 function Page2() {
   const {ref:fortref} = useParallax({
-      speed:-20
+      translateY:[20,0]
 
   })
 

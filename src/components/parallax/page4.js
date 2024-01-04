@@ -10,7 +10,7 @@ import { useParallax } from 'react-scroll-parallax'
 function Page4() {
   const {ref:fortRef} = useParallax(
     {
-      translateX:[50,0]
+      translateX:[30,0]
     }
   )
   return (
