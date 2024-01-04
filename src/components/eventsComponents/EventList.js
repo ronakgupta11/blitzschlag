@@ -60,24 +60,37 @@ export default function EventList() {
         <Image src={flower2} />
       </div>
       {selectedTab === 0 && (
-        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center ">
+        <div className=" z-10 flex flex-wrap lg:gap-x-[100px] m-3 p-3 items-center justify-center  ">
           {data.map((d, k) =>
             isMobile ? (
               <EventCard1 key={k} />
             ) : k % 2 === 0 ? (
-              <EventCard1 key={k} />
+              <div style={{}}>
+                <EventCard1  key={k} />
+              </div>
             ) : (
-              <EventCard2 key={k} />
+              <div style={{}}>
+                <EventCard2  key={k} />
+              </div>
             )
           )}
         </div>
       )}
       {selectedTab === 1 && (
-        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center ">
+        <div className=" z-10 flex flex-wrap m-3 p-3 lg:gap-x-[100px] items-center justify-center ">
+          <div className="">
           <EventCard1 />
+          </div>
+          <div className="">
           <EventCard2 />
+          </div>
+          <div>
           <EventCard1 />
+          </div>
+          <div>
           <EventCard2 />
+          </div>
+         
         </div>
       )}
       {selectedTab === 2 && (
