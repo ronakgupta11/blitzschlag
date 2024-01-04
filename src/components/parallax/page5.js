@@ -13,11 +13,11 @@ function Page5() {
   })
   return (
     <div className='h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background:" linear-gradient(180deg, #292929 -7.2%, #5F5F5F 79.53%)"}}>
-      <div className='h-full self-end'>
+      <div className=' self-end'>
 
 <Image className='scale-50 z-0' src={moon}/>
       </div>
-        <div className='self-end mr-12'>
+        <div className='self-end z-20 mr-4 md:mr-12'>
 
         <p className=' text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl ' style={{background:"linear-gradient(180deg, #FFF 28.93%, #A4A4A4 78.47%)"}}>About Us</p>
         <button className='btn z-20  px-12 mt-12 text-white' style={{
