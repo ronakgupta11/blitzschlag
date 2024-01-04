@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { url } from '@/constants'
 import axios from 'axios'
 import EventList from '@/components/eventsComponents/EventList'
-// import { EventCard } from '@/components/eventCard'
-import CategoriesCard from '@/components/eventsComponents/CategoriesCard'
+
 
 import EventHeader from '@/components/eventsComponents/EventHeader'
 export default function events() {
@@ -14,12 +13,7 @@ export default function events() {
   //   ).catch(e=>console.error(e))
 
   // },[])
-
-  useEffect(() => {
-    // Scroll the page on component mount
-    window.scrollTo({ top: 100, behavior: 'smooth' }); // Adjust the value based on how much you want to scroll
-  }, []);
-  return (
+return (
 
     <div className='flex flex-col items-center justify-center w-full'>
       
