@@ -22,14 +22,16 @@ function login() {
     }
   }, [auth]);
   return (
-    <div className=" relative h-screen pl-12 ">
+    <div className=" relative h-screen">
       <div
-        className="fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover"
+        className="absolute top-0 left-0 w-full h-screen  bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${img.src})` }}
-      ></div>
+      >
 
-      <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-10"></div>
-      <div className="relative overfolw-x-hidden overflow-y-hidden  z-10  py-12 flex flex-col lg:flex-row items-center justify-around space-y-4 w-[80%] m-auto">
+      </div>
+
+      <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-10"></div>
+      <div className=" absolute my-10  overfolw-x-hidden h-full overflow-y-auto z-10  py-12 flex flex-col lg:flex-row items-center justify-around space-y-4 w-full m-auto">
         <div className="font-sankaran text-white lg:text-7xl text-4xl items-center ">
           BLITZSCHLAG
         </div>
