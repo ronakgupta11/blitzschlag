@@ -22,6 +22,9 @@ function Page5() {
         <Image className='absolute top-48 right-2 scale-50 z-0' src={cloudBig}/>
         <Image className='absolute top-24 right-60 scale-50 z-0' src={cloudSmall}/>
         <p className='absolute md:right-16   text-transparent bg-clip-text font-sankaran text-4xl md:text-7xl ' style={{background:"linear-gradient(180deg, #FFF 28.93%, #A4A4A4 78.47%)"}}>About Us</p>
+        <button className='btn z-20 px-12 absolute bottom-[15%] text-white right-[10%]' style={{
+          background: '#282828 ', boxShadow: '0px 6px 14.899999618530273px rgba(0, 0, 0, 0.50)', borderRadius: 20
+        }} >About Us</button>
     </div>
   )
 }

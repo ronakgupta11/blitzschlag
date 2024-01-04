@@ -24,6 +24,9 @@ function Page4() {
         <Image className='absolute top-32 right-2 scale-50 z-0' src={cloudBig}/>
         <Image className='absolute top-24 right-40 scale-50 z-0' src={cloudSmall}/>
         <p className='absolute top-5 left-5 text-transparent bg-clip-text font-sankaran text-4xl md:text-7xl' style={{background: "linear-gradient(97deg, #2D1502 28.53%, #B16529 99.14%)"}}>Campus Ambassador</p>
+        <button className='btn z-20 px-12 mt-16 absolute top-[15%] text-white left-[10%]' style={{
+     background: '#2D1502', boxShadow: '0px 6px 14.899999618530273px rgba(100, 57, 25, 0.80)', borderRadius: 20
+        }} >Register</button>
     </div>
   )
 }
