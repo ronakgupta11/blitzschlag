@@ -22,7 +22,7 @@ function Navbar() {
     };
   }, [])
   return (
-    <div className="nav py-5 w-full flex bg-[#0A0A0A] opacity-[0.85]">
+    <div className="nav  py-5 w-full flex bg-[#0A0A0A] opacity-[0.85]">
       { 
         <ul className={`w-full flex ${isMobile?"justify-between":"justify-evenly"} align-middle ${isMobile?"px-5":""} text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]`} >
           <li className="w-[15%]">
@@ -33,16 +33,16 @@ function Navbar() {
            
               <div className="flex justify-evenly w-[70%]">
             <li className={pathname === '/' ? 'active' : ''} >
-            <a href="">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className={pathname === '/events' ? 'active' : ''}>
-            <a href="">Events</a>
+            <a href="/events">Events</a>
           </li>
           <li>
-            <a href="">Ambassadors</a>
+            <a href="/ambassadors">Ambassadors</a>
           </li>
           <li>
-            <a href="">Our Team</a>
+            <a href="/team">Our Team</a>
           </li>
           
           </div>
