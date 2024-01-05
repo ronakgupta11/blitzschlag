@@ -33,10 +33,10 @@ function MobileEventPage(props) {
           <Image className="rotate-180" src={borderDown}></Image>
         </div>
 
-        <Image
-          src={img}
+        <img
+          src={data.image}
           width={260}
-          style={{ height: "300px !important" }}
+          // style={{ height: "300px !important" }}
           className={`border-r-8 border-b-8 border-[#fb5e3f]`}
         />
       </div>

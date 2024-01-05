@@ -8,8 +8,7 @@ import { useRouter } from "next/router";
 
 
 function EventPage() {
-  const router = useRouter()
-  const id = router.query.id
+
 const [dataEvent,setData] = useState({})
 
   const [isMobile, setIsMobile] = useState(false);
@@ -23,6 +22,9 @@ const [dataEvent,setData] = useState({})
   }, []);
 
   useEffect(()=>{
+    const currentURL = window.location.href;
+    const id = currentURL.split('/').pop();
+    console.log(id)
     axios.get(`${url}/events/${id}`)
     .then(
       d => {

@@ -9,13 +9,13 @@ import Loader from "@/components/loader";
 
 
 const Home = () => {
-  const [SLoading, setSLoading] = useState(true);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSLoading(false);
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, []);
+  // const [SLoading, setSLoading] = useState(true);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setSLoading(false);
+  //   }, 3000);
+  //   return () => clearTimeout(timeout);
+  // }, []);
 
 
 
@@ -24,24 +24,24 @@ const Home = () => {
 
 
 
-    <AnimatePresence mode="wait">
+    {/* <AnimatePresence mode="wait"> */}
 
-{ SLoading && 
+{/* { SLoading && 
 <motion.div key="loader" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
  <Loader ></Loader>
- </motion.div>}
-{!SLoading && <motion.div
+ </motion.div>} */}
+{/* {!SLoading && <motion.div
            key="content"
            initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}
-              >
+              > */}
 <Page2/>
 <Page3/>
 <Page4/>
 <Page5/>
-</motion.div>}
-</AnimatePresence>
+{/* </motion.div>}
+</AnimatePresence> */}
 </>
   );
 };
