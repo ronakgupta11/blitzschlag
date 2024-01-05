@@ -59,7 +59,7 @@ function MobileEventPage(props) {
             <Image src={LeftArrow} /> Back
             </Link>
           </div>
-          <EventRegisterModal event={data?.name}/>
+          <EventRegisterModal event={data?.name} id={data?.eventId}/>
         </div>
       </div>
     </div>
