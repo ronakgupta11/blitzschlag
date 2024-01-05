@@ -35,9 +35,9 @@ function Navbar() {
             isMobile ? "px-5" : ""
           } text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]`}
         >
-          <li className="w-[15%] px-6 gap-2 flex align-middle">
-            <Image width={60} height={50} src={blitz_logo1}></Image>
-            <div className="flex flex-col justify-center text-[25px]">
+          <li className="sm:w-[15%]  sm:px-6 gap-2 flex align-middle">
+            <Image className="fit-cover"  width={60} height={60} src={blitz_logo1}></Image>
+            <div className="flex flex-col justify-center text-[16px] sm:text-[25px]">
               <Link href="/">Blitzschlag</Link>
             </div>
           </li>
