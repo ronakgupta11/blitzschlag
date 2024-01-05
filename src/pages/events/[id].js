@@ -2,7 +2,16 @@ import React, { useEffect,useState } from "react";
 import MobileEventPage from "../../components/eventsComponents/MobileEventPage";
 import DesktopEventPage from "/src/components/eventsComponents/DesktopEventPage";
 import { UAParser } from "ua-parser-js";
+import axios from "axios";
+import { url } from "@/constants";
+import { useRouter } from "next/router";
+
+
 function EventPage() {
+  const router = useRouter()
+  const id = router.query.id
+const [dataEvent,setData] = useState({})
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -13,6 +22,23 @@ function EventPage() {
     setIsMobile(isMobileDevice);
   }, []);
 
-  return isMobile ? <MobileEventPage /> : <DesktopEventPage />;
+  useEffect(()=>{
+    axios.get(`${url}/events/${id}`)
+    .then(
+      d => {
+        // console.log(d.data)
+        const data = d.data
+
+       console.log(data)
+
+       setData(data)
+      }
+    ).catch(e=>console.error(e))
+
+  },[])
+
+  
+
+  return isMobile ? <MobileEventPage data={dataEvent}/> : <DesktopEventPage data={dataEvent} />;
 }
 export default EventPage;
