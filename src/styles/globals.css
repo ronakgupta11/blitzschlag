@@ -8,6 +8,11 @@
   font-family: "sankaran";
   src: url("/fonts/SAMARN__.TTF");
 }
+
+body{
+  background-color: black;
+
+}
 ::-webkit-scrollbar {
     height: 5px;
     width: 5px;

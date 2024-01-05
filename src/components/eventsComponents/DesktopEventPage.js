@@ -8,6 +8,7 @@ import { url } from "@/constants";
 import Link from "next/link";
 import img from "/public/assets/img4.png";
 import LeftArrow from "/public/icons/left_arrow.svg";
+import EventRegisterModal from "./EventRegisterModal"
 
 function DesktopEventPage() {
   const router = useRouter();
@@ -15,12 +16,12 @@ function DesktopEventPage() {
   const id = router.query.id;
   // console.log(id);
 
-  useEffect(() => {
-    axios
-      .get(`${url}/events/${id}`)
-      .then((d) => console.log(d.data))
-      .catch((e) => console.error(e));
-  }, [id]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`${url}/events/${id}`)
+  //     .then((d) => console.log(d.data))
+  //     .catch((e) => console.error(e));
+  // }, [id]);
   // bg-[url('/curved_shape.svg'),_url('/assets/events/border.png')]
   // bg-no-repeat bg-[length:60%,20%] bg-[position:left,bottom]
   return (
@@ -78,9 +79,7 @@ function DesktopEventPage() {
               <Image src={LeftArrow} /> Back
             </div>
           </Link>
-          <button className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white">
-            Register
-          </button>
+          <EventRegisterModal/>
         </div>
       </div>
 

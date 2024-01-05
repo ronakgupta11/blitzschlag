@@ -5,20 +5,19 @@ import flower2 from "../../../public/assets/sponsors/flower2.png";
 import Image from "next/image";
 import EventCard1 from "./EventCard1";
 import EventCard2 from "./EventCard2";
+import { UAParser } from "ua-parser-js";
+
 export default function EventList() {
   const data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    const parser = new UAParser();
+    const userAgent = window.navigator.userAgent;
+    const result = parser.setUA(userAgent).getResult();
+    const isMobileDevice = /mobile/i.test(result.device.type);
+    setIsMobile(isMobileDevice);
   }, []);
 
   return (
@@ -60,16 +59,19 @@ export default function EventList() {
         <Image src={flower2} />
       </div>
       {selectedTab === 0 && (
-        <div className=" z-10 flex flex-wrap lg:gap-x-[100px] m-3 p-3 items-center justify-center  ">
+        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
           {data.map((d, k) =>
             isMobile ? (
-              <EventCard1 key={k} />
+              <div className = "ml-12">
+
+              <EventCard1 className='m-auto' key={k} />
+              </div>
             ) : k % 2 === 0 ? (
-              <div style={{}}>
+              <div className="mx-8" style={{width:"40%"}}>
                 <EventCard1  key={k} />
               </div>
             ) : (
-              <div style={{}}>
+              <div className="mx-8" style={{width:"40%"}}>
                 <EventCard2  key={k} />
               </div>
             )

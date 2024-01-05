@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react'
-import { url } from '@/constants'
-import axios from 'axios'
-import EventList from '@/components/eventsComponents/EventList'
-// import { EventCard } from '@/components/eventCard'
-import CategoriesCard from '@/components/eventsComponents/CategoriesCard'
+import React, { useEffect } from "react";
+import { url } from "@/constants";
+import axios from "axios";
+import EventList from "@/components/eventsComponents/EventList";
+import EventHeader from "@/components/eventsComponents/EventHeader";
 
-import EventHeader from '@/components/eventsComponents/EventHeader'
 export default function events() {
   // useEffect(()=>{
   //   axios.get(`${url}/events`)
@@ -14,27 +12,19 @@ export default function events() {
   //   ).catch(e=>console.error(e))
 
   // },[])
-
-  useEffect(() => {
-    // Scroll the page on component mount
-    window.scrollTo({ top: 100, behavior: 'smooth' }); // Adjust the value based on how much you want to scroll
-  }, []);
   return (
-
-    <div className='flex flex-col items-center justify-center w-full'>
-      
-<EventHeader/>
-<EventList/>
-{/* <CategoriesCard/> */}
+    <div className="flex flex-col items-center justify-center w-full">
+      <EventHeader />
+      <EventList />
+      {/* <CategoriesCard/> */}
     </div>
 
-// </div>
-
-
-  )
+    // </div>
+  );
 }
 
-{/* <div className=' relative'>
+{
+  /* <div className=' relative'>
 <div
     className='fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover'
     style={{ backgroundImage: `url(${bgImage.src})` }}
@@ -64,4 +54,5 @@ export default function events() {
 <EventCard title={"Panache"} desc1={"Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably )"} desc2={"In this the group may consist of 8-16 members."}/>
 <EventCard title={"Panache"} desc1={"Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably )"} desc2={"In this the group may consist of 8-16 members."}/>
 </div>
-</div> */}
+</div> */
+}

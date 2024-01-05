@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  daisyui: {
+    themes: ["black"],
+  },
   important: true,
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",

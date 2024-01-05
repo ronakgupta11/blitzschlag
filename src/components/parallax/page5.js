@@ -12,12 +12,12 @@ function Page5() {
     translateY:[30,0]
   })
   return (
-    <div className='h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background:" linear-gradient(180deg, #292929 -7.2%, #5F5F5F 79.53%)"}}>
-      <div className='h-full self-end'>
+    <div className='h-[700px]  w-full relative flex flex-col items-center overflow-hidden' style={{ background:" linear-gradient(180deg, #292929 -7.2%, #5F5F5F 79.53%)"}}>
+      <div className=' self-end'>
 
 <Image className='scale-50 z-0' src={moon}/>
       </div>
-        <div className='self-end mr-12'>
+        <div className='self-end z-20 mr-4 md:mr-12'>
 
         <p className=' text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl ' style={{background:"linear-gradient(180deg, #FFF 28.93%, #A4A4A4 78.47%)"}}>About Us</p>
         <button className='btn z-20  px-12 mt-12 text-white' style={{
@@ -27,7 +27,7 @@ function Page5() {
       <div className='w-full h-screen'>
         <Image className='absolute bottom-0 z-20 w-full h-96' src={cloudfront}/>
         <Image className='absolute bottom-0 z-0 w-full h-[500px]' src={cloudback}/>
-        <Image ref={fortRef} className='absolute bottom-0 z-0 w-full md:w-[60%] max-h-[80%] md:max-h-screen object-cover object-top' src={fort}/>
+        <Image ref={fortRef} className='absolute bottom-0 z-0 w-full md:w-[60%] max-h-[80%] md:max-h-full object-cover object-top' src={fort}/>
       </div>
 
     </div>
