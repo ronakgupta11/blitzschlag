@@ -8,19 +8,11 @@ import classes from './LandingSection.module.css'
 import bottomCloud from "../../../../public/assets/home/page1/cloudsbottom.png"
 import topCloud from "../../../../public/assets/home/page1/cloudstop.png"
 import sun from "../../../../public/assets/home/page1/sun.png"
-import gate from "../../../../public/assets/home/page1/gate.png"
 
 
 function LandingSection() {
     return (
         <div className={`${classes.root} h-screen relative overflow-hidden`}>
-            <motion.div
-                initial={{ y: 0, scale: 1 }} 
-                animate={{ y: 40, scale: 3 }} 
-                transition={{ duration: 1, delay: 0 }}
-                className='absolute w-screen z-[25] w-screen absolute flex items-center overflow-hidden pointer-events-none'>
-                    <Image className='w-screen' src={gate} />
-            </motion.div>
             <motion.div
                 initial={{ y: 100 }} 
                 animate={{ y: 0 }} 
