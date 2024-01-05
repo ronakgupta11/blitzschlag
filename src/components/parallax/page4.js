@@ -12,7 +12,7 @@ function Page4() {
     }
   )
   return (
-    <div className='h-[700px] sm:h-screen w-full relative overflow-hidden flex flex-col items-center'style={{ background:" linear-gradient(180deg, #CF7C33 -7.2%, #FFE793 79.53%)"}}>
+    <div className='h-[700px] md:h-screen w-full relative overflow-hidden flex flex-col items-center'style={{ background:" linear-gradient(180deg, #CF7C33 -7.2%, #FFE793 79.53%)"}}>
               <div className='self-start mt-12 ml-4'>
 
 <p className='text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl' style={{background: "linear-gradient(97deg, #2D1502 28.53%, #B16529 99.14%)"}}>Campus Ambassador</p>
