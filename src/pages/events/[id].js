@@ -4,14 +4,17 @@ import DesktopEventPage from "/src/components/eventsComponents/DesktopEventPage"
 import { UAParser } from "ua-parser-js";
 import axios from "axios";
 import { url } from "@/constants";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 
 function EventPage() {
 
-const [dataEvent,setData] = useState({})
+const [dataEvent,setData] = useState(null)
+
 
   const [isMobile, setIsMobile] = useState(false);
+
+
 
   useEffect(() => {
     const parser = new UAParser();
@@ -21,6 +24,8 @@ const [dataEvent,setData] = useState({})
     setIsMobile(isMobileDevice);
   }, []);
 
+
+
   useEffect(()=>{
     const currentURL = window.location.href;
     const id = currentURL.split('/').pop();
@@ -28,7 +33,6 @@ const [dataEvent,setData] = useState({})
     axios.get(`${url}/events/${id}`)
     .then(
       d => {
-        // console.log(d.data)
         const data = d.data
 
        console.log(data)

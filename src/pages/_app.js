@@ -95,6 +95,7 @@ export default function App({ Component, pageProps }) {
           hideProgressBar={false}
           closeOnClick
           theme="light"
+          className={"z-[1000000]"}
         />
       </Provider>
     </>

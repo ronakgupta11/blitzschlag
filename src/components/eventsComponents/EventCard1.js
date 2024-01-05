@@ -9,7 +9,7 @@ function EventCard1(props) {
   return (
     <div className="flex relative md:w-[420px] w-[290px] items-center scale-60 md:scale-90 m-4">
         <div className="image absolute -left-20 md:-left-32 -top-4  h-44 md:h-64">
-          <Image className="w-full h-full rounded-lg" src={img} />
+          <img className="w-full h-full rounded-lg" src={data.banner} />
         </div>
       <div className='flex flex-col bg-[#894e0d]  items-center font-amita text-white justify-around md:w-[420px] w-[290px] h-40 md:h-[207px] border-b-2 border-t-2 border-r-2  rounded-br-[100px] '> 
       <p className=' md:text-2xl text-lg font-bold'>{data.name}</p>

@@ -30,8 +30,8 @@ function login() {
 
       </div>
 
-      <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-10"></div>
-      <div className=" absolute my-10  overfolw-x-hidden h-full overflow-y-auto z-10  py-12 flex flex-col lg:flex-row items-center justify-around space-y-4 w-full m-auto">
+      <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-[#070707] opacity-70 to-transparent z-[9]"></div>
+      <div className=" absolute my-10  overfolw-x-hidden h-full overflow-y-auto z-[9]  py-12 flex flex-col lg:flex-row items-center justify-around space-y-4 w-full m-auto">
         <div className="font-sankaran text-white lg:text-7xl text-4xl items-center ">
           BLITZSCHLAG
         </div>
