@@ -1,5 +1,5 @@
-import { useState,useEffect } from 'react';
-import { motion,AnimatePresence, delay } from "framer-motion";
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence, delay } from "framer-motion";
 import Head from "next/head";
 import Page2 from '@/components/parallax/Page2';
 import Page3 from '@/components/parallax/Page3';
@@ -9,32 +9,32 @@ import Loader from "@/components/loader";
 import LandingSection from '@/components/parallax/LandingSection/LandingSection';
 
 
-const Home = ({SLoading}) => {
+const Home = ({ SLoading }) => {
   return (
-<>
+    <>
 
 
 
-    <AnimatePresence mode="sync">
+      <AnimatePresence mode="sync">
 
-{ SLoading && 
-<motion.div key="loader" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='absolute z-20'>
- <Loader ></Loader>
- </motion.div>} */}
-{/* {!SLoading && <motion.div
-           key="content"
-           initial={{ opacity: 1 }}
-           animate={{ opacity: 1 }}
-           exit={{ opacity: 0 }}
-              >
-      <LandingSection />
-<Page2/>
-<Page3/>
-<Page4/>
-<Page5/>
-{/* </motion.div>}
-</AnimatePresence> */}
-</>
+        {SLoading &&
+          <motion.div key="loader" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='absolute z-20'>
+            <Loader ></Loader>
+          </motion.div>}
+        {!SLoading && <motion.div
+          key="content"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <LandingSection />
+          <Page2 />
+          <Page3 />
+          <Page4 />
+          <Page5 />
+        </motion.div>}
+      </AnimatePresence>
+    </>
   );
 };
 
