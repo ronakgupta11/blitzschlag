@@ -4,6 +4,7 @@ import Image from "next/image";
 import cloudback from "../../../public/assets/home/page3/cloudback.png";
 import fort from "../../../public/assets/home/page3/fort.png";
 import moon from "../../../public/assets/home/page3/moon.png";
+import Link from "next/link";
 
 import { useParallax } from "react-scroll-parallax";
 function Page3() {
@@ -33,7 +34,10 @@ function Page3() {
             borderRadius: 20,
           }}
         >
+          <Link href={"/events"}>
+
           Explore
+          </Link>
         </button>
       </div>
 
