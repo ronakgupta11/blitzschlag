@@ -5,20 +5,19 @@ import flower2 from "../../../public/assets/sponsors/flower2.png";
 import Image from "next/image";
 import EventCard1 from "./EventCard1";
 import EventCard2 from "./EventCard2";
+import { UAParser } from "ua-parser-js";
+
 export default function EventList() {
   const data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    const parser = new UAParser();
+    const userAgent = window.navigator.userAgent;
+    const result = parser.setUA(userAgent).getResult();
+    const isMobileDevice = /mobile/i.test(result.device.type);
+    setIsMobile(isMobileDevice);
   }, []);
 
   return (
