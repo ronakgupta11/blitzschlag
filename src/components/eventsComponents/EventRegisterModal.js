@@ -1,10 +1,23 @@
 import React, { useState } from 'react'
-import { FaHome } from 'react-icons/fa'
-
+import { useSelector } from 'react-redux'
+import { selectAuthenticated } from '@/redux/reducers/userReducer'
+import {toast} from "react-toastify"
 function EventRegisterModal({event}) {
+  const auth = useSelector(selectAuthenticated)
   const [teamSize,setTeamSize] = useState(0)
+
   return (
-    <div><button className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white " onClick={()=>document.getElementById('my_modal_1').showModal()}>Register</button>
+    <div><button className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white " onClick={()=>{
+      if(!auth){
+        toast("Please Login to Register for Events",{
+          type:"info"
+        })
+      }
+      else{
+
+        document.getElementById('my_modal_1').showModal()
+      }
+      }}>Register</button>
     <dialog id="my_modal_1" className="modal">
       <div className="modal-box">
         <div className='flex items-center justify-between'>

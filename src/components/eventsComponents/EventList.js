@@ -6,34 +6,19 @@ import Image from "next/image";
 import EventCard1 from "./EventCard1";
 import EventCard2 from "./EventCard2";
 import { UAParser } from "ua-parser-js";
-import { url } from "@/constants";
-import axios from "axios"
-
+import { selectEventsData } from "@/redux/reducers/dataReducer";
+import { useSelector } from "react-redux";
 export default function EventList() {
-  const data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
-  const [flagship,setFlagship] = useState([]);
-  const [club,setClub] = useState([]);
-  const [fun,setFun] = useState([]);
 
-console.log(flagship)
-  useEffect(()=>{
-    axios.get(`${url}/events`)
-    .then(
-      d => {
-        // console.log(d.data)
-        const data = d.data
-        const filteredFlagship = data.filter(item => item.category === "flagship");
-        setFlagship(filteredFlagship)
-        const filteredClub = data.filter(item => item.category === "club");
-        setClub(filteredClub)
-        const filteredFun = data.filter(item => item.category === "club");
-        setFun(filteredFun)
-      }
-    ).catch(e=>console.error(e))
+const events = useSelector(selectEventsData)
+const flagship = events.filter(item => item.category === "flagship");
+const club = events.filter(item => item.category === "club");
+const fun = events.filter(item => item.category === "fun");
 
-  },[])
+
+
 
   useEffect(() => {
     const parser = new UAParser();

@@ -79,8 +79,10 @@ function Navbar({SLoading}) {
               !isMobile &&
               <li className="flex flex-col justify-center align-middle mr-4">
             <button className="bg-[#463000] btn-sm lg:btn text-white lg:px-6 text-center flex flex-col justify-center align-middle rounded-full">
-              
+              <Link href={"/login"}>
+
                 Register
+              </Link>
             
             </button>
           </li>
