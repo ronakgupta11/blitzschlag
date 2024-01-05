@@ -20,7 +20,7 @@ function Page4() {
   background: '#2D1502', boxShadow: '0px 6px 14.899999618530273px rgba(100, 57, 25, 0.80)', borderRadius: 20
 }} >Register</button>
 </div>
-<Image className='absolute w-[200px] md:w-[370px] bottom-[15%] left-10  -z-10 md:z-0' src={moon}/>
+<Image className='absolute w-[200px] md:w-[370px] bottom-[10%] left-10  -z-10 md:z-0' src={moon}/>
 
       <div className='w-full h-screen'>
 
