@@ -27,7 +27,7 @@ function Page5() {
       <div className='w-full h-screen'>
         <Image className='absolute bottom-0 z-20 w-full h-96' src={cloudfront}/>
         <Image className='absolute bottom-0 z-0 w-full h-[500px]' src={cloudback}/>
-        <Image ref={fortRef} className='absolute bottom-0 z-0 w-full md:w-[60%] max-h-[80%] md:max-h-screen object-cover object-top' src={fort}/>
+        <Image ref={fortRef} className='absolute bottom-0 z-0 w-full md:w-[60%] max-h-[80%] md:max-h-full object-cover object-top' src={fort}/>
       </div>
 
     </div>

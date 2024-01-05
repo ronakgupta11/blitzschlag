@@ -26,7 +26,7 @@ function Page4() {
 
         <Image className='absolute bottom-0 z-20 w-full ' src={cloudfront}/>
         <Image className='absolute bottom-0 z-0 w-full' src={cloudback}/>
-        <Image ref={fortRef} className='absolute bottom-0 right-0 z-0 w-full md:w-[60%] max-h-[80%] md:max-h-screen  object-cover object-top' src={fort}/>
+        <Image ref={fortRef} className='absolute bottom-0 right-0 z-0 w-full md:w-[60%] max-h-[80%] md:max-h-full  object-cover object-top' src={fort}/>
       </div>
 
     </div>
