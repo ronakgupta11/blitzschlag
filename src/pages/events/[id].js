@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import MobileEventPage from "../../components/eventsComponents/MobileEventPage";
 import DesktopEventPage from "/src/components/eventsComponents/DesktopEventPage";
 import { UAParser } from "ua-parser-js";
