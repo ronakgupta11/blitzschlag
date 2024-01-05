@@ -4,7 +4,7 @@ import Link from "next/link";
 import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal"
 function DesktopEventPage({data}) {
-
+console.log(data)
   return (
     <div className="bg-black w-full flex h-full ">
       <div
@@ -41,7 +41,7 @@ function DesktopEventPage({data}) {
               <Image src={LeftArrow} /> Back
             </div>
           </Link>
-          <EventRegisterModal event={data?.name}/>
+          <EventRegisterModal event={data?.name} id={data?.eventId}/>
         </div>
       </div>
 
