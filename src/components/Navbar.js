@@ -21,9 +21,11 @@ function Navbar() {
       window.removeEventListener('resize', handleResize);
     };
   }, [])
+  
   return (
-    <div className="nav  py-5 w-full flex bg-[#0A0A0A] opacity-[0.85]">
+    <div className="nav py-3 w-full flex bg-[#0A0A0A] opacity-[0.85]">
       { 
+        
         <ul className={`w-full flex ${isMobile?"justify-between":"justify-evenly"} align-middle ${isMobile?"px-5":""} text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]`} >
           <li className="w-[15%]">
             Logo
@@ -78,7 +80,7 @@ function Navbar() {
               <li className="flex flex-col justify-center align-middle mr-4">
             <button className="bg-[#463000] btn-sm lg:btn text-white lg:px-6 text-center flex flex-col justify-center align-middle rounded-full">
               
-                Register
+               <a href="/register"> Register</a>
             
             </button>
           </li>
@@ -91,7 +93,7 @@ function Navbar() {
      {isMobile && <div
         className={`${
           !toggle ? "hidden" : "flex"
-        } p-6 black-gradient bg-[#0A0A0A] absolute top-0 right-0 h-screen justify-start align-top  my-2 min-w-[140px] z-10 rounded-xl `}
+        } p-6 black-gradient bg-[#0A0A0A] absolute top-0 right-0 h-screen justify-start align-top   min-w-[140px] z-10  `}
       >
         <ul className="list-none flex flex-col  items-start justify-start gap-4  text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]">
           <li></li>
@@ -122,20 +124,21 @@ function Navbar() {
           <li>
             <a href="/events">Events</a>
           </li>
+          <li className={pathname === '/ambassadors' ? 'active' : ''}>
+            <a href="/ambassadors">Ambassadors</a>
+          </li>
           <li className="flex flex-col justify-center align-middle">
             <button className="bg-[#463000] btn-sm lg:btn text-white lg:px-6 text-center flex flex-col justify-center align-middle rounded-full">
-              <a className="text-[16px]" href="">
+              <a className="text-[16px]" href="/register">
                 Register
               </a>
             </button>
-          </li>
-          <li className={pathname === '/ambassadors' ? 'active' : ''}>
-            <a href="/ambassadors">Ambassadors</a>
           </li>
         </ul>
       </div>}
     </div>
   );
 }
+         
 
 export default Navbar;
