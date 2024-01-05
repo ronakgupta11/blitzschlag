@@ -33,7 +33,7 @@ function LandingSection() {
                 <motion.div className="flex items-center justify-center h-screen"
                     initial={{ y: 400, scale: 1 }} 
                     animate={{ y: 0 }} 
-                    transition={{ duration: 2, delay: 0 }} 
+                    transition={{ duration: 2, delay: 0 }}
                 >
                     <h1
 
@@ -47,13 +47,13 @@ function LandingSection() {
                 initial={{ y: 70 }} 
                 animate={{ y: 0 }} 
                 transition={{ duration: 2, delay: 0 }} 
-                className='absolute bottom-0 w-screen z-[25]'
+                className={`${classes.bcloudgrad} absolute bottom-0 w-screen z-[25]`}
             >
                 <Image className='w-screen' src={topCloud} />
             </motion.div>
             <motion.div className="flex items-center justify-center h-screen"
                 initial={{ y: 0, scale: 0.3 }} 
-                animate={{ y: 40, scale: 2 }} 
+                animate={{ y: 100, scale: 2 }} 
                 transition={{ duration: 1.7, delay: 0 }}>
 
                 <Image className='w-50' src={sun} />
