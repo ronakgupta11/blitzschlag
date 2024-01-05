@@ -38,7 +38,7 @@ export default function team() {
   console.log(activeSection);
 
   return (
-    <div className="w-full    bg-[#fffbed] relative p-4">
+    <div className="w-full    bg-[#fffbed] relative p-4 pt-28">
       <div className="flex w-full md:space-x-64 space-x-48 items-center justify-center">
         <Image src={flower} />
         <Image src={flower} />

@@ -58,7 +58,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSLoading(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -74,7 +74,7 @@ export default function App({ Component, pageProps }) {
     </Head>
       <Provider store={store}>
         <Layout>
-          <Component {...pageProps} />
+          <Component {...pageProps} SLoading={SLoading}/>
         </Layout>
         <ToastContainer
           position="top-right"

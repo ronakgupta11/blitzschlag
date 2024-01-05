@@ -6,36 +6,28 @@ import Page3 from '@/components/parallax/Page3';
 import Page4 from '@/components/parallax/page4';
 import Page5 from '@/components/parallax/page5';
 import Loader from "@/components/loader";
+import LandingSection from '@/components/parallax/LandingSection/LandingSection';
 
 
-const Home = () => {
-  const [SLoading, setSLoading] = useState(true);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSLoading(false);
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, []);
-
-
-
+const Home = ({SLoading}) => {
   return (
 <>
 
 
 
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="sync">
 
 { SLoading && 
-<motion.div key="loader" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+<motion.div key="loader" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='absolute z-20'>
  <Loader ></Loader>
  </motion.div>}
 {!SLoading && <motion.div
            key="content"
-           initial={{ opacity: 0 }}
+           initial={{ opacity: 1 }}
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}
               >
+      <LandingSection />
 <Page2/>
 <Page3/>
 <Page4/>

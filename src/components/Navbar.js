@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -22,7 +23,7 @@ function Navbar() {
     };
   }, [])
   return (
-    <div className="nav  py-5 w-full flex bg-[#0A0A0A] opacity-[0.85]">
+    <div className="nav  py-5 w-full flex bg-[#0A0A0A] opacity-[0.85] absolute top-0 z-10">
       { 
         <ul className={`w-full flex ${isMobile?"justify-between":"justify-evenly"} align-middle ${isMobile?"px-5":""} text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]`} >
           <li className="w-[15%]">
@@ -33,16 +34,16 @@ function Navbar() {
            
               <div className="flex justify-evenly w-[70%]">
             <li className={pathname === '/' ? 'active' : ''} >
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className={pathname === '/events' ? 'active' : ''}>
-            <a href="/events">Events</a>
+            <Link href="/events">Events</Link>
           </li>
           <li>
-            <a href="/ambassadors">Ambassadors</a>
+            <Link href="/ambassadors">Ambassadors</Link>
           </li>
           <li>
-            <a href="/team">Our Team</a>
+            <Link href="/team">Our Team</Link>
           </li>
           
           </div>
@@ -117,20 +118,20 @@ function Navbar() {
             </svg>
           </li>
           <li className={pathname === '/' ? '' : ''}>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a href="/events">Events</a>
+            <Link href="/events">Events</Link>
           </li>
           <li className="flex flex-col justify-center align-middle">
             <button className="bg-[#463000] btn-sm lg:btn text-white lg:px-6 text-center flex flex-col justify-center align-middle rounded-full">
-              <a className="text-[16px]" href="">
+              <Link className="text-[16px]" href="">
                 Register
-              </a>
+              </Link>
             </button>
           </li>
           <li className={pathname === '/ambassadors' ? 'active' : ''}>
-            <a href="/ambassadors">Ambassadors</a>
+            <Link href="/ambassadors">Ambassadors</Link>
           </li>
         </ul>
       </div>}
