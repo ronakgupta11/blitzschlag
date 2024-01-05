@@ -12,14 +12,14 @@ import sun from "../../../../public/assets/home/page1/sun.png"
 
 function LandingSection() {
     return (
-        <div className={`${classes.root} h-screen relative overflow-hidden`}>
+        <div className={`${classes.root} h-[80vh] md:h-screen relative overflow-hidden`}>
             <motion.div
                 initial={{ y: 100 }} 
                 animate={{ y: 0 }} 
                 transition={{ duration: 2, delay: 0 }} 
                 className='absolute bottom-0 w-screen z-10'
             >
-                <Image className='w-screen' src={bottomCloud} />
+                <Image className='w-screen h-[30vh] md:h-auto' src={bottomCloud} />
             </motion.div>
             <div className='absolute font-sankaran w-screen z-20'>
                 <motion.div className="flex items-center justify-center h-screen"
@@ -41,7 +41,7 @@ function LandingSection() {
                 transition={{ duration: 2, delay: 0 }} 
                 className={`${classes.bcloudgrad} absolute bottom-0 w-screen z-[25]`}
             >
-                <Image className='w-screen' src={topCloud} />
+                <Image className='w-screen h-[20vh] md:h-auto' src={topCloud} />
             </motion.div>
             <motion.div className="flex items-center justify-center h-screen"
                 initial={{ y: 0, scale: 0.3 }} 
