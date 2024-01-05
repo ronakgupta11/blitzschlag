@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import img from "../../../public/assets/events/event.png"
+import Link from 'next/link';
 function EventCard1({name,desc,image,id}) {
 
   return (
@@ -14,7 +15,10 @@ function EventCard1({name,desc,image,id}) {
       <p className='self-end pl-2 text-xs md:text-sm w-[213px] md:w-[316px]'>
       Panache is a Fashion walk. In this the participants may participate individually and in groups as well. ( grouppreferably ).  
       </p>
-      <button className='px-4 text-xs md:text-sm text-white py-1 self-end mr-20 md:mr-16 bg-[#9D390E] border-white border rounded-3xl'>Know more</button>
+      <button className='px-4 text-xs md:text-sm text-white py-1 self-end mr-20 md:mr-16 bg-[#9D390E] border-white border rounded-3xl'><Link href="/events/123">
+      Know more
+      </Link>
+      </button>
 
       </div>
     </div>

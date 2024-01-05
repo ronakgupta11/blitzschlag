@@ -8,18 +8,19 @@ import { url } from "@/constants";
 // import BG from "/public/bg_mobile.svg";
 import img from "/public/assets/img4.png";
 import LeftArrow from "/public/icons/left_arrow.svg";
+import EventRegisterModal from "./EventRegisterModal"
 
 function MobileEventPage() {
   const router = useRouter();
 
   const id = router.query.id;
 
-  useEffect(() => {
-    axios
-      .get(`${url}/events/${id}`)
-      .then((d) => console.log(d.data))
-      .catch((e) => console.error(e));
-  }, [id]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`${url}/events/${id}`)
+  //     .then((d) => console.log(d.data))
+  //     .catch((e) => console.error(e));
+  // }, [id]);
   return (
     <div className="bg-[#fbae9e] w-full h-full ">
       <div
@@ -75,9 +76,7 @@ function MobileEventPage() {
             {" "}
             <Image src={LeftArrow} /> Back
           </div>
-          <button className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white">
-            Register
-          </button>
+          <EventRegisterModal/>
         </div>
       </div>
     </div>
