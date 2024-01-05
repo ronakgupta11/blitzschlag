@@ -10,7 +10,9 @@ function Layout({ children }) {
     <ParallaxProvider>
 
     <div className="layout ">
+      <div className="fixed z-[9999] w-full">
       <Navbar/>
+      </div>
       <div className="content flex-1 w-full ">{children}</div>
       <Footer />
     </div>
