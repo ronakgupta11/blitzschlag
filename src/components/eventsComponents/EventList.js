@@ -11,7 +11,7 @@ export default function EventList() {
   const [isMobile, setIsMobile] = useState();
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -60,16 +60,16 @@ export default function EventList() {
         <Image src={flower2} />
       </div>
       {selectedTab === 0 && (
-        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  ">
+        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
           {data.map((d, k) =>
             isMobile ? (
-              <EventCard1 key={k} />
+              <EventCard1 className='m-auto' key={k} />
             ) : k % 2 === 0 ? (
-              <div style={{width:"40%"}}>
+              <div className="mx-8" style={{width:"40%"}}>
                 <EventCard1  key={k} />
               </div>
             ) : (
-              <div style={{width:"40%"}}>
+              <div className="mx-8" style={{width:"40%"}}>
                 <EventCard2  key={k} />
               </div>
             )

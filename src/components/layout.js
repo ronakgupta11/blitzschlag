@@ -10,11 +10,7 @@ function Layout({ children }) {
     <ParallaxProvider>
 
     <div className="layout ">
-      {/* <SidebarBlitz/> */}
-      {/* <div className="sidebar fixed z-[9999999]  "><Sidebar/></div> */}
-      <div className="  w-full z-[99]">
-        <Navbar/>
-      </div>
+      <Navbar/>
       <div className="content flex-1 w-full ">{children}</div>
       <Footer />
     </div>

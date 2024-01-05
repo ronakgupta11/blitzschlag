@@ -1,22 +1,47 @@
-import { useEffect } from 'react';
-import { motion, useAnimation, useMotionValue } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Page1 from '@/components/parallax/Page1';
+import { useState,useEffect } from 'react';
+import { motion,AnimatePresence, delay } from "framer-motion";
+import Head from "next/head";
 import Page2 from '@/components/parallax/Page2';
 import Page3 from '@/components/parallax/Page3';
 import Page4 from '@/components/parallax/page4';
 import Page5 from '@/components/parallax/page5';
-import { AnimatePresence } from 'framer-motion';
+import Loader from "@/components/loader";
+
 
 const Home = () => {
+  const [SLoading, setSLoading] = useState(true);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSLoading(false);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, []);
+
 
 
   return (
 <>
+
+
+
+    <AnimatePresence mode="wait">
+
+{ SLoading && 
+<motion.div key="loader" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+ <Loader ></Loader>
+ </motion.div>}
+{!SLoading && <motion.div
+           key="content"
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           exit={{ opacity: 0 }}
+              >
 <Page2/>
 <Page3/>
 <Page4/>
 <Page5/>
+</motion.div>}
+</AnimatePresence>
 </>
   );
 };
