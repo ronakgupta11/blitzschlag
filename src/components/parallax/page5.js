@@ -12,7 +12,7 @@ function Page5() {
     translateY:[30,0]
   })
   return (
-    <div className='h-[700px] md:h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background:" linear-gradient(180deg, #292929 -7.2%, #5F5F5F 79.53%)"}}>
+    <div className='h-[700px]  w-full relative flex flex-col items-center overflow-hidden' style={{ background:" linear-gradient(180deg, #292929 -7.2%, #5F5F5F 79.53%)"}}>
       <div className=' self-end'>
 
 <Image className='scale-50 z-0' src={moon}/>
