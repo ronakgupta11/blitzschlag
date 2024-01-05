@@ -1,91 +1,109 @@
-import React, { useEffect,useState,useRef } from 'react'
-import flower1 from "../../public/assets/team/flower1.png"
-import flower from "../../public/assets/team/flower.png"
-import Image from 'next/image'
-import TeamCard from '@/components/teamComponents/TeamCard'
-import { Parallax } from 'react-scroll-parallax'
+import React, { useEffect, useState, useRef } from "react";
+import flower1 from "../../public/assets/team/flower1.png";
+import flower from "../../public/assets/team/flower.png";
+import Image from "next/image";
+import TeamCard from "@/components/teamComponents/TeamCard";
+import { Parallax } from "react-scroll-parallax";
 
 export default function team() {
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef([
-    { id: 'Technical', ref: useRef() },
-    { id: 'Publicity', ref: useRef() },
-    { id: 'MassMedia', ref: useRef() },
-    { id: 'Cultural', ref: useRef() },
+    { id: "Technical", ref: useRef() },
+    { id: "Publicity", ref: useRef() },
+    { id: "MassMedia", ref: useRef() },
+    { id: "Cultural", ref: useRef() },
   ]);
 
-  const containerRef = useRef()
+  const containerRef = useRef();
   const handleScroll = () => {
     const scrollPosition = window.scrollY + window.innerHeight / 2;
 
     sectionRefs.current.forEach(({ id, ref }, index) => {
-      if (ref.current.offsetTop <= scrollPosition && ref.current.offsetTop + ref.current.clientHeight >= scrollPosition) {
+      if (
+        ref.current.offsetTop <= scrollPosition &&
+        ref.current.offsetTop + ref.current.clientHeight >= scrollPosition
+      ) {
         setActiveSection(index);
       }
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-
-
-  console.log(activeSection)
-
+  console.log(activeSection);
 
   return (
-
-
-<div className='w-full    bg-[#fffbed] relative p-4'>
-  <div className='flex w-full md:space-x-64 space-x-48 items-center justify-center'>
-    <Image src={flower}/>
-    <Image src={flower}/>
-  </div>
-  <div className='w-full flex space-x-2 items-center justify-between'>
-  <div className='border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg'></div>
-    <p className='font-amita text-2xl md:text-4xl text-[#5A2700] '>Our Team</p>
-    <div className='border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg'></div>
-  
-  </div>
-  <Image className="absolute top-0 left-0" src ={flower1}/>
-  <div className='flex h-screen w-full flex-col md:flex-row items-center justify-around  p-2 '>
-
-  <div id='TeamContainer' ref={containerRef} className='h-full overflow-y-scroll'>
+    <div className="w-full    bg-[#fffbed] relative p-4">
+      <div className="flex w-full md:space-x-64 space-x-48 items-center justify-center">
+        <Image src={flower} />
+        <Image src={flower} />
+      </div>
+      <div className="w-full flex space-x-2 items-center justify-between">
+        <div className="border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg"></div>
+        <p className="font-amita text-2xl md:text-4xl text-[#5A2700] ">
+          Our Team
+        </p>
+        <div className="border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg"></div>
+      </div>
+      <Image className="absolute top-0 left-0" src={flower1} />
+      <div className="flex h-screen w-full flex-col md:flex-row items-center justify-around  p-2 ">
+        <div
+          id="TeamContainer"
+          ref={containerRef}
+          className="h-full overflow-y-scroll"
+        >
           {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-            <div ref={sectionRefs.current[0].ref} id='Technical' className='cards flex flex-wrap my-12'>
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-            </div>
+          <div
+            ref={sectionRefs.current[0].ref}
+            id="Technical"
+            className="cards flex flex-wrap my-12"
+          >
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+          </div>
           {/* </Parallax> */}
           {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-            <div ref={sectionRefs.current[1].ref} id='Publicity' className='cards flex flex-wrap my-12'>
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-            </div>
+          <div
+            ref={sectionRefs.current[1].ref}
+            id="Publicity"
+            className="cards flex flex-wrap my-12"
+          >
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+          </div>
           {/* </Parallax> */}
           {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-            <div ref={sectionRefs.current[2].ref} id='MassMedia' className='cards flex flex-wrap my-12'>
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-            </div>
+          <div
+            ref={sectionRefs.current[2].ref}
+            id="MassMedia"
+            className="cards flex flex-wrap my-12"
+          >
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+          </div>
           {/* </Parallax> */}
           {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-            <div ref={sectionRefs.current[3].ref} id='Cultural' className='cards flex flex-wrap my-12'>
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-              <TeamCard />
-            </div>
+          <div
+            ref={sectionRefs.current[3].ref}
+            id="Cultural"
+            className="cards flex flex-wrap my-12"
+          >
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+            <TeamCard />
+          </div>
           {/* </Parallax> */}
         </div>
 
@@ -115,14 +133,13 @@ export default function team() {
             </ul>
     </div>
    </div> */}
-  </div>
-</div>
-
-
-  )
+      </div>
+    </div>
+  );
 }
 
-{/* <div className=' relative h-screen pl-24 '>
+{
+  /* <div className=' relative h-screen pl-24 '>
 <div
     className='fixed top-0 left-0 w-full h-screen  bg-fixed bg-center bg-no-repeat bg-cover'
     style={{ backgroundImage: `url(${bgImage.src})` }}
@@ -142,4 +159,5 @@ export default function team() {
     </div>
 </div>
 </div>
-</div> */}
+</div> */
+}
