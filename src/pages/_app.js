@@ -5,19 +5,21 @@ import { ToastContainer } from "react-toastify";
 import { Provider } from "react-redux";
 import store from "@/redux/store";
 
+import { url } from "@/constants";
 import { getUserData, logOutUser } from "@/redux/actions/userAction";
 import {
   SET_AUTHENTICATED,
   SET_UNAUTHENTICATED,
   SET_USER,
 } from "@/redux/reducers/userReducer";
+import { SET_EVENTS } from "@/redux/reducers/dataReducer";
 // import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
 import Layout from "@/components/layout";
 import axios from "axios";
 import { useState,useEffect } from "react";
-import { motion,AnimatePresence, delay } from "framer-motion";
-import Loader from "@/components/loader";
+// import { motion,AnimatePresence, delay } from "framer-motion";
+// import Loader from "@/components/loader";
 import Head from "next/head";
 // const samakarn = localFont({
 //   src: [
@@ -36,6 +38,17 @@ export default function App({ Component, pageProps }) {
     const token = localStorage.getItem("BLITZID");
     const profile = localStorage.getItem("BLITZUSER");
     axios.defaults.headers.common["Authorization"] = token;
+    
+      axios.get(`${url}/events`)
+      .then(
+        d => {
+          // console.log(d.data)
+          const data = d.data
+          dispatch(SET_EVENTS({
+            events:data
+          }))
+        
+        }).catch(err=>console.log(err))
 
     if (token) {
       const decoded = jwtDecode(token);
@@ -58,7 +71,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSLoading(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -74,7 +87,7 @@ export default function App({ Component, pageProps }) {
     </Head>
       <Provider store={store}>
         <Layout>
-          <Component {...pageProps} />
+          <Component {...pageProps} SLoading={SLoading}/>
         </Layout>
         <ToastContainer
           position="top-right"
@@ -82,6 +95,7 @@ export default function App({ Component, pageProps }) {
           hideProgressBar={false}
           closeOnClick
           theme="light"
+          className={"z-[1000000]"}
         />
       </Provider>
     </>

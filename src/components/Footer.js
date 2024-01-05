@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import BlitzLogo from "../../public/assets/Footer/logo.png";
+
 import Link from "next/link";
+import blitz_logo1 from '../../public/assets/blitz_logo2.png'
 function Footer() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -27,12 +28,12 @@ function Footer() {
         <div
           style={{
             borderRight: "solid white 1px",
-            borderBottom: isMobile ? "solid white 1px" : "",
+           
           }}
           className="flex-col px-5 align-middle justify-center lg:max-w-[25%]"
         >
           <div className="flex align-middle justify-center">
-            {/* <Image src={BlitzLogo}></Image> */}
+          <Image width={200} src={blitz_logo1}></Image>
           </div>
           <div className="text-white text-center font-sankaran text-[16px]  leading-[44px]">
             BLITZSCHALG’24
@@ -43,7 +44,7 @@ function Footer() {
           style={{
             fontFamily: "BlackOpsOne",
             borderRight: "1px solid white",
-            borderBottom: isMobile ? "solid white 1px" : "",
+           
           }}
           className="flex flex-col my-3  lg:gap-y-11 align-middle lg:max-w-[50%] "
         >
@@ -52,8 +53,8 @@ function Footer() {
           </div>
 
           <div className=" flex align-middle lg:gap-y-5 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-amita text-[12.5px] md:text-[20px] font-normal leading-[44px]">
-            <div className="text-center">
-              <Link className="text-center" href="/">
+            <div className="text-center ">
+              <Link className="text-center " href="/">
                 Home
               </Link>
             </div>

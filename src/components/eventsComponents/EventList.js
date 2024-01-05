@@ -6,11 +6,19 @@ import Image from "next/image";
 import EventCard1 from "./EventCard1";
 import EventCard2 from "./EventCard2";
 import { UAParser } from "ua-parser-js";
-
+import { selectEventsData } from "@/redux/reducers/dataReducer";
+import { useSelector } from "react-redux";
 export default function EventList() {
-  const data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
+
+const events = useSelector(selectEventsData)
+const flagship = events.filter(item => item.category === "flagship");
+const club = events.filter(item => item.category === "club");
+const fun = events.filter(item => item.category === "fun");
+
+
+
 
   useEffect(() => {
     const parser = new UAParser();
@@ -19,6 +27,9 @@ export default function EventList() {
     const isMobileDevice = /mobile/i.test(result.device.type);
     setIsMobile(isMobileDevice);
   }, []);
+
+
+
 
   return (
     <div className="bg-[#883800] w-full flex flex-col items-center overflow-x-hidden">
@@ -51,7 +62,7 @@ export default function EventList() {
             selectedTab === 2 ? "text-[#721542] bg-white" : ""
           } `}
         >
-          Department Events
+          Fun Events
         </button>
       </div>
       <div className="absolute flex w-full justify-between">
@@ -60,47 +71,63 @@ export default function EventList() {
       </div>
       {selectedTab === 0 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {data.map((d, k) =>
+          {flagship.map((d, k) =>
             isMobile ? (
               <div className = "ml-12">
 
-              <EventCard1 className='m-auto' key={k} />
+              <EventCard1 data={d} className='m-auto' key={k} />
               </div>
             ) : k % 2 === 0 ? (
               <div className="mx-8" style={{width:"40%"}}>
-                <EventCard1  key={k} />
+                <EventCard1 data={d} key={k} />
               </div>
             ) : (
               <div className="mx-8" style={{width:"40%"}}>
-                <EventCard2  key={k} />
+                <EventCard2  data={d} key={k} />
               </div>
             )
           )}
         </div>
       )}
       {selectedTab === 1 && (
-        <div className=" z-10 flex flex-wrap m-3 p-3 lg:gap-x-[100px] items-center justify-center ">
-          <div className="">
-          <EventCard1 />
-          </div>
-          <div className="">
-          <EventCard2 />
-          </div>
-          <div>
-          <EventCard1 />
-          </div>
-          <div>
-          <EventCard2 />
-          </div>
-         
-        </div>
+        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
+        {club.map((d, k) =>
+          isMobile ? (
+            <div className = "ml-12">
+
+            <EventCard1 data={d} className='m-auto' key={k} />
+            </div>
+          ) : k % 2 === 0 ? (
+            <div className="mx-8" style={{width:"40%"}}>
+              <EventCard1 data={d}  key={k} />
+            </div>
+          ) : (
+            <div className="mx-8" style={{width:"40%"}}>
+              <EventCard2 data={d} key={k} />
+            </div>
+          )
+        )}
+      </div>
       )}
       {selectedTab === 2 && (
-        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center ">
-          <p className="text-4xl font-amita text-center text-white min-h-60">
-            No Events Here yet
-          </p>
-        </div>
+       <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
+       {fun.map((d, k) =>
+         isMobile ? (
+           <div className = "ml-12">
+
+           <EventCard1 data={d} className='m-auto' key={k} />
+           </div>
+         ) : k % 2 === 0 ? (
+           <div className="mx-8" style={{width:"40%"}}>
+             <EventCard1 data={d}  key={k} />
+           </div>
+         ) : (
+           <div className="mx-8" style={{width:"40%"}}>
+             <EventCard2 data={d}  key={k} />
+           </div>
+         )
+       )}
+     </div>
       )}
 
       <div className="flex w-full items-center">

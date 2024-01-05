@@ -1,0 +1,41 @@
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import LeftArrow from "/public/icons/left_arrow.svg";
+
+function EventTab({ credentials }) {
+  return credentials ? (
+    <div>No Event Registered yet</div>
+  ) : (
+    <div className="grid w-full bg-[#FFFBED]">
+      <div className=" py-[32px] px-[30px] md:px-[60px] h-fit">
+        <Link href={"/"}>
+          <div className="flex gap-[10px] items-center text-[#393939] font-amita ">
+            <Image src={LeftArrow} alt="left_arrow_icon" /> Back to home
+          </div>
+        </Link>
+      </div>
+      <div className="bg-white px-[40px] py-[30px]">
+        <p className="text-[#000] text-[18px] border-b-2 border-black pb-[20px]">
+          Registered Events
+        </p>
+        <div className="grid grid-cols-5 items-center text-[#000000] text-base text-center mt-[20px]">
+          <p>Sr No.</p>
+          <p>Event Name</p>
+          <p>Date</p>
+          <p>Venue</p>
+          <p>Status</p>
+        </div>
+        <div className="grid grid-cols-5 items-center text-[#000000] text-base text-center mt-[20px]">
+          <p>1.</p>
+          <p>Panache</p>
+          <p>02.02.2024</p>
+          <p>OAT</p>
+          <p className="text-[#1968FF]">Register</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default EventTab;

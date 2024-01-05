@@ -55,12 +55,12 @@ const errors = useSelector(selectErrors)
         })
     }
   return (
-<div>
+<div className='z-[1000]'>
     {/* You can open the modal using document.getElementById('ID').showModal() method */}
-<button className="btn" onClick={()=>document.getElementById('my_campus_modal').showModal()}>open modal</button>
+<button className="btn rounded-xl bg-[#E9B704] text-[#463000]" onClick={()=>document.getElementById('my_campus_modal').showModal()}>Register Now</button>
 <dialog id="my_campus_modal" className="modal">
-  <div className="modal-box">
-    <form method="dialog">
+  <div className="modal-box rounded-2xl bg-[#463000] text-[white]">
+    <form method="dialog ">
       {/* if there is a button in form, it will close the modal */}
       <button id='btn-modal-close' className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
     </form>
@@ -71,7 +71,7 @@ const errors = useSelector(selectErrors)
   <div className="label">
     <span className="label-text text-white">Your Name</span>
   </div>
-  <input type="text" placeholder="Type Here.." onChange={(e)=>{
+  <input type="text " placeholder="Type Here.." onChange={(e)=>{
      dispatch(CLEAR_ERRORS())
             setName(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs `} />
   <div className="label">

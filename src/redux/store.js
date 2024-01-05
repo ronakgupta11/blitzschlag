@@ -13,7 +13,7 @@ import uiReducer from "./reducers/uiReducer"
 // const middleware = [thunk]
 const reducers =({
     user:userReducer,
-    // data:dataReducer,
+    data:dataReducer,
     ui:uiReducer
 })
 
