@@ -5,6 +5,7 @@ import cloudBg from "../../../public/assets/home/page2/cloudBg.png"
 import hawa from "../../../public/assets/home/page2/hawa.png"
 import moon from "../../../public/assets/home/page2/moon.png"
 import { useParallax } from 'react-scroll-parallax'
+import Link from 'next/link'
 function Page2() {
   const {ref:fortref} = useParallax({
       translateY:[20,0]
@@ -20,14 +21,19 @@ function Page2() {
   
 
   return (
-    <div className='h-[700px] sm:h-screen w-full relative flex flex-col items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #E6745A -7.87%, #FFBCB6 74.4%)"}}>
+    <div className='h-[700px]  w-full relative flex flex-col items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #E6745A -7.87%, #FFBCB6 74.4%)"}}>
 
       <div className='self-start mt-24 ml-4'>
 
-<p className=' text-transparent bg-clip-text bg-[#2E0D02] font-sankaran text-5xl md:text-7xl  '>Padharo Mahare Fest</p>
+<p className=' text-transparent bg-clip-text bg-[#2E0D02] font-sankaran text-5xl md:text-7xl  '>Padharo Mhare Fest</p>
 <button className='btn z-20 px-12 mt-12 text-white' style={{
   background: '#4E2420', boxShadow: '0px 6px 14.899999618530273px rgba(143, 55, 39, 0.80)', borderRadius: 20
-}} >Know More</button>
+}} >
+  <Link href={"/theme"}>
+
+  Know More
+  </Link>
+  </button>
 </div>
       <div className='w-full h-screen'>
 

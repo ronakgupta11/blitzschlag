@@ -4,6 +4,7 @@ import Image from "next/image";
 import cloudback from "../../../public/assets/home/page3/cloudback.png";
 import fort from "../../../public/assets/home/page3/fort.png";
 import moon from "../../../public/assets/home/page3/moon.png";
+import Link from "next/link";
 
 import { useParallax } from "react-scroll-parallax";
 function Page3() {
@@ -13,7 +14,7 @@ function Page3() {
 
   return (
     <div
-      className="h-[700px] sm:h-screen w-full relative flex flex-col  items-center overflow-hidden"
+      className="h-[700px]  w-full relative flex flex-col  items-center overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #5DAAE7 -7.87%, #BEEBFF 74.4%)",
       }}
@@ -33,7 +34,10 @@ function Page3() {
             borderRadius: 20,
           }}
         >
+          <Link href={"/events"}>
+
           Explore
+          </Link>
         </button>
       </div>
 

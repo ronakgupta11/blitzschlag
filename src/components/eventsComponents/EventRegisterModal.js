@@ -4,13 +4,16 @@ import { FaHome } from 'react-icons/fa'
 function EventRegisterModal({event}) {
   const [teamSize,setTeamSize] = useState(0)
   return (
-    <div><button className="bg-[#FF002F] text-white font-black-ops-one text-lg  rounded-md px-16 py-2 " onClick={()=>document.getElementById('my_modal_1').showModal()}>Register</button>
+    <div><button className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white " onClick={()=>document.getElementById('my_modal_1').showModal()}>Register</button>
     <dialog id="my_modal_1" className="modal">
       <div className="modal-box">
         <div className='flex items-center justify-between'>
 
         <h3 className="font-bold text-lg">{`Register your team for ${event}`}</h3>
-        <FaHome onClick={()=>{}} size={20}/>
+        <form method="dialog">
+        
+        <button className="btn btn-circle font-black-ops-one"><span>X</span></button>
+        </form>
         </div>
         {/* <p className="py-4">Press ESC key or click the button below to close</p> */}
         <div className="modal-action">
@@ -50,7 +53,7 @@ function EventRegisterModal({event}) {
 </div>
 
 
-            <button className="bg-[#FF002F] text-white font-black-ops-one text-lg  rounded-md px-16 py-2 ">Register Team</button>
+            <button className=" btn text-white font-amita text-lg  rounded-md px-16 py-2 ">Register Team</button>
           </form>
         </div>
       </div>
