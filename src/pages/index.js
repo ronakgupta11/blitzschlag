@@ -18,7 +18,7 @@ const Home = ({ SLoading }) => {
       <AnimatePresence mode="sync">
 
         {SLoading &&
-          <motion.div key="loader" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='absolute z-20'>
+          <motion.div key="loader" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='absolute z-[100]'>
             <Loader ></Loader>
           </motion.div>}
         {!SLoading && <motion.div

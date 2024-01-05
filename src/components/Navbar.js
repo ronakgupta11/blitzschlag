@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-function Navbar() {
+import {motion} from 'framer-motion'
+function Navbar({SLoading}) {
   const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { pathname } = useRouter();
@@ -23,7 +24,7 @@ function Navbar() {
     };
   }, [])
   return (
-    <div className="nav  py-5 w-full flex bg-[#0A0A0A] opacity-[0.85] absolute top-0 z-10">
+    <div className="nav  py-5 w-full flex bg-[#0A0A0A] opacity-[0.85] absolute top-0 z-30">
       { 
         <ul className={`w-full flex ${isMobile?"justify-between":"justify-evenly"} align-middle ${isMobile?"px-5":""} text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]`} >
           <li className="w-[15%]">

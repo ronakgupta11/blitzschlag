@@ -19,6 +19,7 @@ import { useState,useEffect } from "react";
 import { motion,AnimatePresence, delay } from "framer-motion";
 import Loader from "@/components/loader";
 import Head from "next/head";
+import { useRouter } from "next/router";
 // const samakarn = localFont({
 //   src: [
 //     {
@@ -52,9 +53,11 @@ export default function App({ Component, pageProps }) {
       }
     }
   }, []);
+  
+  const router = useRouter();
 
-
-  const [SLoading, setSLoading] = useState(true);
+  // NOTE: only show the loader if the first load is at path "/"
+  const [SLoading, setSLoading] = useState(router.pathname === "/");
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSLoading(false);
