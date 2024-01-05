@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import cloudfront from "../../../public/assets/home/page5/cloudfront.png"
 import cloudback from "../../../public/assets/home/page5/cloudback.png"
 import fort from "../../../public/assets/home/page5/fort.png"
@@ -22,7 +23,11 @@ function Page5() {
         <p className=' text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl ' style={{background:"linear-gradient(180deg, #FFF 28.93%, #A4A4A4 78.47%)"}}>About Us</p>
         <button className='btn z-20  px-12 mt-12 text-white' style={{
           background: '#282828 ', boxShadow: '0px 6px 14.899999618530273px rgba(0, 0, 0, 0.50)', borderRadius: 20
-        }} >About Us</button>
+        }} >
+          <Link href="/about">
+          About Us
+          </Link>
+          </button>
         </div>
       <div className='w-full h-screen'>
         <Image className='absolute bottom-0 z-20 w-full h-96' src={cloudfront}/>

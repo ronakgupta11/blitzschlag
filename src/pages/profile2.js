@@ -10,6 +10,14 @@ import UserProfile from "/public/icons/userprofile.svg";
 import MailIcon from "/public/icons/mail.svg";
 import PhoneIcon from "/public/icons/phone.svg";
 import HamIcon from "/public/icons/hamburger.svg";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import {
+  selectAuthenticated,
+  selectCredentials,
+  selectEvents,
+} from "@/redux/reducers/userReducer";
+import { useRouter } from "next/router";
 
 function Input() {
   return (
@@ -26,9 +34,20 @@ function Input() {
   );
 }
 
-export default function Profile1() {
+export default function Profile() {
+
+  
+  
+  const router = useRouter();
+  const auth = useSelector(selectAuthenticated);
+  const credentials = useSelector(selectCredentials);
   const [currentTab, setCurrentTab] = useState(0);
   const [menu, setMenu] = useState(false);
+  useEffect(() => {
+    if (!auth) {
+      router.push("/login");
+    }
+  }, [auth]);
   return (
     <div className="flex">
       {/* {menu ? ( */}

@@ -20,8 +20,8 @@ const Home = ({SLoading}) => {
 { SLoading && 
 <motion.div key="loader" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='absolute z-20'>
  <Loader ></Loader>
- </motion.div>}
-{!SLoading && <motion.div
+ </motion.div>} */}
+{/* {!SLoading && <motion.div
            key="content"
            initial={{ opacity: 1 }}
            animate={{ opacity: 1 }}
@@ -32,8 +32,8 @@ const Home = ({SLoading}) => {
 <Page3/>
 <Page4/>
 <Page5/>
-</motion.div>}
-</AnimatePresence>
+{/* </motion.div>}
+</AnimatePresence> */}
 </>
   );
 };
