@@ -62,7 +62,10 @@ export default function EventList() {
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
           {data.map((d, k) =>
             isMobile ? (
+              <div className = "ml-12">
+
               <EventCard1 className='m-auto' key={k} />
+              </div>
             ) : k % 2 === 0 ? (
               <div className="mx-8" style={{width:"40%"}}>
                 <EventCard1  key={k} />
