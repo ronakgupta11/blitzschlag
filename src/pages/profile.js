@@ -4,6 +4,7 @@ import ProfileIcon from "/public/icons/profile.svg";
 import NotifyIcon from "/public/icons/notifiy.svg";
 import PassIcon from "/public/icons/passes.svg";
 import EventIcon from "/public/icons/events.svg";
+import CrossIcon from "/public/icons/cross.svg";
 import {
   selectAuthenticated,
   selectCredentials,
@@ -12,6 +13,7 @@ import {
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import EventTab from "/src/components/profile/EventTab.js";
+import PassTab from "/src/components/profile/PassTab.js";
 import ProfileTab from "/src/components/profile/ProfileTab.js";
 import { QRCode } from "react-qrcode-logo";
 
@@ -28,24 +30,38 @@ export default function Profile() {
     }
   }, [auth]);
 
-  console.log(credentials);
+  // console.log(credentials);
 
   return (
     <div className="flex">
       {/* {menu ? ( */}
       <div
-        className={`grid gap-[32px] px-[80px] pr-[140px] py-[100px] bg-black text-[#FFFBED] 
-      font-amita font-medium ${menu ? `grid` : `hidden`} md:grid`}
+        className={`grid h-fit gap-[32px] px-[40px] md:px-[80px] pr-[50px] md:pr-[140px] py-[50px] md:py-[100px] bg-black text-[#FFFBED] 
+        font-amita font-medium ${menu ? `grid` : `hidden`} ${
+          menu ? "absolute" : "unset"
+        } md:unset md:grid`}
       >
+        <div
+          className="md:hidden flex justify-end"
+          onClick={() => setMenu(!menu)}
+        >
+          <Image src={CrossIcon} alt="cross_icon" width={20} height={20} />
+        </div>
         <p
           className="flex gap-[20px] items-center"
-          onClick={() => setCurrentTab(0)}
+          onClick={() => {
+            setCurrentTab(0);
+            // setMenu(!menu);
+          }}
         >
           <Image src={ProfileIcon} /> Profile
         </p>
         <p
           className="flex gap-[20px] items-center"
-          onClick={() => setCurrentTab(1)}
+          onClick={() => {
+            setCurrentTab(1);
+            // setMenu(!menu);
+          }}
         >
           <Image src={EventIcon} />
           Events
@@ -69,9 +85,9 @@ export default function Profile() {
       {currentTab === 0 ? (
         <ProfileTab setMenu={setMenu} menu={menu} credentials={credentials} />
       ) : currentTab === 1 ? (
-        <EventTab />
+        <EventTab setMenu={setMenu} menu={menu} />
       ) : currentTab === 2 ? (
-        <EventTab credentials={credentials} />
+        <PassTab setMenu={setMenu} menu={menu} credentials={credentials} />
       ) : currentTab === 3 ? (
         <p>Notifications</p>
       ) : null}
