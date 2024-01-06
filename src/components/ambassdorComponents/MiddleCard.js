@@ -67,17 +67,18 @@ const MiddleCard = () => {
                 lineHeight="35"
                 letterSpacing="-0.54px"
               >
-                There will be multiple students from
+                Generate excitement and anticipation
                 <tspan x="50%" y="60%">
                   {" "}
-                  each college chosen for this position,
+                  for the fest through word of-mouth
                 </tspan>
                 <tspan x="50%" y="70%">
-                  who will be in charge of the entire
+                  promotions, social media campaigns,
                 </tspan>
                 <tspan x="50%" y="80%">
-                  contingent from that college.
+                  and engaging activities .
                 </tspan>
+                
               </text>
             </svg>
           </div>
@@ -129,16 +130,16 @@ const MiddleCard = () => {
                 lineHeight="35"
                 letterSpacing="-0.54px"
               >
-                There will be multiple students from
+                Gathering participation :
                 <tspan x="50%" y="60%">
                   {" "}
-                  each college chosen for this position,
+                  Motivate and encourage your peers
                 </tspan>
                 <tspan x="50%" y="70%">
-                  who will be in charge of the entire
+                  to participate in the fest's diverse
                 </tspan>
                 <tspan x="50%" y="80%">
-                  contingent from that college.
+                  competitions , workshops , and events.
                 </tspan>
               </text>
             </svg>
@@ -184,16 +185,16 @@ const MiddleCard = () => {
                 lineHeight="35"
                 letterSpacing="-0.54px"
               >
-                There will be multiple students from
-                <tspan x="50%" y="60%">
+                Being a source of information :
+                <tspan x="50%" y="60%"> 
                   {" "}
-                  each college chosen for this position,
+                  Answer your classmates' questions,
                 </tspan>
                 <tspan x="50%" y="70%">
-                  who will be in charge of the entire
+                  provide clear directions, and act as
                 </tspan>
                 <tspan x="50%" y="80%">
-                  contingent from that college.
+                 a helpful guide throughout the fest.
                 </tspan>
               </text>
             </svg>

@@ -82,6 +82,7 @@ function Navbar() {
           <li className="w-[10%] flex flex-col align-middle justify-center ">
             { !toggle &&(
               <svg
+                className="hover:cursor-pointer"
                 onClick={() => setToggle(!toggle)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -149,6 +150,7 @@ function Navbar() {
             flex  align-middle justify-start  w-full "
             >
               <svg
+              className="hover:cursor-pointer"
                 onClick={() => {
                   setToggle(!toggle);
                 }}
@@ -313,7 +315,7 @@ function Navbar() {
                   fill={`${pathname == "/register" ? "#934505" : "white"}`}
                 />
               </svg>
-              <Link href="/register">Login/Register</Link>
+              <Link href="/login">Login/Register</Link>
             </li>
           </ul>
         </div>
