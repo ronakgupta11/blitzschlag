@@ -24,7 +24,10 @@ function Navbar() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  useEffect(()=>{
+    if(toggle)
+    setToggle(!toggle)
+  },[pathname])
   return (
     <div className="nav py-2 w-full flex z-[999] bg-[#0A0A0A]  absolute top-0 ">
       {
