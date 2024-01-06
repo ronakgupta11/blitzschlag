@@ -27,7 +27,7 @@ function Page3() {
           Events
         </p>
         <button
-          className="btn z-20 px-12 mt-12 text-white"
+          className="btn z-[99] px-12 mt-12 text-white"
           style={{
             background: "#0D2138",
             boxShadow: "0px 6px 14.899999618530273px rgba(102, 179, 215, 0.80)",

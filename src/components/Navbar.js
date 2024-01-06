@@ -297,7 +297,7 @@ function Navbar() {
               style={{ justiySelf: "flex-end" }}
               className={`
                ${
-                 pathname === "/register"
+                 pathname === "/login"
                    ? "bg-[#FCF2D9] text-[#934505] rounded-md"
                    : ""
                }
@@ -312,7 +312,7 @@ function Navbar() {
               >
                 <path
                   d="M11 7L9.6 8.4L12.2 11H2V13H12.2L9.6 15.6L11 17L16 12L11 7ZM20 19H12V21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3H12V5H20V19Z"
-                  fill={`${pathname == "/register" ? "#934505" : "white"}`}
+                  fill={`${pathname == "/login" ? "#934505" : "white"}`}
                 />
               </svg>
               <Link href="/login">Login/Register</Link>

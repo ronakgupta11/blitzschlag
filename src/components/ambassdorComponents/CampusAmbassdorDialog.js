@@ -9,14 +9,12 @@ import { LOADING_UI,SET_ERRORS,CLEAR_ERRORS } from '@/redux/reducers/uiReducer';
 function CampusAmbassdorDialog() {
 
 const dispatch = useDispatch()
-
-
     const [name,setName] = useState("")
     const [email,setEmail] = useState("")
     const [phone,setPhone] = useState("")
     const [college,setCollege] = useState("")
     const loading  = useSelector(selectLoading)
-const errors = useSelector(selectErrors)
+    const errors = useSelector(selectErrors)
 
 
 
@@ -46,7 +44,7 @@ const errors = useSelector(selectErrors)
             }
         )
         .catch(err=>{
-            console.log(err)
+            console.log(err.response.data)
             dispatch(
                 SET_ERRORS(err.response.data),
   
@@ -61,8 +59,7 @@ const errors = useSelector(selectErrors)
 <dialog id="my_campus_modal" className="modal">
   <div className="modal-box rounded-2xl bg-[#463000] text-[white]">
     <form method="dialog ">
-      {/* if there is a button in form, it will close the modal */}
-      <button id='btn-modal-close' className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
     </form>
     <h3 className="font-bold text-lg mb-4">Campus Ambassdor SignUp</h3>
     <div className='flex flex-col space-y-2 items-venter justify-center'>
@@ -116,7 +113,7 @@ const errors = useSelector(selectErrors)
 {errors.general &&  <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp! </span>{errors.general} </p>}
 
 
-<button className='btn max-w-xs' onClick={handleClick}>{loading?<span className="loading loading-dots loading-sm"></span>:"Submit"}</button>
+<button className='btn max-w-xs bg-[#E9B704] text-[#463000]' onClick={handleClick}>{loading?<span className="loading loading-dots loading-sm"></span>:"Submit"}</button>
 {/* </form> */}
     </div>
   </div>
