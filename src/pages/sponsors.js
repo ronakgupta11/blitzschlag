@@ -4,10 +4,7 @@ import SponsorList from "@/components/sponsorComponents/SponsorList";
 import { motion, useAnimation } from "framer-motion";
 
 function sponsors() {
-  useEffect(() => {
-    // Scroll the page on component mount
-    window.scrollTo({ top: 100, behavior: "smooth" }); // Adjust the value based on how much you want to scroll
-  }, []);
+
   return (
     <motion.div
       // initial={{ opacity: 0, y: 0 }}
