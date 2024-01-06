@@ -26,7 +26,7 @@ function Page2() {
       <div className='self-start z-[99] mt-24 ml-4'>
 
 <p className=' text-transparent bg-clip-text bg-[#2E0D02] font-sankaran text-5xl md:text-7xl  '>Padharo Mhare Fest</p>
-<button className='btn z-20 px-12 mt-12 text-white' style={{
+<button className='btn z-[99] px-12 mt-12 text-white' style={{
   background: '#4E2420', boxShadow: '0px 6px 14.899999618530273px rgba(143, 55, 39, 0.80)', borderRadius: 20
 }} >
   <Link href={"/theme"}>
