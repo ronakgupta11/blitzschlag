@@ -33,7 +33,9 @@ function Footer() {
           className="flex-col px-5 align-middle justify-center lg:max-w-[25%]"
         >
           <div className="flex align-middle justify-center">
+          <Link href={"/"}>
           <Image width={200} src={blitz_logo1}></Image>
+          </Link>
           </div>
           <div className="text-white text-center font-sankaran text-[16px]  leading-[44px]">
             BLITZSCHALG’24
