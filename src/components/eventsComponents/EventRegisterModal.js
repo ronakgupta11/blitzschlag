@@ -34,7 +34,7 @@ function EventRegisterModal({event,id}) {
 
 
   const handleRegister = ()=>{
-dispatch(LOADING_UI)
+dispatch(LOADING_UI())
 if(teamName){
   const teamId = generateUniqueTeamId(teamName)
 
@@ -61,8 +61,14 @@ d=>
     dispatch(CLEAR_ERRORS())
   }
   ).catch(
-    err=>console.log(err)
+      err=>{
+          dispatch(
+              SET_ERRORS(err.response.data),
+
+          )
+      }
   )
+  
 }
     
     // setStatus(1)
@@ -90,6 +96,7 @@ d=>
   </div>
   <input type="text" onChange={(e)=>setTeamCode(e.target.value)} placeholder="Team Code" className="input input-bordered w-full " />
   </label>
+  {errors.general &&<p className='text-red-600 text-sm'>{errors.general}</p>}
 
   <button onClick={handleRegister} className=" btn text-white font-amita text-lg bg-blue-500  rounded-md px-16 py-2 my-4">{loading?<span className="loading loading-dots loading-sm"></span>:"Register"}</button>
 
@@ -134,8 +141,6 @@ const success = <div>
 
         {/* <div className="modal-action"> */}
           {/* <form method="dialog"> */}
-
-
 {status === 0 && form}
 {status === 1 && success}
           {/* </form> */}
