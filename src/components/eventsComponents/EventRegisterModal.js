@@ -62,6 +62,7 @@ d=>
   }
   ).catch(
       err=>{
+        console.log(err.response.data)
           dispatch(
               SET_ERRORS(err.response.data),
 
