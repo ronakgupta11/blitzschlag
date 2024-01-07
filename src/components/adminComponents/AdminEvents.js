@@ -38,8 +38,8 @@ function AdminEvents() {
         
 <div className=' mx-8 text-black '>
     {/* <p>Add Events</p> */}
-    {/* <AddEventModal/> */}
-    <UpdateEvent/>
+    <AddEventModal/>
+    {/* <UpdateEvent/> */}
 </div>
 <div className='w-60 m-8'>
         <div className="mb-2 block">
@@ -103,18 +103,14 @@ function AdminEvents() {
 {/* {console.log(len?.length)} */}
                 <Table.Cell>{len?.length || 0}</Table.Cell>
                 <Table.Cell>
-                  <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                    Edit
-                  </a>
+                  <UpdateEvent id={e.id}/>
                 </Table.Cell>
                 <Table.Cell>
-                  {/* <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"> */}
-                    {/* Delete */}
-                  {/* </a> */}
+
                   <Button onClick={()=>handleDelete(e.id)}>Delete</Button>
                 </Table.Cell>
-                <Table.Cell className='h-24 w-24 overflow-auto'>{e.desc}</Table.Cell>
-                <Table.Cell className='h-24 w-24 overflow-auto'>{e.oneliner || ""}</Table.Cell>
+                {/* <Table.Cell className='h-24 w-24 overflow-auto'>{e?.desc.split(0,5)}</Table.Cell> */}
+                {/* <Table.Cell className='h-24 w-24 overflow-auto'>{e.oneliner || ""}</Table.Cell> */}
 
               </Table.Row>
 

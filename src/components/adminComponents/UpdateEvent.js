@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import { CLEAR_ERRORS, LOADING_UI, selectLoading } from '@/redux/reducers/uiReducer';
 import { useDispatch } from 'react-redux';
-export default function UpdateEvent() {
+export default function UpdateEvent({id}) {
     const dispatch= useDispatch()
     const loading = useSelector(selectLoading)
   const [openModal, setOpenModal] = useState(false);
@@ -45,10 +45,8 @@ export default function UpdateEvent() {
 
 
   const submit = ()=>{
-    // dispatch(LOADING_UI())
-    let eventData ={
-        name,desc,oneliner,date,venue,time,prize,image,banner,rulebook,category,maxParticipants,clubName
-    }
+    dispatch(LOADING_UI())
+
     const updatedFields={};
     if(name!='') updatedFields.name=name;
     if(desc!='') updatedFields.desc=desc;
@@ -66,18 +64,22 @@ export default function UpdateEvent() {
     
 
       axios
-      .post('api',{updatedFields:updatedFields})
+      .post(`${url}/updateEvent/${id}`,updatedFields)
       .then((response) => {
-        console.log(response.data);
+        toast("updated",{type:"success"})
+        onCloseModal()
+        dispatch(CLEAR_ERRORS())
+        // console.log(response.data);
       })
       .catch((error) => {
+        
         console.error(error);
       });
 
   }
   return (
     <>
-      <Button onClick={() => setOpenModal(true)}>Add Events</Button>
+      <Button onClick={() => setOpenModal(true)}>Edit</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body>
@@ -241,7 +243,7 @@ export default function UpdateEvent() {
             </div>
 
             <div className="w-full">
-              <Button onClick={submit}>{loading?"loading..":"Add Event"}</Button>
+              <Button onClick={submit}>{loading?"loading..":"Update"}</Button>
             </div>
 
           </div>
