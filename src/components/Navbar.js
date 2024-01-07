@@ -146,10 +146,10 @@ function Navbar() {
             background:
               "linear-gradient(90deg, #934505 0%, rgba(147, 69, 5, 0.00) 575.21%)",
           }}
-          initial={{ x: "100%" }}
-          animate={{ x: toggle ? "0%" : "100%" }}
-          transition={{ duration: 0.5 }}
-          exit={{ x: "100%" }}
+          // initial={{ x: "100%" }}
+          // animate={{ x: toggle ? "0%" : "100%" }}
+          // transition={{ duration: 0.5 }}
+          // exit={{ x: "100%" }}
         >
           <motion.ul className="list-none flex flex-col h-full  items-start justify-start gap-4  text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]"
           initial="hidden"
