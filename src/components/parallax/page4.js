@@ -17,7 +17,7 @@ function Page4() {
               <div className='self-start mt-12 ml-4'>
 
 <p className='text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl' style={{background: "linear-gradient(97deg, #2D1502 28.53%, #B16529 99.14%)"}}>Campus Ambassador</p>
-<button className='btn z-[99] px-12 mt-12 text-white' style={{
+<button className='btn z-[100] px-12 mt-12 text-white' style={{
   background: '#2D1502', boxShadow: '0px 6px 14.899999618530273px rgba(100, 57, 25, 0.80)', borderRadius: 20
 }} >
   <Link href={"/ambassadors"}>
