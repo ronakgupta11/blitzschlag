@@ -14,17 +14,17 @@ function Page4() {
   )
   return (
     <div className='h-[700px]  w-full relative overflow-hidden flex flex-col items-center'style={{ background:" linear-gradient(180deg, #CF7C33 -7.2%, #FFE793 79.53%)"}}>
-              <div className='self-start mt-12 ml-4'>
+              <div className='self-start z-[99] mt-12 ml-4'>
 
 <p className='text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl' style={{background: "linear-gradient(97deg, #2D1502 28.53%, #B16529 99.14%)"}}>Campus Ambassador</p>
-<button className='btn z-[100] px-12 mt-12 text-white' style={{
+<Link href={"/ambassadors"}>
+<button className='btn px-12 mt-12 text-white' style={{
   background: '#2D1502', boxShadow: '0px 6px 14.899999618530273px rgba(100, 57, 25, 0.80)', borderRadius: 20
 }} >
-  <Link href={"/ambassadors"}>
 
   Register
-  </Link>
   </button>
+  </Link>
 </div>
 <Image className='absolute w-[200px] md:w-[370px] bottom-[10%] left-10  -z-10 md:z-0' src={moon}/>
 
