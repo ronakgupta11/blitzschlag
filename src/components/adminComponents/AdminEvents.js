@@ -1,7 +1,7 @@
 'use client';
 
-import { Table } from 'flowbite-react';
-import React from 'react'
+import { Table,TextInput,Label } from 'flowbite-react';
+import React, { useEffect ,useState} from 'react'
 import { useSelector } from 'react-redux'
 import { selectEventsData } from '@/redux/reducers/dataReducer'
 import AddEventModal from './AddEventModal';
@@ -9,14 +9,32 @@ import AddEventModal from './AddEventModal';
 function AdminEvents() {
 
     const events = useSelector(selectEventsData)
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState(events);
+    useEffect(()=>{
+      if (!searchTerm) {
+        setSearchResults(events);
+      } else {
+        // Filter events based on the search term
+        const filteredEvents = events.filter((event) =>
+          event.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setSearchResults(filteredEvents);
+      }
+    },[searchTerm,events])
   return (
     <div>
         
-<div className='h-48 mx-8 text-black '>
+<div className=' mx-8 text-black '>
     {/* <p>Add Events</p> */}
     <AddEventModal/>
 </div>
-
+<div className='w-60 m-8'>
+        <div className="mb-2 block">
+          <Label htmlFor="base" value="Search" />
+        </div>
+        <TextInput id="base" type="text" sizing="md" onChange={(e)=>setSearchTerm(e.target.value)} />
+      </div>
 
     <div className="overflow-x-auto">
       <Table>
@@ -43,7 +61,7 @@ function AdminEvents() {
 
         </Table.Head>
         <Table.Body className="divide-y">
-            {events.map(e=>{
+            {searchResults.map(e=>{
                 const len = e.registeredTeams
                 return(<Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                 <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
