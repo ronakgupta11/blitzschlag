@@ -4,9 +4,6 @@ import { url } from '@/constants';
 import axios from 'axios';
 import { Table,TextInput,Label } from 'flowbite-react';
 import React, { useEffect ,useState} from 'react'
-// import { useSelector } from 'react-redux'
-// import { selectEventsData } from '@/redux/reducers/dataReducer'
-// import AddEventModal from './AddEventModal';
 
 function AdminUsers() {
 

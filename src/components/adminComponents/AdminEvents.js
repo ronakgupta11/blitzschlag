@@ -1,10 +1,13 @@
 'use client';
 
-import { Table,TextInput,Label } from 'flowbite-react';
+import { Table,TextInput,Label, Button } from 'flowbite-react';
 import React, { useEffect ,useState} from 'react'
 import { useSelector } from 'react-redux'
 import { selectEventsData } from '@/redux/reducers/dataReducer'
 import AddEventModal from './AddEventModal';
+import axios from 'axios';
+import { url } from '@/constants';
+import { toast } from 'react-toastify';
 
 function AdminEvents() {
 
@@ -22,6 +25,13 @@ function AdminEvents() {
         setSearchResults(filteredEvents);
       }
     },[searchTerm,events])
+
+    const handleDelete =(id)=>{
+
+      axios.post(`${url}/deleteEvent/${id}`).then(d=>{
+        toast("deleted",{type:"success"})
+      }).catch(err=>console.log(err))
+    }
   return (
     <div>
         
@@ -62,6 +72,7 @@ function AdminEvents() {
         </Table.Head>
         <Table.Body className="divide-y">
             {searchResults.map(e=>{
+              console.log(e)
                 const len = e.registeredTeams
                 return(<Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                 <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
@@ -95,9 +106,10 @@ function AdminEvents() {
                   </a>
                 </Table.Cell>
                 <Table.Cell>
-                  <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                    Delete
-                  </a>
+                  {/* <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"> */}
+                    {/* Delete */}
+                  {/* </a> */}
+                  <Button onClick={()=>handleDelete(e.id)}>Delete</Button>
                 </Table.Cell>
                 <Table.Cell className='h-24 w-24 overflow-auto'>{e.desc}</Table.Cell>
                 <Table.Cell className='h-24 w-24 overflow-auto'>{e.oneliner || ""}</Table.Cell>
