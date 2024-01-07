@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 // import "@/styles/login.css"
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { Provider } from "react-redux";
 import store from "@/redux/store";
 
@@ -49,6 +49,7 @@ export default function App({ Component, pageProps }) {
           dispatch(SET_EVENTS({
             events: data
           }))
+          toast("api called")
 
         }).catch(err => console.log(err))
 
@@ -96,12 +97,19 @@ export default function App({ Component, pageProps }) {
               <Component {...pageProps} SLoading={SLoading} />
             </Layout>
             <motion.div
-              className="absolute top-0 left-0 w-full h-screen bg-black origin-bottom z-[100]"
+              className="slideIn absolute top-0 left-0 w-full h-screen bg-black origin-bottom z-[100]"
               intial={{ scaleY: 0 }}
               animate={{ scaleY: 0 }}
               exit={{ scaleY: 1 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             ></motion.div>
+            {/* <motion.div
+              className="slideOut absolute top-0 left-0 w-full h-screen bg-black origin-top z-[100]"
+              intial={{ scaleY: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            ></motion.div> */}
           </motion.div>
         </AnimatePresence>
         <ToastContainer
