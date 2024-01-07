@@ -5,6 +5,7 @@ import React, { useEffect ,useState} from 'react'
 import { useSelector } from 'react-redux'
 import { selectEventsData } from '@/redux/reducers/dataReducer'
 import AddEventModal from './AddEventModal';
+import UpdateEvent from './UpdateEvent';
 
 function AdminEvents() {
 
@@ -27,7 +28,8 @@ function AdminEvents() {
         
 <div className=' mx-8 text-black '>
     {/* <p>Add Events</p> */}
-    <AddEventModal/>
+    {/* <AddEventModal/> */}
+    <UpdateEvent/>
 </div>
 <div className='w-60 m-8'>
         <div className="mb-2 block">
