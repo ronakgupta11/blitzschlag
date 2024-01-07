@@ -33,7 +33,7 @@ function Navbar() {
   return (
     <AnimatePresence>
 
-    <div className="nav py-2 w-full flex z-[999] bg-[#0A0A0A]  absolute top-0 ">
+    <div className="nav py-2 w-full flex z-[100] bg-[#0A0A0A]  absolute top-0 ">
       {
         <ul
           className={`w-full flex ${

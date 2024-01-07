@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import TeamDetailModal from "./TeamDetailModal";
 import HamIcon from "/public/icons/hamburger.svg";
 import LeftArrow from "/public/icons/left_arrow.svg";
 
@@ -45,7 +46,8 @@ function EventTab({ menu, setMenu, credentials }) {
           <p>Panache</p>
           <p>02.02.2024</p>
           <p>OAT</p>
-          <p className="text-[#1968FF]">Register</p>
+          <TeamDetailModal />
+          {/* <p className="text-[#1968FF]"></p> */}
         </div>
       </div>
     </div>
