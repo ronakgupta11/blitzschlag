@@ -50,7 +50,7 @@ function ProfileTab({ menu, setMenu, credentials }) {
           </div>
         </div>
       </div>
-      <div className="px-[40px] md:px-[80px] py-[60px] bg-white grid gap-[24px]">
+      <div className="px-[40px] md:px-[80px] py-[60px] bg-[#FFCDA4] grid gap-[24px]">
         <div className="flex gap-[50px] flex-wrap width-full md:width-auto">
           <Input label="Name" value={credentials?.name} />
           <Input label="Mobile No." value={credentials?.phone} />
