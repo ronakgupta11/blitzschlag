@@ -77,7 +77,7 @@ function EventRegisterModal({ event, id }) {
           });
           dispatch(CLEAR_ERRORS());
         })
-        .catch((err) => console.log(err));
+        .catch((err) => dispatch(SET_ERRORS(err.response.data)));
     } else {
       axios
         .post(`${url}/events/join/${id}/${teamCode}`)

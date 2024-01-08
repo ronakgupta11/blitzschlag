@@ -4,7 +4,7 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import { selectAuthenticated } from "@/redux/reducers/userReducer";
 
-function TeamDetailModal() {
+function TeamDetailModal({team}) {
   const auth = useSelector(selectAuthenticated);
   //   const dispatch = useDispatch();
   const [status, setStatus] = useState(0);
@@ -22,7 +22,7 @@ function TeamDetailModal() {
           }
         }}
       >
-        Register
+       View Team
       </button>
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box bg-[#FFC697] px-0 pt-[5px]">
@@ -35,29 +35,24 @@ function TeamDetailModal() {
           </div>
           <div className="grid gap-[14px] px-[24px]">
             <div className="flex items-center gap-[30px]">
-              <div className="">Event Name: </div> Panache
+              <div className="">Team Name: </div> {team.teamName}
             </div>
             <div className="flex items-center gap-[30px]">
-              <div className="">Event Name: </div> Panache
+              <div className="">Team Leader: </div> {team.teamLeaderId}
             </div>
             <div className="flex items-center gap-[30px]">
-              <div className="">Team Name: </div> Alpha
-            </div>
-            <div className="flex items-center gap-[30px]">
-              <div className="">Team Leader Name: </div> Alpha
+              <div className="">Team Status: </div><span className={`${team.teamStatus === "unVerified"? "text-red-600":"text-green-500"}`}> {team.teamStatus}</span>
             </div>
           </div>
           <div className="mt-[34px]">
             <div className="grid grid-cols-3 bg-[#FFB070] py-[12px]">
               <div className="">S No.</div>
-              <div className="">Member Name</div>
               <div className="">Blitz ID</div>
             </div>
-            <div className="grid grid-cols-3 py-[12px]">
-              <div className="">1</div>
-              <div className="">Vaibhav Bansal</div>
-              <div className="">Blitz_123</div>
-            </div>
+           {team.members.map((m,k)=> <div className="grid grid-cols-3 py-[12px]">
+              <div className="">{k+1}</div>
+              <div className="">{m}</div>
+            </div>)}
           </div>
         </div>
       </dialog>
