@@ -38,13 +38,13 @@ const dispatch = useDispatch()
                 })
             dispatch(CLEAR_ERRORS())
 
-            document.getElementById('btn-modal-close').click()
+            // document.getElementById('btn-modal-close').click()
 
 
             }
         )
         .catch(err=>{
-            console.log(err.response.data)
+            console.log(err)
             dispatch(
                 SET_ERRORS(err.response.data),
   
