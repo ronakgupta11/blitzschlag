@@ -4,8 +4,12 @@ import Image from "next/image";
 import TeamDetailModal from "./TeamDetailModal";
 import HamIcon from "/public/icons/hamburger.svg";
 import LeftArrow from "/public/icons/left_arrow.svg";
+import { useSelector } from "react-redux";
+import { selectEvents, selectTeams } from "@/redux/reducers/userReducer";
 
 function EventTab({ menu, setMenu, credentials }) {
+  const events = useSelector(selectEvents)
+  const teams = useSelector(selectTeams)
   return credentials ? (
     <div>No Event Registered yet</div>
   ) : (
@@ -41,14 +45,14 @@ function EventTab({ menu, setMenu, credentials }) {
           <p>Venue</p>
           <p>Status</p>
         </div>
-        <div className="grid grid-cols-5 gap-[10px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
-          <p>1.</p>
-          <p>Panache</p>
-          <p>02.02.2024</p>
-          <p>OAT</p>
-          <TeamDetailModal />
+{  events.map((e,k)=>  (<div className="grid grid-cols-5 gap-[10px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
+          <p>{k+1}</p>
+          <p>{e?.name}</p>
+          <p>{e?.date}</p>
+          <p>{e?.venue}</p>
+          <TeamDetailModal team = {teams[k]} />
           {/* <p className="text-[#1968FF]"></p> */}
-        </div>
+        </div>))}
       </div>
     </div>
   );
