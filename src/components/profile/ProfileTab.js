@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MailIcon from "/public/icons/mail.svg";
@@ -10,6 +10,9 @@ import UserProfile from "/public/icons/userprofile.svg";
 import Input from "./Input";
 
 function ProfileTab({ menu, setMenu, credentials }) {
+const [issue,setIssue] = useState("")
+
+  
   return (
     <div className="grid w-full">
       <div className="bg-[#FFFBED] py-[32px] px-[30px] md:px-[60px] grid gap-[20px] text-[#393939] font-amita ">
@@ -50,16 +53,15 @@ function ProfileTab({ menu, setMenu, credentials }) {
           </div>
         </div>
       </div>
-      <div className="px-[40px] md:px-[80px] py-[60px] bg-white grid gap-[24px]">
+      <div className="px-[40px] md:px-[80px] py-[60px] bg-[#FFCDA4] grid gap-[24px]">
+        <p className="text-black text-2xl font-semibold"> Report Issues</p>
         <div className="flex gap-[50px] flex-wrap width-full md:width-auto">
           <Input label="Name" value={credentials?.name} />
           <Input label="Mobile No." value={credentials?.phone} />
         </div>
-        <Input label="Email" value={credentials?.email} />
-        <Input label="College Name" value={credentials?.college} />
-        {/* <Input label="Name" value={credentials?.name} /> */}
-        <button className="px-[50px] py-[12px] bg-[#1968FF] text-white w-fit rounded-xl">
-          Save Changes
+        <Input label="Describe Issue" onChange ={(e)=>setIssue(e.target.value)}/>
+        <button disabled={!issue} className={`px-[50px] py-[12px] text-white w-fit rounded-xl ${!issue?"bg-blue-400":"bg-blue-500"}`}>
+          Report
         </button>
       </div>
     </div>

@@ -3,7 +3,12 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import blitz_logo1 from "../../public/assets/blitz_logo2.png";
 import Image from "next/image";
+import { motion,AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
+import { selectAuthenticated } from "@/redux/reducers/userReducer";
+
 function Navbar() {
+  const auth = useSelector(selectAuthenticated)
   const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { pathname } = useRouter();
@@ -18,6 +23,11 @@ function Navbar() {
   //   },5000)
   // },[visible])
   useEffect(() => {
+    
+    setTimeout(() => {
+      setVisible(false);
+    }, 5000);
+   
     const handleResize = () => {
       const isMobileScreen = window.innerWidth < 768; // You can adjust the threshold as needed
       setIsMobile(isMobileScreen);
@@ -159,7 +169,8 @@ function Navbar() {
 
       {/* SideBar component */}
       { (
-        <div
+        
+        <motion.div
           className={`${
             !toggle ? "hidden" : "flex"
           } p-6   rounded-l-[40px] h-[600px] overflow-hidden font-amita  absolute top-0 right-0  justify-start align-top   min-w-[140px]   `}
@@ -168,10 +179,27 @@ function Navbar() {
             background:
               "linear-gradient(90deg, #934505 0%, rgba(147, 69, 5, 0.00) 575.21%)",
           }}
+          // initial={{ x: "100%" }}
+          // animate={{ x: toggle ? "0%" : "100%" }}
+          // transition={{ duration: 0.5 }}
+          // exit={{ x: "100%" }}
         >
-          <ul className="list-none flex flex-col h-full  items-start justify-start gap-4  text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]">
-            <li></li>
-            <li
+          <motion.ul className="list-none flex flex-col h-full  items-start justify-start gap-4  text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: -20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.6, // Delay before the revealing effect starts
+                staggerChildren: 0.1, // Stagger between each list item
+              },
+            },
+          }}>
+            
+            <motion.li 
               className="
              
             flex  align-middle justify-start  w-full "
@@ -192,8 +220,8 @@ function Navbar() {
                   fill="white"
                 />
               </svg>
-            </li>
-            <li
+            </motion.li>
+            <motion.li whileHover={{scale:1.1}} 
               className={`
               ${
                 pathname === "/" ? "bg-[#FCF2D9] text-[#934505] rounded-md" : ""
@@ -221,8 +249,8 @@ function Navbar() {
                 />
               </svg>
               <Link href="/">Home</Link>
-            </li>
-            <li
+            </motion.li>
+            <motion.li whileHover={{scale:1.1}} 
               className={`
                ${
                  pathname === "/events"
@@ -247,9 +275,9 @@ function Navbar() {
                 />
               </svg>
               <Link href="/events">Events</Link>
-            </li>
+            </motion.li>
 
-            <li
+            <motion.li whileHover={{scale:1.1}} 
               className={`
                ${
                  pathname === "/sponsors"
@@ -272,9 +300,9 @@ function Navbar() {
               </svg>
 
               <Link href="/sponsors">Sponsors</Link>
-            </li>
+            </motion.li>
 
-            <li
+            <motion.li whileHover={{scale:1.1}} 
               className={`
                ${
                  pathname === "/ambassadors"
@@ -296,8 +324,8 @@ function Navbar() {
                 />
               </svg>
               <Link href="/ambassadors">Campus Ambassadors</Link>
-            </li>
-            <li
+            </motion.li>
+            <motion.li whileHover={{scale:1.1}} 
               className={`
                ${
                  pathname === "/team"
@@ -319,8 +347,8 @@ function Navbar() {
                 />
               </svg>
               <Link href="/team">Our Team</Link>
-            </li>
-            <li
+            </motion.li>
+            <motion.li whileHover={{scale:1.1}} 
               style={{ justiySelf: "flex-end" }}
               className={`
                ${
@@ -342,10 +370,11 @@ function Navbar() {
                   fill={`${pathname == "/register" ? "#934505" : "white"}`}
                 />
               </svg>
-              <Link href="/login">Login/Register</Link>
-            </li>
-          </ul>
-        </div>
+              <Link href={auth?"/profile":"/login"}>{auth?"Profile":"Login/Register"}</Link>
+            </motion.li>
+          </motion.ul>
+          </motion.div>
+
       )}
     </div>}
     </>

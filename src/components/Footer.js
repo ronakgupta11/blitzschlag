@@ -33,7 +33,9 @@ function Footer() {
           className="flex-col flex   align-middle  justify-start  lg:max-w-[25%]"
         >
           <div className="flex items-center justify-center align-middle">
+          <Link href={"/"}>
           <Image width={200} src={blitz_logo1}></Image>
+          </Link>
           </div>
           <div className="text-white text-center font-sankaran text-[16px]  leading-[44px]">
             BLITZSCHALG’24
@@ -65,7 +67,7 @@ function Footer() {
               <Link href="/about">About Us</Link>
             </div>
             <div className="">
-              <Link href="/register">Register</Link>
+              <Link href="/login">Register</Link>
             </div>
             <div className="">
               <Link href="/ambassadors">Campus Ambassador</Link>
@@ -81,7 +83,7 @@ function Footer() {
             <div className="text-center font-sankaran">Connect With Us</div>
             <div className="flex justify-center">
               <div className=" flex align-middle justify-center w-[88px] h-[88px] flex-wrap gap-[40px]">
-                <a href="">
+                <a href="https://www.instagram.com/blitz_mnit?igsh=OThhczUxZG5yOTR2" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -96,7 +98,7 @@ function Footer() {
                   </svg>
                 </a>
 
-                <a href="">
+                <a href="https://m.facebook.com/blitzschlagMNIT/" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -111,7 +113,7 @@ function Footer() {
                   </svg>
                 </a>
 
-                <a href="">
+                <a href="https://youtube.com/@blitzschlagmnit3592?si=DBv0JypcSmMzytSl" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -125,7 +127,7 @@ function Footer() {
                     />
                   </svg>
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/blitzschlag-mnit-8a897a2a8/" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

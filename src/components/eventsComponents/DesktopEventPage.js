@@ -2,19 +2,28 @@ import borderDown from "../../../public/assets/events/border.png";
 import Image from "next/image";
 import Link from "next/link";
 import LeftArrow from "/public/icons/left_arrow.svg";
-import EventRegisterModal from "./EventRegisterModal"
-function DesktopEventPage({data}) {
-console.log(data)
+import EventRegisterModal from "./EventRegisterModal";
+
+function DesktopEventPage({ data }) {
+  console.log(data);
   return (
     <div className="bg-black w-full flex h-full ">
       <div
         className={`pl-[60px] lg:pl-[80px] lg:pr-[140px] flex flex-col gap-[25px] xl:gap-[40px] pt-[60px] pb-[50px] w-[85%] lg:w-[95%] bg-[url('/curved_shape.svg')] 
           bg-no-repeat bg-cover`}
       >
-       {data? <p className="text-[60px] text-[#751300]">{data?.name}</p>:<div className="skeleton w-60 h-28 rounded-lg bg-transparent"></div>}
-        {data? <p className="text-[#313131] text-[14px] leading-[16px] text-justify z-10 w-[42vw] xl:w-[38vw]">
-          {data?.desc}
-        </p>:<div className="skeleton w-[42vp] h-28 bg-transparent"></div>}
+        {data ? (
+          <p className="text-[60px] text-[#751300]">{data?.name}</p>
+        ) : (
+          <div className="skeleton w-60 h-28 rounded-lg bg-transparent"></div>
+        )}
+        {data ? (
+          <p className="text-[#313131] text-[14px] leading-[16px] text-justify z-10 w-[42vw] xl:w-[38vw]">
+            {data?.desc}
+          </p>
+        ) : (
+          <div className="skeleton w-[42vp] h-28 bg-transparent"></div>
+        )}
         <div className="flex gap-[85px] lg:gap-[150px] items-center font-amita">
           <div>
             <div className="text-[#202020] text-[20px]">
@@ -30,7 +39,11 @@ console.log(data)
           <div>
             <div className="text-[#202020] text-[30px]">Prize Worth</div>
             <div className="text-[#202020] text-[42px] font-bold text-right">
-             {data?` ₹ ${data?.prize}`:<div className="skeleton bg-transparent w-20 h-20"></div>}
+              {data ? (
+                ` ₹ ${data?.prize}`
+              ) : (
+                <div className="skeleton bg-transparent w-20 h-20"></div>
+              )}
             </div>
           </div>
         </div>
@@ -41,7 +54,7 @@ console.log(data)
               <Image src={LeftArrow} /> Back
             </div>
           </Link>
-          <EventRegisterModal event={data?.name} id={data?.eventId}/>
+          <EventRegisterModal event={data?.name} id={data?.eventId} />
         </div>
       </div>
 
@@ -51,12 +64,16 @@ console.log(data)
           <Image className="rotate-180" src={borderDown}></Image>
         </div>
 
-       {data? <img
-          src={data?.image}
-          // width={414}
-          
-          className={`border-r-8 border-b-8 border-[#fb5e3f] w-[414px] h-[500px]`}
-        />:<div className="skeleton w-[414px] h-[500px] bg-transparent"></div>}
+        {data ? (
+          <img
+            src={data?.image}
+            // width={414}
+
+            className={`border-r-8 border-b-8 border-[#fb5e3f] w-[414px] h-[500px]`}
+          />
+        ) : (
+          <div className="skeleton w-[414px] h-[500px] bg-transparent"></div>
+        )}
 
         <div className="flex w-full items-center relative overflow-hidden">
           <Image src={borderDown}></Image>

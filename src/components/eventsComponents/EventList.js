@@ -8,14 +8,33 @@ import EventCard2 from "./EventCard2";
 import { UAParser } from "ua-parser-js";
 import { selectEventsData } from "@/redux/reducers/dataReducer";
 import { useSelector } from "react-redux";
+
+import { motion } from 'framer-motion';
+
+function ResponsiveInnerList({ isMobile, d, k }) {
+  return isMobile ? (
+    <div className="ml-12">
+      <EventCard1 data={d} className='m-auto' key={k} />
+    </div>
+  ) : (
+    <motion.div
+      initial={{ x: k % 2 === 0 ? -100 - 50*k : 100 + 50*k }}
+      whileInView={{ x: 0 }}
+      transition={{ duration: 0.6 }}
+      className="mx-8" style={{ width: "40%" }}>
+      {k % 2 === 0 ? (<EventCard1 data={d} key={k} />) : (<EventCard2 data={d} key={k} />)}
+    </motion.div>
+  )
+}
+
 export default function EventList() {
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
 
-const events = useSelector(selectEventsData)
-const flagship = events.filter(item => item.category === "flagship");
-const club = events.filter(item => item.category === "club");
-const fun = events.filter(item => item.category === "fun");
+  const events = useSelector(selectEventsData)
+  const flagship = events.filter(item => item.category === "flagship");
+  const club = events.filter(item => item.category === "club");
+  const fun = events.filter(item => item.category === "fun");
 
 
 
@@ -42,25 +61,22 @@ const fun = events.filter(item => item.category === "fun");
       <div className=" z-10 absolute flex font-amita  text-white md:text-md text-sm border-white ">
         <button
           onClick={() => setSelectedTab(0)}
-          className={` h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${
-            selectedTab === 0 ? "text-[#721542] bg-white" : ""
-          }  rounded-bl-3xl te`}
+          className={` h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${selectedTab === 0 ? "text-[#721542] bg-white" : ""
+            }  rounded-bl-3xl te`}
         >
           Flagship Events
         </button>
         <button
           onClick={() => setSelectedTab(1)}
-          className={`h-full border-b-2  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${
-            selectedTab === 1 ? "text-[#721542] bg-white" : ""
-          } `}
+          className={`h-full border-b-2  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${selectedTab === 1 ? "text-[#721542] bg-white" : ""
+            } `}
         >
           Club Events
         </button>
         <button
           onClick={() => setSelectedTab(2)}
-          className={`h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 rounded-br-3xl bg-[#a86a32] ${
-            selectedTab === 2 ? "text-[#721542] bg-white" : ""
-          } `}
+          className={`h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 rounded-br-3xl bg-[#a86a32] ${selectedTab === 2 ? "text-[#721542] bg-white" : ""
+            } `}
         >
           Fun Events
         </button>
@@ -72,62 +88,23 @@ const fun = events.filter(item => item.category === "fun");
       {selectedTab === 0 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
           {flagship.map((d, k) =>
-            isMobile ? (
-              <div className = "ml-12">
-
-              <EventCard1 data={d} className='m-auto' key={k} />
-              </div>
-            ) : k % 2 === 0 ? (
-              <div className="mx-8" style={{width:"40%"}}>
-                <EventCard1 data={d} key={k} />
-              </div>
-            ) : (
-              <div className="mx-8" style={{width:"40%"}}>
-                <EventCard2  data={d} key={k} />
-              </div>
-            )
+            (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
           )}
         </div>
       )}
       {selectedTab === 1 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-        {club.map((d, k) =>
-          isMobile ? (
-            <div className = "ml-12">
-
-            <EventCard1 data={d} className='m-auto' key={k} />
-            </div>
-          ) : k % 2 === 0 ? (
-            <div className="mx-8" style={{width:"40%"}}>
-              <EventCard1 data={d}  key={k} />
-            </div>
-          ) : (
-            <div className="mx-8" style={{width:"40%"}}>
-              <EventCard2 data={d} key={k} />
-            </div>
-          )
-        )}
-      </div>
+          {club.map((d, k) =>
+            (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
+          )}
+        </div>
       )}
       {selectedTab === 2 && (
-       <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-       {fun.map((d, k) =>
-         isMobile ? (
-           <div className = "ml-12">
-
-           <EventCard1 data={d} className='m-auto' key={k} />
-           </div>
-         ) : k % 2 === 0 ? (
-           <div className="mx-8" style={{width:"40%"}}>
-             <EventCard1 data={d}  key={k} />
-           </div>
-         ) : (
-           <div className="mx-8" style={{width:"40%"}}>
-             <EventCard2 data={d}  key={k} />
-           </div>
-         )
-       )}
-     </div>
+        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
+          {fun.map((d, k) =>
+            (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
+          )}
+        </div>
       )}
 
       <div className="flex w-full items-center">

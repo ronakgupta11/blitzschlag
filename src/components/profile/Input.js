@@ -1,4 +1,4 @@
-export default function Input({ label, value }) {
+export default function Input({ label, value ,onChange}) {
   return (
     <div className="grid gap-[16px]">
       <label htmlFor="Name" className="text-[#353535] text-base font-medium">
@@ -8,7 +8,8 @@ export default function Input({ label, value }) {
         type="text"
         name={label}
         value={value}
-        className="rounded-xl border-[1px] border-[#AAAAAA] rounded text-[#353535]"
+        onChange={onChange}
+        className="rounded-xl border-[1px] border-[#AAAAAA]  text-[#353535]"
       />
     </div>
   );
