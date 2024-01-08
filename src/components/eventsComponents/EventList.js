@@ -97,6 +97,12 @@ export default function EventList() {
           {club.map((d, k) =>
             (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
           )}
+          {club?.length === 0 && <div className="h-96 flex items-center justify-center">
+            <p className="text-5xl font-sankaran text-white text-center">
+            Coming Soon
+            </p>
+            </div>
+            }
         </div>
       )}
       {selectedTab === 2 && (
@@ -104,6 +110,12 @@ export default function EventList() {
           {fun.map((d, k) =>
             (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
           )}
+          {fun?.length === 0 && <div className="h-96 flex items-center justify-center">
+            <p className="text-5xl font-sankaran text-white text-center">
+            Coming Soon
+            </p>
+            </div>
+            }
         </div>
       )}
 
