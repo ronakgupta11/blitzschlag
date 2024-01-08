@@ -17,6 +17,7 @@ import EventTab from "/src/components/profile/EventTab.js";
 import PassTab from "/src/components/profile/PassTab.js";
 import ProfileTab from "/src/components/profile/ProfileTab.js";
 import { QRCode } from "react-qrcode-logo";
+import { logOutUser } from "@/redux/actions/userAction";
 
 export default function Profile() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -76,7 +77,7 @@ export default function Profile() {
         </p>
         <p
           className="flex gap-[20px] items-center cursor-pointer"
-          onClick={() => setCurrentTab(3)}
+          onClick={() => logOutUser()}
         >
           <Image src={LogoutIcon} />
           Logout

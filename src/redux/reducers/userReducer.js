@@ -5,7 +5,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     authenticated :false,
     credentials:{}, 
-    registeredEvents:[]
+    registeredEventsData:[],
+    registeredTeamsData:[],
 }
 
 
@@ -49,6 +50,6 @@ const initialState = {
  export const {SET_AUTHENTICATED,SET_UNAUTHENTICATED,SET_USER} = userSlice.actions
  export const selectAuthenticated = (state)=>state.user.authenticated
  export const selectCredentials = (state)=>state.user.credentials
- export const selectEvents = (state)=>state.user.registeredEvents
-
+ export const selectEvents = (state)=>state.user.registeredEventsData
+export const selectTeams = (state) => state.user.registeredTeamsData
  export default userSlice.reducer
