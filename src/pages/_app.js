@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }) {
           dispatch(SET_EVENTS({
             events: data
           }))
-          toast("api called")
+          // toast("api called")
 
         }).catch(err => console.log(err))
 

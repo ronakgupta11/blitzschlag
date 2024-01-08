@@ -83,7 +83,7 @@ function EventRegisterModal({ event, id }) {
           type="text"
           onChange={(e) => setTeamName(e.target.value)}
           placeholder="Team Name"
-          className="input input-bordered w-full "
+          className="input input-bordered bg-inherit w-full "
         />
       </label>
 
@@ -101,7 +101,7 @@ function EventRegisterModal({ event, id }) {
           type="text"
           onChange={(e) => setTeamCode(e.target.value)}
           placeholder="Team Code"
-          className="input input-bordered w-full "
+          className="input input-bordered bg-inherit w-full "
         />
       </label>
       {errors.general && (
@@ -110,7 +110,7 @@ function EventRegisterModal({ event, id }) {
 
       <button
         onClick={handleRegister}
-        className="btn text-white font-amita text-lg bg-blue-500  rounded-md px-16 py-2 my-4"
+        className="btn font-amita text-lg bg-[#E9B704] text-[#463000] rounded-md px-16 py-2 my-4"
       >
         {loading ? (
           <span className="loading loading-dots loading-sm"></span>
@@ -122,7 +122,7 @@ function EventRegisterModal({ event, id }) {
   );
 
   const success = (
-    <div>
+    <div className="flex flex-col items-center justify-around h-48">
       <div>
         <FaCheck size={30} />
       </div>
@@ -149,12 +149,12 @@ function EventRegisterModal({ event, id }) {
       >
         Register
       </button>
-      <dialog id="my_modal_1" className="modal">
-        <div className="modal-box">
+      <dialog id="my_modal_1" className="modal ">
+        <div className="modal-box rounded-2xl bg-[#463000] text-[white]">
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-lg">{`Register your team for ${event}`}</h3>
             <form method="dialog">
-              <button className="btn btn-circle font-black-ops-one">
+              <button className="btn btn-circle bg-[#463000] border-none font-black-ops-one">
                 <span>X</span>
               </button>
             </form>

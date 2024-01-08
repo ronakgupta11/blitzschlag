@@ -64,41 +64,41 @@ const dispatch = useDispatch()
     <h3 className="font-bold text-lg mb-4">Campus Ambassdor SignUp</h3>
     <div className='flex flex-col space-y-2 items-venter justify-center'>
 
-<label className="form-control w-full max-w-xs">
+<label className="form-control w-full ">
   <div className="label">
     <span className="label-text text-white">Your Name</span>
   </div>
   <input type="text " placeholder="Type Here.." onChange={(e)=>{
      dispatch(CLEAR_ERRORS())
-            setName(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs `} />
+            setName(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full   `} />
   <div className="label">
     {errors.name && <span className="label-text-alt text-red-500">{errors.name}</span>}
   </div>
 </label>
 
-<label className="form-control w-full max-w-xs">
+<label className="form-control w-full ">
   <div className="label">
     <span className="label-text text-white">Your Email</span>
   </div>
   <input type="email" placeholder="Type Here.." onChange={(e)=>{
             dispatch(CLEAR_ERRORS())
-            setEmail(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs `} />
+            setEmail(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full   `} />
   <div className="label">
     {errors.email && <span className="label-text-alt text-red-500">{errors.email}</span>}
   </div>
 </label>
-<label className="form-control w-full max-w-xs">
+<label className="form-control w-full ">
   <div className="label">
     <span className="label-text text-white">Your Phone( Whatsapp)</span>
   </div>
   <input type="text" placeholder="Type Here.." onChange={(e)=>{
             dispatch(CLEAR_ERRORS())
-            setPhone(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full max-w-xs `} />
+            setPhone(e.target.value)}} className={`input input-bordered bg-white text-gray-700 w-full `} />
   <div className="label">
     {errors.phone && <span className="label-text-alt text-red-500">{errors.phone}</span>}
   </div>
 </label>
-<label className="form-control w-full max-w-xs">
+<label className="form-control w-full  ">
   <div className="label">
     <span className="label-text text-white">College/Institute Name</span>
   </div>
@@ -113,7 +113,7 @@ const dispatch = useDispatch()
 {errors.general &&  <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp! </span>{errors.general} </p>}
 
 
-<button className='btn max-w-xs bg-[#E9B704] text-[#463000]' onClick={handleClick}>{loading?<span className="loading loading-dots loading-sm"></span>:"Submit"}</button>
+<button className='btn   bg-[#E9B704] text-[#463000]' onClick={handleClick}>{loading?<span className="loading loading-dots loading-sm"></span>:"Submit"}</button>
 {/* </form> */}
     </div>
   </div>

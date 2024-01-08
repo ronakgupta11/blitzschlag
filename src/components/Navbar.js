@@ -4,6 +4,8 @@ import Link from "next/link";
 import blitz_logo1 from "../../public/assets/blitz_logo2.png";
 import Image from "next/image";
 import { motion,AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
+import { selectAuthenticated } from "@/redux/reducers/userReducer";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -30,6 +32,7 @@ function Navbar() {
     if(toggle)
     setToggle(!toggle)
   },[pathname])
+  const auth = useSelector(selectAuthenticated)
   return (
     <AnimatePresence>
 
@@ -337,7 +340,7 @@ function Navbar() {
                   fill={`${pathname == "/login" ? "#934505" : "white"}`}
                 />
               </svg>
-              <Link href="/login">Login/Register</Link>
+              <Link href={auth?"/profile":"/login"}>{auth?"Profile":"Login/Register"}</Link>
             </motion.li>
           </motion.ul>
           </motion.div>
