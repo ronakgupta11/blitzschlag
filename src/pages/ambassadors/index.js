@@ -28,7 +28,7 @@ const index = () => {
   return (
     <div className="w-full overflow-x-hidden ">
       
-      <div className={`  relative`}>
+      <div className={`   relative`}>
        <div>
        <div className={`lg:top-[20%]  top-[3%] md:top-[10%] z-2 w-full  overflow-x-hidden overflow-y-hidden  absolute font-sankaran text-white text-4xl md:text-7xl flex items-center justify-between`}>
           <div className="w-[30%] border-2 border-[#745601] mr-1 rounded-lg"></div>

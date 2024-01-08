@@ -7,6 +7,16 @@ function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { pathname } = useRouter();
+  const [visible,setVisible]=useState(true)
+  let timeoutId;
+  // useEffect(()=>{
+  //   setTimeout(()=>{
+  //     if(visible)
+  //     {
+  //       setVisible(false)
+  //     }
+  //   },5000)
+  // },[visible])
   useEffect(() => {
     const handleResize = () => {
       const isMobileScreen = window.innerWidth < 768; // You can adjust the threshold as needed
@@ -28,8 +38,25 @@ function Navbar() {
     if(toggle)
     setToggle(!toggle)
   },[pathname])
+
   return (
-    <div className="nav py-2 w-full flex z-[999] bg-[#0A0A0A]  absolute top-0 ">
+    <>
+   
+   {  <div
+       onMouseOver={()=>{
+        clearTimeout(timeoutId)
+        setVisible(true)}
+      }
+       onMouseOut={()=>{
+        timeoutId = setTimeout(() => {
+          setVisible(false);
+        }, 3000);
+       }}
+       style={{
+        transition: 'opacity 0.3s ease', // Adjust the duration and easing function as needed
+        
+      }}
+   className={`${!visible?"opacity-0":""} nav flex z-[999] py-2 w-full  bg-[#0A0A0A]  absolute top-0 `}>
       {
         <ul
           className={`w-full flex ${
@@ -297,7 +324,7 @@ function Navbar() {
               style={{ justiySelf: "flex-end" }}
               className={`
                ${
-                 pathname === "/login"
+                 pathname === "/register"
                    ? "bg-[#FCF2D9] text-[#934505] rounded-md"
                    : ""
                }
@@ -312,7 +339,7 @@ function Navbar() {
               >
                 <path
                   d="M11 7L9.6 8.4L12.2 11H2V13H12.2L9.6 15.6L11 17L16 12L11 7ZM20 19H12V21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3H12V5H20V19Z"
-                  fill={`${pathname == "/login" ? "#934505" : "white"}`}
+                  fill={`${pathname == "/register" ? "#934505" : "white"}`}
                 />
               </svg>
               <Link href="/login">Login/Register</Link>
@@ -320,7 +347,8 @@ function Navbar() {
           </ul>
         </div>
       )}
-    </div>
+    </div>}
+    </>
   );
 }
 

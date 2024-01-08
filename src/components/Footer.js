@@ -30,9 +30,9 @@ function Footer() {
             borderRight: "solid white 1px",
            
           }}
-          className="flex-col px-5 align-middle justify-center lg:max-w-[25%]"
+          className="flex-col flex   align-middle  justify-start  lg:max-w-[25%]"
         >
-          <div className="flex align-middle justify-center">
+          <div className="flex items-center justify-center align-middle">
           <Image width={200} src={blitz_logo1}></Image>
           </div>
           <div className="text-white text-center font-sankaran text-[16px]  leading-[44px]">
@@ -77,7 +77,7 @@ function Footer() {
         </div>
 
         <div className="lg:max-w-[25%] ">
-          <div className="flex justify-center gap-y-5 lg:gap-y-12  align-middle flex-col text-white text-center font-BlackOpsOne md:text-[25px] text-[20px] font-normal">
+          <div className="flex lg:mt-[10px] justify-center gap-y-5 lg:gap-y-[68px]  align-middle flex-col text-white text-center font-BlackOpsOne md:text-[25px] text-[20px] font-normal">
             <div className="text-center font-sankaran">Connect With Us</div>
             <div className="flex justify-center">
               <div className=" flex align-middle justify-center w-[88px] h-[88px] flex-wrap gap-[40px]">
