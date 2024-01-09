@@ -32,7 +32,7 @@ const aboutNew = () => {
         >
           About Us
         </div>
-        <div className="p-5 text-black text-left font-amita text-[18px] lg:text-[22px] font-normal leading-loose">
+        <div className="p-5 text-black text-left font-amita text-[18px] lg:text-[22px] font-normal leading-normal">
           BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan
           and the crown jewel of the Malaviya National Institute of Technology
           Jaipur, ignites the spirit of the entire MNIT community! A vibrant
@@ -63,7 +63,7 @@ const aboutNew = () => {
         >
           About Us
         </div>
-        <div className="p-5 text-black text-left font-amita text-[12px]  font-normal leading-normal">
+        <div className="p-5 text-black text-left font-amita text-[12px]  font-normal leading-[30px]">
           BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan
           and the crown jewel of the Malaviya National Institute of Technology
           Jaipur, ignites the spirit of the entire MNIT community! A vibrant

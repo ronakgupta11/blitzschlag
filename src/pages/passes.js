@@ -17,15 +17,22 @@ function hospitality() {
 
 <div className='bg-[#310816] w-full px-10 py-20 flex flex-wrap items-center justify-center m-auto'>
     <div className='flex flex-wrap my-8 mx-4 items-center justify-center'>
-        <div className='bg-[#fcf2d9] w-[240px] h-[240px] m-4 rounded-xl'>
-
+        <div className='bg-[#fcf2d9] w-[240px] h-80 m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4'>
+<p className='text-2xl font-amita font-bold'>Maharaja Pass </p>
+<p className='text-xl font-amita font-bold'>₹ 2500</p>
+<p className='font-semibold text-sm'>The Maharaja pass enables you to participate in any flagship event of your choice as well as provides accommodation for 3 days from 2nd Feb 10 AM to 5th Feb. You can take part in any club event during the course of the fest. Furthermore, you will be able to attend all three pronites of Blitzschlag'24.</p>
         </div>
-        <div className='bg-[#fcf2d9] w-[240px] h-[240px] m-4 rounded-xl'>
-
+        <div className='bg-[#fcf2d9] w-[240px] h-80 m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4'>
+<p className='text-2xl font-amita font-bold'>Diwan Pass </p>
+<p className='text-xl font-amita font-bold'>₹ 1100</p>
+<p className='font-semibold text-sm'>A Diwan pass entitles you to lodge for the day as well as participate in any one flagship event of your choice. You can take part in any of the club activities scheduled on that day as well as attend the same-day pronite.</p>
         </div>
-        <div className='bg-[#fcf2d9] w-[240px] h-[240px] m-4 rounded-xl'>
-
+        <div className='bg-[#fcf2d9] w-[240px] h-80 m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4'>
+<p className='text-2xl font-amita font-bold'>Rawat Pass</p>
+<p className='text-xl font-amita font-bold'>₹ 200</p>
+<p className='font-semibold text-sm'>A Rawat pass allows you to take part in all of that day's club events. For eg if you take this pass for first day then you can take part in any of the club activities scheduled on that day (except flagship events & pronites.</p>
         </div>
+
 
 
     </div>
