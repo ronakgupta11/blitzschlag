@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config, { isServer }) => {
+
     // Add a rule to handle glb files
     config.module.rules.push({
       test: /\.(glb)$/,
