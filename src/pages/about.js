@@ -6,8 +6,8 @@ import Image from "next/image";
 const about = () => {
   return (
     <div className="bg-[#fffbed] min-h-screen relative w-full text-[#393939] text-lg font-amita flex flex-col items-center justify-center">
-      <Image className="absolute top-0 right-0 rotate-90" src={flower1} />
-      <div className="flex m-2 w-full items-center justify-between">
+
+      <div className="flex px-12 m-2 w-full items-center justify-between">
         <Image src={flower} />
         <Image src={flower} />
       </div>
@@ -29,11 +29,11 @@ const about = () => {
         we embark on a weekend of laughter and unforgettable experiences.
       </p>
       <div className="h-12"></div>
-      <div className="flex m-2 w-full items-center justify-between">
+      <div className="flex px-12 m-2 w-full items-center justify-between">
         <Image src={flower} />
         <Image src={flower} />
       </div>
-      <Image className="absolute bottom-0 left-0 -rotate-90 " src={flower1} />
+      
     </div>
   );
 };
