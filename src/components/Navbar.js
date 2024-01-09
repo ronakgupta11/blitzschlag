@@ -24,9 +24,7 @@ function Navbar() {
   // },[visible])
   useEffect(() => {
     
-    setTimeout(() => {
-      setVisible(false);
-    }, 5000);
+   
    
     const handleResize = () => {
       const isMobileScreen = window.innerWidth < 768; // You can adjust the threshold as needed
