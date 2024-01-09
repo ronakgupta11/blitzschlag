@@ -1,19 +1,37 @@
-import React from "react";
-// import Menu from '../components/Menu'
-import flower1 from "../../public/assets/team/flower1.png";
-import flower from "../../public/assets/team/flower.png";
-import Image from "next/image";
-const about = () => {
+import React from 'react'
+import bg from "../../public/assets/hospitality/bg.svg"
+import Image from 'next/image'
+import {motion} from "framer-motion"
+function hospitality() {
   return (
-    <div className="bg-[#fffbed]  min-h-screen relative w-full text-[#393939] text-lg font-amita flex flex-col items-center justify-center">
-      
-      <div className="flex p-12 mt-8 w-full items-center justify-between">
-        <Image src={flower} />
-        <Image src={flower} />
-      </div>
-      <p className="text-[#00293E] font-amita text-2xl my-4 ">Rules and Regulations</p>
-      <ul className="text-justify w-[70%] mx-auto my-6">
-      <ul className="list-disc">
+    <div>
+<div className='w-full relative bg-[#FCF2D9]'>
+<Image className='w-full' src={bg}/>
+
+</div>
+<div className='flex absolute font-sankaran text-center bg-clip-text top-0 pt-12 md:top-[10%] bg-[#FCF2d9]  flex-col i space-y-2 w-full'>
+        <p className='text-2xl md:text-5xl text-transparent'>
+          Passes And Accommodation
+        </p>
+</div>
+
+<div className='bg-[#310816] w-full px-10 py-20 flex flex-wrap items-center justify-center m-auto'>
+    <div className='flex flex-wrap my-8 mx-4 items-center justify-center'>
+        <div className='bg-[#fcf2d9] w-[240px] h-[240px] m-4 rounded-xl'>
+
+        </div>
+        <div className='bg-[#fcf2d9] w-[240px] h-[240px] m-4 rounded-xl'>
+
+        </div>
+        <div className='bg-[#fcf2d9] w-[240px] h-[240px] m-4 rounded-xl'>
+
+        </div>
+
+
+    </div>
+    <div className='w-full m-auto flex flex-col items-center justify-center space-y-4'>
+        <p className='text-[#FFC08E] text-4xl  my-8 font-sankaran '>Rules and regulations</p>
+      <ul className="m-4 w-full md:w-[80%] text-[#FcF2d9] leading-loose flex flex-col list-disc font-amita text-lg space-y-8">
   <li>
     All guests will be provided with mattresses, bedsheets, pillows, and blankets. All these commodities issued to them would have to be returned in sound condition to the organizers during check-out.
   </li>
@@ -44,15 +62,13 @@ const about = () => {
 </ul>
 
 
-      </ul>
-      <div className="h-12"></div>
-      <div className="flex p-12  w-full items-center justify-between">
-        <Image src={flower} />
-        <Image src={flower} />
-      </div>
-      
-    </div>
-  );
-};
 
-export default about;
+    </div>
+</div>
+
+
+</div>
+  )
+}
+
+export default hospitality

@@ -369,7 +369,7 @@ function Navbar() {
                   fill={`${pathname == "/team" ? "#934505" : "white"}`}
                 />
               </svg>
-              <Link href="/hospitality">Hospitality</Link>
+              <Link href="/passes">Passes And Accomodation</Link>
             </motion.li>
             <motion.li whileHover={{scale:1.1}} 
               style={{ justiySelf: "flex-end" }}

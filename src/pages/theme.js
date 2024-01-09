@@ -10,7 +10,7 @@ function theme2() {
   return (
     <div>
 <div className='w-full relative bg-[#FCF2D9]'>
-<Image  src={bg}/>
+<Image className='w-full' src={bg}/>
 
 </div>
 <div className='flex absolute font-sankaran text-center bg-clip-text top-0 pt-12 md:top-[10%] bg-[#360805]  flex-col items-center justify-center space-y-2 w-full'>
