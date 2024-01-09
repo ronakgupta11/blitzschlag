@@ -174,7 +174,10 @@ function EventRegisterModal({ event, id }) {
         <Image width={150} src={qr}/>
       </div>
       <div>Please Pay on above qr code to get your team verified.</div> */}
-      <div>You can view your team status in profile section</div>
+      <div><Link href={"/profile"}>
+      You can view your team status in profile section
+      </Link>
+      </div>
 
     </div>
   );
@@ -189,8 +192,10 @@ function EventRegisterModal({ event, id }) {
         <Image width={150} src={qr}/>
       </div>
       <div>Please Pay on above qr code to get your team verified.</div> */}
-      <div>You can view your team status in profile section</div>
-
+      <div><Link href={"/profile"}>
+      You can view your team status in profile section
+      </Link>
+      </div>
     </div>
   );
 
