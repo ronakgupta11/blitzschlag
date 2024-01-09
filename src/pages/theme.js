@@ -24,7 +24,7 @@ function theme2() {
 
 <div className='bg-[#4a0e0a] w-full px-10 py-20 flex flex-wrap items-center justify-center m-auto'>
 
-<div className='w-[220px] text-justify h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={yelo} >
 
@@ -37,7 +37,7 @@ function theme2() {
          </p>
     
 </div>
-<div className='w-[220px] text-justify h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={orange} >
 
@@ -50,7 +50,7 @@ function theme2() {
          </p>
     
 </div>
-<div className='w-[220px] text-justify h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={blue} >
 
@@ -62,7 +62,7 @@ function theme2() {
     </p>
     
 </div>
-<div className='w-[220px] text-justify h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={red} >
 
