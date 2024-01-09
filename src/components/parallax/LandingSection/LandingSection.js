@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import { motion } from 'framer-motion'
+import blitz from "../../../../public/assets/blitz.png"
 
 import classes from './LandingSection.module.css'
 
@@ -27,12 +28,13 @@ function LandingSection() {
                     animate={{ y: 0 }} 
                     transition={{ duration: 2, delay: 0 }}
                 >
-                    <h1
+                    {/* <h1
 
                         className={`${classes.maintext} text-center`}
                     >
                         blitzschlag'24
-                    </h1>
+                    </h1> */}
+                    <Image src={blitz}></Image>
                 </motion.div>
             </div>
             <motion.div
