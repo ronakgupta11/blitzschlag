@@ -34,7 +34,7 @@ export default function EventList() {
   const events = useSelector(selectEventsData)
   const flagship = events.filter(item => item.category === "flagship");
   const club = events.filter(item => item.category === "club");
-  const fun = events.filter(item => item.category === "fun");
+  // const fun = events.filter(item => item.category === "fun");
 
 
 
@@ -58,28 +58,22 @@ export default function EventList() {
         <Image className="rotate-180" src={borderDown}></Image>
         {/* <Image src={borderDown2}></Image> */}
       </div>
-      <div className=" z-10 absolute flex font-amita  text-white md:text-md text-sm border-white ">
+      <div className=" z-10 absolute flex font-amita  text-white md:text-lg text-md border-white ">
         <button
           onClick={() => setSelectedTab(0)}
-          className={` h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${selectedTab === 0 ? "text-[#721542] bg-white" : ""
+          className={` h-full border-2 border-t-0  px-8 md:px-12 py-3 md:py-5 bg-[#a86a32] ${selectedTab === 0 ? "text-[#721542] bg-white" : ""
             }  rounded-bl-3xl te`}
         >
           Flagship Events
         </button>
         <button
           onClick={() => setSelectedTab(1)}
-          className={`h-full border-b-2  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${selectedTab === 1 ? "text-[#721542] bg-white" : ""
+          className={`h-full border-b-2  px-8 md:px-12 py-3 md:py-5 rounded-br-3xl bg-[#a86a32] ${selectedTab === 1 ? "text-[#721542] bg-white" : ""
             } `}
         >
           Club Events
         </button>
-        <button
-          onClick={() => setSelectedTab(2)}
-          className={`h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 rounded-br-3xl bg-[#a86a32] ${selectedTab === 2 ? "text-[#721542] bg-white" : ""
-            } `}
-        >
-          Fun Events
-        </button>
+       
       </div>
       <div className="absolute flex w-full justify-between">
         <Image src={flower1} />
