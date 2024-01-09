@@ -23,7 +23,7 @@ function Page2() {
   return (
     <div className='h-[700px]  w-full relative flex flex-col items-center overflow-hidden' style={{ background: "linear-gradient(180deg, #E6745A -7.87%, #FFBCB6 74.4%)"}}>
 
-      <div className='self-start z-[99] mt-24 ml-4'>
+      <div className='self-start z-[99] mt-24 ml-4 md:ml-8'>
 
 <p className=' text-transparent bg-clip-text bg-[#2E0D02] font-sankaran text-5xl md:text-7xl  '>Padharo Mhare Fest</p>
 <button className='btn z-[99] px-12 mt-12 text-white' style={{
