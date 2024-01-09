@@ -9,35 +9,38 @@ import { UAParser } from "ua-parser-js";
 import { selectEventsData } from "@/redux/reducers/dataReducer";
 import { useSelector } from "react-redux";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 function ResponsiveInnerList({ isMobile, d, k }) {
   return isMobile ? (
     <div className="ml-12">
-      <EventCard1 data={d} className='m-auto' key={k} />
+      <EventCard1 data={d} className="m-auto" key={k} />
     </div>
   ) : (
     <motion.div
-      initial={{ x: k % 2 === 0 ? -100 - 50*k : 100 + 50*k }}
+      initial={{ x: k % 2 === 0 ? -100 - 50 * k : 100 + 50 * k }}
       whileInView={{ x: 0 }}
       transition={{ duration: 0.6 }}
-      className="mx-8" style={{ width: "40%" }}>
-      {k % 2 === 0 ? (<EventCard1 data={d} key={k} />) : (<EventCard2 data={d} key={k} />)}
+      className="mx-8"
+      style={{ width: "40%" }}
+    >
+      {k % 2 === 0 ? (
+        <EventCard1 data={d} key={k} />
+      ) : (
+        <EventCard2 data={d} key={k} />
+      )}
     </motion.div>
-  )
+  );
 }
 
 export default function EventList() {
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
 
-  const events = useSelector(selectEventsData)
-  const flagship = events.filter(item => item.category === "flagship");
-  const club = events.filter(item => item.category === "club");
-  const fun = events.filter(item => item.category === "fun");
-
-
-
+  const events = useSelector(selectEventsData);
+  const flagship = events.filter((item) => item.category === "flagship");
+  const club = events.filter((item) => item.category === "club");
+  // const fun = events.filter(item => item.category === "fun");
 
   useEffect(() => {
     const parser = new UAParser();
@@ -47,9 +50,6 @@ export default function EventList() {
     setIsMobile(isMobileDevice);
   }, []);
 
-
-
-
   return (
     <div className="bg-[#883800] w-full flex flex-col items-center overflow-x-hidden">
       <div className="flex w-full items-center relative ">
@@ -58,27 +58,22 @@ export default function EventList() {
         <Image className="rotate-180" src={borderDown}></Image>
         {/* <Image src={borderDown2}></Image> */}
       </div>
-      <div className=" z-10 absolute flex font-amita  text-white md:text-md text-sm border-white ">
+      <div className=" z-10 absolute flex font-amita  text-white md:text-lg text-md border-white ">
         <button
           onClick={() => setSelectedTab(0)}
-          className={` h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${selectedTab === 0 ? "text-[#721542] bg-white" : ""
-            }  rounded-bl-3xl te`}
+          className={` h-full border-2 border-t-0  px-8 md:px-12 py-3 md:py-5 bg-[#a86a32] ${
+            selectedTab === 0 ? "text-[#721542] bg-white" : ""
+          }  rounded-bl-3xl te`}
         >
           Flagship Events
         </button>
         <button
           onClick={() => setSelectedTab(1)}
-          className={`h-full border-b-2  px-8 md:px-12 py-2 md:py-3 bg-[#a86a32] ${selectedTab === 1 ? "text-[#721542] bg-white" : ""
-            } `}
+          className={`h-full border-b-2  px-8 md:px-12 py-3 md:py-5 rounded-br-3xl bg-[#a86a32] ${
+            selectedTab === 1 ? "text-[#721542] bg-white" : ""
+          } `}
         >
           Club Events
-        </button>
-        <button
-          onClick={() => setSelectedTab(2)}
-          className={`h-full border-2 border-t-0  px-8 md:px-12 py-2 md:py-3 rounded-br-3xl bg-[#a86a32] ${selectedTab === 2 ? "text-[#721542] bg-white" : ""
-            } `}
-        >
-          Fun Events
         </button>
       </div>
       <div className="absolute flex w-full justify-between">
@@ -87,35 +82,37 @@ export default function EventList() {
       </div>
       {selectedTab === 0 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {flagship.map((d, k) =>
-            (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
-          )}
+          {flagship.map((d, k) => (
+            <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />
+          ))}
         </div>
       )}
       {selectedTab === 1 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {club.map((d, k) =>
-            (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
-          )}
-          {club?.length === 0 && <div className="h-96 flex items-center justify-center">
-            <p className="text-5xl font-sankaran text-white text-center">
-            Coming Soon
-            </p>
+          {club.map((d, k) => (
+            <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />
+          ))}
+          {club?.length === 0 && (
+            <div className="h-96 flex items-center justify-center">
+              <p className="text-5xl font-sankaran text-white text-center">
+                Coming Soon
+              </p>
             </div>
-            }
+          )}
         </div>
       )}
       {selectedTab === 2 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {fun.map((d, k) =>
-            (<ResponsiveInnerList isMobile={isMobile} d={d} k={k} />)
-          )}
-          {fun?.length === 0 && <div className="h-96 flex items-center justify-center">
-            <p className="text-5xl font-sankaran text-white text-center">
-            Coming Soon
-            </p>
+          {fun.map((d, k) => (
+            <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />
+          ))}
+          {fun?.length === 0 && (
+            <div className="h-96 flex items-center justify-center">
+              <p className="text-5xl font-sankaran text-white text-center">
+                Coming Soon
+              </p>
             </div>
-            }
+          )}
         </div>
       )}
 

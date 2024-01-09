@@ -13,12 +13,12 @@ function DesktopEventPage({ data }) {
           bg-no-repeat bg-cover`}
       >
         {data ? (
-          <p className="text-[60px] text-[#751300]">{data?.name}</p>
+          <p className="text-[60px] text-[#751300] font-amita">{data?.name}</p>
         ) : (
           <div className="skeleton w-60 h-28 rounded-lg bg-transparent"></div>
         )}
         {data ? (
-          <p className="text-[#313131] text-[14px] leading-[16px] text-justify z-10 w-[42vw] xl:w-[38vw]">
+          <p className="text-[#313131] text-[16px] leading-[16px] text-justify z-10 w-[42vw] xl:w-[38vw] leading-[30px]">
             {data?.desc}
           </p>
         ) : (
@@ -58,7 +58,7 @@ function DesktopEventPage({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col gap-[100px] justify-between w-[70%] lg:w-[60%]">
+      <div className="flex flex-col justify-between w-[70%] lg:w-[60%]">
         <div className="flex w-full items-center relative overflow-hidden">
           <Image className="rotate-180" src={borderDown}></Image>
           <Image className="rotate-180" src={borderDown}></Image>
@@ -67,9 +67,7 @@ function DesktopEventPage({ data }) {
         {data ? (
           <img
             src={data?.image}
-            // width={414}
-
-            className={`border-r-8 border-b-8 border-[#fb5e3f] w-[414px] h-[500px]`}
+            className={`border-r-8 border-b-8 border-[#fb5e3f] w-[514px] h-[600px]`}
           />
         ) : (
           <div className="skeleton w-[414px] h-[500px] bg-transparent"></div>

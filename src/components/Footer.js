@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import Link from "next/link";
-import blitz_logo1 from '../../public/assets/blitz_logo2.png'
+import blitz_logo1 from "../../public/assets/blitz_logo2.png";
 function Footer() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -28,14 +28,13 @@ function Footer() {
         <div
           style={{
             borderRight: "solid white 1px",
-           
           }}
           className="flex-col flex   align-middle  justify-start  lg:max-w-[25%]"
         >
           <div className="flex items-center justify-center align-middle">
-          <Link href={"/"}>
-          <Image width={200} src={blitz_logo1}></Image>
-          </Link>
+            <Link href={"/"}>
+              <Image width={200} src={blitz_logo1}></Image>
+            </Link>
           </div>
           <div className="text-white text-center font-sankaran text-[16px]  leading-[44px]">
             BLITZSCHALG’24
@@ -46,7 +45,6 @@ function Footer() {
           style={{
             fontFamily: "BlackOpsOne",
             borderRight: "1px solid white",
-           
           }}
           className="flex flex-col my-3  lg:gap-y-11 align-middle lg:max-w-[50%] "
         >
@@ -54,17 +52,21 @@ function Footer() {
             Quick Links
           </div>
 
-          <div className=" flex align-middle lg:gap-y-5 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-amita text-[12.5px] md:text-[20px] font-normal leading-[44px]">
-            <div className="text-center ">
+          <div className=" flex align-middle lg:gap-y-4 gap-x-[12px] lg:gap-x-[74px] justify-center flex-wrap text-white text-center font-amita text-[12.5px] md:text-[20px] font-normal leading-[44px]">
+            {/* <div className="text-center ">
               <Link className="text-center " href="/">
                 Home
               </Link>
-            </div>
+            </div> */}
             <div className="">
               <Link href="/events">Events</Link>
             </div>
             <div className="">
               <Link href="/about">About Us</Link>
+            </div>
+
+            <div className="">
+              <Link href="/theme">Theme</Link>
             </div>
             <div className="">
               <Link href="/login">Register</Link>
@@ -83,7 +85,10 @@ function Footer() {
             <div className="text-center font-sankaran">Connect With Us</div>
             <div className="flex justify-center">
               <div className=" flex align-middle justify-center w-[88px] h-[88px] flex-wrap gap-[40px]">
-                <a href="https://www.instagram.com/blitz_mnit?igsh=OThhczUxZG5yOTR2" target="_blank">
+                <a
+                  href="https://www.instagram.com/blitz_mnit?igsh=OThhczUxZG5yOTR2"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -98,7 +103,10 @@ function Footer() {
                   </svg>
                 </a>
 
-                <a href="https://m.facebook.com/blitzschlagMNIT/" target="_blank">
+                <a
+                  href="https://m.facebook.com/blitzschlagMNIT/"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -113,7 +121,10 @@ function Footer() {
                   </svg>
                 </a>
 
-                <a href="https://youtube.com/@blitzschlagmnit3592?si=DBv0JypcSmMzytSl" target="_blank">
+                <a
+                  href="https://youtube.com/@blitzschlagmnit3592?si=DBv0JypcSmMzytSl"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -127,7 +138,10 @@ function Footer() {
                     />
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/blitzschlag-mnit-8a897a2a8/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/blitzschlag-mnit-8a897a2a8/"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
