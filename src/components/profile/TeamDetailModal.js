@@ -13,18 +13,14 @@ function TeamDetailModal({team}) {
       <button
         className="w-fit bg-[#FB5E3F] px-[18px] md:px-[32px] py-[8px] text-white "
         onClick={() => {
-          if (!auth) {
-            toast("Please Login to Register for Events", {
-              type: "info",
-            });
-          } else {
-            document.getElementById("my_modal_1").showModal();
-          }
+          
+            document.getElementById(`my_modal_${team.teamId}`).showModal();
+       
         }}
       >
        View Team
       </button>
-      <dialog id="my_modal_1" className="modal">
+      <dialog id={`my_modal_${team.teamId}`} className="modal">
         <div className="modal-box bg-[#FFC697] px-0 pt-[5px]">
           <div className="flex items-center justify-end px-[24px]">
             <form method="dialog">
@@ -35,13 +31,13 @@ function TeamDetailModal({team}) {
           </div>
           <div className="grid gap-[14px] px-[24px]">
             <div className="flex items-center gap-[30px]">
-              <div className="">Team Name: </div> {team.teamName}
+              <div className="">Team Name: </div> {team?.teamName}
             </div>
             <div className="flex items-center gap-[30px]">
-              <div className="">Team Leader: </div> {team.teamLeaderId}
+              <div className="">Team Leader: </div> {team?.teamLeaderId}
             </div>
             <div className="flex items-center gap-[30px]">
-              <div className="">Team Status: </div><span className={`${team.teamStatus === "unVerified"? "text-red-600":"text-green-500"}`}> {team.teamStatus}</span>
+              <div className="">Team Status: </div><span className={`${team?.teamStatus === "unVerified"? "text-red-600":"text-green-500"}`}> {team?.teamStatus}</span>
             </div>
           </div>
           <div className="mt-[34px]">
@@ -49,7 +45,7 @@ function TeamDetailModal({team}) {
               <div className="">S No.</div>
               <div className="">Blitz ID</div>
             </div>
-           {team.members.map((m,k)=> <div className="grid grid-cols-3 py-[12px]">
+           {team?.members.map((m,k)=> <div className="grid grid-cols-3 py-[12px]">
               <div className="">{k+1}</div>
               <div className="">{m}</div>
             </div>)}

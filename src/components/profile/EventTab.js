@@ -10,6 +10,7 @@ import { selectEvents, selectTeams } from "@/redux/reducers/userReducer";
 function EventTab({ menu, setMenu, credentials }) {
   const events = useSelector(selectEvents)
   const teams = useSelector(selectTeams)
+  console.log(teams)
   return credentials ? (
     <div>No Event Registered yet</div>
   ) : (

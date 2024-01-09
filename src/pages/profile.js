@@ -7,12 +7,13 @@ import EventIcon from "/public/icons/events.svg";
 import CrossIcon from "/public/icons/cross.svg";
 import LogoutIcon from "/public/icons/logout.svg";
 import {
+  SET_UNAUTHENTICATED,
   selectAuthenticated,
   selectCredentials,
   selectEvents,
 } from "@/redux/reducers/userReducer";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import EventTab from "/src/components/profile/EventTab.js";
 import PassTab from "/src/components/profile/PassTab.js";
 import ProfileTab from "/src/components/profile/ProfileTab.js";
@@ -25,6 +26,7 @@ export default function Profile() {
   const router = useRouter();
   const auth = useSelector(selectAuthenticated);
   const credentials = useSelector(selectCredentials);
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (!auth) {
@@ -77,7 +79,10 @@ export default function Profile() {
         </p>
         <p
           className="flex gap-[20px] items-center cursor-pointer"
-          onClick={() => logOutUser()}
+          onClick={() => {
+            logOutUser()
+            dispatch(SET_UNAUTHENTICATED())
+          }}
         >
           <Image src={LogoutIcon} />
           Logout
