@@ -4,6 +4,7 @@ import Image from "next/image";
 import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal";
 import Link from "next/link";
+import { FaDownload } from "react-icons/fa";
 function MobileEventPage(props) {
   const data = props.data;
 
@@ -57,9 +58,9 @@ function MobileEventPage(props) {
         </div>
         <div className="mt-[52px] flex w-full justify-between items-center font-amita">
           <div className="color-[#00293E] text-[20px] text-[#202020] flex gap-[7px] items-center">
-            <Link href={"/events"}>
+            <Link href={data?.rulebook || ""} target="_blank">
               {" "}
-              <Image src={LeftArrow} /> Back
+              <FaDownload size={20} /> Rulebook
             </Link>
           </div>
           <EventRegisterModal event={data?.name} id={data?.eventId} />

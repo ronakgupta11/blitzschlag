@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal";
-
+import { FaDownload } from "react-icons/fa";
 function DesktopEventPage({ data }) {
   console.log(data);
   return (
@@ -48,10 +48,10 @@ function DesktopEventPage({ data }) {
           </div>
         </div>
         <div className="mt-[32px] flex gap-[150px] lg:gap-[200px] font-amita">
-          <Link href={"/events"}>
-            <div className="color-[#00293E] text-[20px] text-[#202020] flex gap-[7px] items-center">
+          <Link href={data?.rulebook || ""} target="_blank">
+            <div className="color-[#00293E] text-[20px] text-[#fb5e3f] flex gap-[7px] items-center">
               {" "}
-              <Image src={LeftArrow} /> Back
+              <FaDownload size={20}/> Rulebook
             </div>
           </Link>
           <EventRegisterModal event={data?.name} id={data?.eventId} />

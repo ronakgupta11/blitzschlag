@@ -144,7 +144,7 @@ export default function LoginForm() {
         </p>
       </div>
       <button
-        className="bg-yellow-400 text-white rounded-lg  py-2 w-full"
+        className="bg-yellow-400 text-white rounded-lg py-2 w-full mt-[10px]"
         onClick={handleClick}
         type="submit"
       >
