@@ -4,13 +4,11 @@ import Link from "next/link";
 import blitz_logo1 from "../../public/assets/blitz_logo2.png";
 import Image from "next/image";
 import { motion,AnimatePresence } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectAuthenticated } from "@/redux/reducers/userReducer";
-import { logOutUser } from "@/redux/actions/userAction";
-import { SET_UNAUTHENTICATED } from "@/redux/reducers/userReducer";
+
 function Navbar() {
   const auth = useSelector(selectAuthenticated)
-  const dispatch = useDispatch()
   const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { pathname } = useRouter();
@@ -68,7 +66,7 @@ function Navbar() {
         transition: 'opacity 0.3s ease', // Adjust the duration and easing function as needed
         
       }}
-   className={`${!visible?"opacity-0":""} nav flex z-[999] py-2 w-full  bg-[#0A0A0A]  absolute top-0 `}>
+   className={` nav flex z-[999] py-2 w-full  bg-[#0A0A0A]  absolute top-0 `}>
       {
         <ul
           className={`w-full flex ${
@@ -397,15 +395,6 @@ function Navbar() {
               </svg>
               <Link href={auth?"/profile":"/login"}>{auth?"Profile":"Login/Register"}</Link>
             </motion.li>
-           
-             
-
-             {auth && <motion.button whileHover={{scale:1.1}}  className=" border-none btn font-amita text-lg bg-[#E9B704] text-[#463000] rounded-md px-16 py-2 my-4" onClick={()=>{
-                   logOutUser();
-                   dispatch(SET_UNAUTHENTICATED());
-              }}> Logout </motion.button>}
-            
-            
           </motion.ul>
           </motion.div>
 

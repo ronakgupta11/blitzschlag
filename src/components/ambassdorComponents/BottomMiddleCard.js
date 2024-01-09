@@ -48,7 +48,7 @@ const BottomMiddleCard = () => {
               <div style={{ textAlign: "start" }}>
                 <div
                   style={{ fontFamily: "amita" }}
-                  className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]"
+                  className="text-white max-w-[350px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]"
                 >
                   Priority access to events
                 </div>
@@ -71,7 +71,7 @@ const BottomMiddleCard = () => {
               <div style={{ textAlign: "start" }}>
                 <div
                   style={{ fontFamily: "amita" }}
-                  className="text-white max-w-[250px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]"
+                  className="text-white max-w-[350px] lg:text-[40px] text-[20px] font-bold leading-[39px] tracking-[-1.2px]"
                 >
                   Behind-the-scenes experience
                 </div>
