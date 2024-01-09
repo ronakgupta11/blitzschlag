@@ -13,7 +13,7 @@ function theme2() {
 <Image  src={bg}/>
 
 </div>
-<div className='flex absolute font-sankaran text-center bg-clip-text top-[7%] md:top-[10%] bg-[#360805]  flex-col items-center justify-center space-y-2 w-full'>
+<div className='flex absolute font-sankaran text-center bg-clip-text top-[15] md:top-[10%] bg-[#360805]  flex-col items-center justify-center space-y-2 w-full'>
 
         <p className='text-md md:text-2xl text-transparent' >
             theme
