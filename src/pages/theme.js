@@ -5,6 +5,7 @@ import blue from "../../public/assets/theme/blue.png"
 import yelo from "../../public/assets/theme/yelo.png"
 import red from "../../public/assets/theme/red.png"
 import orange from "../../public/assets/theme/orange.png"
+import {motion} from "framer-motion"
 function theme2() {
   return (
     <div>
@@ -24,7 +25,12 @@ function theme2() {
 
 <div className='bg-[#4a0e0a] w-full px-10 py-20 flex flex-wrap items-center justify-center m-auto'>
 
-<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+<motion.div
+ initial={{ y: 100,  }}
+ whileInView={{y:0}}
+transition={{delay:0.1,duration:0.6}}
+
+  className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={yelo} >
 
@@ -36,8 +42,14 @@ function theme2() {
         
          </p>
     
-</div>
-<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+</motion.div>
+<motion.div 
+ initial={{ y: 125,  }}
+ whileInView={{y:0}}
+transition={{delay:0.1,duration:0.6}}
+
+
+className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={orange} >
 
@@ -49,8 +61,13 @@ function theme2() {
         
          </p>
     
-</div>
-<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+</motion.div>
+<motion.div 
+ initial={{ y: 150,  }}
+ whileInView={{y:0}}
+transition={{delay:0.1,duration:0.6}}
+
+className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={blue} >
 
@@ -61,8 +78,13 @@ function theme2() {
     As unbounded as the sky, it has eternal beauty spread across every horizon of the city
     </p>
     
-</div>
-<div className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
+</motion.div>
+<motion.div
+ initial={{ y: 175,  }}
+ whileInView={{y:0}}
+transition={{delay:0.1,duration:0.6}}
+
+ className='w-[220px]  h-[220px] text-black flex flex-col space-y-4 items-center justify-around p-4 bg-[#FCF2D9] rounded-xl shadow-md m-4'>
     <div className='flex space-x-4 items-center justify-center font-semibold'>
         <Image src={red} >
 
@@ -74,7 +96,7 @@ function theme2() {
         
          </p>
     
-</div>
+</motion.div>
 </div>
 
 
