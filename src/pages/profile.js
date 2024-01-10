@@ -26,7 +26,7 @@ export default function Profile() {
   const router = useRouter();
   const auth = useSelector(selectAuthenticated);
   const credentials = useSelector(selectCredentials);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!auth) {
@@ -78,10 +78,10 @@ export default function Profile() {
           Passes
         </p>
         <p
-          className="flex gap-[20px] items-center cursor-pointer"
+          className="flex gap-[20px] items-center cursor-pointer mt-[30px]"
           onClick={() => {
-            logOutUser()
-            dispatch(SET_UNAUTHENTICATED())
+            logOutUser();
+            dispatch(SET_UNAUTHENTICATED());
           }}
         >
           <Image src={LogoutIcon} />
