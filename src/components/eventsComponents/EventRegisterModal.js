@@ -202,7 +202,7 @@ function EventRegisterModal({ event, id }) {
   return (
     <div>
       <button
-        className="w-fit bg-[#FB5E3F] px-[36px] py-[8px] text-white "
+        className="w-fit bg-[#00517E] px-[36px] py-[8px] text-white "
         onClick={() => {
           if (!auth) {
             toast("Please Login to Register for Events", {

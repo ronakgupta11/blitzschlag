@@ -13,12 +13,12 @@ function DesktopEventPage({ data }) {
           bg-no-repeat bg-cover`}
       >
         {data ? (
-          <p className="text-[60px] text-[#751300] font-amita">{data?.name}</p>
+          <p className="text-[60px] text-[#003959] font-amita">{data?.name}</p>
         ) : (
           <div className="skeleton w-60 h-28 rounded-lg bg-transparent"></div>
         )}
         {data ? (
-          <p className="text-[#313131] text-[16px] leading-[16px] text-justify z-10 w-[42vw] xl:w-[38vw] leading-[30px]">
+          <p className="text-[#161616] text-[16px] text-justify z-10 w-[42vw] xl:w-[38vw] leading-[30px]">
             {data?.desc}
           </p>
         ) : (
@@ -49,7 +49,7 @@ function DesktopEventPage({ data }) {
         </div>
         <div className="mt-[32px] flex gap-[150px] lg:gap-[200px] font-amita">
           <Link href={data?.rulebook || ""} target="_blank">
-            <div className="color-[#00293E] text-[20px] text-[#fb5e3f] flex gap-[7px] items-center">
+            <div className="color-[#00293E] text-[20px] text-[#00293E] flex gap-[7px] items-center">
               {" "}
               <FaDownload size={20}/> Rulebook
             </div>
@@ -67,7 +67,7 @@ function DesktopEventPage({ data }) {
         {data ? (
           <img
             src={data?.image}
-            className={`border-r-8 border-b-8 border-[#fb5e3f] w-[514px] h-[600px]`}
+            className={`border-r-8 border-b-8 border-[#00517e] w-[514px] h-[600px]`}
           />
         ) : (
           <div className="skeleton w-[414px] h-[500px] bg-transparent"></div>
