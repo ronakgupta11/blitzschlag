@@ -1,0 +1,196 @@
+
+
+
+ {
+        "president":[
+            {
+                "Name": "Vidit Awasthi ",
+                "Position": "President",
+                "instagram": "https://www.instagram.com/vidit_awasthi_23?igsh=ZGNjOWZkYTE3MQ==",
+                "linkedin": "https://www.linkedin.com/in/vidit-awasthi-2086aa223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                "Gmail": "2021ume1112@mnit.ac.in"
+               },
+               {
+                  "Name": "Bhavika Nibhwani ",
+                  "Position": "Vice President",
+                  "instagram": "https://www.instagram.com/bhavika_nibhwanii?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D",
+                  "linkedin": "www.linkedin.com/in/bhavika-nibhwani-73403823b",
+                  "Gmail": "2021ucp1241@mnit.ac.in"
+                 }
+
+        ],
+        "general":[
+            {
+                "Name": "Ankit Sharma ",
+                "Position": "General Secretary ",
+                "instagram": "https://www.instagram.com/a.n.k.i.t_s.h.a.r.m.a.19?igsh=YzVkODRmOTdmMw==",
+                "Gmail": "2021ume1185@mnit.ac.in"
+               },
+               {
+                "Name": "Harshita Agarwal",
+                "Position": "General Secretary",
+                "instagram": "https://www.instagram.com/harshitaa_32?igsh=MTdlMjRlYjZlMQ==",
+                "linkedin": "https://www.linkedin.com/in/harshita-agarwal-3b482920a/",
+                "Gmail": "2021ucp1134@mnit.ac.in"
+               }
+
+        ],
+        "cultural":[
+            {
+                "Name": "Harshit Khandelwal ",
+                "Position": "Advisor to Cultural Secretary ",
+                "instagram": "https://www.instagram.com/harshit._.khandelwal?igsh=MTUwZjh6a24wZXV4cA==",
+                "linkedin": "https://www.linkedin.com/in/harshit-khandelwal-62a396249/",
+                "Gmail": "2020umt1389@mnit.ac.in"
+               },
+               {
+                "Name": "Krithik Mohan",
+                "Position": "Cultural Secretary",
+                "instagram": "https://www.instagram.com/therealkrithik?igsh=ZGNjOWZkYTE3MQ==",
+                "linkedin": "https://www.linkedin.com/in/krithik-mohan-49aa60288/",
+                "Gmail": "2021ume1095@mnit.ac.in"
+               },
+               {
+                "Name": "Abhi Verma",
+                "Position": "Cultural Secretary",
+                "instagram": "https://www.instagram.com/live_it_abhiiiii",
+                "linkedin": "https://www.linkedin.com/in/abhi-verma-mnit/",
+                "Gmail": "2021uch1028@mnit.ac.in"
+               }
+
+        ],
+        "technical":[
+            {
+                "Name": "Ronak Gupta",
+                "Position": "Technical Secretary",
+                "instagram": "https://www.instagram.com/ronak_gupta__",
+                "linkedin": "https://www.linkedin.com/in/ronak-gupta-7428a1224/",
+                "Gmail": "2021uec1454@mnit.ac.in"
+               },
+               {
+                "Name": "Reet Pandya",
+                "Position": "Technical secretary",
+                "instagram": "https://www.instagram.com/reet_57?igsh=MXNjdHp2MHNtdGFocQ==",
+                "linkedin": "https://www.linkedin.com/in/reet-pandya-12ab99226/",
+                "Gmail": "2021uar1157@mnit.ac.in"
+               },
+               {
+                "Name": "Pravin K Mahto",
+                "Position": "Technical Secretary",
+                "instagram": "https://www.instagram.com/_pravin_ak____?igsh=ODA1NTc5OTg5Nw==",
+                "linkedin": "https://www.linkedin.com/in/pravin-kumar-077a24224/",
+                "Gmail": "2021uar1227@mnit.ac.in"
+               }
+
+        ],
+        "finance":[
+            {
+                "Name": "Kislay Bhambu",
+                "Position": "Finance Secretary",
+                "instagram": "https://www.instagram.com/kislay.z?igsh=ZDE1MWVjZGVmZQ==",
+                "linkedin": "www.linkedin.com/in/kislay-bhambu"
+               },
+               {
+                "Name": "Shreya Sinha",
+                "Position": "Finance Secretary",
+                "instagram": "https://www.instagram.com/shre._.yaaa._?igsh=dzcydW9mbmhlc2s1&utm_source=qr",
+                "linkedin": "https://www.linkedin.com/in/shhreyaa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                "Gmail": "2021umt1851@mnit.ac.in"
+               }
+
+        ],
+        "massMedia":[
+            {
+                "Name": "Chinmaya Singh",
+                "Position": "Advisor to Mass & Media Secretary ",
+                "instagram": "https://www.instagram.com/chinmaya__singh/",
+                "linkedin": "https://www.linkedin.com/in/chinmaya-singh-3687a2215/",
+                "Gmail": "2020uce1506@mnit.ac.in"
+               },
+               {
+                "Name": "Preetika Arora",
+                "Position": "Mass and Media Secretary",
+                "instagram": "https://www.instagram.com/p_arora2509?igsh=MXg5dmthM3oxMDZ4MQ==",
+                "linkedin": "www.linkedin.com/in/preetika-arora-683645272"
+               },
+               {
+                "Name": "AKSHAT PATHAK ",
+                "Position": "MASS AND MEDIA SECRETARY ",
+                "instagram": "https://www.instagram.com/itzzz_axat_pathak?igsh=OHYwYzZoajc2Z3Qz",
+                "linkedin": "https://www.linkedin.com/in/akshat-pathak-217596215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                "Gmail": "2021UME1114@mnit.ac.in"
+               }
+        ],
+        "publicity":[
+            {
+                "Name": "Kshitij Pratap Singh",
+                "Position": "Advisor to Publicity Secretary",
+                "instagram": "https://www.instagram.com/kshitij_rajawat/",
+                "linkedin": "https://www.linkedin.com/in/kshitij-pratap-352a9b200/",
+                "Gmail": "2020uee1337@mnit.ac.in"
+               },
+               {
+                "Name": "Jayan Tanjea",
+                "Position": "Publicity Secretary",
+                "instagram": "https://www.instagram.com/jayan_taneja/",
+                "linkedin": "https://www.linkedin.com/in/jayan-taneja-ab8526256/",
+                "Gmail": "2021umt1680@mnit.ac.in"
+               },
+               {
+                "Name": "Somya Gupta",
+                "Position": "Publicity Secretary",
+                "instagram": "https://www.instagram.com/somyagupta7521?igsh=MWVseTUxODUzOTBtZQ==",
+                "linkedin": "www.linkedin.com/in/somya-gupta-622530246",
+                "Gmail": "2021uch1751@mnit.ac.in"
+               }
+
+        ],
+        "marketing":[
+            {
+                "Name": "Harsh Vardhan Singh ",
+                "Position": "Advisor to Marketing secretary ",
+                "instagram": "https://www.instagram.com/harshsingh8248?igsh=MXhzZmRyZGN4N29qaA%3D%3D&utm_source=qr",
+                "linkedin": "https://www.linkedin.com/in/harsh-singh-76b4481a9/",
+                "Gmail": "2020UMT1340@mnit.ac.in"
+               }
+
+        ],
+
+        "logistics":[
+            {
+                "Name": "Madhvendra Singh ",
+                "Position": "Logistics Secretary ",
+                "instagram": "https://www.instagram.com/_madhvendra_singh_?igsh=NnF3bTZ5NmRhcnNq",
+                "linkedin": "https://www.linkedin.com/in/madhvendra-singh-657762251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                "Gmail": "2021umt1738@mnit.ac.in"
+               },
+               {
+                "Name": "Jasneet singh",
+                "Position": "Logistics Secretary",
+                "instagram": "https://www.instagram.com/jasneet.here?igsh=Ym9sdXVjOGs1OW1w",
+                "linkedin": "https://www.linkedin.com/in/jasneet-singh-847231251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                "Gmail": "2021ume1117@mnit.ac.in"
+               }
+
+        ],
+        "decor":[
+            {
+                "Name": "Chetan Dora",
+                "Position": "Decor Secretary ",
+                "instagram": "https://www.instagram.com/chetandora?igsh=Z2gyaDZsa3BheXFz&utm_source=qr",
+                "Gmail": "2021uar1229@mnit.ac.in"
+               },
+               {
+                "Name": "Shivangi Talukdar ",
+                "Position": "Decor Secratary ",
+                "instagram": "https://www.instagram.com/shivangi_talukdar?igsh=MTRkOXZoeWw2aHNheg=="
+               }
+
+        ]
+    }
+
+
+   
+      
+    
+    

@@ -4,41 +4,29 @@ import flower from "../../public/assets/team/flower.png";
 import Image from "next/image";
 import TeamCard from "@/components/teamComponents/TeamCard";
 import { Parallax } from "react-scroll-parallax";
+import teamData from "../components/teamComponents/teamData.json"
 
 export default function team() {
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef([
-    { id: "Technical", ref: useRef() },
-    { id: "Publicity", ref: useRef() },
-    { id: "MassMedia", ref: useRef() },
-    { id: "Cultural", ref: useRef() },
+    { id: "president", ref: useRef() },
+    { id: "general", ref: useRef() },
+    { id: "cultural", ref: useRef() },
+    { id: "technical", ref: useRef() },
+    { id: "finance", ref: useRef() },
+    { id: "massMedia", ref: useRef() },
+    { id: "publicity", ref: useRef() },
+    { id: "marketing", ref: useRef() },
+    { id: "logistics", ref: useRef() },
+    { id: "decor", ref: useRef() },
   ]);
 
   const containerRef = useRef();
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
+ 
 
-    sectionRefs.current.forEach(({ id, ref }, index) => {
-      if (
-        ref.current.offsetTop <= scrollPosition &&
-        ref.current.offsetTop + ref.current.clientHeight >= scrollPosition
-      ) {
-        setActiveSection(index);
-      }
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  console.log(activeSection);
 
   return (
-    <div className="w-full    bg-[#fffbed] relative p-4 pt-28">
+    <div className="w-full    bg-[#fffbed] relative p-4 ">
       <div className="flex w-full md:space-x-64 space-x-48 items-center justify-center">
         <Image src={flower} />
         <Image src={flower} />
@@ -57,82 +45,108 @@ export default function team() {
           ref={containerRef}
           className="h-full overflow-y-scroll"
         >
-          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-          <div
-            ref={sectionRefs.current[0].ref}
-            id="Technical"
-            className="cards flex flex-wrap my-12"
-          >
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-          </div>
-          {/* </Parallax> */}
-          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-          <div
-            ref={sectionRefs.current[1].ref}
-            id="Publicity"
-            className="cards flex flex-wrap my-12"
-          >
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-          </div>
-          {/* </Parallax> */}
-          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-          <div
-            ref={sectionRefs.current[2].ref}
-            id="MassMedia"
-            className="cards flex flex-wrap my-12"
-          >
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-          </div>
-          {/* </Parallax> */}
-          {/* <Parallax onExit={() => setActiveSection(activeSection + 1)}> */}
-          <div
-            ref={sectionRefs.current[3].ref}
-            id="Cultural"
-            className="cards flex flex-wrap my-12"
-          >
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-          </div>
-          {/* </Parallax> */}
+          {Object.keys(teamData).map((category,k)=>{
+            return(
+              <div
+              key={k}
+              ref={sectionRefs.current[k].ref}
+              id={category}
+              className="cards flex flex-wrap items-center justify-around my-12"
+            >
+              {teamData[category].map(
+                (m,k)=>{
+                  return(
+                    <TeamCard data = {m} key ={k}/>
+                  )
+                }
+              )}
+            </div>
+
+            )
+          })}
+
+
         </div>
 
-        {/* <div className='relative h-full flex align-start justify-start'>
+        <div className='relative h-full flex align-start justify-start'>
           <div style={{ alignSelf: "start" }} className=' text-[#606060] text-lg font-amita h-full '>
             <ul className='flex flex-row md:flex-col items-center justify-around space-x-3 space-y-6'>
-              <div>Hello {activeSection}</div>
-              <li className={activeSection === 0 ? 'text-red-500' : ''}
-             onClick={() => sectionRefs.current[0].ref.current.scrollIntoView({ behavior: 'smooth' })}>
+              <li className={activeSection === 0 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(0)
+              sectionRefs.current[0].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  President Team
+          
+              </li>
+              <li className={activeSection === 1? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(1)
+              sectionRefs.current[1].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Operations Team
+          
+              </li>
+              <li className={activeSection === 2 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(2)
+              sectionRefs.current[2].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Cultural Team
+          
+              </li>
+              <li className={activeSection === 3 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(3)
+              sectionRefs.current[3].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
                   Technical Team
           
               </li>
-              <li className={activeSection === 1 ? 'text-red-500' : ''}
-           onClick={() => sectionRefs.current[1].ref.current.scrollIntoView({ behavior: 'smooth' })}>
+              <li className={activeSection === 4 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(4)
+              sectionRefs.current[4].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Finance Team
+          
+              </li>
+              <li className={activeSection === 5 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(5)
+              sectionRefs.current[5].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Mass and Media Team
+          
+              </li>
+              <li className={activeSection === 6 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(6)
+              sectionRefs.current[6].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
                   Publicity Team
-                
+          
               </li>
-              <li className={activeSection === 2 ? 'text-black text-xl border-b-2 border-black' : ''}
-               onClick={() => sectionRefs.current[2].ref.current.scrollIntoView({ behavior: 'smooth' })}>
-                  Mass Media Team
-                
+              <li className={activeSection === 7 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(7)
+              sectionRefs.current[7].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Marketing Team
+          
               </li>
-              <li className={activeSection === 3 ? 'text-red-500' : ''} onClick={() => sectionRefs.current[3].ref.current.scrollIntoView({ behavior: 'smooth' })}>
-                  Cultural Team
-                
+              <li className={activeSection === 8 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(8)
+              sectionRefs.current[8].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Logostics Team
+          
               </li>
+              <li className={activeSection === 9 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
+             onClick={() => {
+              setActiveSection(9)
+              sectionRefs.current[9].ref.current.scrollIntoView({ behavior: 'smooth' })}}>
+                  Decor Team
+          
+              </li>
+             
+              
+              
             </ul>
     </div>
-   </div> */}
+   </div>
       </div>
     </div>
   );
