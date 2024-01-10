@@ -1,7 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
 import React from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 function Layout({ children }) {
@@ -9,7 +8,7 @@ function Layout({ children }) {
     <ParallaxProvider>
       <div className="layout ">
         {/* <div className="sidebar fixed z-[9999999]  "><Sidebar/></div> */}
-        <div className="h-[80px]">
+        <div className="h-[80px] z-[999]">
         <Navbar/>
         </div>
         <div className="content flex-1 relative w-full ">{children}</div>

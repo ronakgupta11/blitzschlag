@@ -108,7 +108,7 @@ function Navbar() {
                         : "flex flex-col justify-center"
                     }
                   >
-                    <Link href="/login">Login/Register</Link>
+                    <Link href={auth ? "/profile" : "/login"}>{auth ? "Profile" : "Login/Register"}</Link>
                   </li>
                 </div>
               )}
