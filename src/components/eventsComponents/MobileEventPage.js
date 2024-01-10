@@ -14,7 +14,7 @@ function MobileEventPage(props) {
         className="flex flex-col gap-[50px] justify-between items-center
       bg-[url('/bg_mobile.svg')] bg-no-repeat bg-[length:100%] bg-center"
       >
-        <div className="flex w-full items-center overflow-hidden">
+        <div className="flex w-full items-center bg-[#2b2b2b] overflow-hidden">
           <Image className="rotate-180" src={borderDown}></Image>
           <Image className="rotate-180" src={borderDown}></Image>
         </div>
