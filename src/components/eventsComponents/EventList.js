@@ -39,7 +39,7 @@ export default function EventList() {
 
   const events = useSelector(selectEventsData);
   const flagship = events.filter((item) => item.category === "flagship");
-  const club = events.filter((item) => item.category === "club");
+  const club = events.filter((item) => item.category === "club1");
   // const fun = events.filter(item => item.category === "fun");
 
   useEffect(() => {
