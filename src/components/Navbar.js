@@ -67,7 +67,7 @@ function Navbar() {
                 isMobile ? "justify-between" : "justify-evenly"
               } align-middle ${
                 isMobile ? "px-5" : ""
-              } text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]`}
+              } text-white text-center font-amita text-[16px]  font-normal leading-[44px]`}
             >
               <li className="sm:w-[15%]  sm:px-6 gap-2 flex align-middle">
                 <Image
@@ -181,7 +181,7 @@ function Navbar() {
               // exit={{ x: "100%" }}
             >
               <motion.ul
-                className="list-none flex flex-col h-full  items-start justify-start gap-4  text-white text-center font-black-ops-one text-[16px]  font-normal leading-[44px]"
+                className="list-none flex flex-col h-full  items-start justify-start gap-4  text-white text-center font-amita text-[16px]  font-normal leading-[44px]"
                 initial="hidden"
                 animate="visible"
                 variants={{
