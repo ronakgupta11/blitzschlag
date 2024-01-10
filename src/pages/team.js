@@ -72,7 +72,7 @@ export default function team() {
 
         </div>
 
-        <div className='relative h-full flex align-start justify-start'>
+        {/* <div className='relative h-full flex align-start justify-start'>
           <div style={{ alignSelf: "start" }} className=' text-[#606060] text-lg font-amita h-full '>
             <ul className='flex flex-row md:flex-col items-center justify-around space-x-3 space-y-6 overflow-x-auto w-full '>
               <li className={activeSection === 0 ? 'text-black text-xl border-b-2 border-black cursor-pointer' : ' cursor-pointer'}
@@ -150,7 +150,7 @@ export default function team() {
               
             </ul>
     </div>
-   </div>
+   </div> */}
       </div>
     </div>
   );
