@@ -33,7 +33,7 @@ function MobileEventPage(props) {
       <div
         className={`flex flex-col gap-[18px] max-[500px]:px-[35px] px-[55px] pt-[15px] pb-[30px] items-center`}
       >
-        <p className="text-[60px] text-[#003959]">{data?.name}</p>
+        <p className="text-[60px] font-amita text-[#003959]">{data?.name}</p>
         <p className="text-[#161616] text-[14px] text-justify z-10 leading-[16px]">
           {data?.desc}
         </p>
