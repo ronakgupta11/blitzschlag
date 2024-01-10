@@ -23,7 +23,11 @@ export default function team() {
 
   const containerRef = useRef();
  
-
+  useEffect(() => {
+    if (sectionRefs.current[activeSection] && sectionRefs.current[activeSection].ref.current) {
+      sectionRefs.current[activeSection].ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [activeSection]);
 
   return (
     <div className="w-full    bg-[#fffbed] relative p-4 ">
