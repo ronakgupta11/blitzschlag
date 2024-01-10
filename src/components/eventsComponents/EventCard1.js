@@ -12,10 +12,10 @@ function EventCard1(props) {
       </div>
       <div className="flex flex-col bg-[#894e0d]  items-center  text-white justify-around md:w-[420px] w-[290px] h-40 md:h-[207px] border-b-2 border-t-2 border-r-2  rounded-br-[100px] ">
         <p className=" md:text-2xl text-lg font-bold font-amita">{data.name}</p>
-        <p className="self-end pl-2 text-xs md:text-sm w-[213px] md:w-[316px]">
+        <p className="self-end pl-2 md:pr-8 text-justify text-xs md:text-sm w-[213px] md:w-[316px]">
           {data.oneliner}
         </p>
-        <button className="px-4 text-xs md:text-sm text-white py-1 self-end mr-20 md:mr-16 bg-[#9D390E] border-white border rounded-3xl">
+        <button className="px-4 text-xs md:text-sm  text-white py-1   bg-[#9D390E] border-white border rounded-3xl">
           <Link href={`/events/${data.id}`}>Know more</Link>
         </button>
       </div>

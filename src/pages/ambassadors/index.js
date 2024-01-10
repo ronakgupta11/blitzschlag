@@ -50,8 +50,10 @@ const index = () => {
 
       <MiddleCard />
       <BottomMiddleCard />
-      <div className="bg-[#463000] flex justify-center p-3 font-amita">
+      <div className="bg-[#463000] flex flex-col items-center justify-center p-3 font-amita">
+
       <CampusAmbassdorDialog/>
+      <div className="h-8 w-full"></div>
       </div>
     </div>
   );
