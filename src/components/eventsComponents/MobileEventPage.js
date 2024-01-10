@@ -9,12 +9,12 @@ function MobileEventPage(props) {
   const data = props.data;
 
   return (
-    <div className="bg-[#c5ccdc] w-full h-full ">
+    <div className="bg-[#59b6e9] w-full h-full ">
       <div
         className="flex flex-col gap-[50px] justify-between items-center
       bg-[url('/bg_mobile.svg')] bg-no-repeat bg-[length:100%] bg-center"
       >
-        <div className="flex w-full bg-black items-center overflow-hidden">
+        <div className="flex w-full items-center overflow-hidden">
           <Image className="rotate-180" src={borderDown}></Image>
           <Image className="rotate-180" src={borderDown}></Image>
         </div>
