@@ -24,7 +24,7 @@ function MobileEventPage(props) {
             src={data?.image}
             width={260}
             // style={{ height: "300px !important" }}
-            className={`border-r-8 border-b-8 border-[#fb5e3f]`}
+            className={`border-r-8 border-b-8 border-[#00517E]`}
           />
         ) : (
           <div className="skeleton w-[260px] h-[350px]"></div>
@@ -33,8 +33,8 @@ function MobileEventPage(props) {
       <div
         className={`flex flex-col gap-[18px] max-[500px]:px-[35px] px-[55px] pt-[15px] pb-[30px] items-center`}
       >
-        <p className="text-[60px] text-[#751300]">{data?.name}</p>
-        <p className="text-[#313131] text-[14px] text-justify z-10 leading-[16px]">
+        <p className="text-[60px] text-[#003959]">{data?.name}</p>
+        <p className="text-[#161616] text-[14px] text-justify z-10 leading-[16px]">
           {data?.desc}
         </p>
         <div className="flex w-full justify-between items-center font-amita">
@@ -57,7 +57,7 @@ function MobileEventPage(props) {
           </div>
         </div>
         <div className="mt-[52px] flex w-full justify-between items-center font-amita">
-          <div className="color-[#00293E] text-[20px] text-[#202020] flex gap-[7px] items-center">
+          <div className="color-[#00293E] text-[20px] text-[#00293E] flex gap-[7px] items-center">
             <Link href={data?.rulebook || ""} target="_blank">
               {" "}
               <FaDownload size={20} /> Rulebook
