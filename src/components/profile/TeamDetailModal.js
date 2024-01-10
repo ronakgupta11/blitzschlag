@@ -14,13 +14,13 @@ function TeamDetailModal({team}) {
         className="w-fit bg-[#FB5E3F] px-[18px] md:px-[32px] py-[8px] text-white "
         onClick={() => {
           
-            document.getElementById(`my_modal_${team.teamId}`).showModal();
+            document.getElementById(`my_modal_${team?.teamId}`).showModal();
        
         }}
       >
        View Team
       </button>
-      <dialog id={`my_modal_${team.teamId}`} className="modal">
+      <dialog id={`my_modal_${team?.teamId}`} className="modal">
         <div className="modal-box bg-[#FFC697] px-0 pt-[5px]">
           <div className="flex items-center justify-end px-[24px]">
             <form method="dialog">
