@@ -13,42 +13,48 @@ function ProfileTab({ menu, setMenu, credentials }) {
   const [issue, setIssue] = useState("");
 
   return (
-    <div className="grid w-full grid-rows-2">
-      <div className="bg-[#FFFBED] py-[32px] px-[30px] md:px-[60px] grid gap-[20px] text-[#393939] font-amita ">
-        <div className="align-right font-bold leading-[24px] text-right flex items-center justify-between md:justify-end">
-          <div
-            className="p-[8px] bg-black rounded-full md:hidden"
-            onClick={() => setMenu(!menu)}
-          >
-            <Image src={HamIcon} width={28} height={28} className="h-fit " />{" "}
-          </div>
-          <Link href={"/"}>
-            <div className="flex gap-[10px] items-center">
-              <Image src={LeftArrow} alt="left_arrow_icon" /> Back to home
+    <div className="grid w-full">
+      <div className="bg-[url('/assets/theme/bg.svg')] bg-center ">
+        <div className="bg-[#FFFBED] text-white py-[82px] px-[30px] md:px-[60px] grid gap-[20px] font-amita bg-blue-600/30 backdrop-brightness-50">
+          <div className="align-right font-bold leading-[24px] text-right flex items-center justify-between md:justify-end">
+            <div
+              className="p-[8px] bg-black rounded-full md:hidden"
+              onClick={() => setMenu(!menu)}
+            >
+              <Image src={HamIcon} width={28} height={28} className="h-fit " />{" "}
             </div>
-          </Link>
-        </div>
-        <div className="flex gap-[40px] items-center">
-          <Image
-            src={ProfileImg}
-            width={120}
-            height={120}
-            className="border-4 border-[#7515C1] rounded-full"
-          />
-          <div className="grid text-sm gap-[20px] font-bold">
-            <p>info</p>
-            <p className="flex gap-[20px] items-center">
-              {" "}
-              <Image src={UserProfile} /> {credentials?.name}
-            </p>
-            <p className="flex gap-[20px] items-center">
-              <Image src={MailIcon} />
-              {credentials?.email}
-            </p>
-            <p className="flex gap-[20px] items-center">
-              <Image src={PhoneIcon} />
-              {credentials?.phone}
-            </p>
+            <Link href={"/"}>
+              <div className="flex gap-[10px] items-center">
+                <Image src={LeftArrow} alt="left_arrow_icon" /> Back to home
+              </div>
+            </Link>
+          </div>
+
+          <div className="flex gap-[40px] items-center ">
+            <Image
+              src={ProfileImg}
+              width={120}
+              height={120}
+              className="border-4 border-[#7515C1] rounded-full"
+            />
+            <div className="grid text-sm gap-[20px] font-bold">
+              <p>info</p>
+              <p className="flex gap-[20px] items-center">
+                {" "}
+                <Image src={UserProfile} /> {credentials?.name}
+              </p>
+              <p className="flex gap-[20px] items-center">
+                <Image src={MailIcon} />
+                {`${credentials?.email?.slice(
+                  0,
+                  4
+                )}...${credentials?.email?.slice(-10)}`}
+              </p>
+              <p className="flex gap-[20px] items-center">
+                <Image src={PhoneIcon} />
+                {credentials?.phone}
+              </p>
+            </div>
           </div>
         </div>
       </div>

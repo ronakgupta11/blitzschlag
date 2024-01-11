@@ -78,7 +78,7 @@ export default function Profile() {
           Passes
         </p>
         <p
-          className="flex gap-[20px] items-center cursor-pointer mt-[30px]"
+          className="flex gap-[20px] items-center cursor-pointer mt-[120px]"
           onClick={() => {
             logOutUser();
             dispatch(SET_UNAUTHENTICATED());

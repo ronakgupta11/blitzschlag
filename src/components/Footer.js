@@ -37,7 +37,7 @@ function Footer() {
             </Link>
           </div>
           <div className="text-white text-center font-sankaran text-[16px]  leading-[44px]">
-            BLITZSCHALG’24
+            BLITZSCHLAG’24
           </div>
         </div>
 
@@ -122,7 +122,7 @@ function Footer() {
                 </a>
 
                 <a
-                  href="https://youtube.com/@blitzschlagmnit3592?si=DBv0JypcSmMzytSl"
+                  href="https://www.linkedin.com/in/blitzschlag-mnit-8a897a2a8/"
                   target="_blank"
                 >
                   <svg
@@ -139,7 +139,7 @@ function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/blitzschlag-mnit-8a897a2a8/"
+                  href="https://youtube.com/@blitzschlagmnit3592?si=DBv0JypcSmMzytSl"
                   target="_blank"
                 >
                   <svg
