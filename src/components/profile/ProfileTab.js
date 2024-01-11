@@ -15,7 +15,7 @@ function ProfileTab({ menu, setMenu, credentials }) {
   return (
     <div className="grid w-full">
       <div className="bg-[url('/assets/theme/bg.svg')] bg-center ">
-        <div className="bg-[#FFFBED] text-white py-[82px] px-[30px] md:px-[60px] grid gap-[20px] font-amita bg-blue-600/30 backdrop-brightness-50">
+        <div className="bg-[#FFFBED] text-white py-[42px] md:py-[82px] px-[30px] md:px-[60px] grid gap-[40px] md:gap-[20px] font-amita bg-blue-600/30 backdrop-brightness-50">
           <div className="align-right font-bold leading-[24px] text-right flex items-center justify-between md:justify-end">
             <div
               className="p-[8px] bg-black rounded-full md:hidden"
@@ -60,7 +60,7 @@ function ProfileTab({ menu, setMenu, credentials }) {
       </div>
       <div className="px-[40px] md:px-[80px] py-[20px] bg-[#FFCDA4] grid gap-[24px]">
         <p className="text-black text-2xl font-semibold"> Report Issues</p>
-        <div className="flex gap-[50px] flex-wrap width-full md:width-auto">
+        <div className="flex gap-[20px] md:gap-[50px] flex-wrap width-full md:width-auto">
           <Input label="Name" value={credentials?.name} />
           <Input label="Mobile No." value={credentials?.phone} />
         </div>

@@ -1,6 +1,6 @@
 export default function Input({ label, value, onChange }) {
   return (
-    <div className="grid gap-[16px]">
+    <div className="grid gap-[10px] md:gap-[16px]">
       <label htmlFor="Name" className="text-[#353535] text-base font-medium">
         {label}
       </label>
