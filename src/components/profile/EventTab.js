@@ -3,14 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import TeamDetailModal from "./TeamDetailModal";
 import HamIcon from "/public/icons/hamburger.svg";
-import LeftArrow from "/public/icons/left_arrow.svg";
+import LeftArrow from "/public/icons/left_arrow_black.svg";
 import { useSelector } from "react-redux";
 import { selectEvents, selectTeams } from "@/redux/reducers/userReducer";
 
 function EventTab({ menu, setMenu, credentials }) {
-  const events = useSelector(selectEvents)
-  const teams = useSelector(selectTeams)
-  console.log(teams)
+  const events = useSelector(selectEvents);
+  const teams = useSelector(selectTeams);
   return credentials ? (
     <div>No Event Registered yet</div>
   ) : (
@@ -36,24 +35,29 @@ function EventTab({ menu, setMenu, credentials }) {
         </Link>
       </div> */}
       <div className="bg-white px-[30px] md:px-[40px] py-[30px]">
-        <p className="text-[#000] text-[18px] border-b-2 border-black pb-[20px]">
+        <p className="text-[#000] text-[20px] border-b-2 border-black pb-[20px]">
           Registered Events
         </p>
-        <div className="grid grid-cols-5 gap-[10px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
+        {/* <div className="grid grid-cols-4 gap-[10px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
           <p>Sr No.</p>
           <p>Event Name</p>
           <p>Date</p>
           <p>Venue</p>
           <p>Status</p>
+        </div> */}
+        <div className="grid grid-cols-4 gap-[30px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
+          {events.map((e, k) => (
+            <div className="grid items-center justify-center gap-[10px]">
+              <Image
+                src={e?.image}
+                width={205}
+                height={285}
+                className="shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] shadow-lg"
+              />
+              <TeamDetailModal team={teams[k]} />
+            </div>
+          ))}
         </div>
-{  events.map((e,k)=>  (<div className="grid grid-cols-5 gap-[10px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
-          <p>{k+1}</p>
-          <p>{e?.name}</p>
-          <p>{e?.date}</p>
-          <p>{e?.venue}</p>
-          <TeamDetailModal team = {teams[k]} />
-          {/* <p className="text-[#1968FF]"></p> */}
-        </div>))}
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export default function Profile() {
   const router = useRouter();
   const auth = useSelector(selectAuthenticated);
   const credentials = useSelector(selectCredentials);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!auth) {
@@ -40,7 +40,7 @@ export default function Profile() {
     <div className="flex bg-[#5F2B00]">
       {/* {menu ? ( */}
       <div
-        className={`grid h-fit gap-[32px] px-[40px] md:px-[80px] pr-[50px] md:pr-[140px] py-[50px] md:py-[100px] bg-[#5F2B00] text-[#FFFBED] 
+        className={`z-10 grid h-fit gap-[32px] px-[40px] md:px-[80px] pr-[50px] md:pr-[140px] py-[50px] md:py-[100px] bg-[#5F2B00] text-[#FFFBED] 
         font-amita font-medium ${menu ? `grid` : `hidden`} ${
           menu ? "absolute" : "unset"
         } md:unset md:grid`}
@@ -78,10 +78,10 @@ export default function Profile() {
           Passes
         </p>
         <p
-          className="flex gap-[20px] items-center cursor-pointer"
+          className="flex gap-[20px] items-center cursor-pointer mt-[120px]"
           onClick={() => {
-            logOutUser()
-            dispatch(SET_UNAUTHENTICATED())
+            logOutUser();
+            dispatch(SET_UNAUTHENTICATED());
           }}
         >
           <Image src={LogoutIcon} />
