@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import flower1 from "../../public/assets/team/flower1.png";
-import flower from "../../public/assets/team/flower.png";
+import head from "../../public/assets/team/head.svg"
 import Image from "next/image";
 import TeamCard from "@/components/teamComponents/TeamCard";
-import { Parallax } from "react-scroll-parallax";
 import teamData from "../components/teamComponents/teamData.json"
 
 export default function team() {
@@ -23,26 +21,19 @@ export default function team() {
 
   const containerRef = useRef();
  
-  useEffect(() => {
-    if (sectionRefs.current[activeSection] && sectionRefs.current[activeSection].ref.current) {
-      sectionRefs.current[activeSection].ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [activeSection]);
+
 
   return (
-    <div className="w-full    bg-[#fffbed] relative p-4 ">
-      <div className="flex w-full md:space-x-64 space-x-48 items-center justify-center">
-        <Image src={flower} />
-        <Image src={flower} />
-      </div>
-      <div className="w-full flex space-x-2 items-center justify-between">
-        <div className="border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg"></div>
-        <p className="font-amita text-2xl md:text-4xl text-[#5A2700] ">
+    <div className="w-full bg-[#310816]">
+<Image className="w-full" src={head}></Image>
+      <div className="w-full flex mt-8 space-x-2 items-center justify-between">
+        <div className="border w-[25%] md:w-[40%] border-white rounded-lg"></div>
+        <p className="font-amita text-2xl md:text-4xl text-white ">
           Our Team
         </p>
-        <div className="border-2 w-[25%] md:w-[35%] border-[#411C00] rounded-lg"></div>
+        <div className="border w-[25%] md:w-[40%] border-white rounded-lg"></div>
       </div>
-      <Image className="absolute top-0 left-0" src={flower1} />
+      {/* <Image className="absolute top-0 left-0" src={flower1} /> */}
       <div className="flex h-screen w-full flex-col md:flex-row items-center justify-around  p-2 ">
         <div
           id="TeamContainer"
