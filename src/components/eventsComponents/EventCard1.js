@@ -6,7 +6,7 @@ function EventCard1(props) {
   const data = props.data;
 
   return (
-    <div className="flex relative md:w-[420px] w-[290px] items-center scale-60 md:scale-90 m-4">
+    <div className="flex relative md:w-[420px] w-[290px] items-center scale-90 m-4">
       <div className="image absolute -left-20 md:-left-32 -top-4  h-44 md:h-64">
         <img className="w-full h-full rounded-lg" src={data.banner} />
       </div>
