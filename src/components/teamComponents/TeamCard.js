@@ -5,12 +5,12 @@ import Link from "next/link";
 
 function TeamCard({ data }) {
   return (
-    <div className="flex sm:flex-col m-4 items-center justify-center space-x-2 space-y-2">
+    <div className="flex flex-col m-4 items-center justify-center space-x-2 space-y-2">
       <div className="img-div flex flex-col w-full m-4">
-        <div className="rounded-full bg-red-500 w-12 h-12 self-end"></div>
-        <div className="rounded-full bg-red-500 w-32 h-32 self-center flex items-center justify-center p-3">
+        {/* <div className="rounded-full bg-red-500 w-12 h-12 self-end"></div> */}
+        <div className=" w-40 h-40 self-center flex items-center justify-center">
           <img
-            className="rounded-full w-full h-full"
+            className=" rounded-lg w-full h-full"
             src={
               data?.img
                 ? data.img
@@ -18,7 +18,7 @@ function TeamCard({ data }) {
             }
           />
         </div>
-        <div className="rounded-full bg-red-500 w-8 h-8 self-start"></div>
+        {/* <div className="rounded-full bg-red-500 w-8 h-8 self-start"></div> */}
       </div>
       <div className="text-div flex flex-col items-center space-y-6 ">
         <p className="text-[#393939] text-xl font-amita">{data?.Position}</p>
