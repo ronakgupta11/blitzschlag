@@ -89,33 +89,20 @@ export default function EventList() {
       )}
       {selectedTab === 1 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {club.map((d, k) => (
+          {club.map((d, k) => {
+           return  (
             <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />
-          ))}
-          {club?.length === 0 && (
+          )})}
+           {club?.length === 0 && (
             <div className="h-96 flex items-center justify-center">
               <p className="text-5xl font-sankaran text-white text-center">
                 Coming Soon
               </p>
             </div>
           )}
+          
         </div>
       )}
-      {selectedTab === 2 && (
-        <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {fun.map((d, k) => (
-            <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />
-          ))}
-          {fun?.length === 0 && (
-            <div className="h-96 flex items-center justify-center">
-              <p className="text-5xl font-sankaran text-white text-center">
-                Coming Soon
-              </p>
-            </div>
-          )}
-        </div>
-      )}
-
       <div className="flex w-full items-center">
         <Image src={borderDown}></Image>
         <Image src={borderDown}></Image>

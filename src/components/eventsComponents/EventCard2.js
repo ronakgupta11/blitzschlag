@@ -1,11 +1,8 @@
 import React from "react";
-import Image from "next/image";
-import img from "../../../public/assets/events/event.png";
 import Link from "next/link";
 
 function EventCard2(props) {
   const data = props.data;
-
   return (
     <div className="flex relative md:w-[420px] w-[290px] items-center md:scale-90 scale-60 m-4">
       <div className="image absolute  -right-20 md:-right-32 -top-4 h-44 md:h-64">

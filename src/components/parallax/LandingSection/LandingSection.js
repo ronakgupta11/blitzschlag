@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { motion } from 'framer-motion'
 import blitz from "../../../../public/assets/blitz.png"
+// import blitz from "../../../../public/assets/blitz_ani.gif"
 
 import classes from './LandingSection.module.css'
 
