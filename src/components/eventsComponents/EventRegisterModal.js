@@ -170,10 +170,10 @@ function EventRegisterModal({ event, id }) {
       <div>
         Team Code : <span className="font-bold text-xl text-yellow-500">{teamId} </span>
       </div>
-      {/* <div>
+      <div>
         <Image width={150} src={qr}/>
       </div>
-      <div>Please Pay on above qr code to get your team verified.</div> */}
+      <div>Please Pay on above qr code to get your team verified.</div>
       <div><Link href={"/profile"}>
       You can view your team status in profile section
       </Link>
@@ -188,10 +188,10 @@ function EventRegisterModal({ event, id }) {
         <FaCheck size={20} />
       <p> Successfully joined <span className="font-bold text-xl text-yellow-500">{setTeamCode} </span></p>
       </div>
-      {/* <div>
+      <div>
         <Image width={150} src={qr}/>
       </div>
-      <div>Please Pay on above qr code to get your team verified.</div> */}
+      <div>Please Pay on above qr code to get your team verified.</div>
       <div><Link href={"/profile"}>
       You can view your team status in profile section
       </Link>
