@@ -6,6 +6,7 @@ import PassIcon from "/public/icons/passes.svg";
 import EventIcon from "/public/icons/events.svg";
 import CrossIcon from "/public/icons/cross.svg";
 import LogoutIcon from "/public/icons/logout.svg";
+import SlickModal from "@/components/profile/slickModal";
 import {
   SET_UNAUTHENTICATED,
   selectAuthenticated,
@@ -20,13 +21,15 @@ import ProfileTab from "/src/components/profile/ProfileTab.js";
 import { QRCode } from "react-qrcode-logo";
 import { logOutUser } from "@/redux/actions/userAction";
 
-export default function Profile() {
+export default function Profile({slickModal}) {
   const [currentTab, setCurrentTab] = useState(0);
   const [menu, setMenu] = useState(false);
   const router = useRouter();
   const auth = useSelector(selectAuthenticated);
   const credentials = useSelector(selectCredentials);
   const dispatch = useDispatch();
+  const [openModal, setOpenModal] = useState(false);
+
 
   useEffect(() => {
     if (!auth) {
@@ -34,10 +37,21 @@ export default function Profile() {
     }
   }, [auth]);
 
-  // console.log(credentials);
+  // useEffect(()=>{
+
+  //   if(slickModal){
+
+  //     setOpenModal(true)
+  //   }
+
+      
+    
+  // },[slickModal])
+
 
   return (
     <div className="flex bg-[#5F2B00]">
+      <SlickModal openModal={openModal} setOpenModal={setOpenModal}/>
       {/* {menu ? ( */}
       <div
         className={`z-10 grid h-fit gap-[32px] px-[40px] md:px-[80px] pr-[50px] md:pr-[140px] py-[50px] md:py-[100px] bg-[#5F2B00] text-[#FFFBED] 

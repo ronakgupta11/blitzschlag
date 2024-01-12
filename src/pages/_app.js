@@ -73,6 +73,7 @@ export default function App({ Component, pageProps }) {
 
   // NOTE: only show the loader if the first load is at path "/"
   const [SLoading, setSLoading] = useState(router.pathname === "/");
+  const [slickModal,setSlickModal] = useState(router.pathname === "/profile")
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSLoading(false);
@@ -94,7 +95,7 @@ export default function App({ Component, pageProps }) {
         <AnimatePresence mode="wait">
           <motion.div key={router.pathname}>
             <Layout>
-              <Component {...pageProps} SLoading={SLoading} />
+              <Component {...pageProps} SLoading={SLoading} slickModal={slickModal} />
             </Layout>
             <motion.div
               className="slideIn absolute top-0 left-0 w-full h-screen bg-black origin-bottom z-[100]"
