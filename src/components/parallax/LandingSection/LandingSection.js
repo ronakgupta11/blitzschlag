@@ -34,7 +34,7 @@ function LandingSection() {
                     >
                         blitzschlag'24
                     </h1> */}
-                    <Image src={blitz}></Image>
+                    <Image className=' ' src={blitz}></Image>
                 </motion.div>
             </div>
             <motion.div
