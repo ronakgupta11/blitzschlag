@@ -82,7 +82,7 @@ function Navbar() {
                 <div className="flex justify-evenly w-[70%]">
                   <li
                     className={
-                      pathname === "/  "
+                      pathname === "/events"
                         ? "active flex flex-col justify-center"
                         : "flex flex-col justify-center"
                     }
@@ -91,17 +91,26 @@ function Navbar() {
                   </li>
                   <li
                     className={
-                      pathname === "/events  "
+                      pathname === "/ambassadors"
                         ? "active flex flex-col justify-center"
                         : "flex flex-col justify-center"
                     }
                   >
                     <Link href="/ambassadors">Ambassadors</Link>
                   </li>
+                  <li
+                    className={
+                      pathname === "/passes"
+                        ? "active flex flex-col justify-center"
+                        : "flex flex-col justify-center"
+                    }
+                  >
+                    <Link href="/passes">Passes</Link>
+                  </li>
 
                   <li
                     className={
-                      pathname === "/ambassadors  "
+                      pathname === "/profile"
                         ? "active flex flex-col justify-center"
                         : "flex flex-col justify-center"
                     }
