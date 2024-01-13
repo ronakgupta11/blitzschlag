@@ -21,7 +21,7 @@ function ResponsiveInnerList({ isMobile, d, k }) {
       initial={{ x: k % 2 === 0 ? -100 - 50 * k : 100 + 50 * k }}
       whileInView={{ x: 0 }}
       transition={{ duration: 0.6 }}
-      className={`mx-8 flex ${k%2==0 ? 'flex-row-reverse' : ''}`}
+      className={`mx-8 flex ${k % 2 == 0 ? "flex-row-reverse" : ""}`}
       style={{ width: "40%" }}
     >
       {k % 2 === 0 ? (
@@ -39,7 +39,7 @@ export default function EventList() {
 
   const events = useSelector(selectEventsData);
   const flagship = events.filter((item) => item.category === "flagship");
-  const club = events.filter((item) => item.category === "club1");
+  const club = events.filter((item) => item.category === "club");
   // const fun = events.filter(item => item.category === "fun");
 
   useEffect(() => {
@@ -90,17 +90,15 @@ export default function EventList() {
       {selectedTab === 1 && (
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
           {club.map((d, k) => {
-           return  (
-            <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />
-          )})}
-           {club?.length === 0 && (
+            return <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />;
+          })}
+          {club?.length === 0 && (
             <div className="h-96 flex items-center justify-center">
               <p className="text-5xl font-sankaran text-white text-center">
                 Coming Soon
               </p>
             </div>
           )}
-          
         </div>
       )}
       <div className="flex w-full items-center">

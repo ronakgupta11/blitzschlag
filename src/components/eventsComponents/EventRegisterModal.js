@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { url } from "@/constants";
 import { useDispatch } from "react-redux";
-import qr from "../../../public/assets/events/qr.jpg"
+import qr from "../../../public/assets/events/qr.jpg";
 import Image from "next/image";
 import { getUserData } from "@/redux/actions/userAction";
 import { SET_USER } from "@/redux/reducers/userReducer";
@@ -45,18 +45,15 @@ function EventRegisterModal({ event, id }) {
 
   const handleRegister = () => {
     dispatch(LOADING_UI());
-    if(!teamName && !teamCode){
-     let err = {teamName : "Please Fill atleast one field"}
-      dispatch(SET_ERRORS(err))
-
-    }
-    else if ( teamName && teamCode){
-      let err = {general : "Please Fill only one field"}
-      dispatch(SET_ERRORS(err))
-    }
-    else if (teamName) {
+    if (!teamName && !teamCode) {
+      let err = { teamName: "Please Fill atleast one field" };
+      dispatch(SET_ERRORS(err));
+    } else if (teamName && teamCode) {
+      let err = { general: "Please Fill only one field" };
+      dispatch(SET_ERRORS(err));
+    } else if (teamName) {
       const teamIdGen = generateUniqueTeamId(teamName);
-      setTeamId(teamIdGen)
+      setTeamId(teamIdGen);
 
       axios
         .post(`${url}/events/register/${id}/${teamIdGen}`, {
@@ -67,13 +64,13 @@ function EventRegisterModal({ event, id }) {
           toast("Created Team", {
             type: "success",
           });
-          const BLITZID =  localStorage.getItem("BLITZID");
+          const BLITZID = localStorage.getItem("BLITZID");
           axios.defaults.headers.common["Authorization"] = BLITZID;
-          getUserData().then(res=>{
+          getUserData().then((res) => {
             // console.log("res",res)
-            localStorage.setItem("BLITZUSER",JSON.stringify(res));
+            localStorage.setItem("BLITZUSER", JSON.stringify(res));
 
-            dispatch(SET_USER(res))
+            dispatch(SET_USER(res));
           });
           dispatch(CLEAR_ERRORS());
         })
@@ -86,13 +83,13 @@ function EventRegisterModal({ event, id }) {
           toast("Joined Team", {
             type: "success",
           });
-          const BLITZID =  localStorage.getItem("BLITZID");
+          const BLITZID = localStorage.getItem("BLITZID");
           axios.defaults.headers.common["Authorization"] = BLITZID;
-          getUserData().then(res=>{
+          getUserData().then((res) => {
             // console.log("res",res)
-            localStorage.setItem("BLITZUSER",JSON.stringify(res));
+            localStorage.setItem("BLITZUSER", JSON.stringify(res));
 
-            dispatch(SET_USER(res))
+            dispatch(SET_USER(res));
           });
           dispatch(CLEAR_ERRORS());
         })
@@ -113,8 +110,9 @@ function EventRegisterModal({ event, id }) {
         <input
           type="text"
           onChange={(e) => {
-            dispatch(CLEAR_ERRORS())
-            setTeamName(e.target.value)}}
+            dispatch(CLEAR_ERRORS());
+            setTeamName(e.target.value);
+          }}
           placeholder="Team Name"
           className="input input-bordered bg-inherit w-full "
         />
@@ -135,8 +133,9 @@ function EventRegisterModal({ event, id }) {
         <input
           type="text"
           onChange={(e) => {
-            dispatch(CLEAR_ERRORS())
-            setTeamCode(e.target.value)}}
+            dispatch(CLEAR_ERRORS());
+            setTeamCode(e.target.value);
+          }}
           placeholder="Team Code"
           className="input input-bordered bg-inherit w-full "
         />
@@ -165,20 +164,25 @@ function EventRegisterModal({ event, id }) {
     <div className="flex flex-col  justify-around h-96 items-center">
       <div className="flex space-x-2">
         <FaCheck size={20} />
-      <p> Successfully Created <span className="font-bold text-xl text-yellow-500">{teamName} </span></p>
+        <p>
+          {" "}
+          Successfully Created{" "}
+          <span className="font-bold text-xl text-yellow-500">{teamName} </span>
+        </p>
       </div>
       <div>
-        Team Code : <span className="font-bold text-xl text-yellow-500">{teamId} </span>
+        Team Code :{" "}
+        <span className="font-bold text-xl text-yellow-500">{teamId} </span>
       </div>
       <div>
-        <Image width={150} src={qr}/>
+        <Image width={150} src={qr} />
       </div>
       <div>Please Pay on above qr code to get your team verified.</div>
-      <div><Link href={"/profile"}>
-      You can view your team status in profile section
-      </Link>
+      <div style={{ textDecoration: "underline" }}>
+        <Link href={"/profile"}>
+          You can view your team status in profile section
+        </Link>
       </div>
-
     </div>
   );
 
@@ -186,15 +190,22 @@ function EventRegisterModal({ event, id }) {
     <div className="flex flex-col  justify-around h-96 items-center">
       <div className="flex space-x-2">
         <FaCheck size={20} />
-      <p> Successfully joined <span className="font-bold text-xl text-yellow-500">{setTeamCode} </span></p>
+        <p>
+          {" "}
+          Successfully joined{" "}
+          <span className="font-bold text-xl text-yellow-500">
+            {setTeamCode}{" "}
+          </span>
+        </p>
       </div>
       <div>
-        <Image width={150} src={qr}/>
+        <Image width={150} src={qr} />
       </div>
       <div>Please Pay on above qr code to get your team verified.</div>
-      <div><Link href={"/profile"}>
-      You can view your team status in profile section
-      </Link>
+      <div>
+        <Link href={"/profile"}>
+          You can view your team status in profile section
+        </Link>
       </div>
     </div>
   );
@@ -220,7 +231,10 @@ function EventRegisterModal({ event, id }) {
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-lg">{`Register your team for ${event}`}</h3>
             <form method="dialog">
-              <button onClick={()=>dispatch(CLEAR_ERRORS())} className="btn btn-circle bg-[#463000] border-none font-black-ops-one">
+              <button
+                onClick={() => dispatch(CLEAR_ERRORS())}
+                className="btn btn-circle bg-[#463000] border-none font-black-ops-one"
+              >
                 <span>X</span>
               </button>
             </form>

@@ -1,6 +1,14 @@
 {
     "president":[
         {
+            "Name": "Akshat Mantri",
+            "Position": "Advisor to President and Vice-President",
+            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FAkshat%20Mantri-min%20(1).jpg?alt=media&token=c40e7874-eba5-4a44-8eea-1940c52716bb",
+            "instagram": "https://www.instagram.com/vidit_awasthi_23?igsh=ZGNjOWZkYTE3MQ==",
+            "linkedin": "https://www.linkedin.com/in/vidit-awasthi-2086aa223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "Gmail": "2020uch1289@mnit.ac.in"
+        },
+        {
             "Name": "Vidit Awasthi ",
             "Position": "President",
             "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FVidit%20Awasthi.JPG?alt=media&token=020b0db3-bddf-4584-a0db-0b795297a2ef",
@@ -19,6 +27,13 @@
 
     ],
     "general":[
+        {
+            "Name": "Poorvie Chaudhary",
+            "Position": "Advisor to General Secretary",
+            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FPoorvie%20Choudhary.jpg?alt=media&token=47056da5-35d3-42cc-bed9-902377c6c9a9",
+            "instagram": "https://www.instagram.com/a.n.k.i.t_s.h.a.r.m.a.19?igsh=YzVkODRmOTdmMw==",
+            "Gmail": "2020umt1361@mnit.ac.in"
+            },
         {
             "Name": "Ankit Sharma ",
             "Position": "General Secretary",
@@ -92,6 +107,13 @@
     ],
     "finance":[
         {
+            "Name": "Batti Lal Meena",
+            "Position": "Advisor to Finance Secretary",
+            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FBatti%20Lal%20Meena.jpg?alt=media&token=71d93a9c-9b79-4801-8887-9f7a061a512d",
+            "instagram": "https://www.instagram.com/kislay.z?igsh=ZDE1MWVjZGVmZQ==",
+            "linkedin": "www.linkedin.com/in/kislay-bhambu"
+            },
+        {
             "Name": "Kislay Bhambu",
             "Position": "Finance Secretary",
             "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FKislay%20Bhambu.jpg?alt=media&token=e04a9520-a29f-4ad1-81ce-e5bdd18598de",
@@ -155,7 +177,7 @@
             "Position": "Publicity Secretary",
             "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FSomya%20Gupta.jpg?alt=media&token=85070f39-42e4-4ea2-837e-bffe60a4699a",
             "instagram": "https://www.instagram.com/somyagupta7521?igsh=MWVseTUxODUzOTBtZQ==",
-            "linkedin": "www.linkedin.com/in/somya-gupta-622530246",
+            "linkedin": "https://www.linkedin.com/in/somya-gupta-622530246",
             "Gmail": "2021uch1751@mnit.ac.in"
             }
 
@@ -168,7 +190,23 @@
             "instagram": "https://www.instagram.com/harshsingh8248?igsh=MXhzZmRyZGN4N29qaA%3D%3D&utm_source=qr",
             "linkedin": "https://www.linkedin.com/in/harsh-singh-76b4481a9/",
             "Gmail": "2020UMT1340@mnit.ac.in"
-            }
+            },
+            {
+                "Name": "Rudra Kumar Purohit",
+                "Position": "Marketing secretary ",
+                "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FRudra%20Kumar%20Purohit.jpg?alt=media&token=8cd6f18e-b52d-4199-a7a8-e3c806ee99e7",
+                "instagram": "https://www.instagram.com/harshsingh8248?igsh=MXhzZmRyZGN4N29qaA%3D%3D&utm_source=qr",
+                "linkedin": "https://www.linkedin.com/in/harsh-singh-76b4481a9/",
+                "Gmail": "2020UMT1340@mnit.ac.in"
+                },
+                {
+                    "Name": "Sarthak Jain",
+                    "Position": "Marketing secretary ",
+                    "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FSarthak_Jain%20(1).jpg?alt=media&token=a3cde546-bfbe-4506-96fd-3128184be1e9",
+                    "instagram": "https://www.instagram.com/harshsingh8248?igsh=MXhzZmRyZGN4N29qaA%3D%3D&utm_source=qr",
+                    "linkedin": "https://www.linkedin.com/in/harsh-singh-76b4481a9/",
+                    "Gmail": "2020UMT1340@mnit.ac.in"
+                    }
 
     ],
     "logistics":[
