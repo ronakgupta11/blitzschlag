@@ -13,8 +13,9 @@ import {
   LOADING_UI,
   SET_ERRORS,
   CLEAR_ERRORS,
+
 } from "@/redux/reducers/uiReducer";
-import { SET_USER } from "@/redux/reducers/userReducer";
+import { SET_USER,  SET_MNIT } from "@/redux/reducers/userReducer";
 import { getUserData } from "@/redux/actions/userAction";
 
 export default function LoginForm() {
@@ -45,7 +46,10 @@ export default function LoginForm() {
         getUserData().then((res) => {
           // console.log("res",res)
           localStorage.setItem("BLITZUSER", JSON.stringify(res));
-
+          if(res.credentials.email.slice(-10) === "mnit.ac.in"
+          ){
+            dispatch(SET_MNIT())
+          }
           dispatch(SET_USER(res));
         });
         dispatch(CLEAR_ERRORS());

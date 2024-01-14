@@ -30,7 +30,7 @@ const initialState = {
         SET_USER:(state,action)=>{
             
             return {
-            
+            ...state,
                 authenticated:true,
                 ...action.payload
 
@@ -62,8 +62,10 @@ return{
 
 
 
- export const {SET_AUTHENTICATED,SET_UNAUTHENTICATED,SET_USER} = userSlice.actions
+ export const {SET_AUTHENTICATED,SET_UNAUTHENTICATED,SET_USER,SET_CA,SET_MNIT} = userSlice.actions
  export const selectAuthenticated = (state)=>state.user.authenticated
+ export const selectMNIT = (state)=>state.user.isMNIT
+ export const selectCA = (state)=>state.user.isCA
  export const selectCredentials = (state)=>state.user.credentials
  export const selectEvents = (state)=>state.user.registeredEventsData
 export const selectTeams = (state) => state.user.registeredTeamsData

@@ -37,6 +37,9 @@ function TeamDetailModal({team}) {
               <div className="">Team Leader: </div> {team?.teamLeaderId}
             </div>
             <div className="flex items-center gap-[30px]">
+              <div className="">Team Code: </div> {team?.teamId}
+            </div>
+            <div className="flex items-center gap-[30px]">
               <div className="">Team Status: </div><span className={`${team?.teamStatus === "unVerified"? "text-red-600":"text-green-500"}`}> {team?.teamStatus}</span>
             </div>
           </div>

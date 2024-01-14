@@ -9,6 +9,7 @@ import { url } from "@/constants";
 import { getUserData, logOutUser } from "@/redux/actions/userAction";
 import {
   SET_AUTHENTICATED,
+  SET_MNIT,
   SET_UNAUTHENTICATED,
   SET_USER,
 } from "@/redux/reducers/userReducer";
@@ -38,8 +39,11 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const token = localStorage.getItem("BLITZID");
-    const profile = localStorage.getItem("BLITZUSER");
+    let profile = localStorage.getItem("BLITZUSER");
+    profile = JSON.parse(profile)
+
     axios.defaults.headers.common["Authorization"] = token;
+    
 
     axios.get(`${url}/events`)
       .then(
@@ -64,7 +68,12 @@ export default function App({ Component, pageProps }) {
 
         // axios.defaults.he  aders.common["Authorization"] = token;
 
-        dispatch(SET_USER(JSON.parse(profile)));
+        dispatch(SET_USER(profile));
+        console.log(profile)
+        
+        if(profile?.credentials.email.slice(-10) === "mnit.ac.in"){
+          dispatch(SET_MNIT())
+        }
       }
     }
   }, []);

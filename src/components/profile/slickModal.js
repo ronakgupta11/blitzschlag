@@ -25,9 +25,6 @@ function SlickModal({openModal,setOpenModal}) {
                 {"Download"}
               </Button>
                 </Link>
-              <Button color="gray" onClick={() => setOpenModal(false)}>
-                No, cancel
-              </Button>
             </div>
           </div>
         </Modal.Body>

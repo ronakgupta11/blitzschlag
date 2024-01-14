@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import ProfileIcon from "/public/icons/profile.svg";
-import NotifyIcon from "/public/icons/notifiy.svg";
 import PassIcon from "/public/icons/passes.svg";
 import EventIcon from "/public/icons/events.svg";
 import CrossIcon from "/public/icons/cross.svg";
@@ -11,7 +10,7 @@ import {
   SET_UNAUTHENTICATED,
   selectAuthenticated,
   selectCredentials,
-  selectEvents,
+  selectMNIT,
 } from "@/redux/reducers/userReducer";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,6 +28,7 @@ export default function Profile({slickModal}) {
   const credentials = useSelector(selectCredentials);
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
+  const isMNIT = useSelector(selectMNIT)
 
 
   useEffect(() => {
@@ -37,16 +37,16 @@ export default function Profile({slickModal}) {
     }
   }, [auth]);
 
-  // useEffect(()=>{
+  useEffect(()=>{
 
-  //   if(slickModal){
+    if(isMNIT && slickModal){
 
-  //     setOpenModal(true)
-  //   }
+      setOpenModal(true)
+    }
 
       
     
-  // },[slickModal])
+  },[slickModal])
 
 
   return (
