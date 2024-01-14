@@ -71,9 +71,7 @@ function Navbar() {
               <li className="sm:w-[15%]  sm:px-6 gap-2 flex align-middle">
               <Image
                   className="fit-cover "
-                  width={60}
-                  height={50}
-                  style={{}}
+                  width={70}
                   src={Mnit_logo}
                 ></Image>
                 <Image
