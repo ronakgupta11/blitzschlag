@@ -25,8 +25,8 @@ export default function team() {
 
   return (
     <div className="w-full bg-[#310816]">
-<Image className="w-full" src={head}></Image>
-      <div className="w-full flex mt-8 space-x-2 items-center justify-between">
+{/* <Image className="w-full" src={head}></Image> */}
+      <div className="w-full flex py-8 space-x-2 items-center justify-between">
         <div className="border w-[25%] md:w-[40%] border-white rounded-lg"></div>
         <p className="font-amita text-2xl md:text-4xl text-white ">
           Our Team

@@ -4,6 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     authenticated :false,
+    isMNIT:false,
+    isCA:false,
     credentials:{}, 
     registeredEventsData:[],
     registeredTeamsData:[],
@@ -35,6 +37,19 @@ const initialState = {
             }
 
         },
+        SET_MNIT:(state)=>{
+            return{
+                ...state,
+                isMNIT:true
+            }
+
+        },
+        SET_CA:(state)=>{
+return{
+    ...state,
+    isCA:true
+}
+        }
 
 
 

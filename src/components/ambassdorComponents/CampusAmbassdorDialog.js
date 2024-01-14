@@ -36,6 +36,7 @@ const dispatch = useDispatch()
                 toast("Successfully Signed Up for CA Programme",{
                     type:"success"
                 })
+                document.getElementById('my_campus_modal').close()
             dispatch(CLEAR_ERRORS())
 
             // document.getElementById('btn-modal-close').click()

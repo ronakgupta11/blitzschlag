@@ -105,6 +105,33 @@
             }
 
     ],
+    "publicity":[
+        {
+            "Name": "Kshitij Pratap Singh",
+            "Position": "Advisor to Publicity Secretary",
+            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FKshitij%20Rajawat.jpg?alt=media&token=79190cd7-6df3-4409-a297-9716b8169e2e",
+            "instagram": "https://www.instagram.com/kshitij_rajawat/",
+            "linkedin": "https://www.linkedin.com/in/kshitij-pratap-352a9b200/",
+            "Gmail": "2020uee1337@mnit.ac.in"
+            },
+            {
+            "Name": "Jayan Tanjea",
+            "Position": "Publicity Secretary",
+            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FJayan%20Taneja.jpg?alt=media&token=b4ad8ae6-153d-4796-89c3-d2549c28b1af",
+            "instagram": "https://www.instagram.com/jayan_taneja/",
+            "linkedin": "https://www.linkedin.com/in/jayan-taneja-ab8526256/",
+            "Gmail": "2021umt1680@mnit.ac.in"
+            },
+            {
+            "Name": "Somya Gupta",
+            "Position": "Publicity Secretary",
+            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FSomya%20Gupta.jpg?alt=media&token=85070f39-42e4-4ea2-837e-bffe60a4699a",
+            "instagram": "https://www.instagram.com/somyagupta7521?igsh=MWVseTUxODUzOTBtZQ==",
+            "linkedin": "https://www.linkedin.com/in/somya-gupta-622530246",
+            "Gmail": "2021uch1751@mnit.ac.in"
+            }
+
+    ],
     "finance":[
         {
             "Name": "Batti Lal Meena",
@@ -155,33 +182,7 @@
             "Gmail": "2021UME1114@mnit.ac.in"
             }
     ],
-    "publicity":[
-        {
-            "Name": "Kshitij Pratap Singh",
-            "Position": "Advisor to Publicity Secretary",
-            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FKshitij%20Rajawat.jpg?alt=media&token=79190cd7-6df3-4409-a297-9716b8169e2e",
-            "instagram": "https://www.instagram.com/kshitij_rajawat/",
-            "linkedin": "https://www.linkedin.com/in/kshitij-pratap-352a9b200/",
-            "Gmail": "2020uee1337@mnit.ac.in"
-            },
-            {
-            "Name": "Jayan Tanjea",
-            "Position": "Publicity Secretary",
-            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FJayan%20Taneja.jpg?alt=media&token=b4ad8ae6-153d-4796-89c3-d2549c28b1af",
-            "instagram": "https://www.instagram.com/jayan_taneja/",
-            "linkedin": "https://www.linkedin.com/in/jayan-taneja-ab8526256/",
-            "Gmail": "2021umt1680@mnit.ac.in"
-            },
-            {
-            "Name": "Somya Gupta",
-            "Position": "Publicity Secretary",
-            "img":"https://firebasestorage.googleapis.com/v0/b/blitzstarter-d367e.appspot.com/o/Team%2FSomya%20Gupta.jpg?alt=media&token=85070f39-42e4-4ea2-837e-bffe60a4699a",
-            "instagram": "https://www.instagram.com/somyagupta7521?igsh=MWVseTUxODUzOTBtZQ==",
-            "linkedin": "https://www.linkedin.com/in/somya-gupta-622530246",
-            "Gmail": "2021uch1751@mnit.ac.in"
-            }
 
-    ],
     "marketing":[
         {
             "Name": "Harsh Vardhan Singh ",
