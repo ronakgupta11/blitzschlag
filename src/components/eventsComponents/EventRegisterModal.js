@@ -43,6 +43,7 @@ function EventRegisterModal({ event, id }) {
   const [teamCode, setTeamCode] = useState("");
   const [teamId, setTeamId] = useState("");
 
+  const [image,setImage] = useState()
   const handleRegister = () => {
     dispatch(LOADING_UI());
     if (!teamName && !teamCode) {
@@ -102,11 +103,22 @@ function EventRegisterModal({ event, id }) {
     // setStatus(1)
   };
   const handleSubmit = ()=>{
-     try {
-        setStatus(3)
-     } catch (error) {
-      
-     }
+   
+
+    
+    dispatch(LOADING_UI())
+    const formData = new FormData()
+    formData.append("image", image,image?.name);
+
+    axios
+    .post(`${url}/events/proof/${teamId}`,formData)
+    .then((d) => {
+      setStatus(3);
+      dispatch(CLEAR_ERRORS())
+})
+      .catch(e=>{
+        console.log(e)
+      })
   }
   const form = (
     <div className="flex flex-col items-start justify-between space-y-4 my-4">
@@ -186,14 +198,9 @@ function EventRegisterModal({ event, id }) {
       </div>
       <div>Please Pay 500 on above qr code to get your team verified.</div>
       <div>
-    <input  type="file" accept="image/*"></input>
+    <input  type="file" onChange={(e)=>setImage(e.target.files[0])}  accept="image/*"></input>
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
-      <div>
-        <Link href={"/profile"}>
-          You can view your team status in profile section
-        </Link>
-      </div>
     </div>
   );
 
@@ -214,7 +221,7 @@ function EventRegisterModal({ event, id }) {
       </div>
       <div>Please Pay 500 on above qr code to get your team verified.</div>
       <div>
-    <input type="file" accept="image/*"></input>
+    <input type="file" onChange={(e)=>setImage(e.target.files[0])} accept="image/*"></input>
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
       
