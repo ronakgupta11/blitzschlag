@@ -18,9 +18,9 @@ function ResponsiveInnerList({ isMobile, d, k }) {
     </div>
   ) : (
     <motion.div
-      initial={{ x: k % 2 === 0 ? -100 - 50 * k : 100 + 50 * k }}
-      whileInView={{ x: 0 }}
-      transition={{ duration: 0.6 }}
+      // initial={{ x: k % 2 === 0 ? -100 - 50 * k : 100 + 50 * k }}
+      // whileInView={{ x: 0 }}
+      // transition={{ duration: 0.6 }}
       className={`mx-8 flex ${k % 2 == 0 ? "flex-row-reverse" : ""}`}
       style={{ width: "40%" }}
     >
