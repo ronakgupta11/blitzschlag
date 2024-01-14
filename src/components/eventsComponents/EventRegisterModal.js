@@ -223,9 +223,12 @@ function EventRegisterModal({ event, id }) {
 
   const teamVerified = (
     <div className="flex flex-col  justify-around h-96 items-center">
+      <div className="flex gap-5">
+      <FaCheck/>
      Your Team status will be verified within 24 hrs
+      </div>
     <div>
-      <Link href={"/profile"}>
+      <Link className="underline" href={"/profile"}>
         You can view your team status in profile section
       </Link>
     </div>
@@ -264,10 +267,10 @@ function EventRegisterModal({ event, id }) {
 
           {/* <div className="modal-action"> */}
           {/* <form method="dialog"> */}
-          {status === 1 && form}
+          {status === 0 && form}
           {status === 1 && successCreate}
           {status === 2 && successJoin}
-          {status ===0 && teamVerified}
+          {status ===3 && teamVerified}
           {/* </form> */}
         </div>
         {/* </div> */}
