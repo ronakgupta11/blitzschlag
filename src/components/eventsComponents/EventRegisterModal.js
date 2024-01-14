@@ -101,6 +101,13 @@ function EventRegisterModal({ event, id }) {
 
     // setStatus(1)
   };
+  const handleSubmit = ()=>{
+     try {
+        setStatus(3)
+     } catch (error) {
+      
+     }
+  }
   const form = (
     <div className="flex flex-col items-start justify-between space-y-4 my-4">
       <label className="form-control w-full ">
@@ -177,8 +184,12 @@ function EventRegisterModal({ event, id }) {
       <div>
         <Image width={150} src={qr} />
       </div>
-      <div>Please Pay on above qr code to get your team verified.</div>
-      <div style={{ textDecoration: "underline" }}>
+      <div>Please Pay 500 on above qr code to get your team verified.</div>
+      <div>
+    <input  type="file" accept="image/*"></input>
+      </div>
+      <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
+      <div>
         <Link href={"/profile"}>
           You can view your team status in profile section
         </Link>
@@ -201,14 +212,25 @@ function EventRegisterModal({ event, id }) {
       <div>
         <Image width={150} src={qr} />
       </div>
-      <div>Please Pay on above qr code to get your team verified.</div>
+      <div>Please Pay 500 on above qr code to get your team verified.</div>
       <div>
-        <Link href={"/profile"}>
-          You can view your team status in profile section
-        </Link>
+    <input type="file" accept="image/*"></input>
       </div>
+      <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
+      
     </div>
   );
+
+  const teamVerified = (
+    <div className="flex flex-col  justify-around h-96 items-center">
+     Your Team status will be verified within 24 hrs
+    <div>
+      <Link href={"/profile"}>
+        You can view your team status in profile section
+      </Link>
+    </div>
+  </div>
+  )
 
   return (
     <div>
@@ -242,9 +264,10 @@ function EventRegisterModal({ event, id }) {
 
           {/* <div className="modal-action"> */}
           {/* <form method="dialog"> */}
-          {status === 0 && form}
+          {status === 1 && form}
           {status === 1 && successCreate}
           {status === 2 && successJoin}
+          {status ===0 && teamVerified}
           {/* </form> */}
         </div>
         {/* </div> */}
