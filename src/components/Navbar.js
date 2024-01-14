@@ -69,13 +69,12 @@ function Navbar() {
                 } text-white text-center font-amita text-[16px]  font-normal leading-[44px]`}
             >
               <li className="sm:w-[15%]  sm:px-6 gap-2 flex align-middle">
-              <Image
+              {/* <Image
                   className="fit-cover "
-                  width={60}
+                  width={70}
                   height={50}
-                  style={{}}
                   src={Mnit_logo}
-                ></Image>
+                ></Image> */}
                 <Image
                   className="fit-cover"
                   width={70}
