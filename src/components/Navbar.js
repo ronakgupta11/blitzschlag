@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import blitz_logo1 from "../../public/assets/blitz_logo2.png";
+import Mnit_logo from "../../public/assets/Mnit_logo.png";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
@@ -68,12 +69,19 @@ function Navbar() {
                 } text-white text-center font-amita text-[16px]  font-normal leading-[44px]`}
             >
               <li className="sm:w-[15%]  sm:px-6 gap-2 flex align-middle">
+              <Image
+                  className="fit-cover "
+                  width={60}
+                  height={50}
+                  style={{}}
+                  src={Mnit_logo}
+                ></Image>
                 <Image
                   className="fit-cover"
-                  width={60}
-                  height={60}
+                  width={70}
                   src={blitz_logo1}
                 ></Image>
+                
                 <div className="flex flex-col justify-center text-[16px] sm:text-[25px]">
                   <Link href="/">Blitzschlag</Link>
                 </div>
