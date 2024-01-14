@@ -16,7 +16,7 @@ import {
   SET_ERRORS,
   CLEAR_ERRORS,
 } from "@/redux/reducers/uiReducer";
-import { SET_USER } from "@/redux/reducers/userReducer";
+import { SET_USER,SET_MNIT } from "@/redux/reducers/userReducer";
 
 export default function SignupForm() {
   const router = useRouter();
@@ -71,7 +71,10 @@ export default function SignupForm() {
         axios.defaults.headers.common["Authorization"] = BLITZID;
         getUserData().then((res) => {
           localStorage.setItem("BLITZUSER", JSON.stringify(res));
-
+          if(res.credentials.email.slice(-10) === "mnit.ac.in"
+          ){
+            dispatch(SET_MNIT())
+          }
           dispatch(SET_USER(res));
         });
         dispatch(CLEAR_ERRORS());
