@@ -23,19 +23,17 @@ function LandingSection() {
             >
                 <Image className='w-screen h-[30vh] md:h-auto' src={bottomCloud} />
             </motion.div>
-            <div className='absolute font-sankaran w-screen z-20'>
-                <motion.div className="flex items-center justify-center h-screen"
+            <motion.div className='font-amita z-20 text-3xl text-center mt-20 md:mt-8 text-[#2e0d02] font-semibold'>
+                Malaviya National Institute Of Technology<br/>
+                <p className='text-lg'>presents</p>
+            </motion.div>
+            <div className='absolute font-sankaran z-20'>
+                <motion.div className="flex items-center justify-center md:h-screen"
                     initial={{ y: 400, scale: 1 }} 
                     animate={{ y: 0 }} 
                     transition={{ duration: 2, delay: 0 }}
                 >
-                    {/* <h1
-
-                        className={`${classes.maintext} text-center`}
-                    >
-                        blitzschlag'24
-                    </h1> */}
-                    <Image className=' ' src={blitz}></Image>
+                    <Image className='md:w-[70%] w-full ' src={blitz}></Image>
                 </motion.div>
             </div>
             <motion.div
