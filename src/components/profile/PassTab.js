@@ -4,12 +4,26 @@ import HamIcon from "/public/icons/hamburger.svg";
 import LeftArrow from "/public/icons/left_arrow.svg";
 
 function PassTab({ menu, setMenu, credentials }) {
-
+const head =(id)=>{
+if(id === 0){
+  return "Maharaja Pass"
+}
+else if(id === 1){
+  return "Diwan Pass"
+}
+else{
+  return "Rawat pass"
+}
+}
   const passes = credentials?.passes;
   console.log(passes)
-  return credentials ? (
+  return credentials? (
     <div className="bg-[#FFFBED] p-[40px] text-black text-[18px] font-amita w-full">
-      No Passes yet
+     {passes?.map((p,k)=>(<div  key={k} className="border border-black rounded-xl h-48 w-48 m-4 flex flex-col items-center justify-around">
+      <p>{head(p?.passId)}</p>
+      <p>{`status: ${p?.status}`}</p>
+     </div>))}
+     {passes?.length === 0 && <div className="font-amita text-black text-[18px] p-[40px]"> No passes Yet </div>}
     </div>
   ) : (
     <div className="grid w-full bg-[#FFFBED]">
