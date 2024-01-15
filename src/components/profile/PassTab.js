@@ -4,6 +4,9 @@ import HamIcon from "/public/icons/hamburger.svg";
 import LeftArrow from "/public/icons/left_arrow.svg";
 
 function PassTab({ menu, setMenu, credentials }) {
+
+  const passes = credentials?.passes;
+  console.log(passes)
   return credentials ? (
     <div className="bg-[#FFFBED] p-[40px] text-black text-[18px] font-amita w-full">
       No Passes yet

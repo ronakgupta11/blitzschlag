@@ -22,20 +22,20 @@ function hospitality() {
 <p className='text-2xl font-amita font-bold'>Maharaja Pass </p>
 <p className='text-xl font-amita font-bold'>₹ 2500</p>
 <p className='font-semibold text-sm h-full'>The Maharaja pass enables you to participate in any flagship event of your choice as well as provides accommodation for 3 days from 2nd Feb 10 AM to 5th Feb. You can take part in any club event during the course of the fest. Furthermore, you will be able to attend all three pronites of Blitzschlag'24.</p>
-<PurchasePass/>
+<PurchasePass pass={0}/>
         </div>
         <div className='bg-[#fcf2d9] h-96 w-[240px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4'>
 <p className='text-2xl font-amita font-bold'>Diwan Pass </p>
 <p className='text-xl font-amita font-bold'>₹ 1100</p>
 <p className='font-semibold text-sm h-full'>A Diwan pass entitles you to lodge for the day as well as participate in any one flagship event of your choice. You can take part in any of the club activities scheduled on that day as well as attend the same-day pronite.</p>
-<PurchasePass/>
+<PurchasePass pass={1}/>
  
         </div>
         <div className='bg-[#fcf2d9] h-96 w-[240px]  m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4'>
 <p className='text-2xl font-amita font-bold'>Rawat Pass</p>
 <p className='text-xl font-amita font-bold'>₹ 200</p>
 <p className='font-semibold text-sm h-full'>A Rawat pass allows you to take part in all of that day's club events. For eg if you take this pass for first day then you can take part in any of the club activities scheduled on that day (except flagship events & pronites.</p>
-<PurchasePass/>
+<PurchasePass pass={2}/>
     
         </div>
 
