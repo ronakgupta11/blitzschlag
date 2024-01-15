@@ -75,6 +75,9 @@ function Footer() {
               <Link href="/ambassadors">Campus Ambassador</Link>
             </div>
             <div className="">
+              <Link href="/ambassadors" target="_blank">Brochure</Link>
+            </div>
+            <div className="">
               <Link href="/team">Contact Us</Link>
             </div>
           </div>
