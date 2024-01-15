@@ -24,14 +24,16 @@ function PurchasePass({pass }) {
   const errors = useSelector(selectErrors);
   const auth = useSelector(selectAuthenticated);
   const dispatch = useDispatch();
-  
+  const [image,setImage] = useState(null)
   const [status, setStatus] = useState(0);
 
   const handleSubmit = () => {
 if (auth) {
+  const formData = new FormData()
+  formData.append("image", image,image?.name)
 dispatch(LOADING_UI())
       axios
-        .post(`${url}/passes/purchase/${pass}`)
+        .post(`${url}/buyPass/${pass}`,formData)
         .then((d) => {
           setStatus(1);
           const BLITZID = localStorage.getItem("BLITZID");
@@ -76,7 +78,7 @@ dispatch(LOADING_UI())
       </div>
       <div>Please Pay on above qr code and submit payment confirmation.</div>
       <div>
-<input type="file" accept="image/*"></input>
+<input type="file" onChange={(e)=>setImage(e.target.files[0])} accept="image/*"></input>
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
     </div>

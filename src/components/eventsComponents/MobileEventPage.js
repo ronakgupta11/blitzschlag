@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import borderDown from "../../../public/assets/events/border.png";
 import Image from "next/image";
-import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal";
 import Link from "next/link";
+import ClubRegister from './ClubRegister'
 import { FaDownload } from "react-icons/fa";
 function MobileEventPage(props) {
   const data = props.data;
@@ -49,12 +49,12 @@ function MobileEventPage(props) {
               <span className="font-bold">Time:</span> {data?.time}
             </div>
           </div>
-          <div>
+          {data?.prize &&<div>
             <div className="text-[#202020] text-[24px]">Prize Worth</div>
             <div className="text-[#202020] text-[32px] font-bold text-right">
               ₹ {data?.prize}
             </div>
-          </div>
+          </div>}
         </div>
         <div className="mt-[52px] flex w-full justify-between items-center font-amita">
           <div className="color-[#00293E] text-[20px] text-[#00293E] flex gap-[7px] items-center">
@@ -63,7 +63,8 @@ function MobileEventPage(props) {
               <FaDownload size={20} /> Rulebook
             </Link>
           </div>
-          <EventRegisterModal event={data?.name} id={data?.eventId} />
+          { data?.category === "club" ?<ClubRegister event={data?.name} id={data?.eventId} />:
+          <EventRegisterModal event={data?.name} id={data?.eventId} />}
         </div>
       </div>
     </div>

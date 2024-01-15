@@ -5,8 +5,6 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { url } from "@/constants";
 import { useDispatch } from "react-redux";
-import qr from "../../../public/assets/events/qr.jpg";
-import Image from "next/image";
 import { getUserData } from "@/redux/actions/userAction";
 import { SET_USER } from "@/redux/reducers/userReducer";
 import {
@@ -19,7 +17,7 @@ import { selectLoading } from "@/redux/reducers/uiReducer";
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 
-function EventRegisterModal({ event, id }) {
+function ClubRegister({ event, id }) {
   function generateUniqueTeamId(teamName) {
     // Remove spaces from the team name
     const trimmedTeamName = teamName.replace(/\s/g, "");
@@ -102,24 +100,7 @@ function EventRegisterModal({ event, id }) {
 
     // setStatus(1)
   };
-  const handleSubmit = ()=>{
-   
 
-    
-    dispatch(LOADING_UI())
-    const formData = new FormData()
-    formData.append("image", image,image?.name);
-
-    axios
-    .post(`${url}/events/proof/${teamId}`,formData)
-    .then((d) => {
-      setStatus(3);
-      dispatch(CLEAR_ERRORS())
-})
-      .catch(e=>{
-        console.log(e)
-      })
-  }
   const form = (
     <div className="flex flex-col items-start justify-between space-y-4 my-4">
       <label className="form-control w-full ">
@@ -193,14 +174,15 @@ function EventRegisterModal({ event, id }) {
         Team Code :{" "}
         <span className="font-bold text-xl text-yellow-500">{teamId} </span>
       </div>
-      <div>
-        <Image width={150} src={qr} />
-      </div>
-      <div>Please Pay 500 on above qr code to get your team verified.</div>
-      <div>
-    <input  type="file" onChange={(e)=>setImage(e.target.files[0])}  accept="image/*"></input>
-      </div>
-      <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
+      <div className="flex gap-5">
+
+Your Team status will be verified within 24 hrs
+ </div>
+<div>
+ <Link className="underline" href={"/profile"}>
+   You can view your team status in profile section
+ </Link>
+</div>
     </div>
   );
 
@@ -212,35 +194,24 @@ function EventRegisterModal({ event, id }) {
           {" "}
           Successfully joined{" "}
           <span className="font-bold text-xl text-yellow-500">
-            {setTeamCode}{" "}
+            {teamCode}{" "}
           </span>
         </p>
       </div>
-      <div>
-        <Image width={150} src={qr} />
-      </div>
-      <div>Please Pay 500 on above qr code to get your team verified.</div>
-      <div>
-    <input type="file" onChange={(e)=>setImage(e.target.files[0])} accept="image/*"></input>
-      </div>
-      <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
-      
+      <div className="flex gap-5">
+
+Your Team status will be verified within 24 hrs
+ </div>
+<div>
+ <Link className="underline" href={"/profile"}>
+   You can view your team status in profile section
+ </Link>
+</div>
+    
     </div>
   );
 
-  const teamVerified = (
-    <div className="flex flex-col  justify-around h-96 items-center">
-      <div className="flex gap-5">
-      <FaCheck/>
-     Your Team status will be verified within 24 hrs
-      </div>
-    <div>
-      <Link className="underline" href={"/profile"}>
-        You can view your team status in profile section
-      </Link>
-    </div>
-  </div>
-  )
+
 
   return (
     <div>
@@ -277,7 +248,7 @@ function EventRegisterModal({ event, id }) {
           {status === 0 && form}
           {status === 1 && successCreate}
           {status === 2 && successJoin}
-          {status ===3 && teamVerified}
+
           {/* </form> */}
         </div>
         {/* </div> */}
@@ -286,4 +257,4 @@ function EventRegisterModal({ event, id }) {
   );
 }
 
-export default EventRegisterModal;
+export default ClubRegister;

@@ -74,7 +74,7 @@ function Navbar() {
                  
                   style={{width:"50px",height:"50px"}}
                   src={Mnit_logo}
-                ></Image>
+                ></Image> 
                 <Image
                   className="fit-cover"
                   style={{width:"60px",height:"60px"}}

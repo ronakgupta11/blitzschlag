@@ -5,9 +5,10 @@ import { url } from '@/constants';
 import { useDispatch,useSelector } from 'react-redux';
 import { selectErrors, selectLoading } from '@/redux/reducers/uiReducer';
 import { LOADING_UI,SET_ERRORS,CLEAR_ERRORS } from '@/redux/reducers/uiReducer';
+import { selectAuthenticated } from '@/redux/reducers/userReducer';
 
 function CampusAmbassdorDialog() {
-
+const auth = useSelector(selectAuthenticated)
 const dispatch = useDispatch()
     const [name,setName] = useState("")
     const [email,setEmail] = useState("")
@@ -56,7 +57,14 @@ const dispatch = useDispatch()
   return (
 <div className='z-[1000]'>
     {/* You can open the modal using document.getElementById('ID').showModal() method */}
-<button className="btn rounded-xl bg-[#E9B704] text-[#463000]" onClick={()=>document.getElementById('my_campus_modal').showModal()}>Register Now</button>
+<button className="btn rounded-xl bg-[#E9B704] text-[#463000]" onClick={()=>{
+  if(!auth){
+    toast("Please login to register",{type:"info"})
+  }else{
+
+    document.getElementById('my_campus_modal').showModal()}
+  }
+}>Register Now</button>
 <dialog id="my_campus_modal" className="modal">
   <div className="modal-box rounded-2xl bg-[#463000] text-[white]">
     <form method="dialog ">
