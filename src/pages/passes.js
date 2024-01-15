@@ -9,7 +9,7 @@ function hospitality() {
       <div className="w-full relative bg-[#FCF2D9]">
         <Image className="w-full" src={bg} />
       </div>
-      <div className="flex absolute font-sankaran text-center bg-clip-text top-0 pt-12 md:top-[10%] bg-[#FCF2d9]  flex-col i space-y-2 w-full">
+      <div className="flex absolute font-sankaran text-center bg-clip-text top-0 pt-8 md:top-[10%] bg-[#FCF2d9]  flex-col  space-y-2 w-full">
         <p className="text-2xl md:text-5xl text-transparent">
           Passes And Accommodation
         </p>
@@ -52,6 +52,39 @@ function hospitality() {
             </ul>
             <PurchasePass pass={1} />
           </div>
+          <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
+            <p className="text-2xl font-amita font-bold">Day 1 Pass </p>
+            <p className="text-xl font-amita font-bold">₹ 500</p>
+            <ul className="font-semibold text-sm h-full">
+              <li>
+              Pass for Day 1 includes day long events and pronites
+              </li>
+            
+            </ul>
+            <PurchasePass pass={2} />
+          </div>
+          <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
+            <p className="text-2xl font-amita font-bold">Day2 Pass </p>
+            <p className="text-xl font-amita font-bold">₹ 500</p>
+            <ul className="font-semibold text-sm h-full">
+              <li>
+              Pass for Day 2 includes day long events and pronites
+              </li>
+              
+            </ul>
+            <PurchasePass pass={3} />
+          </div>
+          <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
+            <p className="text-2xl font-amita font-bold">Day 3 Pass </p>
+            <p className="text-xl font-amita font-bold">₹ 700</p>
+            <ul className="font-semibold text-sm h-full">
+              <li>
+              Pass for Day 3 includes day long events and pronites
+              </li>
+             
+            </ul>
+            <PurchasePass pass={4} />
+          </div>
           <div className="bg-[#fcf2d9] h-96 w-[280px]  m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
             <p className="text-2xl font-amita font-bold">Rawat Pass</p>
             <p className="text-xl font-amita font-bold">₹ 200</p>
@@ -68,7 +101,7 @@ function hospitality() {
                 flagship events & pronites.{" "}
               </li>
             </ul>
-            <PurchasePass pass={2} />
+            <PurchasePass pass={5} />
           </div>
         </div>
         <div className="w-full m-auto flex flex-col items-center justify-center space-y-4">
