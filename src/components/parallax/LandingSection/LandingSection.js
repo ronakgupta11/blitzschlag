@@ -50,7 +50,7 @@ function LandingSection() {
                 initial={{ y: 0, scale: 0.3 }} 
                 animate={{ y: 100, scale: 2 }} 
                 transition={{ duration: 1.7, delay: 0 }}>
-
+               
                 <Image className='w-50' src={sun} />
             </motion.div>
         </div>
