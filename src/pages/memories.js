@@ -16,7 +16,7 @@ function Memories() {
 <div className='border w-full border-[#fcf2d9]'></div>
         </div>
 
-        <div className='flex flex-wrap items-center justify-center'>
+        <div className='flex flex-wrap mt-8 items-center justify-center'>
             <ImageCard/>
             <ImageCard/>
             <ImageCard/>
