@@ -4,6 +4,7 @@ import Link from "next/link";
 import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal";
 import { FaDownload } from "react-icons/fa";
+import ClubRegister from "./ClubRegister";
 function DesktopEventPage({ data }) {
   console.log(data);
   return (
@@ -36,7 +37,7 @@ function DesktopEventPage({ data }) {
               <span className="font-bold">Time:</span> {data?.time}
             </div>
           </div>
-          <div>
+          {data?.prize && <div>
             <div className="text-[#202020] text-[30px]">Prize Worth</div>
             <div className="text-[#202020] text-[42px] font-bold text-right">
               {data ? (
@@ -45,7 +46,7 @@ function DesktopEventPage({ data }) {
                 <div className="skeleton bg-transparent w-20 h-20"></div>
               )}
             </div>
-          </div>
+          </div>}
         </div>
         <div className="mt-[32px] flex gap-[150px] lg:gap-[200px] font-amita">
           <Link href={data?.rulebook || ""} target="_blank">
@@ -54,7 +55,8 @@ function DesktopEventPage({ data }) {
               <FaDownload size={20}/> Rulebook
             </div>
           </Link>
-          <EventRegisterModal event={data?.name} id={data?.eventId} />
+         { data?.category === "club" ?<ClubRegister event={data?.name} id={data?.eventId} />:
+          <EventRegisterModal event={data?.name} id={data?.eventId} />}
         </div>
       </div>
 

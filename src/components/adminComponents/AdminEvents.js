@@ -97,7 +97,7 @@ function AdminEvents() {
                     </a>
                   </Table.Cell>
                   <Table.Cell>
-                    {/* {e?.image ? "uploaded" : ""} */}
+                    {e?.image ? "uploaded" : ""}
                     <a
                       href={e.image}
                       target="_blank"
@@ -107,6 +107,7 @@ function AdminEvents() {
                     </a>
                   </Table.Cell>
                   <Table.Cell>
+                  {e?.rulebook ? "uploaded" : ""}
                     <a
                       href={e.rulebook}
                       target="_blank"
