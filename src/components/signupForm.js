@@ -16,7 +16,7 @@ import {
   SET_ERRORS,
   CLEAR_ERRORS,
 } from "@/redux/reducers/uiReducer";
-import { SET_USER,SET_MNIT } from "@/redux/reducers/userReducer";
+import { SET_USER, SET_MNIT } from "@/redux/reducers/userReducer";
 
 export default function SignupForm() {
   const router = useRouter();
@@ -71,9 +71,8 @@ export default function SignupForm() {
         axios.defaults.headers.common["Authorization"] = BLITZID;
         getUserData().then((res) => {
           localStorage.setItem("BLITZUSER", JSON.stringify(res));
-          if(res.credentials.email.slice(-10) === "mnit.ac.in"
-          ){
-            dispatch(SET_MNIT())
+          if (res.credentials.email.slice(-10) === "mnit.ac.in") {
+            dispatch(SET_MNIT());
           }
           dispatch(SET_USER(res));
         });
@@ -140,8 +139,16 @@ export default function SignupForm() {
           <span className="label-text text-[#ddd]">Phone</span>
         </div>
         <input
-          type="text"
-          placeholder="9999-5842-58"
+          type="number"
+          placeholder="9898-5842-58"
+          maxlength="10"
+          pattern="\d{10}"
+          value={Phone}
+          onInput={(e) => {
+            e.target.value = Math.max(0, parseInt(e.target.value))
+              .toString()
+              .slice(0, 10);
+          }}
           onChange={(e) => {
             dispatch(SET_ERRORS({ ...errors, phone: "" }));
             setPhone(e.target.value);
