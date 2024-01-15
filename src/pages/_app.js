@@ -86,7 +86,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSLoading(false);
-    }, 2000);
+    }, 1000);
     return () => clearTimeout(timeout);
   }, []);
 

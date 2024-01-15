@@ -3,6 +3,7 @@ import borderDown from "../../../public/assets/events/border.png";
 import Image from "next/image";
 import EventRegisterModal from "./EventRegisterModal";
 import Link from "next/link";
+import ClubRegister from './ClubRegister'
 import { FaDownload } from "react-icons/fa";
 function MobileEventPage(props) {
   const data = props.data;

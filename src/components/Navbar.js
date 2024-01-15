@@ -68,16 +68,16 @@ function Navbar() {
                 } align-middle ${isMobile ? "px-5" : ""
                 } text-white text-center font-amita text-[16px]  font-normal leading-[44px]`}
             >
-              <li className="sm:w-[15%]  sm:px-6 gap-2 flex align-middle">
-              {/* <Image
+              <li className="sm:w-[15%]  sm:px-6 gap-2 items-center flex align-middle">
+              <Image
                   className="fit-cover "
-                  width={70}
-                  height={50}
+                 
+                  style={{width:"50px",height:"50px"}}
                   src={Mnit_logo}
-                ></Image> */}
+                ></Image> 
                 <Image
                   className="fit-cover"
-                  width={70}
+                  style={{width:"60px",height:"60px"}}
                   src={blitz_logo1}
                 ></Image>
                 
