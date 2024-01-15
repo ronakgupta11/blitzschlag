@@ -75,7 +75,7 @@ function Footer() {
               <Link href="/ambassadors">Campus Ambassador</Link>
             </div>
             <div className="">
-              <Link href="/ambassadors" target="_blank">Brochure</Link>
+              <Link href="https://drive.google.com/file/d/12ZXKWuEghsR7lt_5jCIysqIrGjCQevK_/view?usp=drive_link" target="_blank">Brochure</Link>
             </div>
             <div className="">
               <Link href="/team">Contact Us</Link>
