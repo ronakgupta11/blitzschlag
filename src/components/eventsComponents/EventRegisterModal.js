@@ -40,10 +40,13 @@ function EventRegisterModal({ event, id }) {
   const dispatch = useDispatch();
   const [status, setStatus] = useState(0);
   const [teamName, setTeamName] = useState("");
+  const [teamSize, setTeamSize] = useState(0);
   const [teamCode, setTeamCode] = useState("");
   const [teamId, setTeamId] = useState("");
 
   const [image,setImage] = useState()
+
+
   const handleRegister = () => {
     dispatch(LOADING_UI());
     if (!teamName && !teamCode) {
@@ -52,13 +55,19 @@ function EventRegisterModal({ event, id }) {
     } else if (teamName && teamCode) {
       let err = { general: "Please Fill only one field" };
       dispatch(SET_ERRORS(err));
-    } else if (teamName) {
+    } 
+    else if(teamName && !teamSize){
+      let err = { size: "team size is mandatory" };
+      dispatch(SET_ERRORS(err));
+    }
+    else if (teamName && teamSize) {
       const teamIdGen = generateUniqueTeamId(teamName);
       setTeamId(teamIdGen);
 
       axios
         .post(`${url}/events/register/${id}/${teamIdGen}`, {
           teamName: teamName,
+          teamSize
         })
         .then((d) => {
           setStatus(1);
@@ -102,6 +111,8 @@ function EventRegisterModal({ event, id }) {
 
     // setStatus(1)
   };
+
+
   const handleSubmit = ()=>{
    
 
@@ -124,7 +135,7 @@ function EventRegisterModal({ event, id }) {
     <div className="flex flex-col items-start justify-between space-y-4 my-4">
       <label className="form-control w-full ">
         <div className="label">
-          <span className="label-text">Create Team</span>
+          <span className="label-text">Create Team (only team leader)</span>
         </div>
         <input
           type="text"
@@ -139,6 +150,32 @@ function EventRegisterModal({ event, id }) {
       {errors.teamName && (
         <p className="text-red-600 text-sm">{errors.teamName}</p>
       )}
+      <label className="form-control w-full ">
+        <div className="label">
+          <span className="label-text">Team Size</span>
+        </div>
+        <input
+          type="number"
+          onChange={(e) => {
+            setTeamSize(e.target.value);
+          }}
+          placeholder="Team Size"
+          className="input input-bordered bg-inherit w-full "
+        />
+      </label>
+      {errors.size && (
+        <p className="text-red-600 text-sm">{errors.size}</p>
+      )}
+            <button
+        onClick={handleRegister}
+        className="btn font-amita text-lg bg-[#E9B704] text-[#463000] rounded-md px-16 py-2 my-4"
+      >
+        {loading ? (
+          <span className="loading loading-dots loading-sm"></span>
+        ) : (
+          "Register"
+        )}
+      </button>
       <div className="w-full flex items-center justify-center">
         <hr className="w-full" />
         <p className="mx-2">OR</p>
@@ -173,7 +210,7 @@ function EventRegisterModal({ event, id }) {
         {loading ? (
           <span className="loading loading-dots loading-sm"></span>
         ) : (
-          "Register"
+          "Join Team"
         )}
       </button>
     </div>
@@ -196,9 +233,10 @@ function EventRegisterModal({ event, id }) {
       <div>
         <Image width={150} src={qr} />
       </div>
-      <div>Please Pay 500 on above qr code to get your team verified.</div>
+      <div>Please Pay on above qr code to get your team verified.</div>
       <div>
     <input  type="file" onChange={(e)=>setImage(e.target.files[0])}  accept="image/*"></input>
+    <div>Submit Payment Confirmation</div>
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
     </div>
@@ -219,9 +257,11 @@ function EventRegisterModal({ event, id }) {
       <div>
         <Image width={150} src={qr} />
       </div>
-      <div>Please Pay 500 on above qr code to get your team verified.</div>
+      <div>Please Pay on above qr code to get your team verified.</div>
       <div>
     <input type="file" onChange={(e)=>setImage(e.target.files[0])} accept="image/*"></input>
+    <div>Submit Payment Confirmation</div>
+
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
       
