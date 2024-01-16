@@ -38,14 +38,8 @@ function EventTab({ menu, setMenu, credentials }) {
         <p className="text-[#000] text-[20px] border-b-2 border-black pb-[20px]">
           Registered Events
         </p>
-        {/* <div className="grid grid-cols-4 gap-[10px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
-          <p>Sr No.</p>
-          <p>Event Name</p>
-          <p>Date</p>
-          <p>Venue</p>
-          <p>Status</p>
-        </div> */}
-        <div className="grid grid-cols-4 gap-[30px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[30px] items-center text-[#000000] text-[14px] md:text-base text-center mt-[20px]">
           {events.map((e, k) => (
             <div className="grid items-center justify-center gap-[10px]">
               <Image
