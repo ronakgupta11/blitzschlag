@@ -10,8 +10,14 @@ import { selectCredentials } from "@/redux/reducers/userReducer";
 function MobileEventPage(props) {
   const data = props.data;
   const credentials = useSelector(selectCredentials)
+  const [isRegistered,setIsRegistered] = useState(false)
   const registeredEvents = credentials.registeredEvents || []
-  const isRegistered = registeredEvents.some(event => event.eventId === data?.eventId);
+  useEffect(()=>{
+    const reg =  registeredEvents.some(event => event.eventId === data?.eventId);
+
+setIsRegistered(reg)
+  },[data])
+
   return (
     <div className="bg-[#59b6e9] w-full h-full ">
       <div

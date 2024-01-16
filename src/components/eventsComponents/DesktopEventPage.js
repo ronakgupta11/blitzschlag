@@ -7,11 +7,18 @@ import { FaDownload } from "react-icons/fa";
 import ClubRegister from "./ClubRegister";
 import { useSelector } from "react-redux";
 import { selectCredentials } from "@/redux/reducers/userReducer";
+import { useEffect, useState } from "react";
 function DesktopEventPage({ data }) {
   const credentials = useSelector(selectCredentials)
+  const [isRegistered,setIsRegistered] = useState(false)
   const registeredEvents = credentials.registeredEvents || []
-  const isRegistered = registeredEvents.some(event => event.eventId === data?.eventId);
-  // console.log(isRegistered)
+  useEffect(()=>{
+    const reg =  registeredEvents.some(event => event.eventId === data?.eventId);
+
+setIsRegistered(reg)
+  },[data])
+
+
   return (
     <div className="bg-black w-full flex h-full ">
       <div

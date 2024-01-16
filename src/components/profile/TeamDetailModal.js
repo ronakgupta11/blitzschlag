@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 import { toast } from "react-toastify";
 import { selectAuthenticated } from "@/redux/reducers/userReducer";
+import PayNow from "./payNow";
 
 function TeamDetailModal({team}) {
   const auth = useSelector(selectAuthenticated);
@@ -41,6 +42,7 @@ function TeamDetailModal({team}) {
             </div>
             <div className="flex items-center gap-[30px]">
               <div className="">Team Status: </div><span className={`${team?.teamStatus === "unVerified"? "text-red-600":"text-green-500"}`}> {team?.teamStatus}</span>
+              {team?.teamStatus === "unVerified" && <PayNow  teamId= {team?.teamId}/>}
             </div>
           </div>
           <div className="mt-[34px]">
