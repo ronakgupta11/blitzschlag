@@ -5,6 +5,7 @@ import { Table, TextInput, Label, Button } from "flowbite-react";
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import { url } from "@/constants";
+import {toast} from "react-toastify"
 import team from "@/pages/team";
 function AdminEventTeams() {
 
@@ -18,6 +19,15 @@ function AdminEventTeams() {
       .post(`${url}/deleteTeam/${id}`)
       .then((d) => {
         toast("deleted", { type: "success" });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const handleVerify = (id) => {
+    axios
+      .post(`${url}/verifyTeam/${id}`)
+      .then((d) => {
+        toast("verified", { type: "success" });
       })
       .catch((err) => console.log(err));
   };
@@ -60,7 +70,6 @@ const [data,setData] = useState(null)
             {data?.map((e,k) => {
               const team  = e?.team
               const user = e?.teamLeader
-              
               return (
                 <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
@@ -100,7 +109,7 @@ const [data,setData] = useState(null)
                   }</Table.Cell>
 
                   <Table.Cell>
-                    <Button onClick={() => handleDelete(team?.teamId)}>Verify</Button>
+                    <Button onClick={() => handleVerify(team?.teamId)}>Verify</Button>
                   </Table.Cell>
                   <Table.Cell>
                     <Button onClick={() => handleDelete(team?.teamId)}>Delete</Button>
