@@ -5,8 +5,18 @@ import EventRegisterModal from "./EventRegisterModal";
 import Link from "next/link";
 import ClubRegister from './ClubRegister'
 import { FaDownload } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { selectCredentials } from "@/redux/reducers/userReducer";
 function MobileEventPage(props) {
   const data = props.data;
+  const credentials = useSelector(selectCredentials)
+  const [isRegistered,setIsRegistered] = useState(false)
+  const registeredEvents = credentials.registeredEvents || []
+  useEffect(()=>{
+    const reg =  registeredEvents.some(event => event.eventId === data?.eventId);
+
+setIsRegistered(reg)
+  },[data])
 
   return (
     <div className="bg-[#59b6e9] w-full h-full ">
@@ -63,8 +73,16 @@ function MobileEventPage(props) {
               <FaDownload size={20} /> Rulebook
             </Link>
           </div>
-          { data?.category === "club" ?<ClubRegister event={data?.name} id={data?.eventId} />:
-          <EventRegisterModal event={data?.name} id={data?.eventId} />}
+          { isRegistered?
+           <button
+           className={`w-fit bg-blue-500 px-[36px] py-[8px] text-white`}
+           disabled
+         >
+           Registered
+         </button>
+
+          :(data?.category === "club" ?<ClubRegister event={data?.name} id={data?.eventId} />:
+          <EventRegisterModal event={data?.name} id={data?.eventId} />)}
         </div>
       </div>
     </div>

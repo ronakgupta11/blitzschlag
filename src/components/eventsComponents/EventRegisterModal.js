@@ -217,7 +217,7 @@ function EventRegisterModal({ event, id }) {
   );
 
   const successCreate = (
-    <div className="flex flex-col  justify-around h-96 items-center">
+    <div className="flex flex-col  justify-around space-y-4 items-center">
       <div className="flex space-x-2">
         <FaCheck size={20} />
         <p>
@@ -233,17 +233,18 @@ function EventRegisterModal({ event, id }) {
       <div>
         <Image width={150} src={qr} />
       </div>
-      <div>Please Pay on above qr code to get your team verified.</div>
+      <div>Please Pay on above qr code or on Profile Page to get your team verified.</div>
       <div>
+        
+    <div className="text-sm">Submit Payment Confirmation</div>
     <input  type="file" onChange={(e)=>setImage(e.target.files[0])}  accept="image/*"></input>
-    <div>Submit Payment Confirmation</div>
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
     </div>
   );
 
   const successJoin = (
-    <div className="flex flex-col  justify-around h-96 items-center">
+    <div className="flex flex-col  justify-around space-y-4  items-center">
       <div className="flex space-x-2">
         <FaCheck size={20} />
         <p>
@@ -257,10 +258,11 @@ function EventRegisterModal({ event, id }) {
       <div>
         <Image width={150} src={qr} />
       </div>
-      <div>Please Pay on above qr code to get your team verified.</div>
+      <div>Please Pay on above qr code or on Profile Page to get your team verified.</div>
       <div>
+    <div className="text-sm">Submit Payment Confirmation</div>
+
     <input type="file" onChange={(e)=>setImage(e.target.files[0])} accept="image/*"></input>
-    <div>Submit Payment Confirmation</div>
 
       </div>
       <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>

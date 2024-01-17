@@ -40,6 +40,7 @@ function ClubRegister({ event, id }) {
   const [teamName, setTeamName] = useState("");
   const [teamCode, setTeamCode] = useState("");
   const [teamId, setTeamId] = useState("");
+  const [teamSize, setTeamSize] = useState(0);
 
   const [image,setImage] = useState()
   const handleRegister = () => {
@@ -57,6 +58,7 @@ function ClubRegister({ event, id }) {
       axios
         .post(`${url}/events/register/${id}/${teamIdGen}`, {
           teamName: teamName,
+          teamSize
         })
         .then((d) => {
           setStatus(1);
@@ -120,6 +122,32 @@ function ClubRegister({ event, id }) {
       {errors.teamName && (
         <p className="text-red-600 text-sm">{errors.teamName}</p>
       )}
+    <label className="form-control w-full ">
+        <div className="label">
+          <span className="label-text">Team Size</span>
+        </div>
+        <input
+          type="number"
+          onChange={(e) => {
+            setTeamSize(e.target.value);
+          }}
+          placeholder="Team Size"
+          className="input input-bordered bg-inherit w-full "
+        />
+      </label>
+      {errors.size && (
+        <p className="text-red-600 text-sm">{errors.size}</p>
+      )}
+            <button
+        onClick={handleRegister}
+        className="btn font-amita text-lg bg-[#E9B704] text-[#463000] rounded-md px-16 py-2 my-4"
+      >
+        {loading ? (
+          <span className="loading loading-dots loading-sm"></span>
+        ) : (
+          "Register"
+        )}
+      </button>
       <div className="w-full flex items-center justify-center">
         <hr className="w-full" />
         <p className="mx-2">OR</p>
@@ -152,9 +180,9 @@ function ClubRegister({ event, id }) {
         className="btn font-amita text-lg bg-[#E9B704] text-[#463000] rounded-md px-16 py-2 my-4"
       >
         {loading ? (
-          <span className="loading loading-dots loading-sm"></span>
+          <span className="load ing loading-dots loading-sm"></span>
         ) : (
-          "Register"
+          "Join Team"
         )}
       </button>
     </div>

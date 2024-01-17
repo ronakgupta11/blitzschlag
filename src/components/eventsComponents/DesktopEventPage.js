@@ -5,8 +5,20 @@ import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal";
 import { FaDownload } from "react-icons/fa";
 import ClubRegister from "./ClubRegister";
+import { useSelector } from "react-redux";
+import { selectCredentials } from "@/redux/reducers/userReducer";
+import { useEffect, useState } from "react";
 function DesktopEventPage({ data }) {
-  console.log(data);
+  const credentials = useSelector(selectCredentials)
+  const [isRegistered,setIsRegistered] = useState(false)
+  const registeredEvents = credentials.registeredEvents || []
+  useEffect(()=>{
+    const reg =  registeredEvents.some(event => event.eventId === data?.eventId);
+
+setIsRegistered(reg)
+  },[data])
+
+
   return (
     <div className="bg-black w-full flex h-full ">
       <div
@@ -55,8 +67,17 @@ function DesktopEventPage({ data }) {
               <FaDownload size={20}/> Rulebook
             </div>
           </Link>
-         { data?.category === "club" ?<ClubRegister event={data?.name} id={data?.eventId} />:
-          <EventRegisterModal event={data?.name} id={data?.eventId} />}
+          
+         { isRegistered?
+           <button
+           className={`w-fit bg-blue-500 px-[36px] py-[8px] text-white`}
+           disabled
+         >
+           Registered
+         </button>
+
+          :(data?.category === "club" ?<ClubRegister event={data?.name} id={data?.eventId} />:
+          <EventRegisterModal event={data?.name} id={data?.eventId} />)}
         </div>
       </div>
 
