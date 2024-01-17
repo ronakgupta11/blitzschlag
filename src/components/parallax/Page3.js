@@ -21,7 +21,7 @@ function Page3() {
     >
       <div className="self-start z-[99] mt-12 ml-4 md:ml-8">
         <p
-          className=" text-transparent bg-clip-text font-sankaran text-5xl md:text-7xl  "
+          className=" text-transparent bg-clip-text font-amita text-5xl md:text-7xl  "
           style={{ background: "#0D2138" }}
         >
           Events
