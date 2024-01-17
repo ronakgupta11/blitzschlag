@@ -19,7 +19,7 @@ import PassTab from "/src/components/profile/PassTab.js";
 import ProfileTab from "/src/components/profile/ProfileTab.js";
 import { QRCode } from "react-qrcode-logo";
 import { logOutUser } from "@/redux/actions/userAction";
-
+import AmbassadorTab from "@/components/profile/AmbassadorTab";
 export default function Profile({slickModal}) {
   const [currentTab, setCurrentTab] = useState(0);
   const [menu, setMenu] = useState(false);
@@ -29,7 +29,7 @@ export default function Profile({slickModal}) {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
   const isMNIT = useSelector(selectMNIT)
-
+  const isAmbassador = useState(true)
 
   useEffect(() => {
     if (!auth) {
@@ -91,6 +91,14 @@ export default function Profile({slickModal}) {
           <Image src={PassIcon} />
           Passes
         </p>
+        { isAmbassador &&
+          <p
+          className="flex gap-[20px] items-center cursor-pointer"
+          onClick={() => setCurrentTab(4)}
+        >
+          <Image src={PassIcon} />
+           Campus Ambassador
+        </p>}
         <p
           className="flex gap-[20px] items-center cursor-pointer mt-[120px]"
           onClick={() => {
@@ -111,7 +119,9 @@ export default function Profile({slickModal}) {
         <PassTab setMenu={setMenu} menu={menu} credentials={credentials} />
       ) : currentTab === 3 ? (
         <p>Notifications</p>
-      ) : null}
+      ) :
+      currentTab===4?<AmbassadorTab setMenu={setMenu} menu={menu} credentials={credentials}/> :
+      null}
     </div>
   );
 }
