@@ -19,7 +19,9 @@ import { selectLoading } from "@/redux/reducers/uiReducer";
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 
+
 function PurchasePass({pass }) {
+  console.log(pass)
   const loading = useSelector(selectLoading);
   const errors = useSelector(selectErrors);
   const auth = useSelector(selectAuthenticated);
@@ -30,7 +32,7 @@ function PurchasePass({pass }) {
   const handleSubmit = () => {
 if (auth) {
   const formData = new FormData()
-  formData.append("image", image,image?.name)
+  formData.append("image",image,image?.name)
 dispatch(LOADING_UI())
       axios
         .post(`${url}/buyPass/${pass}`,formData)
@@ -50,8 +52,7 @@ dispatch(LOADING_UI())
         toast("Please Login to purchase Pass",{
             type:"info"
         })
-        }
-
+  }
   }
 
   const PurchaseConfirmation = (
