@@ -101,7 +101,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, name: "" }));
             setName(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.name ? "input-error" : ""
           }`}
         />
@@ -123,7 +123,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, email: "" }));
             setEmail(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.email ? "input-error" : ""
           }`}
         />
@@ -153,7 +153,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, phone: "" }));
             setPhone(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.phone ? "input-error" : ""
           }`}
         />
@@ -175,7 +175,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, college: "" }));
             setCollege(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.college ? "input-error" : ""
           }`}
         />
@@ -199,7 +199,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, password: "" }));
             setPass(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.password ? "input-error" : ""
           }`}
         />
@@ -222,7 +222,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, confirmPassword: "" }));
             setCnf(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.confirmPassword ? "input-error" : ""
           }`}
         />
@@ -245,7 +245,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, referal: "" }));
             setReferal(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.referal ? "input-error" : ""
           }`}
         />
