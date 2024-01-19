@@ -6,6 +6,7 @@ import AdminUsers from "@/components/adminComponents/AdminUsers";
 import AdminCa from "@/components/adminComponents/AdminCa";
 import { useSelector } from "react-redux";
 import { selectCredentials } from "@/redux/reducers/userReducer";
+import AdminPasses from "@/components/adminComponents/AdminPasses";
 function blitzupdate() {
   const credentials = useSelector(selectCredentials);
   return (
@@ -23,6 +24,9 @@ function blitzupdate() {
           </Tabs.Item>
           <Tabs.Item title="Campus Ambassadors">
             <AdminCa />
+          </Tabs.Item>
+          <Tabs.Item title="Passes">
+            <AdminPasses/>
           </Tabs.Item>
         </Tabs>
       ) : (
