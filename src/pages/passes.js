@@ -35,7 +35,7 @@ function hospitality() {
                 Blitzschlag'24.
               </li>
             </ul>
-            <PurchasePass pass={0} />
+            <PurchasePass modal={"0"} pass={"0"} />
           </div>
           <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
             <p className="text-2xl font-amita font-bold">Diwan Pass </p>
@@ -50,7 +50,7 @@ function hospitality() {
                 that day as well as attend the same-day pronite.
               </li>
             </ul>
-            <PurchasePass pass={1} />
+            <PurchasePass modal={"1"} pass={"1"} />
           </div>
           <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
             <p className="text-2xl font-amita font-bold">Day 1 Pass </p>
@@ -61,7 +61,7 @@ function hospitality() {
               </li>
             
             </ul>
-            <PurchasePass pass={2} />
+            <PurchasePass modal={"2"} pass={"2"} />
           </div>
           <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
             <p className="text-2xl font-amita font-bold">Day2 Pass </p>
@@ -72,7 +72,7 @@ function hospitality() {
               </li>
               
             </ul>
-            <PurchasePass pass={3} />
+            <PurchasePass modal={"3"} pass={"3"} />
           </div>
           <div className="bg-[#fcf2d9] h-96 w-[280px] m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
             <p className="text-2xl font-amita font-bold">Day 3 Pass </p>
@@ -83,7 +83,7 @@ function hospitality() {
               </li>
              
             </ul>
-            <PurchasePass pass={4} />
+            <PurchasePass modal={"4"} pass={"4"} />
           </div>
           <div className="bg-[#fcf2d9] h-96 w-[280px]  m-4 p-4 rounded-xl text-[#310816] flex flex-col space-y-4">
             <p className="text-2xl font-amita font-bold">Rawat Pass</p>
@@ -101,7 +101,7 @@ function hospitality() {
                 flagship events & pronites.{" "}
               </li>
             </ul>
-            <PurchasePass pass={5} />
+            <PurchasePass modal={"5"} pass={"5"} />
           </div>
         </div>
         <div className="w-full m-auto flex flex-col items-center justify-center space-y-4">

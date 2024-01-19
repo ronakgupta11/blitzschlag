@@ -14,13 +14,13 @@ function PassTab({ menu, setMenu, credentials }) {
     } else if( id === "2") {
       return "Day1 Pass";
     }
-    else if( id === "2") {
+    else if( id === "3") {
       return "Day2 Pass";
     }
-    else if( id === "2") {
+    else if( id === "4") {
       return "Day3 Pass";
     }
-    else if( id === "3"){
+    else if( id === "5"){
       return "Rawat Pass"
     }
   };
