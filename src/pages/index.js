@@ -8,7 +8,6 @@ import Page5 from '@/components/parallax/page5';
 import Loader from "@/components/loader";
 import LandingSection from '@/components/parallax/LandingSection/LandingSection';
 
-import Head from 'next/head';
 const Home = ({ SLoading }) => {
   return (
     <>
