@@ -5,12 +5,23 @@ import LeftArrow from "/public/icons/left_arrow_black.svg";
 
 function PassTab({ menu, setMenu, credentials }) {
   const head = (id) => {
-    if (id === 0) {
+
+    console.log("pass id",id)
+    if (id === "0") {
       return "Maharaja Pass";
-    } else if (id === 1) {
+    } else if (id === "1") {
       return "Diwan Pass";
-    } else {
-      return "Rawat pass";
+    } else if( id === "2") {
+      return "Day1 Pass";
+    }
+    else if( id === "2") {
+      return "Day2 Pass";
+    }
+    else if( id === "2") {
+      return "Day3 Pass";
+    }
+    else if( id === "3"){
+      return "Rawat Pass"
     }
   };
   const passes = credentials?.passes;
