@@ -109,7 +109,7 @@ export default function EventList() {
         <div className="flex flex-col items-center mt-12 z-20">
       
 
-      <label className="form-control w-full max-w-xs">
+      {/* <label className="form-control w-full max-w-xs">
   <div className="label">
     <span className="label-text"></span>
   </div>
@@ -120,11 +120,11 @@ export default function EventList() {
         ))}
       </select>
 
-</label>
+</label> */}
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
 
 
-          {filteredClubEvents.map((d, k) => {
+          {club.map((d, k) => {
             return <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />;
           })}
           {club?.length === 0 && (
