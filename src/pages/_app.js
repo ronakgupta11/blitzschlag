@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import store from "@/redux/store";
 
 import { url } from "@/constants";
-import { getUserData, logOutUser } from "@/redux/actions/userAction";
+import {  logOutUser } from "@/redux/actions/userAction";
 import {
   SET_AUTHENTICATED,
   SET_MNIT,
@@ -14,26 +14,13 @@ import {
   SET_USER,
 } from "@/redux/reducers/userReducer";
 import { SET_EVENTS } from "@/redux/reducers/dataReducer";
-// import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
 import Layout from "@/components/layout";
 import axios from "axios";
 import { useState, useEffect } from "react";
-// import { motion,AnimatePresence, delay } from "framer-motion";
-// import Loader from "@/components/loader";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
-// const samakarn = localFont({
-//   src: [
-//     {
-//       path: '../../public/fonts/SAMARN_.TTF',
-//       // weight: '400'
-//     }
-//   ],
-//   variable: '--font-samakarn'
-// })
-// import { useDispatch } from 'react-redux';
 export default function App({ Component, pageProps }) {
   const dispatch = store.dispatch;
 
@@ -106,13 +93,13 @@ export default function App({ Component, pageProps }) {
             <Layout>
               <Component {...pageProps} SLoading={SLoading} slickModal={slickModal} />
             </Layout>
-            <motion.div
+            {/* <motion.div
               className="slideIn absolute top-0 left-0 w-full h-screen bg-black origin-bottom z-[100]"
               intial={{ scaleY: 0 }}
               animate={{ scaleY: 0 }}
               exit={{ scaleY: 1 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            ></motion.div>
+            ></motion.div> */}
             {/* <motion.div
               className="slideOut absolute top-0 left-0 w-full h-screen bg-black origin-top z-[100]"
               intial={{ scaleY: 1 }}

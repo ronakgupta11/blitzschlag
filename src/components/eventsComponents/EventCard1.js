@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import img from "../../../public/assets/events/event.png";
 import Link from "next/link";
 function EventCard1(props) {
   const data = props.data;

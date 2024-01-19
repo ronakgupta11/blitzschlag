@@ -1,7 +1,6 @@
 import borderDown from "../../../public/assets/events/border.png";
 import Image from "next/image";
 import Link from "next/link";
-import LeftArrow from "/public/icons/left_arrow.svg";
 import EventRegisterModal from "./EventRegisterModal";
 import { FaDownload } from "react-icons/fa";
 import ClubRegister from "./ClubRegister";

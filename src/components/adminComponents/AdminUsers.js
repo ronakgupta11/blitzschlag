@@ -28,7 +28,7 @@ function AdminUsers() {
         // const profile = localStorage.getItem("BLITZUSER");
         axios.defaults.headers.common["Authorization"] = token;
 axios.get(`${url}/getUsers`).then(d=>{
-console.log(d.data)
+
     setCa(d.data)
 }).catch(err=>console.log(err))
     },[])
