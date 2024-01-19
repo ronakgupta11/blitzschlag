@@ -122,9 +122,11 @@ export default function EventList() {
 
 </label>
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
+        {selectedClub === "" && club.map((d, k) => {
+            return <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />;
+          })}
 
-
-          {filteredClubEvents.map((d, k) => {
+          {selectedClub !== "" && filteredClubEvents.map((d, k) => {
             return <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />;
           })}
           {club?.length === 0 && (
