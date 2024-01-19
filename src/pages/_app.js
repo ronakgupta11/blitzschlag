@@ -1,10 +1,8 @@
 import "@/styles/globals.css";
-// import "@/styles/login.css"
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { Provider } from "react-redux";
 import store from "@/redux/store";
-
 import { url } from "@/constants";
 import {  logOutUser } from "@/redux/actions/userAction";
 import {
@@ -23,7 +21,6 @@ import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 export default function App({ Component, pageProps }) {
   const dispatch = store.dispatch;
-
   useEffect(() => {
     const token = localStorage.getItem("BLITZID");
     let profile = localStorage.getItem("BLITZUSER");
@@ -81,7 +78,6 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-
       <Head>
         <title>Blitzschlag'24</title>
         <meta name="description" content="BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan and the crown jewel of the Malaviya National Institute of Technology ,Jaipur " />

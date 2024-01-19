@@ -8,12 +8,20 @@ import Page5 from '@/components/parallax/page5';
 import Loader from "@/components/loader";
 import LandingSection from '@/components/parallax/LandingSection/LandingSection';
 
-
+import Head from 'next/head';
 const Home = ({ SLoading }) => {
   return (
     <>
 
-
+<Head>
+        <title>Blitzschlag'24</title>
+        <meta name="description" content="BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan and the crown jewel of the Malaviya National Institute of Technology ,Jaipur " />
+        <meta name="keywords" content="blitzschlag, blitz mnit, blitz, blitz24 , blitzschlag24, mnit,mnit cultural fest, blitzschlag" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Blitzschlag'24" />
+<meta property="og:description" content="BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan" />
+<meta property="og:image" content="/favicon.ico" />
+      </Head>
 
       <AnimatePresence mode="sync">
 
