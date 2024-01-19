@@ -84,8 +84,9 @@ export default function App({ Component, pageProps }) {
 
       <Head>
         <title>Blitzschlag'24</title>
-        <meta name="description" content="Description of your page" />
+        <meta name="description" content="BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan and the crown jewel of the Malaviya National Institute of Technology Jaipur, ignites the spirit of the entire MNIT community! A vibrant tapestry of students woven together by a shared love for creativity and celebration. " />
         <meta name="keywords" content="blitzschlag, blitz mnit, blitz, blitz24 , blitzschlag24, mnit,mnit cultural fest" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider store={store}>
         <AnimatePresence mode="wait">
