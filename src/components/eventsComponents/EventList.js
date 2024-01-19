@@ -44,7 +44,7 @@ export default function EventList() {
   const club = events.filter((item) => item.category === "club");
   // const fun = events.filter(item => item.category === "fun");
   const [selectedClub, setSelectedClub] = useState("");
-  const [filteredClubEvents, setFilteredEvents] = useState([]);
+  const [filteredClubEvents, setFilteredEvents] = useState(club);
 
   const handleClubChange = (event) => {
     const selectedClubName = event.target.value;
@@ -114,7 +114,7 @@ export default function EventList() {
     <span className="label-text"></span>
   </div>
   <select className="select select-bordered bg-inherit" id="clubSelect" onChange={handleClubChange} value={selectedClub}>
-        <option className="text-black" value="">All Clubs</option>
+        <option className="text-black" value="">All Events</option>
         {Array.from(new Set(club.map(event => event.clubName))).map((clubName) => (
           <option className="text-black" key={clubName} value={clubName}>{clubName}</option>
         ))}
