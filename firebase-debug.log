@@ -1,0 +1,305 @@
+[debug] [2024-01-21T12:06:53.541Z] ----------------------------------------------------------------------
+[debug] [2024-01-21T12:06:53.544Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-21T12:06:53.544Z] CLI Version:   13.0.2
+[debug] [2024-01-21T12:06:53.545Z] Platform:      win32
+[debug] [2024-01-21T12:06:53.545Z] Node Version:  v18.18.2
+[debug] [2024-01-21T12:06:53.546Z] Time:          Sun Jan 21 2024 17:36:53 GMT+0530 (India Standard Time)
+[debug] [2024-01-21T12:06:53.546Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-21T12:06:53.672Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-21T12:06:53.673Z] > authorizing via signed-in user (mailtoronakgupta@gmail.com)
+[debug] [2024-01-21T12:06:53.673Z] [iam] checking project blitzstarter-d367e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-21T12:06:53.675Z] > refreshing access token with scopes: []
+[debug] [2024-01-21T12:06:53.678Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-21T12:06:53.679Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-21T12:06:54.157Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-21T12:06:54.158Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-21T12:06:54.184Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions [none]
+[debug] [2024-01-21T12:06:54.184Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:06:54.185Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-21T12:06:56.159Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions 200
+[debug] [2024-01-21T12:06:56.159Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-21T12:06:56.161Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e [none]
+[debug] [2024-01-21T12:06:56.782Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e 200
+[debug] [2024-01-21T12:06:56.782Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e {"projectId":"blitzstarter-d367e","projectNumber":"1061586498672","displayName":"blitzschlag","name":"projects/blitzstarter-d367e","resources":{"hostingSite":"blitzstarter-d367e","storageBucket":"blitzstarter-d367e.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_7a006dfd-fc74-4674-97a1-154d4cb0d731"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-21T12:07:16.082Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/blitzstarter-d367e/sites/blitzstarter-d367e [none]
+[debug] [2024-01-21T12:07:17.724Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/blitzstarter-d367e/sites/blitzstarter-d367e 200
+[debug] [2024-01-21T12:07:17.724Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/blitzstarter-d367e/sites/blitzstarter-d367e {"name":"projects/blitzstarter-d367e/sites/blitzstarter-d367e","defaultUrl":"https://blitzstarter-d367e.web.app","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    ▲ Next.js 14.0.4
+
+[info] 
+   Creating an optimized production build ...
+
+[info] 
+
+[info] 🌼   daisyUI 4.4.22
+
+[info] ├─ ✔︎ 1 theme added		https://daisyui.com/docs/themes
+
+[info] ╰─ ★ Star daisyUI on GitHub	https://github.com/saadeghi/daisyui
+
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/16) ...
+
+[info]    Generating static pages (4/16) 
+
+[info] pass in component 0
+opened modal 0
+pass in component 1
+opened modal 1
+pass in component 2
+opened modal 2
+pass in component 3
+opened modal 3
+pass in component 4
+opened modal 4
+pass in component 5
+opened modal 5
+
+[info]    Generating static pages (8/16) 
+
+[info]    Generating static pages (12/16) 
+
+[info]  ✓ Generating static pages (16/16) 
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ ○ /                                      5.34 kB         174 kB
+├   └ css/e7d4520f2359d648.css             226 B
+├   /_app                                  0 B             168 kB
+├ ○ /404                                   182 B           169 kB
+├ ○ /about                                 1.84 kB         170 kB
+├ ○ /ambassadors (409 ms)                  6.66 kB         175 kB
+├ λ /api/hello                             0 B             168 kB
+├ ○ /blitzupdate                           6.65 kB         231 kB
+├ ○ /events (455 ms)                       2.84 kB         179 kB
+├ ○ /events/[id] (495 ms)                  4.77 kB         182 kB
+├ ○ /login                                 2.1 kB          171 kB
+├ ○ /memories                              483 B           169 kB
+├ ○ /passes                                4.15 kB         174 kB
+├ ○ /profile                               17.5 kB         242 kB
+├ ○ /register                              2.15 kB         171 kB
+├ ○ /sponsors                              3.1 kB          172 kB
+├ ○ /team                                  4.43 kB         174 kB
+└ ○ /theme                                 1.83 kB         170 kB
++ First Load JS shared by all              200 kB
+  ├ chunks/framework-5429a50ba5373c56.js   45.2 kB
+  ├ chunks/main-72cd581c1e9bd837.js        31.6 kB
+  ├ chunks/pages/_app-c4b02278c3ebf062.js  90.6 kB
+  ├ chunks/webpack-91e4d7af6dfda032.js     1.05 kB
+  └ css/7f4d3bc202fcc4e4.css               31.7 kB
+
+[info] 
+○  (Static)   prerendered as static content
+λ  (Dynamic)  server-rendered on demand using Node.js
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /api/hello
+[info] 
+[debug] [2024-01-21T12:08:01.521Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/blitzstarter-d367e/sites/blitzstarter-d367e [none]
+[debug] [2024-01-21T12:08:02.724Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/blitzstarter-d367e/sites/blitzstarter-d367e 200
+[debug] [2024-01-21T12:08:02.725Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/blitzstarter-d367e/sites/blitzstarter-d367e {"name":"projects/blitzstarter-d367e/sites/blitzstarter-d367e","defaultUrl":"https://blitzstarter-d367e.web.app","type":"DEFAULT_SITE"}
+[debug] [2024-01-21T12:08:45.072Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      },
+      "site": "blitzstarter-d367e",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrblitzstarterd367e",
+            "region": "asia-east1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase\\blitzstarter-d367e\\hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase\\blitzstarter-d367e\\functions",
+      "codebase": "firebase-frameworks-blitzstarter-d367e"
+    }
+  ]
+}
+[debug] [2024-01-21T12:08:45.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-21T12:08:45.073Z] > authorizing via signed-in user (mailtoronakgupta@gmail.com)
+[debug] [2024-01-21T12:08:45.073Z] [iam] checking project blitzstarter-d367e for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-01-21T12:08:45.074Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions [none]
+[debug] [2024-01-21T12:08:45.074Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:08:45.074Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-01-21T12:08:46.684Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions 200
+[debug] [2024-01-21T12:08:46.684Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blitzstarter-d367e:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'blitzstarter-d367e'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2024-01-21T12:08:46.687Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e [none]
+[debug] [2024-01-21T12:08:47.186Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e 200
+[debug] [2024-01-21T12:08:47.186Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e {"projectId":"blitzstarter-d367e","projectNumber":"1061586498672","displayName":"blitzschlag","name":"projects/blitzstarter-d367e","resources":{"hostingSite":"blitzstarter-d367e","storageBucket":"blitzstarter-d367e.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_7a006dfd-fc74-4674-97a1-154d4cb0d731"}
+[info] i  functions: preparing codebase firebase-frameworks-blitzstarter-d367e for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-01-21T12:08:47.190Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-01-21T12:08:47.190Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:08:47.192Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-01-21T12:08:47.192Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:08:47.194Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudbuild.googleapis.com [none]
+[debug] [2024-01-21T12:08:47.194Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudbuild.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:08:47.196Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/artifactregistry.googleapis.com [none]
+[debug] [2024-01-21T12:08:47.196Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/artifactregistry.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:08:49.633Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/runtimeconfig.googleapis.com 200
+[debug] [2024-01-21T12:08:49.633Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-01-21T12:08:49.688Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudbuild.googleapis.com 200
+[debug] [2024-01-21T12:08:49.688Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-01-21T12:08:49.714Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/artifactregistry.googleapis.com 200
+[debug] [2024-01-21T12:08:49.714Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-01-21T12:08:49.731Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudfunctions.googleapis.com 200
+[debug] [2024-01-21T12:08:49.732Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-01-21T12:08:49.732Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e/adminSdkConfig [none]
+[debug] [2024-01-21T12:08:50.705Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e/adminSdkConfig 200
+[debug] [2024-01-21T12:08:50.705Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e/adminSdkConfig {"projectId":"blitzstarter-d367e","storageBucket":"blitzstarter-d367e.appspot.com","locationId":"asia-south1"}
+[debug] [2024-01-21T12:08:50.706Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/blitzstarter-d367e/configs [none]
+[debug] [2024-01-21T12:08:51.703Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/blitzstarter-d367e/configs 200
+[debug] [2024-01-21T12:08:51.703Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/blitzstarter-d367e/configs {}
+[debug] [2024-01-21T12:08:51.705Z] Validating nodejs source
+[debug] [2024-01-21T12:08:55.772Z] > [functions] package.json contents: {
+  "name": "blitzschlag",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@next/font": "^14.0.4",
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.12",
+    "@reduxjs/toolkit": "^2.0.1",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "flowbite": "^2.2.1",
+    "flowbite-react": "^0.7.2",
+    "formik": "^2.4.5",
+    "framer-motion": "^10.16.16",
+    "jwt-decode": "^4.0.0",
+    "next": "^14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-qrcode-logo": "^2.9.0",
+    "react-redux": "^9.0.4",
+    "react-scroll-parallax": "^3.4.5",
+    "react-toastify": "^9.1.3",
+    "three": "^0.160.0",
+    "ua-parser-js": "^1.0.37",
+    "yup": "^1.3.3",
+    "sharp": "^0.32.1",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^4.5.0",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2024-01-21T12:08:55.772Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-blitzstarter-d367e to determine what to deploy 
+[debug] [2024-01-21T12:08:55.774Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-21T12:08:55.787Z] Found firebase-functions binary at 'D:\blitz\blitzschlag\.firebase\blitzstarter-d367e\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8158
+
+[debug] [2024-01-21T12:08:56.359Z] Got response from /__/functions.yaml {"endpoints":{"ssrblitzstarterd367e":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-east1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrblitzstarterd367e"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\blitzstarter-d367e\functions directory for uploading... 
+[info] i  functions: packaged D:\blitz\blitzschlag\.firebase\blitzstarter-d367e\functions (172.83 MB) for uploading 
+[debug] [2024-01-21T12:09:10.264Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/blitzstarter-d367e/locations/-/functions [none]
+[debug] [2024-01-21T12:09:11.318Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/blitzstarter-d367e/locations/-/functions 200
+[debug] [2024-01-21T12:09:11.318Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/blitzstarter-d367e/locations/-/functions {}
+[debug] [2024-01-21T12:09:11.319Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/blitzstarter-d367e/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-01-21T12:09:14.401Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/blitzstarter-d367e/locations/-/functions 200
+[debug] [2024-01-21T12:09:14.402Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/blitzstarter-d367e/locations/-/functions {"functions":[{"name":"projects/blitzstarter-d367e/locations/asia-east1/functions/ssrblitzstarterd367e","buildConfig":{"build":"projects/1061586498672/locations/asia-east1/builds/1e778572-2be0-4520-b634-224e80022e95","runtime":"nodejs18","entryPoint":"ssrblitzstarterd367e","source":{"storageSource":{"bucket":"gcf-v2-sources-1061586498672-asia-east1","object":"ssrblitzstarterd367e/function-source.zip","generation":"1705690375291068"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/blitzstarter-d367e/locations/asia-east1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1061586498672-asia-east1","object":"ssrblitzstarterd367e/function-source.zip","generation":"1705690375291068"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/blitzstarter-d367e/locations/asia-east1/services/ssrblitzstarterd367e","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"blitzstarter-d367e.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","FIREBASE_CONFIG":"{\"projectId\":\"blitzstarter-d367e\",\"storageBucket\":\"blitzstarter-d367e.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"blitzstarter-d367e","EVENTARC_CLOUD_EVENT_SOURCE":"projects/blitzstarter-d367e/locations/asia-east1/services/ssrblitzstarterd367e","FUNCTION_TARGET":"ssrblitzstarterd367e"},"maxInstanceCount":3,"ingressSettings":"ALLOW_ALL","uri":"https://ssrblitzstarterd367e-fxx5ywll2q-de.a.run.app","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssrblitzstarterd367e-00009-muv","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-01-19T18:56:07.610406005Z","labels":{"firebase-functions-codebase":"firebase-frameworks-blitzstarter-d367e","firebase-functions-hash":"cfedf877391b1e15a041ace558dd2f69d003cfb3","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://asia-east1-blitzstarter-d367e.cloudfunctions.net/ssrblitzstarterd367e"},{"name":"projects/blitzstarter-d367e/locations/us-central1/functions/sendTeamCreateMail","buildConfig":{"build":"projects/1061586498672/locations/us-central1/builds/e22a9baa-a5ca-46e2-be83-4c92cd6e216c","runtime":"nodejs18","entryPoint":"sendTeamCreateMail","source":{"storageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"sendTeamCreateMail/function-source.zip","generation":"1705687602519138"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/blitzstarter-d367e/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"sendTeamCreateMail/function-source.zip","generation":"1705687602519138"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/blitzstarter-d367e/locations/us-central1/services/sendteamcreatemail","timeoutSeconds":60,"environmentVariables":{"SENDER_EMAIL":"blitzschlag@mnit.ac.in","SENDER_PASS":"olnsfgrwtdrnirux","FIREBASE_CONFIG":"{\"projectId\":\"blitzstarter-d367e\",\"storageBucket\":\"blitzstarter-d367e.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"blitzstarter-d367e","EVENTARC_CLOUD_EVENT_SOURCE":"projects/blitzstarter-d367e/locations/us-central1/services/sendTeamCreateMail","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendTeamCreateMail"},"maxInstanceCount":10,"ingressSettings":"ALLOW_ALL","uri":"https://sendteamcreatemail-fxx5ywll2q-uc.a.run.app","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"sendteamcreatemail-00020-jur","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/blitzstarter-d367e/locations/asia-south1/triggers/sendteamcreatemail-280961","triggerRegion":"asia-south1","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"team/{teamId}","operator":"match-path-pattern"}],"pubsubTopic":"projects/blitzstarter-d367e/topics/eventarc-asia-south1-sendteamcreatemail-280961-862","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"state":"ACTIVE","updateTime":"2024-01-19T18:06:57.636749042Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"59e3e831cb2a237ef64b564a2aa3d93835dc4068"},"environment":"GEN_2","url":"https://us-central1-blitzstarter-d367e.cloudfunctions.net/sendTeamCreateMail"},{"name":"projects/blitzstarter-d367e/locations/us-central1/functions/sendCaMail","buildConfig":{"build":"projects/1061586498672/locations/us-central1/builds/e22a9baa-a5ca-46e2-be83-4c92cd6e216c","runtime":"nodejs18","entryPoint":"sendCaMail","source":{"storageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"sendCaMail/function-source.zip","generation":"1705687602556796"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/blitzstarter-d367e/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"sendCaMail/function-source.zip","generation":"1705687602556796"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/blitzstarter-d367e/locations/us-central1/services/sendcamail","timeoutSeconds":60,"environmentVariables":{"SENDER_EMAIL":"blitzschlag@mnit.ac.in","SENDER_PASS":"olnsfgrwtdrnirux","FIREBASE_CONFIG":"{\"projectId\":\"blitzstarter-d367e\",\"storageBucket\":\"blitzstarter-d367e.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"blitzstarter-d367e","EVENTARC_CLOUD_EVENT_SOURCE":"projects/blitzstarter-d367e/locations/us-central1/services/sendCaMail","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendCaMail"},"maxInstanceCount":10,"ingressSettings":"ALLOW_ALL","uri":"https://sendcamail-fxx5ywll2q-uc.a.run.app","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"sendcamail-00020-dor","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/blitzstarter-d367e/locations/asia-south1/triggers/sendcamail-001702","triggerRegion":"asia-south1","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"ca/{userId}","operator":"match-path-pattern"},{"attribute":"database","value":"(default)"}],"pubsubTopic":"projects/blitzstarter-d367e/topics/eventarc-asia-south1-sendcamail-001702-405","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"state":"ACTIVE","updateTime":"2024-01-19T18:06:54.177235979Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"59e3e831cb2a237ef64b564a2aa3d93835dc4068"},"environment":"GEN_2","url":"https://us-central1-blitzstarter-d367e.cloudfunctions.net/sendCaMail"},{"name":"projects/blitzstarter-d367e/locations/us-central1/functions/api","buildConfig":{"build":"projects/1061586498672/locations/us-central1/builds/e22a9baa-a5ca-46e2-be83-4c92cd6e216c","runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"api/function-source.zip","generation":"1705687600897514"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/blitzstarter-d367e/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"api/function-source.zip","generation":"1705687600897514"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/blitzstarter-d367e/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"SENDER_EMAIL":"blitzschlag@mnit.ac.in","SENDER_PASS":"olnsfgrwtdrnirux","FIREBASE_CONFIG":"{\"projectId\":\"blitzstarter-d367e\",\"storageBucket\":\"blitzstarter-d367e.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"blitzstarter-d367e","EVENTARC_CLOUD_EVENT_SOURCE":"projects/blitzstarter-d367e/locations/us-central1/services/api","FUNCTION_TARGET":"api","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":10,"ingressSettings":"ALLOW_ALL","uri":"https://api-fxx5ywll2q-uc.a.run.app","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00048-tik","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-01-19T18:06:53.779965430Z","labels":{"firebase-functions-hash":"59e3e831cb2a237ef64b564a2aa3d93835dc4068","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-blitzstarter-d367e.cloudfunctions.net/api"},{"name":"projects/blitzstarter-d367e/locations/us-central1/functions/sendMail","buildConfig":{"build":"projects/1061586498672/locations/us-central1/builds/e22a9baa-a5ca-46e2-be83-4c92cd6e216c","runtime":"nodejs18","entryPoint":"sendMail","source":{"storageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"sendMail/function-source.zip","generation":"1705687550552436"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/blitzstarter-d367e/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1061586498672-us-central1","object":"sendMail/function-source.zip","generation":"1705687550552436"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/blitzstarter-d367e/locations/us-central1/services/sendmail","timeoutSeconds":60,"environmentVariables":{"SENDER_EMAIL":"blitzschlag@mnit.ac.in","SENDER_PASS":"olnsfgrwtdrnirux","FIREBASE_CONFIG":"{\"projectId\":\"blitzstarter-d367e\",\"storageBucket\":\"blitzstarter-d367e.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"blitzstarter-d367e","EVENTARC_CLOUD_EVENT_SOURCE":"projects/blitzstarter-d367e/locations/us-central1/services/sendMail","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendMail"},"maxInstanceCount":10,"ingressSettings":"ALLOW_ALL","uri":"https://sendmail-fxx5ywll2q-uc.a.run.app","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"sendmail-00034-gah","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/blitzstarter-d367e/locations/asia-south1/triggers/sendmail-419702","triggerRegion":"asia-south1","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"users/{userId}","operator":"match-path-pattern"}],"pubsubTopic":"projects/blitzstarter-d367e/topics/eventarc-asia-south1-sendmail-419702-779","serviceAccountEmail":"1061586498672-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"state":"ACTIVE","updateTime":"2024-01-19T18:06:54.135517398Z","labels":{"firebase-functions-hash":"59e3e831cb2a237ef64b564a2aa3d93835dc4068","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-blitzstarter-d367e.cloudfunctions.net/sendMail"}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-01-21T12:09:14.408Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/run.googleapis.com [none]
+[debug] [2024-01-21T12:09:14.408Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/run.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:09:14.410Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/eventarc.googleapis.com [none]
+[debug] [2024-01-21T12:09:14.410Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/eventarc.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:09:14.411Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/pubsub.googleapis.com [none]
+[debug] [2024-01-21T12:09:14.411Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/pubsub.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:09:14.412Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/storage.googleapis.com [none]
+[debug] [2024-01-21T12:09:14.413Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/storage.googleapis.com x-goog-quota-user=projects/blitzstarter-d367e
+[debug] [2024-01-21T12:09:16.419Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/pubsub.googleapis.com 200
+[debug] [2024-01-21T12:09:16.419Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-01-21T12:09:16.438Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/run.googleapis.com 200
+[debug] [2024-01-21T12:09:16.438Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2024-01-21T12:09:16.451Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/eventarc.googleapis.com 200
+[debug] [2024-01-21T12:09:16.451Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-01-21T12:09:16.484Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/storage.googleapis.com 200
+[debug] [2024-01-21T12:09:16.484Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blitzstarter-d367e/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-01-21T12:09:16.485Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1061586498672/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-01-21T12:09:16.488Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1061586498672/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-01-21T12:09:18.730Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1061586498672/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-01-21T12:09:18.730Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1061586498672/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1061586498672@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"100784857546311957267"}}
+[debug] [2024-01-21T12:09:19.039Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1061586498672/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-01-21T12:09:19.039Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1061586498672/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1061586498672@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"113478876842999381935"}}
+[debug] [2024-01-21T12:09:19.042Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e [none]
+[debug] [2024-01-21T12:09:19.887Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e 200
+[debug] [2024-01-21T12:09:19.887Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blitzstarter-d367e {"projectId":"blitzstarter-d367e","projectNumber":"1061586498672","displayName":"blitzschlag","name":"projects/blitzstarter-d367e","resources":{"hostingSite":"blitzstarter-d367e","storageBucket":"blitzstarter-d367e.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_7a006dfd-fc74-4674-97a1-154d4cb0d731"}
+[debug] [2024-01-21T12:09:19.891Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/blitzstarter-d367e/versions [none]
+[debug] [2024-01-21T12:09:19.891Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/blitzstarter-d367e/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2024-01-21T12:09:22.390Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/blitzstarter-d367e/versions 200
+[debug] [2024-01-21T12:09:22.390Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/blitzstarter-d367e/versions {"name":"projects/1061586498672/sites/blitzstarter-d367e/versions/f90895bab0b102ee","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2024-01-21T12:09:22.392Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/blitzstarter-d367e/locations/asia-east1/functions:generateUploadUrl [none]
+[debug] [2024-01-21T12:09:23.159Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/blitzstarter-d367e/locations/asia-east1/functions:generateUploadUrl 200
+[debug] [2024-01-21T12:09:23.159Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/blitzstarter-d367e/locations/asia-east1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-1061586498672-asia-east1/024411f8-7b6f-400b-925f-7d0d5aa6ba10.zip?GoogleAccessId=service-1061586498672@gcf-admin-robot.iam.gserviceaccount.com&Expires=1705840765&Signature=cM78scfJ1CzKc%2BWlS1ZGqqGrQG1be0f79XceBm7IlCSluVAj4kRbKEdzrQHiJWaQtOLx3DmuR3IQ%2FJmnZX0mRoSbyTBpeoL%2FuB7MJETIGUDB54DkM6gnSMT2gSIg96uAr0etjeAzcv4UBaRpDpscDQCEeXVgSwzhOeKKPSdVDGGJQeQkc5eXF73aj4qQDyTyaS4gjDjlJ%2Fgf69TFYlW2%2F26e2qd%2BEVOw%2FS5MjWn1RO2JmugWPebs%2B6ephouHvqNc03pTiePj9fNKw8hWDITYXcQf9ib90iAzUnqFzoNzJZyeTjVc1ZYwPTLkWut45ku4hUtU7UvJX5SG699sOuo8OA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-1061586498672-asia-east1","object":"024411f8-7b6f-400b-925f-7d0d5aa6ba10.zip"}}
+[debug] [2024-01-21T12:09:23.161Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-1061586498672-asia-east1/024411f8-7b6f-400b-925f-7d0d5aa6ba10.zip GoogleAccessId=service-1061586498672%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1705840765&Signature=cM78scfJ1CzKc%2BWlS1ZGqqGrQG1be0f79XceBm7IlCSluVAj4kRbKEdzrQHiJWaQtOLx3DmuR3IQ%2FJmnZX0mRoSbyTBpeoL%2FuB7MJETIGUDB54DkM6gnSMT2gSIg96uAr0etjeAzcv4UBaRpDpscDQCEeXVgSwzhOeKKPSdVDGGJQeQkc5eXF73aj4qQDyTyaS4gjDjlJ%2Fgf69TFYlW2%2F26e2qd%2BEVOw%2FS5MjWn1RO2JmugWPebs%2B6ephouHvqNc03pTiePj9fNKw8hWDITYXcQf9ib90iAzUnqFzoNzJZyeTjVc1ZYwPTLkWut45ku4hUtU7UvJX5SG699sOuo8OA%3D%3D
+[debug] [2024-01-21T12:09:23.161Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1061586498672-asia-east1/024411f8-7b6f-400b-925f-7d0d5aa6ba10.zip [stream]

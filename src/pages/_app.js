@@ -85,7 +85,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Blitzschlag'24" />
 <meta property="og:description" content="BLITZSCHLAG 2024, the largest annual cultural festival of Rajasthan" />
-<meta property="og:image" content="/favicon.ico" />
+<meta property="og:image" content="/favicon.ico" />m 
       </Head>
       <Provider store={store}>
         <AnimatePresence mode="wait">
