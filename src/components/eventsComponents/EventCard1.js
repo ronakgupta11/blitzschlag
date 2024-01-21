@@ -1,13 +1,11 @@
 import React from "react";
-import Image from "next/image";
-import img from "../../../public/assets/events/event.png";
 import Link from "next/link";
 function EventCard1(props) {
   const data = props.data;
 
   return (
     <div className="flex relative md:w-[420px] w-[290px] items-center scale-90 m-4">
-      <div className="image absolute -left-20 md:-left-32 -top-4  h-44 md:h-64">
+      <div className="image absolute -left-20 md:-left-32 -top-4 w-40 md:w-56  h-44 md:h-64">
         <img className="w-full h-full rounded-lg" src={data.banner} />
       </div>
       <div className="flex flex-col bg-[#894e0d]  items-center  text-white justify-around md:w-[420px] w-[290px] h-40 md:h-[207px] border-b-2 border-t-2 border-r-2  rounded-br-[100px] ">

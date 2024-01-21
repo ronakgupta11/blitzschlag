@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { selectAuthenticated } from "@/redux/reducers/userReducer";
+import { selectAuthenticated, selectMNIT } from "@/redux/reducers/userReducer";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { url } from "@/constants";
@@ -18,6 +18,7 @@ import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 
 function ClubRegister({ event, id }) {
+  const isMnit = useSelector(selectMNIT)
   function generateUniqueTeamId(teamName) {
     // Remove spaces from the team name
     const trimmedTeamName = teamName.replace(/\s/g, "");
@@ -42,7 +43,6 @@ function ClubRegister({ event, id }) {
   const [teamId, setTeamId] = useState("");
   const [teamSize, setTeamSize] = useState(0);
 
-  const [image,setImage] = useState()
   const handleRegister = () => {
     dispatch(LOADING_UI());
     if (!teamName && !teamCode) {
@@ -202,10 +202,10 @@ function ClubRegister({ event, id }) {
         Team Code :{" "}
         <span className="font-bold text-xl text-yellow-500">{teamId} </span>
       </div>
-      <div className="flex gap-5">
+    { !isMnit &&  <div className="flex gap-5">
 
-Your Team status will be verified within 24 hrs
- </div>
+You Need to buy Pass to Participate in club events.
+ </div>}
 <div>
  <Link className="underline" href={"/profile"}>
    You can view your team status in profile section
@@ -226,10 +226,10 @@ Your Team status will be verified within 24 hrs
           </span>
         </p>
       </div>
-      <div className="flex gap-5">
+      { !isMnit &&  <div className="flex gap-5">
 
-Your Team status will be verified within 24 hrs
- </div>
+You Need to buy Pass to Participate in club events.
+ </div>}
 <div>
  <Link className="underline" href={"/profile"}>
    You can view your team status in profile section

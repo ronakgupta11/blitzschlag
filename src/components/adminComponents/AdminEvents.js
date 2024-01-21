@@ -59,6 +59,7 @@ function AdminEvents() {
             <Table.HeadCell>Event Name</Table.HeadCell>
             {/* <Table.HeadCell>desc</Table.HeadCell> */}
             <Table.HeadCell>Category</Table.HeadCell>
+            <Table.HeadCell>Club Name</Table.HeadCell>
             <Table.HeadCell>Prize</Table.HeadCell>
             <Table.HeadCell>Venue</Table.HeadCell>
             <Table.HeadCell>Date</Table.HeadCell>
@@ -82,6 +83,7 @@ function AdminEvents() {
                     {e.name}
                   </Table.Cell>
                   <Table.Cell>{e.category}</Table.Cell>
+                  <Table.Cell>{e.clubName}</Table.Cell>
                   <Table.Cell>{e.prize}</Table.Cell>
                   <Table.Cell>{e.venue || ""}</Table.Cell>
                   <Table.Cell>{e.date || ""}</Table.Cell>
@@ -124,8 +126,8 @@ function AdminEvents() {
                   <Table.Cell>
                     <Button onClick={() => handleDelete(e.id)}>Delete</Button>
                   </Table.Cell>
-                  {/* <Table.Cell className='h-24 w-24 overflow-auto'>{e?.desc.split(0,5)}</Table.Cell> */}
-                  {/* <Table.Cell className='h-24 w-24 overflow-auto'>{e.oneliner || ""}</Table.Cell> */}
+                  <Table.Cell className='h-24 w-24 overflow-auto'>{e?.desc.split(0,5)}</Table.Cell>
+                   <Table.Cell className='h-24 w-24 overflow-auto'>{e?.oneliner.split(0,5)}</Table.Cell>
                 </Table.Row>
               );
             })}

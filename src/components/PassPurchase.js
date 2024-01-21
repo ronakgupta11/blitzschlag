@@ -19,7 +19,11 @@ import { selectLoading } from "@/redux/reducers/uiReducer";
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 
-function PurchasePass({pass }) {
+
+function PurchasePass({pass,modal }) {
+  console.log( "pass in component",pass)
+  console.log(`opened modal ${modal}`)
+  const passId = pass
   const loading = useSelector(selectLoading);
   const errors = useSelector(selectErrors);
   const auth = useSelector(selectAuthenticated);
@@ -28,12 +32,19 @@ function PurchasePass({pass }) {
   const [status, setStatus] = useState(0);
 
   const handleSubmit = () => {
+console.log("passs in function",passId)
 if (auth) {
+  if(!image){
+    dispatch(SET_ERRORS({err:"No image selected"}))
+  }
+  else{
+
+  
   const formData = new FormData()
-  formData.append("image", image,image?.name)
+  formData.append("image",image,image?.name)
 dispatch(LOADING_UI())
       axios
-        .post(`${url}/buyPass/${pass}`,formData)
+        .post(`${url}/buyPass/${passId}`,formData)
         .then((d) => {
           setStatus(1);
           const BLITZID = localStorage.getItem("BLITZID");
@@ -45,13 +56,13 @@ dispatch(LOADING_UI())
           dispatch(CLEAR_ERRORS());
         })
         .catch((err) => dispatch(SET_ERRORS(err.response.data)));
+  }
     } else {
     
         toast("Please Login to purchase Pass",{
             type:"info"
         })
-        }
-
+  }
   }
 
   const PurchaseConfirmation = (
@@ -76,11 +87,14 @@ dispatch(LOADING_UI())
       <div>
         <Image width={150} src={qr} />
       </div>
+     {errors.err &&  <p className="text-sm text-red-700">{errors.err}</p>}
       <div>Please Pay on above qr code and submit payment confirmation.</div>
       <div>
-<input type="file" onChange={(e)=>setImage(e.target.files[0])} accept="image/*"></input>
+<input type="file" onChange={(e)=>{
+  dispatch(CLEAR_ERRORS())
+  setImage(e.target.files[0])}} accept="image/*"></input>
       </div>
-      <button onClick={handleSubmit} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
+      <button onClick={()=>handleSubmit()} className="btn rounded-xl px-16 bg-[#E9B704] text-[#463000] border-none"> {loading?<span className="loading loading-dots loading-sm"></span>:"Submit"} </button>
     </div>
   );
 
@@ -94,13 +108,13 @@ dispatch(LOADING_UI())
               type: "info",
             });
           } else {
-            document.getElementById("my_pass_modal").showModal();
+            document.getElementById(`my_pass_modal_${modal}`).showModal();
           }
         }}
       >
         Buy pass
       </button>
-      <dialog id="my_pass_modal" className="modal ">
+      <dialog id={`my_pass_modal_${modal}`} className="modal ">
         <div className="modal-box rounded-2xl bg-[#463000] text-[white]">
           <div className="flex items-center justify-between">
             <form method="dialog">

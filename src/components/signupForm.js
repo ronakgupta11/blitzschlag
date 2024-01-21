@@ -3,7 +3,7 @@
 import { url } from "@/constants";
 import { useState } from "react";
 import axios from "axios";
-// import Link from 'next/link';
+
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
@@ -33,21 +33,6 @@ export default function SignupForm() {
   const dispatch = useDispatch();
 
   const successCreate = () => toast("Created Account", { type: "success" });
-  // const successReset = () => toast("Sent Password Reset Mail",{type:"success"});
-
-  // const getUserData = ()=>{
-
-  //   axios.get(`${url}/user`).then(
-  //       res=>{
-  //           dispatch(
-  //              SET_USER(res.data)
-  //           )
-  //       }
-  //   ).catch(
-  //       err => console.log(err)
-  //   )
-
-  // }
 
   const handleClick = (e) => {
     e.preventDefault();

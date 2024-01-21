@@ -77,7 +77,7 @@ function PayNow({ teamId }) {
   return (
     <div>
       <button
-        className="w-fit bg-[#5f2b00] px-[36px] py-[8px] text-white "
+        className="w-fit bg-[#5f2b00] rounded-xl px-[36px] py-[8px] text-white "
         onClick={() => {
           document.getElementById("my_pay_modal").showModal();
         }}

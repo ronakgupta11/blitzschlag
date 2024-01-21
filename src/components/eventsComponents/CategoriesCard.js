@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import borderUp from "../../../public/assets/events/borderup.png";
-// import borderDown2 from "../../../public/assets/borderDown2.png";
 
 const CategoriesCard = () => {
   return (
@@ -11,8 +10,6 @@ const CategoriesCard = () => {
       }}
       className="w-full "
     >
-      {/* border */}
-
       <div
         className="flex flex-col  ml-[75px] mt-[86px] mb-[120px]"
         style={{ color: "#784e1d" }}
