@@ -7,7 +7,7 @@ import PayNow from "./payNow";
 import axios from "axios";
 import { url } from "@/constants";
 import { getUserData } from "@/redux/actions/userAction";
-
+import { SET_MNIT,SET_USER } from "@/redux/reducers/userReducer";
 function TeamDetailModal({team}) {
   const auth = useSelector(selectAuthenticated);
   const dispatch = useDispatch()
