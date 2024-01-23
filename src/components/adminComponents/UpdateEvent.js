@@ -50,12 +50,12 @@ export default function UpdateEvent({id}) {
     const updatedFields={};
     if(name!='') updatedFields.name=name;
     if(desc!='') updatedFields.desc=desc;
+    if(date!='') updatedFields.date = date
     if(oneliner!='') updatedFields.oneliner=oneliner;
     if(venue!='') updatedFields.venue=venue;
     if(time!='') updatedFields.time=time;
     if(prize!='') updatedFields.prize=prize;
     if(image!='') updatedFields.image=image;
-    if(banner!='') updatedFields.banner=banner;
     if(banner!='') updatedFields.banner=banner;
     if(rulebook!='') updatedFields.rulebook=rulebook;
     if(category!='') updatedFields.category=category;

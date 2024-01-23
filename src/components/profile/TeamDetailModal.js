@@ -1,14 +1,30 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 import { toast } from "react-toastify";
 import { selectAuthenticated } from "@/redux/reducers/userReducer";
 import PayNow from "./payNow";
-
+import axios from "axios";
+import { url } from "@/constants";
+import { getUserData } from "@/redux/actions/userAction";
+import { SET_MNIT,SET_USER } from "@/redux/reducers/userReducer";
 function TeamDetailModal({team}) {
   const auth = useSelector(selectAuthenticated);
-  //   const dispatch = useDispatch();
-  const [status, setStatus] = useState(0);
+  const dispatch = useDispatch()
+  const handleRefresh =()=>{
+    const BLITZID = localStorage.getItem("BLITZID");
+    axios.defaults.headers.common["Authorization"] = BLITZID;
+    getUserData().then((res) => {
+      // console.log("res",res)
+      localStorage.setItem("BLITZUSER", JSON.stringify(res));
+      if(res.credentials.email.slice(-10) === "mnit.ac.in"
+      ){
+        dispatch(SET_MNIT())
+      }
+      dispatch(SET_USER(res));
+    });
+
+  }
   return (
     <div>
       <button
@@ -44,11 +60,15 @@ function TeamDetailModal({team}) {
               <div className="">Team Status: </div><span className={`${team?.teamStatus === "unVerified"? "text-red-600":"text-green-500"}`}> {team?.teamStatus}</span>
               {team?.teamStatus === "unVerified" && <PayNow  teamId= {team?.teamId}/>}
             </div>
+            <div className="flex items-center gap-[30px]">
+              <button onClick={handleRefresh} className="btn bg-[#5f2b00] border-none  rounded-xl">Refresh</button>
+            </div>
           </div>
           <div className="mt-[34px]">
             <div className="grid grid-cols-3 bg-[#FFB070] py-[12px]">
               <div className="">S No.</div>
               <div className="">Blitz ID</div>
+          
             </div>
            {team?.members.map((m,k)=> <div className="grid grid-cols-3 py-[12px]">
               <div className="">{k+1}</div>

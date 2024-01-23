@@ -49,6 +49,12 @@ return{
     ...state,
     isCA:true
 }
+        },
+        SET_TEAM:(state)=>{
+            return{
+                ...state,
+             
+            }
         }
 
 

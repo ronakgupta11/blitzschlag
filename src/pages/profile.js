@@ -19,8 +19,8 @@ import PassTab from "/src/components/profile/PassTab.js";
 import ProfileTab from "/src/components/profile/ProfileTab.js";
 import { QRCode } from "react-qrcode-logo";
 import { logOutUser } from "@/redux/actions/userAction";
-import AmbassadorTab from "@/components/profile/AmbassadorTab";
-export default function Profile({slickModal}) {
+
+export default function Profile({ slickModal }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [menu, setMenu] = useState(false);
   const router = useRouter();
@@ -28,30 +28,24 @@ export default function Profile({slickModal}) {
   const credentials = useSelector(selectCredentials);
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
-  const isMNIT = useSelector(selectMNIT)
-  const isAmbassador = useState(true)
+  const isMNIT = useSelector(selectMNIT);
 
+  console.log(credentials);
   useEffect(() => {
     if (!auth) {
       router.push("/login");
     }
   }, [auth]);
 
-  useEffect(()=>{
-
-    if(isMNIT && slickModal){
-
-      setOpenModal(true)
+  useEffect(() => {
+    if (isMNIT && slickModal) {
+      setOpenModal(true);
     }
-
-      
-    
-  },[slickModal])
-
+  }, [slickModal]);
 
   return (
     <div className="flex bg-[#5F2B00]">
-      <SlickModal openModal={openModal} setOpenModal={setOpenModal}/>
+      <SlickModal openModal={openModal} setOpenModal={setOpenModal} />
       {/* {menu ? ( */}
       <div
         className={`z-10 grid h-fit gap-[32px] px-[40px] md:px-[80px] pr-[50px] md:pr-[140px] py-[50px] md:py-[100px] bg-[#5F2B00] text-[#FFFBED] 

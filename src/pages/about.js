@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import img_1 from "../../public/assets/about/img_1.png";
 import bg_container from "../../public/assets/about/bg_container.png";
 import Image from "next/image";

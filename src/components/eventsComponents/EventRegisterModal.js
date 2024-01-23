@@ -118,6 +118,13 @@ function EventRegisterModal({ event, id }) {
 
     
     dispatch(LOADING_UI())
+    if(!image){
+      setStatus(3)
+      dispatch(CLEAR_ERRORS())
+    }
+    else{
+
+    
     const formData = new FormData()
     formData.append("image", image,image?.name);
 
@@ -130,6 +137,7 @@ function EventRegisterModal({ event, id }) {
       .catch(e=>{
         console.log(e)
       })
+    }
   }
   const form = (
     <div className="flex flex-col items-start justify-between space-y-4 my-4">

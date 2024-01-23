@@ -1,23 +1,19 @@
 "use client";
-
 import { url } from "@/constants";
 import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
-
 import { useDispatch, useSelector } from "react-redux";
 import { selectErrors, selectLoading } from "@/redux/reducers/uiReducer";
 import {
   LOADING_UI,
   SET_ERRORS,
   CLEAR_ERRORS,
-
 } from "@/redux/reducers/uiReducer";
-import { SET_USER,  SET_MNIT } from "@/redux/reducers/userReducer";
+import { SET_USER, SET_MNIT } from "@/redux/reducers/userReducer";
 import { getUserData } from "@/redux/actions/userAction";
-
 export default function LoginForm() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -46,9 +42,8 @@ export default function LoginForm() {
         getUserData().then((res) => {
           // console.log("res",res)
           localStorage.setItem("BLITZUSER", JSON.stringify(res));
-          if(res.credentials.email.slice(-10) === "mnit.ac.in"
-          ){
-            dispatch(SET_MNIT())
+          if (res.credentials.email.slice(-10) === "mnit.ac.in") {
+            dispatch(SET_MNIT());
           }
           dispatch(SET_USER(res));
         });
@@ -98,7 +93,7 @@ export default function LoginForm() {
             dispatch(CLEAR_ERRORS());
             setEmail(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full max-w-xs rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full max-w-xs rounded-md ${
             errors.email ? "input-error" : ""
           }`}
         />
@@ -120,7 +115,7 @@ export default function LoginForm() {
             dispatch(CLEAR_ERRORS());
             setPass(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full max-w-xs rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full max-w-xs rounded-md ${
             errors.password ? "input-error" : ""
           }`}
         />

@@ -3,7 +3,7 @@
 import { url } from "@/constants";
 import { useState } from "react";
 import axios from "axios";
-// import Link from 'next/link';
+
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
@@ -33,21 +33,6 @@ export default function SignupForm() {
   const dispatch = useDispatch();
 
   const successCreate = () => toast("Created Account", { type: "success" });
-  // const successReset = () => toast("Sent Password Reset Mail",{type:"success"});
-
-  // const getUserData = ()=>{
-
-  //   axios.get(`${url}/user`).then(
-  //       res=>{
-  //           dispatch(
-  //              SET_USER(res.data)
-  //           )
-  //       }
-  //   ).catch(
-  //       err => console.log(err)
-  //   )
-
-  // }
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -101,7 +86,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, name: "" }));
             setName(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.name ? "input-error" : ""
           }`}
         />
@@ -123,7 +108,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, email: "" }));
             setEmail(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.email ? "input-error" : ""
           }`}
         />
@@ -153,7 +138,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, phone: "" }));
             setPhone(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.phone ? "input-error" : ""
           }`}
         />
@@ -175,7 +160,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, college: "" }));
             setCollege(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.college ? "input-error" : ""
           }`}
         />
@@ -199,7 +184,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, password: "" }));
             setPass(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.password ? "input-error" : ""
           }`}
         />
@@ -222,7 +207,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, confirmPassword: "" }));
             setCnf(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.confirmPassword ? "input-error" : ""
           }`}
         />
@@ -245,7 +230,7 @@ export default function SignupForm() {
             dispatch(SET_ERRORS({ ...errors, referal: "" }));
             setReferal(e.target.value);
           }}
-          className={`input input-bordered bg-white text-gray-700 w-full rounded-md ${
+          className={`input input-bordered bg-white text-gray-700 placeholder-gray-300 w-full rounded-md ${
             errors.referal ? "input-error" : ""
           }`}
         />

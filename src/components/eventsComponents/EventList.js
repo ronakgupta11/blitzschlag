@@ -37,11 +37,29 @@ export default function EventList() {
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState();
 
+ 
+
   const events = useSelector(selectEventsData);
   const flagship = events.filter((item) => item.category === "flagship");
   const club = events.filter((item) => item.category === "club");
   // const fun = events.filter(item => item.category === "fun");
+  const [selectedClub, setSelectedClub] = useState("");
+  const [filteredClubEvents, setFilteredEvents] = useState(club);
 
+  const handleClubChange = (event) => {
+    const selectedClubName = event.target.value;
+    setSelectedClub(selectedClubName);
+
+    // Filter events based on selected club name
+    if(selectedClubName === ""){
+      setFilteredEvents(club)
+    }
+    else{
+
+      const filteredEvents = club.filter(event => event.clubName === selectedClubName);
+      setFilteredEvents(filteredEvents);
+    }
+  };
   useEffect(() => {
     const parser = new UAParser();
     const userAgent = window.navigator.userAgent;
@@ -88,8 +106,27 @@ export default function EventList() {
         </div>
       )}
       {selectedTab === 1 && (
+        <div className="flex flex-col items-center mt-12 z-20">
+      
+
+      <label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text"></span>
+  </div>
+  <select className="select select-bordered bg-inherit" id="clubSelect" onChange={handleClubChange} value={selectedClub}>
+        <option className="text-black" value="">All Events</option>
+        {Array.from(new Set(club.map(event => event.clubName))).map((clubName) => (
+          <option className="text-black" key={clubName} value={clubName}>{clubName}</option>
+        ))}
+      </select>
+
+</label>
         <div className=" z-10 flex flex-wrap m-3 p-3 items-center justify-center  w-full">
-          {club.map((d, k) => {
+        {selectedClub === "" && club.map((d, k) => {
+            return <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />;
+          })}
+
+          {selectedClub !== "" && filteredClubEvents.map((d, k) => {
             return <ResponsiveInnerList isMobile={isMobile} d={d} k={k} />;
           })}
           {club?.length === 0 && (
@@ -99,6 +136,7 @@ export default function EventList() {
               </p>
             </div>
           )}
+        </div>
         </div>
       )}
       <div className="flex w-full items-center">
