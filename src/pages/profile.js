@@ -20,7 +20,11 @@ import ProfileTab from "/src/components/profile/ProfileTab.js";
 import { QRCode } from "react-qrcode-logo";
 import { logOutUser } from "@/redux/actions/userAction";
 
-export default function Profile({ slickModal }) {
+import AmbassadorTab from "@/components/profile/AmbassadorTab";
+export default function Profile({slickModal}) {
+
+
+
   const [currentTab, setCurrentTab] = useState(0);
   const [menu, setMenu] = useState(false);
   const router = useRouter();
@@ -28,7 +32,12 @@ export default function Profile({ slickModal }) {
   const credentials = useSelector(selectCredentials);
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
-  const isMNIT = useSelector(selectMNIT);
+
+  const isMNIT = useSelector(selectMNIT)
+  const isAmbassador = useState(true)
+
+  
+
 
   console.log(credentials);
   useEffect(() => {
