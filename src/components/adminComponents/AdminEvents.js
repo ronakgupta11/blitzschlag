@@ -9,6 +9,7 @@ import UpdateEvent from "./UpdateEvent";
 import axios from "axios";
 import { url } from "@/constants";
 import { toast } from "react-toastify";
+import ExcelDownloadButton from "./DownloadBtn";
 
 function AdminEvents() {
   const events = useSelector(selectEventsData);
@@ -68,6 +69,7 @@ function AdminEvents() {
             <Table.HeadCell>poster</Table.HeadCell>
             <Table.HeadCell>rulebook</Table.HeadCell>
             <Table.HeadCell>teams registered</Table.HeadCell>
+            <Table.HeadCell>Download Teams</Table.HeadCell>
             <Table.HeadCell>Edit</Table.HeadCell>
             <Table.HeadCell>Delete</Table.HeadCell>
             <Table.HeadCell>desc</Table.HeadCell>
@@ -120,6 +122,10 @@ function AdminEvents() {
                   </Table.Cell>
                   {/* {console.log(len?.length)} */}
                   <Table.Cell>{len?.length || 0}</Table.Cell>
+                  <Table.Cell>
+<ExcelDownloadButton name={e?.name}/>
+
+                  </Table.Cell>
                   <Table.Cell>
                     <UpdateEvent id={e.id} />
                   </Table.Cell>
