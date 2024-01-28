@@ -10,6 +10,7 @@ import axios from "axios";
 import { url } from "@/constants";
 import { toast } from "react-toastify";
 import ExcelDownloadButton from "./DownloadBtn";
+import DownloadEventsButton from "./DownLoadAllEvents";
 
 function AdminEvents() {
   const events = useSelector(selectEventsData);
@@ -40,6 +41,10 @@ function AdminEvents() {
       <div className=" mx-8 text-black ">
         {/* <p>Add Events</p> */}
         <AddEventModal />
+        <div className="my-4">
+
+        {/* <DownloadEventsButton/> */}
+        </div>
         {/* <UpdateEvent/> */}
       </div>
       <div className="w-60 m-8">

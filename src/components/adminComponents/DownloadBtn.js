@@ -18,7 +18,19 @@ const ExcelDownloadButton = ({name}) => {
       const data = []
 
       apiData.forEach(d=>{
-        const obj ={...d.team,...d.teamLeader}
+        const teamName = d.team.teamName
+        const teamSize = d.team.teamSize
+        const leaderEmail = d.team.leaderEmail
+        const teamId = d.team.teamId
+        const college = d.teamLeader.college
+        const phone = d.teamLeader.phone
+        const name = d.teamLeader.name
+        const obj ={
+          teamName,name,teamSize,
+          teamId,
+          leaderEmail,phone,college
+          
+          }
         data.push(obj)
 
 
