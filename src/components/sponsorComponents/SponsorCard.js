@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 function SponsorCard({src,link}) {
   return (
-    <div className='w-32 h-16 md:w-60 md:h-40 p-2 rounded-[16px] md:rounded-[40px] m-4 bg-white  flex justify-center'>
-        <img className="max-w-[90%]" src={src}/> 
+    <div className='w-40 h-32 md:w-72 md:h-60 p-6 rounded-[16px] md:rounded-[40px] m-4 bg-white  flex justify-center'>
+        <img className="" src={src}/> 
     </div>
   )
 }
