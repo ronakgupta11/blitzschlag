@@ -34,7 +34,7 @@ export default function Profile({slickModal}) {
   const [openModal, setOpenModal] = useState(false);
 
   const isMNIT = useSelector(selectMNIT)
-  const isAmbassador = useState(true)
+  const [isAmbassador,setIsAmbassador] = useState(false)
 
   
 

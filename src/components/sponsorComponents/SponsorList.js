@@ -21,6 +21,7 @@ import Barbeque_logo from "../../../public/assets/sponsors/Barbeque_logo.png"
 import rayban_logo from "../../../public/assets/sponsors/rayban_logo.png"
 import lakme from "../../../public/assets/sponsors/lakme_logo.png"
 
+import data from "./sponsorData.json"
 
 export default function SponsorList() {
   return (
@@ -39,13 +40,18 @@ export default function SponsorList() {
     <Image src ={flower1}/>
     <Image src ={flower2}/>
 </div>
-        <div className='h-60 z-10 flex flex-wrap m-3 p-3 items-center justify-center '>
+        <div className=' z-10 flex flex-wrap m-3 p-3 items-center justify-center '>
 
-        <div className=" flex items-center justify-center">
+        {/* <div className=" flex items-center justify-center">
               <p className="text-5xl font-sankaran text-white text-center">
                 Coming Soon
               </p>
-            </div>
+            </div> */}
+            {data["sponsors"].map((d,k)=>
+
+            
+            <SponsorCard src={d.img}/>)
+          }
         </div>
        
       <div
@@ -53,21 +59,21 @@ export default function SponsorList() {
 
       ><p className='text-white font-sankaran text-[12px] lg:text-[20px]'>Past Sponsors</p></div>
       <div className=' z-10 flex flex-wrap m-3 p-3 items-center justify-center '>
-        <SponsorCard src={bsnl} link={"/"} />
-        <SponsorCard src={ONGC_logo} link={"/"} />
-        <SponsorCard src={Bajaj_logo} link={"/"} />
-        <SponsorCard src={feast_logo} link={"/"} />
-        <SponsorCard src={basking_logo} link={"/"} />
-        <SponsorCard src={Hero_logo} link={"/"} />
-        <SponsorCard src={sprite_logo} link={"/"} />
-        <SponsorCard src={reliance_logo} link={"/"} />
-        <SponsorCard src={jsw_logo} link={"/"} />
-        <SponsorCard src={icici_logo} link={"/"} />
-        <SponsorCard src={coco_logo} link={"/"} />
-        <SponsorCard src={ninexm_logo} link={"/"} />
-        <SponsorCard src={Barbeque_logo} link={"/"} />
-        <SponsorCard src={rayban_logo} link={"/"} />
-        <SponsorCard src={lakme} link={"/"} />
+        <SponsorCard src={bsnl.src} link={"/"} />
+        <SponsorCard src={ONGC_logo.src} link={"/"} />
+        <SponsorCard src={Bajaj_logo.src} link={"/"} />
+        <SponsorCard src={feast_logo.src} link={"/"} />
+        <SponsorCard src={basking_logo.src} link={"/"} />
+        <SponsorCard src={Hero_logo.src} link={"/"} />
+        <SponsorCard src={sprite_logo.src} link={"/"} />
+        <SponsorCard src={reliance_logo.src} link={"/"} />
+        <SponsorCard src={jsw_logo.src} link={"/"} />
+        <SponsorCard src={icici_logo.src} link={"/"} />
+        <SponsorCard src={coco_logo.src} link={"/"} />
+        <SponsorCard src={ninexm_logo.src} link={"/"} />
+        <SponsorCard src={Barbeque_logo.src} link={"/"} />
+        <SponsorCard src={rayban_logo.src} link={"/"} />
+        <SponsorCard src={lakme.src} link={"/"} />
       </div>
       
 <button className='bg-red btn hover:bg-[#4f0c26] font-sankaran  hover:border-white rounded-[40px] border-2 my-4 text-white border-white px-16 text-[20px] bg-[#4f0c26]'>
